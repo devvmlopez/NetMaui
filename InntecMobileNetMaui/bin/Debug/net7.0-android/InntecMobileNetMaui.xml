@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>InntecMobileNetMaui</name>
+    </assembly>
+    <members>
+        <member name="M:InntecMobileNetMaui.RendererControls.MaskedBehavior.OnAttachedTo(Microsoft.Maui.Controls.Entry)">
+            <summary>
+            Al agregar texto
+            </summary>
+            <param name="entry">Objeto que se esta modificando</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.RendererControls.MaskedBehavior.OnDetachingFrom(Microsoft.Maui.Controls.Entry)">
+            <summary>
+            Al eliminar texto
+            </summary>
+            <param name="entry">Objeto que se esta modificando</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.RendererControls.MaskedBehavior.SetPositions">
+            <summary>
+            Agregar Caracteres
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.RendererControls.MaskedBehavior.OnEntryTextChanged(System.Object,Microsoft.Maui.Controls.TextChangedEventArgs)">
+            <summary>
+            Evento
+            </summary>
+            <param name="sender">Objeto con el que se trabaja</param>
+            <param name="args">Parametros del eventos</param>
+        </member>
+    </members>
+</doc>

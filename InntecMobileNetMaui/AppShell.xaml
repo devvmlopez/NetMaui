@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="InntecMobileNetMaui.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:InntecMobileNetMaui"
+    xmlns:views="clr-namespace:InntecMobileNetMaui.Views.Login"
+    xmlns:cards="clr-namespace:InntecMobileNetMaui.Views.Cards"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent
+        Shell.NavBarIsVisible="False"
+        ContentTemplate="{DataTemplate views:LoginPage}"
+        Route="Login" />
+    <ShellContent
+        Shell.NavBarIsVisible="False"
+        ContentTemplate="{DataTemplate cards:CardPage}"
+        Route="CardPage"/>
+</Shell>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.Login.LoginPage"
+             xmlns:controls="clr-namespace:InntecMobileNetMaui.RendererControls"
+             BackgroundColor="LightGray"
+             Title="LoginPage">
+
+    <StackLayout 
+     BackgroundColor="LightGray"
+     HorizontalOptions="FillAndExpand"
+     VerticalOptions="FillAndExpand">
+        <AbsoluteLayout
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Start"
+             AbsoluteLayout.LayoutFlags="All"
+             AbsoluteLayout.LayoutBounds="0,0,1,1">
+            <Image Source="inntec.png"
+                    WidthRequest="150"
+                    HeightRequest="200"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Start"
+                    Margin="35,-30,0,0"
+                     />
+            <Ellipse Fill="#4E96C8"
+                   AbsoluteLayout.LayoutFlags="All"
+                   AbsoluteLayout.LayoutBounds="1,0,0.5,0.5"
+                   WidthRequest="250"
+                   HeightRequest="250"
+                   Aspect="Uniform"
+                   Margin="70,-90,0,0"
+                   />
+            <Ellipse Fill="#186094"
+                   AbsoluteLayout.LayoutFlags="All"
+                   AbsoluteLayout.LayoutBounds="1,0,0.4,0.4"
+                   WidthRequest="200"
+                   HeightRequest="200"
+                   Aspect="Uniform"
+                   Margin="70,-80,0,0"
+                   />
+        </AbsoluteLayout>
+        <AbsoluteLayout 
+         HorizontalOptions="CenterAndExpand"
+         VerticalOptions="FillAndExpand"
+         AbsoluteLayout.LayoutFlags="All"
+         AbsoluteLayout.LayoutBounds="0,1,1,1">
+            <Frame 
+             BackgroundColor="#90FFFFFF"
+             IsClippedToBounds="True" 
+             VerticalOptions="CenterAndExpand" 
+             HorizontalOptions="CenterAndExpand" 
+             BorderColor="LightGray">
+                <StackLayout 
+                     Padding="8"
+                     VerticalOptions="CenterAndExpand" 
+                     HorizontalOptions="CenterAndExpand">
+                    <StackLayout VerticalOptions="CenterAndExpand">
+                        <StackLayout 
+                                 VerticalOptions="CenterAndExpand"
+                                 IsVisible="False"
+                                 >
+                            <!--IsVisible="{Binding LoginBiometrico}"-->
+                            <StackLayout 
+                                     Orientation="Horizontal"
+                                     HorizontalOptions="Center">
+                                <Label  
+                                    Text="Hola,"
+                                    FontAttributes="Bold"
+                                    HorizontalOptions="Center"
+                                    TextColor="White"/>
+                                <Label  
+                                    Text="{Binding Usuario}"
+                                    FontAttributes="Bold"
+                                    HorizontalOptions="Center"
+                                    TextColor="White"/>
+                            </StackLayout>
+
+                            <StackLayout>
+                                <Button x:Name="BtnPorPass" 
+                                             Text="Ingresar con contraseña"
+                                             HorizontalOptions="Center"
+                                             FontSize="Subtitle"
+                                             TextColor="White"
+                                             BackgroundColor="Transparent"
+                                             />
+                                <!--Pressed="BtnPorPass_Pressed"-->
+                                <BoxView Color="White"
+                                             Margin="-15"
+                                             HorizontalOptions="Center"
+                                             HeightRequest="1"
+                                             WidthRequest="250"/>
+                            </StackLayout>
+
+                            <StackLayout HorizontalOptions="Center">
+                                <ImageButton 
+                                             x:Name="BtnBiometrico"
+                                             Source="faceid"
+                                             BackgroundColor="Transparent"
+                                             WidthRequest="120"
+                                             HeightRequest="120"
+                                             Padding="0,50,0,0"
+                                         />
+                                <!--Pressed="BiometricLogin_Pressed"-->
+                                <Label 
+                                         Text="Toca aqui para ingresar"
+                                         HorizontalOptions="Center"
+                                         TextColor="White"/>
+                                <Label 
+                                         Text="Con reconocimiento biometrico"
+                                         HorizontalOptions="Center"
+                                         TextColor="White"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <StackLayout
+                                         VerticalOptions="CenterAndExpand"
+                                         Padding="0,50,0,0"
+                                         Orientation="Vertical"
+                                         IsVisible="{Binding LoginPass}">
+                            <Label 
+                                             VerticalOptions="StartAndExpand"
+                                             Text="Iniciar Sesion"
+                                             FontSize="Medium"
+                                             FontAttributes="Bold"
+                                             HorizontalOptions="Center"
+                                             TextColor="Black"/>
+                            <controls:CustomEntry
+                                              x:Name="TxtUsr"
+                                              HorizontalOptions="FillAndExpand"
+                                              Text="{Binding User}"
+                                              IcoData="M843.282963 870.115556c-8.438519-140.515556-104.296296-257.422222-233.908148-297.14963C687.881481 536.272593 742.4 456.533333 742.4 364.088889c0-127.241481-103.158519-230.4-230.4-230.4S281.6 236.847407 281.6 364.088889c0 92.444444 54.518519 172.183704 133.12 208.877037-129.611852 39.727407-225.46963 156.634074-233.908148 297.14963-0.663704 10.903704 7.964444 20.195556 18.962963 20.195556l0 0c9.955556 0 18.299259-7.774815 18.962963-17.73037C227.745185 718.506667 355.65037 596.385185 512 596.385185s284.254815 122.121481 293.357037 276.195556c0.568889 9.955556 8.912593 17.73037 18.962963 17.73037C835.318519 890.311111 843.946667 881.019259 843.282963 870.115556zM319.525926 364.088889c0-106.287407 86.186667-192.474074 192.474074-192.474074s192.474074 86.186667 192.474074 192.474074c0 106.287407-86.186667 192.474074-192.474074 192.474074S319.525926 470.376296 319.525926 364.088889z"
+                                              Placeholder="Usuario"
+                                              />
+
+                            <controls:CustomEntry 
+                                              x:Name="TxtPass"
+                                              HeightRequest="60"
+                                              HorizontalOptions="FillAndExpand"
+                                              Text="{Binding Password}"
+                                              IsPassword="True"
+                                              IcoData="M879.849856 385.02485h-106.549958V256.5999S796.749889 0 512 0c0 0-258.287399 0-258.287399 258.112399v126.912451H144.137644a53.549979 53.549979 0 0 0-53.749979 53.012479v533.074792c0 29.087489 24.212491 52.887479 53.749979 52.887479H879.849856a53.549979 53.549979 0 0 0 53.749979-52.937479V437.974829a53.549979 53.549979 0 0 0-53.749979-52.937479z m-529.524793 0V258.099899S348.275064 96.062462 517.062498 96.062462c0 0 159.137438-4.999998 159.137438 159.999938v128.96245z m0 0"
+                                              Placeholder="Contraseña"
+                                              AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                              AbsoluteLayout.LayoutFlags="All"
+                                              />
+                            <Label 
+                                             x:Name="LblError" 
+                                             Text="{Binding Error_description}"
+                                             IsVisible="{Binding ShowError}"
+                                             TextColor="Red"
+                                             HorizontalOptions="CenterAndExpand"/>
+
+                            <Button 
+                                              x:Name="Btn_Entrar"
+                                              AutomationId="BtnEntrar"
+                                              Text="Entrar"
+                                              BackgroundColor="#3487CB" 
+                                              TextColor="White"
+                                              CornerRadius="5"
+                                              HorizontalOptions="CenterAndExpand"
+                                              WidthRequest="300"
+                                              Margin="0,10,0,8"
+                                              Clicked="Btn_Entrar_Clicked"
+                                              />
+                            <!--Clicked="Btn_IniciarSesion_Clicked"-->
+                            <Button 
+                                                 x:Name="Btn_Recuperar"
+                                                 Text="Recuperar contraseña" 
+                                                 BorderColor="#3487CB"
+                                                 BackgroundColor="White"
+                                                 CornerRadius="5"
+                                                 TextColor="Black"
+                                                 HorizontalOptions="Center" 
+                                                 VerticalOptions="Center"
+                                                 WidthRequest="300"
+                                             />
+                            <!--Clicked="Btn_Registro_Clicked"-->
+                            <StackLayout 
+                                                 IsVisible="False"
+                                                 Orientation="Horizontal" 
+                                                 BackgroundColor="#70ebebeb">
+                                <Label 
+                                                     Text="Activar Huella"
+                                                     FontSize="Caption"
+                                                     TextColor="Black"
+                                                     FontAttributes="Bold"
+                                                     VerticalOptions="CenterAndExpand"
+                                                     HorizontalOptions="EndAndExpand"/>
+                                <CheckBox
+                                                     Color="#3487CB" 
+                                                     IsEnabled="{Binding FingerPrint}"
+                                                     IsChecked="{Binding RememberPWS}"
+                                                     HorizontalOptions="StartAndExpand"/>
+                            </StackLayout>
+                            <Label 
+                                              VerticalOptions="StartAndExpand"
+                                              Text="¿No tienes cuenta?"
+                                              FontSize="Small"
+                                              HorizontalOptions="Center"
+                                              TextColor="Black"
+                                              Margin="0,10,0,0"/>
+                            <Button 
+                                             x:Name="Btn_Registro"
+                                             Text="Registrarte Aqui"
+                                             TextColor="Black"
+                                             FontAttributes="Bold"
+                                             BackgroundColor="Transparent"
+                                             HorizontalOptions="CenterAndExpand"
+                                             CornerRadius="5"
+                                             WidthRequest="200"
+                                             Margin="0,10,0,0"
+                                             />
+                            <!--Clicked="Btn_RecuperarContrasena_Clicked"-->
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+        </AbsoluteLayout>
+        <!--</pancakeview:PancakeView>-->
+        <!--<Image Source="inntecLogo.png" 
+             
+             AbsoluteLayout.LayoutBounds="0.5,0,0.25,0.25"
+             AbsoluteLayout.LayoutFlags="All"/>
+
+     <AbsoluteLayout HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand"
+                      AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                      AbsoluteLayout.LayoutFlags="All" 
+                      BackgroundColor="#30000000"
+                      IsVisible="{Binding IsBusy}">-->
+        <!--<lottie:AnimationView
+                  x:Name="LottieView"
+                  RepeatMode="Infinite"
+                  AutoPlay="True"
+                  AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                  AbsoluteLayout.LayoutFlags="All" 
+                  Animation="loadingInntec.json"
+                  IsVisible="{Binding IsBusy}"
+                  HorizontalOptions="CenterAndExpand"
+                  VerticalOptions="CenterAndExpand"
+                  HeightRequest="70"
+                  WidthRequest="70"
+                  />-->
+        <!--</AbsoluteLayout>-->
+    </StackLayout>
+</ContentPage>
