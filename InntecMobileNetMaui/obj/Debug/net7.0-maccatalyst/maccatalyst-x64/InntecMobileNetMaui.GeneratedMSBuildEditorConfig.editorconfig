@@ -40,6 +40,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Render
 build_metadata.AdditionalFiles.TargetPath = RendererControls\CustomEntry.xaml
 build_metadata.AdditionalFiles.RelativePath = RendererControls\CustomEntry.xaml
 
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/RendererControls/CustomSwitch.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.RendererControls.CustomSwitch.xaml
+build_metadata.AdditionalFiles.TargetPath = RendererControls\CustomSwitch.xaml
+build_metadata.AdditionalFiles.RelativePath = RendererControls\CustomSwitch.xaml
+
 [C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Resources.Styles.Colors.xaml
@@ -52,11 +58,41 @@ build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Resour
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Cards/BlockCardOptionsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Cards.BlockCardOptionsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Cards\BlockCardOptionsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Cards\BlockCardOptionsPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Cards/CancelCard.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Cards.CancelCard.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Cards\CancelCard.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Cards\CancelCard.xaml
+
 [C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Cards/CardPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Cards.CardPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Cards\CardPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Cards\CardPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Cards/CardPageList.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Cards.CardPageList.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Cards\CardPageList.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Cards\CardPageList.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Cards/DeleteCard.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Cards.DeleteCard.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Cards\DeleteCard.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Cards\DeleteCard.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Cards/NewCardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Cards.NewCardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Cards\NewCardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Cards\NewCardPage.xaml
 
 [C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Login/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

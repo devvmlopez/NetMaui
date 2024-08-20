@@ -4,16 +4,18 @@
              x:Class="InntecMobileNetMaui.Views.Cards.CardPage"
              >
     
-    <Grid IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
-      HorizontalOptions="FillAndExpand"
-      VerticalOptions="FillAndExpand">
+    <Grid 
+        IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
 
 
-        <Grid x:Name="MenuContainer"
-          HorizontalOptions="FillAndExpand"
-          VerticalOptions="FillAndExpand"
-          IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
-          >
+        <Grid 
+            x:Name="MenuContainer"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
+            >
             <Grid.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <GradientStop Color="#666666" Offset="0.0"/>
@@ -25,10 +27,11 @@
                 <TapGestureRecognizer Tapped="GridArea_Tapped"/>
             </Grid.GestureRecognizers>
 
-            <VerticalStackLayout Margin="0,52,0,0"
-                             HorizontalOptions="StartAndExpand"
-                             VerticalOptions="FillAndExpand"
-                             Spacing="5">
+            <VerticalStackLayout 
+                Margin="0,52,0,0"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="FillAndExpand"
+                Spacing="5">
 
 
                 <Border HeightRequest="80"
@@ -67,6 +70,9 @@
                            FontAttributes="Bold"
                            VerticalOptions="Center"
                            Margin="20,10,0,0"/>
+                    <HorizontalStackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="MisTarjetas_Tapped"/>
+                    </HorizontalStackLayout.GestureRecognizers>
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout Margin="10">
@@ -254,18 +260,18 @@
                              >
 
                             <StackLayout HorizontalOptions="FillAndExpand">
-                                <CarouselView ItemsSource="{Binding Cards}"
-                                  x:Name="Crv_Cards"
-                                  Loop="False"
-                                  IndicatorView="indicatorView"
-                                  BackgroundColor="Transparent"
-                                  HeightRequest="150"
-                                  PeekAreaInsets="70"
-                                  FlowDirection="MatchParent"
-                                  Position="{Binding Position}"
-                                  CurrentItemChanged="Crv_Cards_CurrentItemChanged"
-                              
-                                  Margin="0,10,0,0">
+                                <CarouselView 
+                                    ItemsSource="{Binding Cards}"
+                                    x:Name="Crv_Cards"
+                                    Loop="False"
+                                    IndicatorView="indicatorView"
+                                    BackgroundColor="Transparent"
+                                    HeightRequest="150"
+                                    PeekAreaInsets="70"
+                                    FlowDirection="MatchParent"
+                                    Position="{Binding Position}"
+                                    CurrentItemChanged="Crv_Cards_CurrentItemChanged"
+                                    Margin="0,10,0,0">
 
                                     <CarouselView.ItemTemplate>
                                         <DataTemplate>
@@ -311,7 +317,8 @@
                                                     HeightRequest="130"
                                                     WidthRequest="200"
                                                     CornerRadius="10">
-                                                         <AbsoluteLayout x:Name="Cards"
+                                                         <AbsoluteLayout 
+                                                            x:Name="Cards"
                                                             AbsoluteLayout.LayoutFlags="All"
                                                             AbsoluteLayout.LayoutBounds="0,0,1,1"
                                                             >
@@ -343,9 +350,10 @@
                                                             HorizontalOptions="End"
                                                             TextColor="White">
                                                             <Label.GestureRecognizers>
-                                                                <TapGestureRecognizer Command="{Binding ExecuteBalanceCardCommand}"
-                                                                          CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
-                                                                          BindingContext="{Binding Source={x:Reference Crv_Cards}, Path=BindingContext}">
+                                                                <TapGestureRecognizer 
+                                                                    Command="{Binding ExecuteBalanceCardCommand}"
+                                                                    CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                                    BindingContext="{Binding Source={x:Reference Crv_Cards}, Path=BindingContext}">
                                                                 </TapGestureRecognizer>
                                                             </Label.GestureRecognizers>
 
@@ -405,7 +413,7 @@
                                     </StackLayout.GestureRecognizers>
                                     <AbsoluteLayout >
                                         <Ellipse
-                                            Fill="#9690AC"
+                                             Fill="#9690AC"
                                              HeightRequest="50"
                                              WidthRequest="50"
                                              Aspect="Uniform"/>
@@ -444,6 +452,9 @@
                                         Text="Cancel"
                                         TextColor="Black"
                                         HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="CancelCard_Tapped"/>
+                                    </StackLayout.GestureRecognizers>
                                 </StackLayout>
                                 <StackLayout
                                     Margin="10">
@@ -465,13 +476,14 @@
                                     <Label 
                                         Text="Elimina"
                                         TextColor="Black"
-                                        HorizontalOptions="Center"/> 
+                                        HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="DeleteCard_Tapped"/>
+                                    </StackLayout.GestureRecognizers>
                                 </StackLayout>
                                 <StackLayout 
                                     Margin="10">
-                                    <StackLayout.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="AddNewCard_Tapped"/>
-                                    </StackLayout.GestureRecognizers>
+                                  
                                     <AbsoluteLayout >
                                         <Ellipse 
                                             Fill="#A8AC90"
@@ -492,6 +504,9 @@
                                         Text="Nueva"
                                         TextColor="Black"
                                         HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="AddNewCard_Tapped"/>
+                                    </StackLayout.GestureRecognizers>
                                 </StackLayout>
                             </StackLayout>
                         </Frame>
@@ -509,11 +524,12 @@
                             </Border.StrokeShape>
 
 
-                            <CollectionView ItemsSource="{Binding CardMovementsResult.ListMovimientos}"
-                            BackgroundColor="Transparent"
-                            VerticalOptions="FillAndExpand"
-                            VerticalScrollBarVisibility="Always"
-                            ItemsUpdatingScrollMode="KeepScrollOffset"
+                            <CollectionView 
+                                ItemsSource="{Binding CardMovementsResult.ListMovimientos}"
+                                BackgroundColor="Transparent"
+                                VerticalOptions="FillAndExpand"
+                                VerticalScrollBarVisibility="Always"
+                                ItemsUpdatingScrollMode="KeepScrollOffset"
                             >
                                 <CollectionView.ItemTemplate>
                                     <DataTemplate>
@@ -569,10 +585,11 @@
                     <Image Source="loading.gif"
                        HeightRequest="90"
                        WidthRequest="90"
-                       IsAnimationPlaying="{Binding IsBusy}"
+                       IsAnimationPlaying="False"
                        IsVisible="False"  
                        AbsoluteLayout.LayoutBounds="0,0,1,1"
-                       AbsoluteLayout.LayoutFlags="All"/> <!--{Binding IsBusy}-->
+                       AbsoluteLayout.LayoutFlags="All"/>
+                    <!--IsAnimationPlaying="{Binding IsBusy}" IsVisible = {Binding IsBusy}-->
                 </AbsoluteLayout>
             </Border>
 

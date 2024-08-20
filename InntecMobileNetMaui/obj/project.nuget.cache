@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "b2kkg6zaPuo=",
+  "dgSpecHash": "7wr9oFjVNeM=",
   "success": true,
   "projectFilePath": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\InntecMobileNetMaui.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\vlopez\\.nuget\\packages\\asyncawaitbestpractices\\6.0.4\\asyncawaitbestpractices.6.0.4.nupkg.sha512",
     "C:\\Users\\vlopez\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",
     "C:\\Users\\vlopez\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\vlopez\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
@@ -21,6 +22,7 @@
     "C:\\Users\\vlopez\\.nuget\\packages\\microsoft.net.illink.tasks\\7.0.100-1.23401.1\\microsoft.net.illink.tasks.7.0.100-1.23401.1.nupkg.sha512",
     "C:\\Users\\vlopez\\.nuget\\packages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
     "C:\\Users\\vlopez\\.nuget\\packages\\microsoft.windowsappsdk\\1.2.221209.1\\microsoft.windowsappsdk.1.2.221209.1.nupkg.sha512",
+    "C:\\Users\\vlopez\\.nuget\\packages\\mopups\\1.1.1\\mopups.1.1.1.nupkg.sha512",
     "C:\\Users\\vlopez\\.nuget\\packages\\xamarin.android.glide\\4.13.2.2\\xamarin.android.glide.4.13.2.2.nupkg.sha512",
     "C:\\Users\\vlopez\\.nuget\\packages\\xamarin.android.glide.annotations\\4.13.2.2\\xamarin.android.glide.annotations.4.13.2.2.nupkg.sha512",
     "C:\\Users\\vlopez\\.nuget\\packages\\xamarin.android.glide.disklrucache\\4.13.2.2\\xamarin.android.glide.disklrucache.4.13.2.2.nupkg.sha512",

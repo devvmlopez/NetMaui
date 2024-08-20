@@ -23,13 +23,31 @@
     <MauiXaml Update="RendererControls\CustomEntry.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="RendererControls\CustomSwitch.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Resources\Styles\Colors.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Resources\Styles\Styles.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\Cards\BlockCardOptionsPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\Cards\CancelCard.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\Cards\CardPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\Cards\CardPageList.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\Cards\DeleteCard.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="Views\Cards\NewCardPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="Views\Login\LoginPage.xaml">

@@ -416,9 +416,7 @@ C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-ma
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\InntecMobileNetMaui.AssemblyInfoInputs.cache
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\InntecMobileNetMaui.AssemblyInfo.cs
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\InntecMobileNetMaui.csproj.CoreCompileInputs.cache
-C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\InntecMobileNetMaui.dll
-C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\refint\InntecMobileNetMaui.dll
-C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\InntecMobileNetMaui.pdb
+C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\InntecMobileNetMaui.sourcelink.json
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\InntecMobileNetMaui.runtimeconfig.json
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\InntecMobileNetMaui.dll
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\InntecMobileNetMaui.pdb
@@ -636,5 +634,10 @@ C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-ma
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet.dylib
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\XamlC.stamp
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\InntecMo.ACD87145.Up2Date
+C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\InntecMobileNetMaui.dll
+C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\refint\InntecMobileNetMaui.dll
+C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\InntecMobileNetMaui.pdb
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\InntecMobileNetMaui.genruntimeconfig.cache
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\ref\InntecMobileNetMaui.dll
+C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\AsyncAwaitBestPractices.dll
+C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Mopups.dll

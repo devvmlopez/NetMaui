@@ -41,10 +41,10 @@
                    />
         </AbsoluteLayout>
         <AbsoluteLayout 
-         HorizontalOptions="CenterAndExpand"
-         VerticalOptions="FillAndExpand"
-         AbsoluteLayout.LayoutFlags="All"
-         AbsoluteLayout.LayoutBounds="0,1,1,1">
+             HorizontalOptions="CenterAndExpand"
+             VerticalOptions="FillAndExpand"
+             AbsoluteLayout.LayoutFlags="All"
+             AbsoluteLayout.LayoutBounds="0,1,1,1">
             <Frame 
              BackgroundColor="#90FFFFFF"
              IsClippedToBounds="True" 
@@ -173,6 +173,7 @@
                                                  HorizontalOptions="Center" 
                                                  VerticalOptions="Center"
                                                  WidthRequest="300"
+                                                 Clicked="Btn_Recuperar_Clicked"
                                              />
                             <!--Clicked="Btn_Registro_Clicked"-->
                             <StackLayout 
