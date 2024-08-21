@@ -32,6 +32,9 @@
     <MauiXaml Update="Resources\Styles\Styles.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\Alerts\InformativeAlert.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="Views\Cards\BlockCardOptionsPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

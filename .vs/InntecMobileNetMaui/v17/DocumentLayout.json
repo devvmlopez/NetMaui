@@ -3,8 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\inntecmobilenetmaui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\inntecmobilenetmaui.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\alerts\\informativealert.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\views\\alerts\\informativealert.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\viewmodels\\alerts\\informativeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\viewmodels\\alerts\\informativeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\login\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\views\\login\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\viewmodels\\login\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\viewmodels\\login\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\login\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\views\\login\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\resources\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\resources\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\models\\mailconfirmmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\models\\mailconfirmmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\models\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\cards\\cardpagelist.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\views\\cards\\cardpagelist.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\cards\\cardpagelist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\views\\cards\\cardpagelist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\services\\aesgcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\services\\aesgcm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\models\\carddemo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\models\\carddemo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\cards\\cardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\views\\cards\\cardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\cards\\newcardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -25,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\cards\\cardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\views\\cards\\cardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\cards\\cardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\views\\cards\\cardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\cards\\deletecard.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,32 +115,12 @@
       "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\renderercontrols\\customswitch.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\login\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\views\\login\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\cards\\cardpagelist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\views\\cards\\cardpagelist.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\cards\\cardpagelist.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\views\\cards\\cardpagelist.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\views\\login\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\views\\login\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\resources\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|solutionrelative:inntecmobilenetmaui\\resources\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1FEC58D-85B4-4592-A094-A8072427E9D2}|InntecMobileNetMaui\\InntecMobileNetMaui.csproj|c:\\users\\vlopez\\documents\\github\\netmaui\\inntecmobilenetmaui\\platforms\\android\\androidmanifest.xml||{4E01A4BC-CFCF-452C-8C08-51352512D197}",
@@ -102,50 +142,271 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DeleteCard.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml.cs",
-              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml.cs",
-              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml.cs",
-              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "InformativeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\ViewModels\\Alerts\\InformativeViewModel.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\ViewModels\\Alerts\\InformativeViewModel.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\ViewModels\\Alerts\\InformativeViewModel.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\ViewModels\\Alerts\\InformativeViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T19:46:30.934Z",
+              "WhenOpened": "2024-08-21T18:32:55.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "InntecMobileNetMaui",
-              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\InntecMobileNetMaui.csproj",
-              "RelativeDocumentMoniker": "InntecMobileNetMaui\\InntecMobileNetMaui.csproj",
-              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\InntecMobileNetMaui.csproj",
-              "RelativeToolTip": "InntecMobileNetMaui\\InntecMobileNetMaui.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-20T19:20:56.425Z",
+              "DocumentIndex": 3,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\ViewModels\\Login\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\ViewModels\\Login\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\ViewModels\\Login\\LoginViewModel.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\ViewModels\\Login\\LoginViewModel.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAIwAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T23:53:49.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Services\\UserService.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\Services\\UserService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAADEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T16:48:48.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\AppShell.xaml.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T17:05:37.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml",
+              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAJIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-19T21:07:42.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Resources\\Constants.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Resources\\Constants.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Resources\\Constants.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\Resources\\Constants.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwB4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T15:29:40.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "InformativeAlert.xaml",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Alerts\\InformativeAlert.xaml",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Alerts\\InformativeAlert.xaml",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Alerts\\InformativeAlert.xaml",
+              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Alerts\\InformativeAlert.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-21T17:43:24.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml.cs",
+              "ViewState": "AgIAAAUBAAAAAAAAAAAmwBMBAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T21:15:12.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "NewCardPage.xaml",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\NewCardPage.xaml",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\NewCardPage.xaml",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\NewCardPage.xaml",
+              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\NewCardPage.xaml",
+              "ViewState": "AgIAAD8AAAAAAAAAACBjwFsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-20T16:52:03.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Services\\IUserService.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T16:47:56.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\App.xaml.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\App.xaml.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T17:05:07.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MailConfirmModel.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Models\\MailConfirmModel.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Models\\MailConfirmModel.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Models\\MailConfirmModel.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\Models\\MailConfirmModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T16:52:32.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Models\\LoginModel.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Models\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Models\\LoginModel.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\Models\\LoginModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T23:57:31.216Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AesGcm.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Services\\AesGcm.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Services\\AesGcm.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Services\\AesGcm.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\Services\\AesGcm.cs",
+              "ViewState": "AgIAALwAAAAAAAAAAAAswDYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-21T00:04:34.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CardPageList.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T23:22:31.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CardPageList.xaml",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml",
+              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml",
+              "ViewState": "AgIAAJQBAAAAAAAAAAAjwKUBAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-19T23:22:27.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "CardPage.xaml",
               "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CardPage.xaml",
               "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\CardPage.xaml",
               "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CardPage.xaml",
               "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\CardPage.xaml",
-              "ViewState": "AgIAALABAAAAAAAAAADwv8cBAABXAAAAAAAAAA==",
+              "ViewState": "AgIAAPkAAAAAAAAAAIBZwAsBAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-08-19T21:08:22.673Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 19,
+              "Title": "CancelCard.xaml",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CancelCard.xaml",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\CancelCard.xaml",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CancelCard.xaml",
+              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\CancelCard.xaml",
+              "ViewState": "AgIAAEIAAAAAAAAAACBjwF0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-20T19:53:51.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CardDemo.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Models\\CardDemo.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Models\\CardDemo.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Models\\CardDemo.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\Models\\CardDemo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T22:44:34.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DeleteCard.xaml",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml",
+              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml",
+              "ViewState": "AgIAADkAAAAAAAAAACBjwFMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-20T19:45:23.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "CardPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CardPage.xaml.cs",
               "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\CardPage.xaml.cs",
@@ -158,59 +419,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DeleteCard.xaml",
-              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml",
-              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml",
-              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml",
-              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFMAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-20T19:45:23.429Z",
+              "DocumentIndex": 22,
+              "Title": "DeleteCard.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml.cs",
+              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml.cs",
+              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml.cs",
+              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\DeleteCard.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T19:46:30.934Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CancelCard.xaml",
-              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CancelCard.xaml",
-              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\CancelCard.xaml",
-              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CancelCard.xaml",
-              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\CancelCard.xaml",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAAAF0AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-20T19:53:51.171Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NewCardPage.xaml",
-              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\NewCardPage.xaml",
-              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\NewCardPage.xaml",
-              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\NewCardPage.xaml",
-              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\NewCardPage.xaml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFsAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-20T16:52:03.122Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 23,
               "Title": "NewCardPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\NewCardPage.xaml.cs",
               "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\NewCardPage.xaml.cs",
               "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\NewCardPage.xaml.cs",
               "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\NewCardPage.xaml.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-20T16:55:09.759Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 20,
               "Title": "CancelCard.xaml.cs",
               "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CancelCard.xaml.cs",
               "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\CancelCard.xaml.cs",
@@ -223,20 +458,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 24,
               "Title": "BlockCardOptionsPage.xaml",
               "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\BlockCardOptionsPage.xaml",
               "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\BlockCardOptionsPage.xaml",
               "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\BlockCardOptionsPage.xaml",
               "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\BlockCardOptionsPage.xaml",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAAAGYAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAACBjwGYAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-08-20T19:09:38.01Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 25,
               "Title": "BlockCardOptionsPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\BlockCardOptionsPage.xaml.cs",
               "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\BlockCardOptionsPage.xaml.cs",
@@ -249,7 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 26,
               "Title": "CustomSwitch.xaml",
               "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\RendererControls\\CustomSwitch.xaml",
               "RelativeDocumentMoniker": "InntecMobileNetMaui\\RendererControls\\CustomSwitch.xaml",
@@ -262,7 +497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 27,
               "Title": "CustomSwitch.xaml.cs",
               "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\RendererControls\\CustomSwitch.xaml.cs",
               "RelativeDocumentMoniker": "InntecMobileNetMaui\\RendererControls\\CustomSwitch.xaml.cs",
@@ -275,7 +510,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 28,
               "Title": "MainPage.xaml",
               "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\MainPage.xaml",
               "RelativeDocumentMoniker": "InntecMobileNetMaui\\MainPage.xaml",
@@ -288,59 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CardPageList.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml.cs",
-              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml.cs",
-              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml.cs",
-              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T23:22:31.381Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CardPageList.xaml",
-              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml",
-              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml",
-              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml",
-              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Cards\\CardPageList.xaml",
-              "ViewState": "AgIAALgAAAAAAAAAAADwv8cAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-19T23:22:27.185Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "LoginPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml.cs",
-              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml.cs",
-              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml.cs",
-              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAMwBQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T21:15:12.408Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "LoginPage.xaml",
-              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml",
-              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml",
-              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml",
-              "RelativeToolTip": "InntecMobileNetMaui\\Views\\Login\\LoginPage.xaml",
-              "ViewState": "AgIAAJAAAAAAAAAAAIBJwK8AAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-19T21:07:42.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 29,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\AppShell.xaml",
               "RelativeDocumentMoniker": "InntecMobileNetMaui\\AppShell.xaml",
@@ -353,7 +536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 30,
               "Title": "AndroidManifest.xml",
               "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Platforms\\Android\\AndroidManifest.xml",
               "RelativeDocumentMoniker": "InntecMobileNetMaui\\Platforms\\Android\\AndroidManifest.xml",
@@ -364,20 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Constants.cs",
-              "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Resources\\Constants.cs",
-              "RelativeDocumentMoniker": "InntecMobileNetMaui\\Resources\\Constants.cs",
-              "ToolTip": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Resources\\Constants.cs",
-              "RelativeToolTip": "InntecMobileNetMaui\\Resources\\Constants.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAmwCYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T15:29:40.453Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 32,
               "Title": "MainActivity.cs",
               "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Platforms\\Android\\MainActivity.cs",
               "RelativeDocumentMoniker": "InntecMobileNetMaui\\Platforms\\Android\\MainActivity.cs",
@@ -390,7 +560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 31,
               "Title": "MainApplication.cs",
               "DocumentMoniker": "C:\\Users\\vlopez\\Documents\\GitHub\\NetMaui\\InntecMobileNetMaui\\Platforms\\Android\\MainApplication.cs",
               "RelativeDocumentMoniker": "InntecMobileNetMaui\\Platforms\\Android\\MainApplication.cs",
@@ -398,8 +568,7 @@
               "RelativeToolTip": "InntecMobileNetMaui\\Platforms\\Android\\MainApplication.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-20T00:28:37.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-20T00:28:37.699Z"
             }
           ]
         }

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage 
+             
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InntecMobileNetMaui.Views.Cards.CardPageList"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              Title="CardPageList">
+    
     <Grid  IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
            HorizontalOptions="FillAndExpand"
            VerticalOptions="FillAndExpand" >
@@ -178,21 +182,53 @@
                 >
 
                     <VerticalStackLayout 
+                        BackgroundColor="LightGray"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand"
                         AbsoluteLayout.LayoutFlags="All"
                         AbsoluteLayout.LayoutBounds="0,0,1,1"
-                    >
+                        >
+                        <AbsoluteLayout
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="Start"
+                             AbsoluteLayout.LayoutFlags="All"
+                             AbsoluteLayout.LayoutBounds="0,0,1,1">
+                            <Image Source="inntec.png"
+                                WidthRequest="150"
+                                HeightRequest="200"
+                                HorizontalOptions="StartAndExpand"
+                                VerticalOptions="Start"
+                                Margin="35,-30,0,0"
+                                 />
+                            <Ellipse 
+                                Fill="#4E96C8"
+                                AbsoluteLayout.LayoutFlags="All"
+                                AbsoluteLayout.LayoutBounds="1,0,0.5,0.5"
+                                WidthRequest="250"
+                                HeightRequest="250"
+                                Aspect="Uniform"
+                                Margin="70,-90,0,0"
+                                />
+                            <Ellipse 
+                                Fill="#186094"
+                                AbsoluteLayout.LayoutFlags="All"
+                                AbsoluteLayout.LayoutBounds="1,0,0.4,0.4"
+                                WidthRequest="200"
+                                HeightRequest="200"
+                                Aspect="Uniform"
+                                Margin="70,-80,0,0"
+                                />
+                        </AbsoluteLayout>
 
-                        <VerticalStackLayout Margin="20">
+                        <!--<VerticalStackLayout Margin="20">
                             <Label Text="Furniture in" FontSize="Large" FontAttributes="Bold"/>
                             <Label Text="Unique Style" FontSize="Large" FontAttributes="Bold"/>
 
                             <Label Text="We have wide range of Furniture" TextColor="DarkGray" Margin="0,10,0,0"/>
-                        </VerticalStackLayout>
+                        </VerticalStackLayout>-->
 
                         <!--ItemsSource="{Binding Cards}"-->
-                        <CollectionView 
+                        <!--<CollectionView 
                             
                             BackgroundColor="Transparent"
                             VerticalOptions="FillAndExpand"
@@ -202,7 +238,7 @@
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
 
-                                    <!-- Swipe design border here -->
+                                    --><!-- Swipe design border here --><!--
                                     <Border
                                         StrokeThickness="0"
                                         BackgroundColor="#4E96C8"
@@ -212,7 +248,7 @@
                                         <Border.StrokeShape>
                                             <RoundRectangle CornerRadius="5"/>
                                         </Border.StrokeShape>
-                                        <!-- back swipe is here-->
+                                        --><!-- back swipe is here--><!--
                                         <SwipeView 
                                             HorizontalOptions="FillAndExpand"
                                             VerticalOptions="StartAndExpand">
@@ -309,7 +345,7 @@
                                                 </SwipeItems>
                                             </SwipeView.BottomItems>
                                             <SwipeView.Content>
-                                                <!-- swipe size is here -->
+                                                --><!-- swipe size is here --><!--
                                                 <Border 
                                                     HorizontalOptions="FillAndExpand"
                                                     VerticalOptions="StartAndExpand"
@@ -328,7 +364,7 @@
                                                             <Label 
                                                                 Text="{Binding TarjetaF}"
                                                                 FontSize="Small"
-                                                                BackgroundColor="Transparent"/> <!--Text="{Binding TarjetaF}"-->
+                                                                BackgroundColor="Transparent"/> --><!--Text="{Binding TarjetaF}"--><!--
 
                                                         </VerticalStackLayout>
 
@@ -337,7 +373,7 @@
                                                             HorizontalOptions="EndAndExpand"
                                                             Aspect="Fill"
                                                             HeightRequest="80"
-                                                            WidthRequest="120"/> <!--Source="{Binding ImgProd}"-->
+                                                            WidthRequest="120"/> --><!--Source="{Binding ImgProd}"--><!--
 
                                                     </HorizontalStackLayout>
                                                 </Border>
@@ -347,9 +383,62 @@
 
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
-                        </CollectionView>
+                        </CollectionView>-->
 
+                        <!--<CarouselView.ItemsSource>
+                            <x:Array Type="{x:Type sys:String}">
+                                <sys:String>Tarjeta de Credito</sys:String>
+                                <sys:String>Tarjeta de Vales</sys:String>
+                                <sys:String>Tarjeta de Gasolina</sys:String>
+                            </x:Array>
+                        </CarouselView.ItemsSource>-->
 
+                        <CarouselView 
+                            BindingContext="TarjetaDemo"
+                            BackgroundColor="Transparent"
+                            EmptyView="No items to display."
+                            >
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
+                                        <Frame 
+                                            HasShadow="True"
+                                            BorderColor="DarkGray"
+                                            CornerRadius="5"
+                                            Margin="20"
+                                            HeightRequest="250"
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="CenterAndExpand">
+                                            <StackLayout>
+                                                <Label 
+                                                    Text="{Binding Tipo}"
+                                                    FontAttributes="Bold"
+                                                    FontSize="18"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center" />
+                                                <Image 
+                                                    Source="{Binding TipoTarjeta}"
+                                                    Aspect="Fill"
+                                                    HeightRequest="150"
+                                                    WidthRequest="300"
+                                                    HorizontalOptions="Center" />
+                                                <Label 
+                                                    Text="{Binding Numero}"
+                                                    HorizontalOptions="Center" />
+                                                <Label Text="{Binding Nombre}"
+                                                    FontAttributes="Italic"
+                                                    HorizontalOptions="Center"
+                                                    MaxLines="5"
+                                                    LineBreakMode="TailTruncation" />
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                            
+                        
                     </VerticalStackLayout>
 
 

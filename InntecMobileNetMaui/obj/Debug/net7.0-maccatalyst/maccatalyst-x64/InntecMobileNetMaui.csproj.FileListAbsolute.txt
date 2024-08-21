@@ -641,3 +641,8 @@ C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-ma
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-maccatalyst\maccatalyst-x64\ref\InntecMobileNetMaui.dll
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\AsyncAwaitBestPractices.dll
 C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Mopups.dll
+C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Acr.UserDialogs.dll
+C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\BouncyCastle.Crypto.dll
+C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Plugin.Fingerprint.dll
+C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\Newtonsoft.Json.dll
+C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Mvvm.dll

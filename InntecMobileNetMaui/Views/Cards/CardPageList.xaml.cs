@@ -1,14 +1,23 @@
+using InntecMobileNetMaui.Models;
 using Microsoft.Maui.Controls;
+
 
 namespace InntecMobileNetMaui.Views.Cards;
 
 public partial class CardPageList : ContentPage
 {
+    public CardDemo TarjetaDemo { get; set; }
     private const uint AnimationDuration = 200u;
     private bool isClosed = true;
     public CardPageList()
-	{
+	{   
 		InitializeComponent();
+        TarjetaDemo = new CardDemo
+        {
+            Nombre = "Juan Perez", Numero="1111-0000-0000-2222",Tipo="Credito", TipoTarjeta= "tarjeta_combustible.png"
+        };
+        this.BindingContext = TarjetaDemo;
+
     }
     private void CerrarSession_Tapped(object sender, TappedEventArgs e)
     {

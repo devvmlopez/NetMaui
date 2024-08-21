@@ -1,3 +1,5 @@
+Acr.UserDialogs.dll
+AndHUD.dll
 GoogleGson.dll
 Microsoft.Maui.Controls.Compatibility.dll
 Microsoft.Maui.Controls.dll
@@ -6,6 +8,7 @@ Microsoft.Maui.dll
 Microsoft.Maui.Essentials.dll
 Microsoft.Maui.Graphics.dll
 Mopups.dll
+Plugin.Fingerprint.dll
 Xamarin.Android.Glide.Annotations.dll
 Xamarin.Android.Glide.DiskLruCache.dll
 Xamarin.Android.Glide.dll
@@ -19,6 +22,7 @@ Xamarin.AndroidX.AppCompat.dll
 Xamarin.AndroidX.Arch.Core.Common.dll
 Xamarin.AndroidX.Arch.Core.Runtime.dll
 Xamarin.AndroidX.AsyncLayoutInflater.dll
+Xamarin.AndroidX.Biometric.dll
 Xamarin.AndroidX.Browser.dll
 Xamarin.AndroidX.CardView.dll
 Xamarin.AndroidX.Collection.dll
@@ -147,6 +151,7 @@ androidx.legacy.legacy-support-core-ui.aar
 androidx.legacy.legacy-support-v4.aar
 androidx.exifinterface.exifinterface.aar
 androidx.browser.browser.aar
+androidx.biometric.biometric.aar
 gifdecoder.aar
 glide.aar
 GoogleGson.aar

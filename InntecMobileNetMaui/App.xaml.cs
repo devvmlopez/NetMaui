@@ -1,9 +1,23 @@
-﻿namespace InntecMobileNetMaui
+﻿using InntecMobileNetMaui.Services;
+
+namespace InntecMobileNetMaui
 {
     public partial class App : Application
     {
         public App()
         {
+
+            //Cards = new List<Models.CardModel>();
+            //BenefitLogin = false;
+            //DependencyService.Register<SQLiteDataLogin>();
+            //DependencyService.Register<CardsService>();
+            DependencyService.Register<UserService>();
+            //DependencyService.Register<Services.Viatics.ViaticsService>();
+            //DependencyService.Register<Services.Gas.GasService>();
+            //DependencyService.Register<Services.notificacion.NotifyServices>();
+            //DependencyService.Register<Services.Promociones.PromotionSercies>();
+            //DependencyService.Register<Services.Aclaracion.AclaracionService>();
+
             InitializeComponent();
 
             MainPage = new AppShell();

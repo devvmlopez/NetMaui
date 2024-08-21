@@ -33,11 +33,11 @@ namespace InntecMobileNetMaui.Resources
         #endregion
 
         #region Login
-        //public const string Url_Base = "https://ambientedesarrolloapi.azurewebsites.net/csmAPI";
-        //public const string Url_Base = "https://www.inntecmp.com.mx/CsmAPI";
-        public const string Url_Img_Base = "https://cnd.inntecmp.com.mx/";
         public const string Token_Type = "Bearer";
-        public const string New_Card = "Nueva tarjeta";
+
+        public const string Url_Img_Base = "https://cnd.inntecmp.com.mx/";
+
+        public const string Url_Img_Base_Debug = "https://inntecstorage.blob.core.windows.net/";
 
         public static string Token
         {

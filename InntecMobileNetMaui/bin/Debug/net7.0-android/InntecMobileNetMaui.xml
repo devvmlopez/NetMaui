@@ -4,6 +4,346 @@
         <name>InntecMobileNetMaui</name>
     </assembly>
     <members>
+        <member name="T:InntecMobileNetMaui.Models.LoginModel">
+            <summary>
+            Login registro
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.access_token">
+            <summary>
+            Token de logeo
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.userName">
+            <summary>
+            Usuario (No usado)
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.Usuario">
+            <summary>
+            Usuario para login
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.Password">
+            <summary>
+            Password del usuario
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.client_id">
+            <summary>
+            Identificador del cliente
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.expires_in">
+            <summary>
+            Tiempo en que expira la sesion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.expires">
+            <summary>
+            Fecha en que expira la sesion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.issued">
+            <summary>
+            emision
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.token_type">
+            <summary>
+            Tipo de tiken regresado
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.error">
+            <summary>
+            Mensaje de error
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.error_description">
+            <summary>
+            Descripcion del error
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.HttpStatusCode">
+            <summary>
+            Estatus de la peticion al servidor
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.rememberPWS">
+            <summary>
+            Indicador para recordar la contraseña
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.rol">
+            <summary>
+            Rol
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.MailConfirmModel">
+            <summary>
+            Confirmacion de correo
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MailConfirmModel.Email">
+            <summary>
+            Correo al que se enviara
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MailConfirmModel.Code">
+            <summary>
+            Codigo
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MailConfirmModel.UserName">
+            <summary>
+            Usuario
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MailConfirmModel.UserId">
+            <summary>
+            Identificador del usuario
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MailConfirmModel.NewPassword">
+            <summary>
+            Nuevo Password
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.RecoverPasswordModel">
+            <summary>
+            Recuperacion de password
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.RecoverPasswordModel.Email">
+            <summary>
+            Correo a donde se enviara la recuperacion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.RecoverPasswordModel.UserName">
+            <summary>
+            Usuario
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.RecoverPasswordModel.Message">
+            <summary>
+            Mensaje de la solicitud de la recuperacion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.RecoverPasswordModel.StatusCode">
+            <summary>
+            Estatus que regresa la peticion al servidor
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.RegisterResultModel">
+            <summary>
+            Registro terminado
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.RegisterResultModel.Message">
+            <summary>
+            Mensaje indicando siguientes pasos
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.RegisterResultModel.HttpStatusCode">
+            <summary>
+            Estatus que regresa el servidor a peticion de registro
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.UserModel">
+            <summary>
+            Datos del usuario
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.TokenUnico">
+            <summary>
+            Token unico para registro
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.UsuarioId">
+            <summary>
+            Identificador del usuario
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Tarjeta">
+            <summary>
+            Tarjetas pertenecientes a usuario
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Vigencia">
+            <summary>
+            Vigencias
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Mes">
+            <summary>
+            Mes
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.UsuarioNombre">
+            <summary>
+            Usuario
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Password">
+            <summary>
+            Contraseña
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.PasswordConfirm">
+            <summary>
+            Confirmacion de contraseña
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Nombre">
+            <summary>
+            Nombre del usuario
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Paterno">
+            <summary>
+            Apellido paterno
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Materno">
+            <summary>
+            Apellido materno
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Email">
+            <summary>
+            Correo
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Telefono">
+            <summary>
+            Telefono
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Celular">
+            <summary>
+            Celular
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Estatus">
+            <summary>
+            Estatus del registro
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.EstatusCorreo">
+            <summary>
+            Estatus del correo enviado
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Rfc">
+            <summary>
+            RFC del usuario
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Curp">
+            <summary>
+            CURP del usuario
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Nss">
+            <summary>
+            Numero se seguro social
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.FechaNacimiento">
+            <summary>
+            Fecha de nacimiento
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Observaciones">
+            <summary>
+            Observaciones
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Beneficiarios">
+            <summary>
+            Beneficiario
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.TipoAsistencia">
+            <summary>
+            Tipo de asistencia
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.StatusCode">
+            <summary>
+            Estatus debuelto por el servidor para el registo de la solicitud.
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.Message">
+            <summary>
+            mensaje enviado por el servidor para identificar el estatus en el que se encuenta el proceso
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserModel.CP">
+            <summary>
+            Codigo postal del usaurio
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Models.UserModel.#ctor">
+            <summary>
+            inicializacion del modelo para el registro de la persona
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserV2Model.Nombre">
+            <summary>
+            Nombre de la persona
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserV2Model.Paterno">
+            <summary>
+            Apellido paterno
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserV2Model.Materno">
+            <summary>
+            Apellido materno
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserV2Model.Email">
+            <summary>
+            Correo de la persona
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserV2Model.Celular">
+            <summary>
+            Numero celular para contacto
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserV2Model.UsuarioNombre">
+            <summary>
+            Usuario con el que se ingresara a la APP
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserV2Model.Tarjeta">
+            <summary>
+            Tarjeta con la que se generara el registro
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserV2Model.TokenUnico">
+            <summary>
+            Token unico para la alta de una tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserV2Model.Password">
+            <summary>
+            Password para ingresar a la APP
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.UserV2Model.PasswordConfirm">
+            <summary>
+            Confirmacion de Password para identificar la correcta escritura.
+            </summary>
+        </member>
         <member name="M:InntecMobileNetMaui.RendererControls.MaskedBehavior.OnAttachedTo(Microsoft.Maui.Controls.Entry)">
             <summary>
             Al agregar texto
@@ -27,6 +367,202 @@
             </summary>
             <param name="sender">Objeto con el que se trabaja</param>
             <param name="args">Parametros del eventos</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.AesGcm.NewKeyAesGcm">
+            <summary>
+            Helper that generates a random new key on each call.
+            </summary>
+            <returns>Base 64 encoded string</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.AesGcm.EncryptString(System.String,System.String)">
+            <summary>
+            Metodo para encryptar un texto plano por medio del algoritomo-modo AES-GCM
+            </summary>
+            <param name="plaintext">texto plano</param>
+            <param name="password">palabla clave</param>
+            <returns>texto plano encriptado</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.AesGcm.DecryptString(System.String,System.String)">
+            <summary>
+            Metodo para desencriptar un texto encriptado con el algoritmo-modo AES-GCM
+            </summary>
+            <param name="base64CiphertextAndNonceAndSalt">texto encriptado</param>
+            <param name="password">palabra clave</param>
+            <returns>texto plano desencriptado</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.UserService.LoginAsync(InntecMobileNetMaui.Models.LoginModel,System.String,System.Int32)">
+            <summary>
+            Login
+            </summary>
+            <param name="login">Datos de usuario que quiere hacer login</param>
+            <param name="token">token proveniente de ReCaptcha</param>
+            <param name="plataforma">indica cual es la plataforma que esta ejecutando el login
+            <list type="number">
+            <item name="Android">1</item>
+            <item name="iOS">2</item>
+            </list>
+            </param>
+            <returns>Datos completos del usuario que hizo login(Con token)</returns>
+            Android = 1, iOS = 2
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.UserService.RegisterV2Async(InntecMobileNetMaui.Models.UserV2Model,System.String,System.Int32)">
+            <summary>
+            Nuevo Registro de usuario
+            </summary>
+            <param name="userModel">Datos del usuario a registrar</param>
+            <returns>Datos que indican el siguiente paso</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.UserService.sendConfirmEmail(InntecMobileNetMaui.Models.MailConfirmModel)">
+            <summary>
+            Envio de correo para la confirmacion
+            </summary>
+            <param name="mailConfirm">Datos con correo</param>
+            <returns>Datos del registro indicando si fue satisfactorio o no</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.UserService.GetUserDataAsync">
+            <summary>
+            Datos del usuario
+            </summary>
+            <param name="login">Datos del usuario que inicio sesion(Con token)</param>
+            <returns>Datos del usuario</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.UserService.SetUserDataAsync(InntecMobileNetMaui.Models.UserModel)">
+            <summary>
+            Actualizacion de datos
+            </summary>
+            <param name="login">Datos del inicio de sesion</param>
+            <param name="userModel">Datos del usuario que inicio sesion</param>
+            <returns>Datos actualizados del usuario</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.UserService.RecoverUserPassV2Async(InntecMobileNetMaui.Models.RecoverPasswordModel,System.String,System.Int32)">
+            <summary>
+            Recuperar password de usuario
+            </summary>
+            <param name="recoverPasswordModel">Datos necesarios para recuperar password</param>
+            <returns>Resultado de la operacion</returns>
+        </member>
+        <member name="T:InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel.Title">
+            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel._title"/>
+        </member>
+        <member name="T:InntecMobileNetMaui.ViewModels.BaseAlertViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:InntecMobileNetMaui.ViewModels.BaseAlertViewModel.IsBusy">
+            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.BaseAlertViewModel._isBusy"/>
+        </member>
+        <member name="P:InntecMobileNetMaui.ViewModels.BaseAlertViewModel.Title">
+            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.BaseAlertViewModel._title"/>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Login.LoginViewModel.#ctor">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Login.LoginViewModel.Login(System.String,System.Int32)">
+            <summary>
+            Inicio de sesion
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.#ctor">
+            <summary>
+            Inicializar objetos
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Views.Login.LoginPage.BiometricMap">
+            <summary>
+            Tipos de biometricos
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Views.Login.LoginPage.BiometricDeviceMap">
+            <summary>
+            Identificacion de los biometricos
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.MapDeviceiOS(System.String)">
+            <summary>
+            Identificacion de dispositivo iOS
+            </summary>
+            <param name="identifier"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.OnAppearing">
+            <summary>
+            Inicializacion de Inicio de sesion
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.Btn_Registro_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Registro de usuario nuevo
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.Btn_RecuperarContrasena_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Recuperacion de password
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.Btn_IniciarSesion_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Inicializacion de sesion
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.Login(System.String,System.Int32)">
+            <summary>
+            Guardar datos e iniciar sesion
+            </summary>
+            <param name="token">Token del ReCaptcha</param>
+            <param name="Plataforma">Plataforma que lo ejecuta</param>
+            <remarks>
+            Android = 1
+            iOS = 2
+            </remarks>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.BiometricLogin_Pressed(System.Object,System.EventArgs)">
+            <summary>
+            Inicio de sesion por biometrico
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.BtnPorPass_Pressed(System.Object,System.EventArgs)">
+            <summary>
+            Regresar a ingreso por password
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
         </member>
     </members>
 </doc>
