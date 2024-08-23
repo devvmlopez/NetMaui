@@ -3,6 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InntecMobileNetMaui.Views.Cards.CardPage"
              >
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+               TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="#90255f84" />
+        </Style>
+    </ContentPage.Resources>
     
     <Grid 
         IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
@@ -86,19 +92,22 @@
                            Margin="20,10,0,10"/>
                 </HorizontalStackLayout>
 
-                <HorizontalStackLayout Margin="10"
-                                       x:Name="CerrarSesion">
+                <HorizontalStackLayout 
+                    Margin="10"
+                    x:Name="CerrarSesion">
                     <HorizontalStackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_CerrarSesion"/>
                     </HorizontalStackLayout.GestureRecognizers>
-                    <Image Source="logout.png"
-                           HeightRequest="20"
-                           WidthRequest="20"/>
-                    <Label Text="Cerrar Sesion"
-                           TextColor="#FFFFFF"
-                           FontAttributes="Bold"
-                           VerticalOptions="Center"
-                           Margin="20,10,0,10"/>
+                    <Image 
+                        Source="logout.png"
+                        HeightRequest="20"
+                        WidthRequest="20"/>
+                    <Label 
+                        Text="Cerrar Sesion"
+                        TextColor="#FFFFFF"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        Margin="20,10,0,10"/>
                 </HorizontalStackLayout>
 
                 <VerticalStackLayout
@@ -166,7 +175,7 @@
                 </Border.StrokeShape>
                 <AbsoluteLayout HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand"
-                    BackgroundColor="LightGray"
+                    Style="{StaticResource BackgroundColorViews}"
                     x:Name="swipeContent"
                     >
 

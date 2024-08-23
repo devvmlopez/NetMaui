@@ -6,21 +6,22 @@
         xmlns:controls="clr-namespace:InntecMobileNetMaui.RendererControls">
 
     <Border 
-            Padding="10,5,10,5"
-            BackgroundColor="White"
-            VerticalOptions="FillAndExpand"
-            HorizontalOptions="FillAndExpand">
+        Padding="10,5,10,5"
+        BackgroundColor="White"
+        VerticalOptions="FillAndExpand"
+        HorizontalOptions="FillAndExpand">
         <Border.StrokeShape>
             <RoundRectangle CornerRadius="10,10,10,10"/>
         </Border.StrokeShape>
         <controls:BorderlessEntry 
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalTextAlignment="Center"
-                    Text="{Binding Text}"
-                    IsPassword="{Binding IsPassword}"
-                    TextColor="Black"
-                    x:Name="MeEntry">
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            VerticalTextAlignment="Center"
+            FontFamily="FontMont"
+            Text="{Binding Text}"
+            IsPassword="{Binding IsPassword}"
+            TextColor="Black"
+            x:Name="MeEntry">
             <controls:BorderlessEntry.Margin>
                 <OnPlatform x:TypeArguments="Thickness">
                     <On Platform="iOS" Value="20,0,20,0"/>
@@ -31,22 +32,23 @@
     </Border>
 
     <Label 
-           Margin="15,20,10,20"
-           BackgroundColor="White"
-           TextColor="Black"
-           HorizontalOptions="Start"
-           VerticalOptions="Start"
-           x:Name="MeLabel"/>
+        Margin="15,20,10,20"
+        FontFamily="FontMont"
+        BackgroundColor="White"
+        TextColor="Black"
+        HorizontalOptions="Start"
+        VerticalOptions="Start"
+        x:Name="MeLabel"/>
 
     <Path 
-            x:Name="MeIcon"
-            WidthRequest="25"
-            HeightRequest="25"
-            Margin="0,15,10,0"
-            HorizontalOptions="End"
-            VerticalOptions="StartAndExpand"
-            Aspect="Uniform"
-            Stroke="LightGray"/>
+        x:Name="MeIcon"
+        WidthRequest="25"
+        HeightRequest="25"
+        Margin="0,15,10,0"
+        HorizontalOptions="End"
+        VerticalOptions="StartAndExpand"
+        Aspect="Uniform"
+        Stroke="LightGray"/>
 
 </Grid>
 

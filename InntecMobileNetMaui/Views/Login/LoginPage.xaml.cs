@@ -1,5 +1,4 @@
 using Acr.UserDialogs.Infrastructure;
-
 using Mopups.Services;
 using System.Net;
 using InntecMobileNetMaui.Resources;
@@ -8,6 +7,7 @@ using Plugin.Fingerprint;
 using Plugin.Fingerprint.Abstractions;
 using InntecMobileNetMaui.ViewModels.Alerts;
 using InntecMobileNetMaui.Views.Alerts;
+using InntecMobileNetMaui.Services;
 
 namespace InntecMobileNetMaui.Views.Login;
 public partial class LoginPage : ContentPage

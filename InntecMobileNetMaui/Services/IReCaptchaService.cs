@@ -9,5 +9,6 @@ namespace InntecMobileNetMaui.Services
     public interface IReCaptchaService
     {
         Task<string> Verify(string siteKey, string domainUrl);
+
     }
 }

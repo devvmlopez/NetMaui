@@ -97,23 +97,25 @@ namespace InntecMobileNetMaui.ViewModels.Login
                 }
 
             }
-            LoginModel Result = new LoginModel
+            LoginModel result = new LoginModel
             {
                 Usuario = Constants.UserName,
                 Password = psw,
                 rememberPWS = Constants.rememberPSW
             };
 
-            Result = await DataUser.LoginAsync(Result, token, dispocitivo).ConfigureAwait(true);
-
-            if (Result.HttpStatusCode == System.Net.HttpStatusCode.OK)
+            result = await DataUser.LoginAsync(result, token, dispocitivo).ConfigureAwait(true);
+        
+            if (result.HttpStatusCode == System.Net.HttpStatusCode.OK)
             {
                 // Estado de aceptacion
                 Error_description = Constants.Error_Descipcion;
                 IsBusy = false;
                 ShowError = true;
-                App.Current.MainPage = new CardPageList(); 
+                //App.Current.MainPage = new CardPageList();
                 
+                await Shell.Current.GoToAsync("//CardPageList");
+
             }
             else
             {

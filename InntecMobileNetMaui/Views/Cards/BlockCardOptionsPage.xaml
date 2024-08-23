@@ -18,23 +18,23 @@
               ScaleIn="1"
               ScaleOut="1"/>
     </mopups:PopupPage.Animation>
-    <AbsoluteLayout 
-                  
-                  HorizontalOptions="FillAndExpand" 
-                  VerticalOptions="CenterAndExpand"
-                  Margin="20,0,20,0">
-        <Frame HorizontalOptions="FillAndExpand"
-                               VerticalOptions="CenterAndExpand"
-                               WidthRequest="300"
-                               AbsoluteLayout.LayoutBounds="0,0,1,1" 
-                               AbsoluteLayout.LayoutFlags="All"                                         
-                               CornerRadius="10"
-                               Padding="0">
+    <AbsoluteLayout    
+        HorizontalOptions="FillAndExpand" 
+        VerticalOptions="CenterAndExpand"
+        Margin="20,0,20,0">
+        <Frame 
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand"
+            WidthRequest="300"
+            AbsoluteLayout.LayoutBounds="0,0,1,1" 
+            AbsoluteLayout.LayoutFlags="All"                                         
+            CornerRadius="10"
+            Padding="0">
             <StackLayout>
                 <Frame x:Name="MainFrame" 
-                 BackgroundColor="#255f84" 
-                     Padding="5"
-                         CornerRadius="0">
+                    BackgroundColor="#255f84" 
+                    Padding="5"
+                    CornerRadius="0">
                     <StackLayout Orientation="Horizontal">
                         <Button 
                               Text="x"

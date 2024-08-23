@@ -28,6 +28,8 @@ namespace InntecMobileNetMaui.Services
         /// </param>
         /// <returns>Datos completos del usuario que hizo login(Con token)</returns>
         /// Android = 1, iOS = 2
+        /// 
+        //public async Task<LoginModel> LoginAsync(LoginModel login, string token, int plataforma)
         public async Task<LoginModel> LoginAsync(LoginModel login, string token, int plataforma)
         {
             LoginModel loginModel;

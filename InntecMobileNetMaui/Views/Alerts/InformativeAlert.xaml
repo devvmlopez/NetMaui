@@ -39,7 +39,8 @@
                     FontSize="Subtitle"
                     TextColor="Black"
                     VerticalOptions="StartAndExpand" 
-                    HorizontalOptions="Center" />
+                    HorizontalOptions="Center"
+                    FontFamily="FontMontB"/>
 
                 <Label 
                     Text="{Binding Message}"
@@ -47,7 +48,8 @@
                     TextColor="Black"
                     HorizontalTextAlignment="Center"
                     VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="Center" />
+                    HorizontalOptions="Center"
+                    FontFamily="FontMont"/>
 
 
                 <Button Text="Aceptar"
@@ -55,6 +57,7 @@
                         BackgroundColor="#367fb6"
                         VerticalOptions="EndAndExpand"
                         Clicked="Button_Clicked"
+                        FontFamily="FontMontB"
                         Margin="10,20,10,0"/>
             </VerticalStackLayout>
         </Border>

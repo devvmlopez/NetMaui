@@ -33,7 +33,7 @@
                      Padding="5"
                          CornerRadius="0">
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Numero de Tarjeta"
+                        <Label Text="Cancelar Tarjeta"
                              Margin="10,0,0,0"
                              TextColor="White"
                              HorizontalOptions="Center"

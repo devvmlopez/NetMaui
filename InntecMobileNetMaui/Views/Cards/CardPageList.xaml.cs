@@ -1,30 +1,51 @@
 using InntecMobileNetMaui.Models;
-using Microsoft.Maui.Controls;
+using InntecMobileNetMaui.Services.Card;
+using InntecMobileNetMaui.ViewModels;
+
 
 
 namespace InntecMobileNetMaui.Views.Cards;
 
 public partial class CardPageList : ContentPage
-{
-    public CardDemo TarjetaDemo { get; set; }
-    private const uint AnimationDuration = 200u;
+{   
+    CardViewModel cardViewModel;
+    ICardService<CardModel> cardService;
     private bool isClosed = true;
+    private const uint AnimationDuration = 200u;
+   // public CardPageList(CardViewModel cardViewModel, ICardService<CardModel> cardService)
     public CardPageList()
-	{   
+    {   
 		InitializeComponent();
-        TarjetaDemo = new CardDemo
-        {
-            Nombre = "Juan Perez", Numero="1111-0000-0000-2222",Tipo="Credito", TipoTarjeta= "tarjeta_combustible.png"
-        };
-        this.BindingContext = TarjetaDemo;
+        this.cardViewModel = cardViewModel;
+        this.BindingContext = cardViewModel;
+        this.cardService = cardService;
+    }
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        //if (cardViewModel.Cards.Count == 0)
+        //{
+        //    cardViewModel.ExecuteLoadCardsCommand.Execute(null);
+        //}
 
     }
-    private void CerrarSession_Tapped(object sender, TappedEventArgs e)
+    private async void CerrarSession_Tapped(object sender, TappedEventArgs e)
     {
         CloseAnimation();
-        Shell.Current.GoToAsync("//CardPage");
+        await Shell.Current.GoToAsync("//Login");
+        //Falta implementar la logica de cerrar la session
     }
-
+    private void menu_Tapped(object sender, TappedEventArgs e)
+    {
+        if (isClosed) OpenAnimation();
+        else CloseAnimation();
+    }
+    private async void MisTarjetas_Tapped(object sender, TappedEventArgs e)
+    {
+        CloseAnimation();
+        await Shell.Current.GoToAsync("//CardPage");
+        // Como Demo la logica dicta que deberia ir al listado de todas las tarjetas
+    }
     private void TapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
     {
         _ = MainContentGrid.TranslateTo(this.Width * 0.5, 0, AnimationDuration, Easing.CubicIn);
@@ -59,21 +80,12 @@ public partial class CardPageList : ContentPage
         isClosed = true;
     }
 
-    private void menu_Tapped(object sender, TappedEventArgs e)
-    {
-        if (isClosed) OpenAnimation();
-        else CloseAnimation();
-    }
-    private void MisTarjetas_Tapped(object sender, TappedEventArgs e)
-    {
-        CloseAnimation();
-        Shell.Current.GoToAsync("//CardPageList");
-    }
-    async void TapGestureRecognizer_Tapped_CerrarSesion(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
-    {
-        GridArea_Tapped(this, new TappedEventArgs(null));
+  
+    //async void TapGestureRecognizer_Tapped_CerrarSesion(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
+    //{
+    //    GridArea_Tapped(this, new TappedEventArgs(null));
 
-        await Shell.Current.GoToAsync("//Login");
+    //    await Navigation.PushAsync(new LoginPage()); //Falta implementar la logica de cerrar la session
 
-    }
+    //}
 }

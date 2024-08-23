@@ -126,6 +126,10 @@
               "target": "Package",
               "version": "[2.1.5, )"
             },
+            "Plugin.Maui.CurrentActivity_CalcDP": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Xamarin.Android.Glide": {
               "target": "Package",
               "version": "[4.13.2.2, )",
@@ -180,6 +184,10 @@
               "target": "Package",
               "version": "[1.7.0.1, )",
               "autoReferenced": true
+            },
+            "Xamarin.GooglePlayServices.SafetyNet": {
+              "target": "Package",
+              "version": "[118.0.1.2, )"
             }
           },
           "imports": [
@@ -320,6 +328,10 @@
             "Plugin.Fingerprint": {
               "target": "Package",
               "version": "[2.1.5, )"
+            },
+            "Plugin.Maui.CurrentActivity_CalcDP": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [

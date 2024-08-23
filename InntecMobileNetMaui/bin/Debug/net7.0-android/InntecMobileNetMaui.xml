@@ -4,6 +4,282 @@
         <name>InntecMobileNetMaui</name>
     </assembly>
     <members>
+        <member name="T:InntecMobileNetMaui.Models.BalanceModel">
+            <summary>
+            Balance de la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.BalanceModel.SaldoDisponible">
+            <summary>
+            Saldo disponible de la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.BalanceModel.CreditoLimite">
+            <summary>
+            Limite de credito
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.BalanceModel.Respuesta">
+            <summary>
+            Respuesta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.BalanceModel.Descripcion">
+            <summary>
+            Descripcion del monto
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.BalanceModel.Detalle">
+            <summary>
+            Deatlle adicional
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.BalanceModel.HttpStatusCode">
+            <summary>
+            Estatus de la solicidud al servidor
+            </summary>
+        </member>
+        <member name="E:InntecMobileNetMaui.Models.CardModel.PropertyChanged">
+            <summary>
+            Monitor de cambio de propiedades
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Models.CardModel.SetProperty``1(``0@,``0,System.String,System.Action)">
+            <summary>
+            Desencadenador de asigancion de propiedades
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="backingStore"></param>
+            <param name="value"></param>
+            <param name="propertyName"></param>
+            <param name="onChanged"></param>
+            <returns></returns>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.Index">
+            <summary>
+            Indice de tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.UsuarioCsmTarjetaId">
+            <summary>
+            Identificador unico de tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.Balance">
+            <summary>
+            Saldo de la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.Tarjeta">
+            <summary>
+            Numero de tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.Vigencia">
+            <summary>
+            Vigencia de tarjeta
+            </summary>
+        </member>
+        <member name="F:InntecMobileNetMaui.Models.CardModel.estatus">
+            <summary>
+            Estatatus de la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.Estatus">
+            <summary>
+            Monitoreo de estatus
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.BEstatus">
+            <summary>
+            Indicador del estatus de una tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.BVisible">
+            <summary>
+            Indicador Visual para tarjetas(Ocultar)
+                 25 Bloqueada por inntec
+                 27 Cerrada, Cancelada por el cliente
+                 99 Prevencion
+                 98 BloqueadaCombustible
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.Color">
+            <summary>
+            Color que indica el estatus de la tarjeta(Encabezado)
+            </summary>
+        </member>
+        <member name="F:InntecMobileNetMaui.Models.CardModel.estatusDescripcion">
+            <summary>
+            Descripcion del estatus
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.EstatusDescripcion">
+            <summary>
+            Monitoreo del estatus
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.Producto">
+            <summary>
+            Tipo de tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.ProductoID">
+            <summary>
+            Identificador del producto
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.ImgProd">
+            <summary>
+            Imagen a mostrar
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.userName">
+            <summary>
+            Nombre del usuario
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.saldo">
+            <summary>
+            Saldo de la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.Message">
+            <summary>
+            Mensaje
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.StatusCode">
+            <summary>
+            Estatus de la respuesta del servidor
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.CardModel.Complemento">
+            <summary>
+            Complemento para tarjeta de Combustible
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.ProductComplement">
+            <summary>
+            Complemento de tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.ProductComplement.ProductoGrupoId">
+            <summary>
+            Grupo al que pertenece la tarjeta
+            </summary>
+        </member>
+        <member name="F:InntecMobileNetMaui.Models.ProductComplement.qrId">
+            <summary>
+            Indicador para existencia de QR
+            </summary>
+        </member>
+        <member name="E:InntecMobileNetMaui.Models.ProductComplement.PropertyChanged">
+            <summary>
+            Monitor de cambio de propiedades
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Models.ProductComplement.SetProperty``1(``0@,``0,System.String,System.Action)">
+            <summary>
+            Desencadenador de asigancion de propiedades
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="backingStore"></param>
+            <param name="value"></param>
+            <param name="propertyName"></param>
+            <param name="onChanged"></param>
+            <returns></returns>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.ProductComplement.QrId">
+            <summary>
+            Monitoreo de QR para eliminar o agregar
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.ProductComplement.TarjetaId">
+            <summary>
+            Identificador de la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.ProductComplement.LinkQr">
+            <summary>
+            Indicador para agregar un QR a tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.ProductComplement.UnLinkQr">
+            <summary>
+            Indicador para eliminar un QR a tarjeta
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Enumeradores.EnumValidar">
+            <summary>
+            Tipo de validacion para REGEX
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Enumeradores.enumMenuItemType">
+            <summary>
+            Lista para el menu principal
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Enumeradores.enumStatusSolicitud">
+            <summary>
+            Estatus para solicitudes de viaticos
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Enumeradores.enumComprobacionEstatus">
+            <summary>
+            Estatus para Comprobaciones de viaticos
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Enumeradores.enumProductoID">
+            <summary>
+            Tipos de tarjetas (Productos)
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Enumeradores.enumProductoGrupo">
+            <summary>
+            Grupos de tarjetas
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Enumeradores.enumSolicitudActivacionEstatus">
+            <summary>
+            Estatus de las solicitudes de activacion
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Enumeradores.enumFAQs">
+            <summary>
+            Preguntas Frecuentes
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Enumeradores.CameraOptions">
+            <summary>
+             Manejo de la capara
+             </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Enumeradores.EnumAclaracionEstatus">
+            <summary>
+            Estatus para aclaraciones.
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.HomeMenuItem">
+            <summary>
+            Menu principal
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.HomeMenuItem.Id">
+            <summary>
+            Identificador del Menu
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.HomeMenuItem.ImgMenu">
+            <summary>
+            Imagen a mostrar
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.HomeMenuItem.Title">
+            <summary>
+            Nombre de la opcion
+            </summary>
+        </member>
         <member name="T:InntecMobileNetMaui.Models.LoginModel">
             <summary>
             Login registro
@@ -107,6 +383,91 @@
         <member name="P:InntecMobileNetMaui.Models.MailConfirmModel.NewPassword">
             <summary>
             Nuevo Password
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.MovementsDetailsModel">
+            <summary>
+            Detalle de movimientos
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.MontoMonendaLocal">
+            <summary>
+            Monto del movimiento
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.MontoMonendaRef">
+            <summary>
+            Monto del movmiento (Ref)
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.Fecha">
+            <summary>
+            Fecha del movimiento
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.Comercio">
+            <summary>
+            Datos del comercio
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.Estatus">
+            <summary>
+            Estatus del movimiento
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.Tipo">
+            <summary>
+            Tipo de movimiento (Retiro, Depocito)
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.MontoProcesadoLocal">
+            <summary>
+            Tipo de movimiento en Texto
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.ColorMonto">
+            <summary>
+            Color para el texto del movimiento
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.ComercioAbreviado">
+            <summary>
+            Descripcion del comercio sin tipo de movimiento
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.HttpStatusCode">
+            <summary>
+            Estatus que regresa la peticion del servidor
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.MovementsModel">
+            <summary>
+            Movimientos de la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsModel.ListMovimientos">
+            <summary>
+            Listado de movimientos
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsModel.Respuesta">
+            <summary>
+            Respueta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsModel.Descripcion">
+            <summary>
+            Descripcion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsModel.Detalle">
+            <summary>
+            Detalle
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsModel.HttpStatusCode">
+            <summary>
+            Estatus de la respuesta del servidor
             </summary>
         </member>
         <member name="T:InntecMobileNetMaui.Models.RecoverPasswordModel">
@@ -390,6 +751,53 @@
             <param name="password">palabra clave</param>
             <returns>texto plano desencriptado</returns>
         </member>
+        <member name="M:InntecMobileNetMaui.Services.Card.CardService.GetItemsAsync(System.Boolean)">
+            <summary>
+            Obtencion del listado de tarjetas relacionadas al usuario.
+            </summary>
+            <param name="login">objeto de login, para identificar al usuario</param>
+            <param name="forceRefresh"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Card.CardService.GetBalanceAsync(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Obtencion del balance correspondiente al usuario
+            </summary>
+            <param name="login">Objeto de login</param>
+            <param name="card">Tarjeta de la que se requiere saber el saldo</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Card.CardService.AddItemV2Async(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Se agregar una nueva tarjeta a un usuario.
+            </summary>
+            <param name="item">Tarjeta a agragar</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Card.CardService.GetMovementsMonthAsync(InntecMobileNetMaui.Models.CardModel,System.Int32,System.Int32)">
+            <summary>
+            Obtencion de movimientos relacionados a la tarjeta por mes.
+            </summary>
+            <param name="login">Objeto de login</param>
+            <param name="card">Tarjeta de la que se requiere obtener los movimientos</param>
+            <param name="year">Año de los movimientos</param>
+            <param name="month">Mes de los movimientos</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Card.CardService.BlockItemAsync(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Bloqueo permanente de tarjeta.
+            </summary>
+            <param name="loginModel">Objeto de login</param>
+            <param name="cardModel">Tarjeta que se bloqueara</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Card.CardService.BlockEcommerceItemAsync(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Bloqueo de transacciones ecommerce
+            </summary>
+            <param name="cardModel">Tarjeta que sera bloqueada</param>
+            <returns></returns>
+        </member>
         <member name="M:InntecMobileNetMaui.Services.UserService.LoginAsync(InntecMobileNetMaui.Models.LoginModel,System.String,System.Int32)">
             <summary>
             Login
@@ -404,6 +812,7 @@
             </param>
             <returns>Datos completos del usuario que hizo login(Con token)</returns>
             Android = 1, iOS = 2
+            
         </member>
         <member name="M:InntecMobileNetMaui.Services.UserService.RegisterV2Async(InntecMobileNetMaui.Models.UserV2Model,System.String,System.Int32)">
             <summary>
@@ -456,6 +865,68 @@
         <member name="P:InntecMobileNetMaui.ViewModels.BaseAlertViewModel.Title">
             <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.BaseAlertViewModel._title"/>
         </member>
+        <member name="T:InntecMobileNetMaui.ViewModels.CardViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteBalanceCard(System.Object)">
+            <summary>
+            Saldo de la tarjeta
+            </summary>
+            <param name="arg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteLoadCards">
+            <summary>
+            Lisatdo de tarjetas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.CardViewModel.ExecutCardMovements(System.Object)">
+            <summary>
+            movimientos de tarjeta por mes seleccionado
+            </summary>
+            <param name="obj">Fecha que se necesita filtrar</param>
+            <returns></returns>
+        </member>
+        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.LoadingBalance">
+            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.CardViewModel._loadingBalance"/>
+        </member>
+        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.CardMovementsResult">
+            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.CardViewModel._cardMovementsResult"/>
+        </member>
+        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.IsRefreshing">
+            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.CardViewModel._isRefreshing"/>
+        </member>
+        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.Cards">
+            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.CardViewModel._cards"/>
+        </member>
+        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.Position">
+            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.CardViewModel._position"/>
+        </member>
+        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.Cerrado">
+            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.CardViewModel._cerrado"/>
+        </member>
+        <member name="F:InntecMobileNetMaui.ViewModels.CardViewModel.executeBalanceCardCommand">
+            <summary>The backing field for <see cref="P:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteBalanceCardCommand"/>.</summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteBalanceCardCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteBalanceCard(System.Object)"/>.</summary>
+        </member>
+        <member name="F:InntecMobileNetMaui.ViewModels.CardViewModel.executeLoadCardsCommand">
+            <summary>The backing field for <see cref="P:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteLoadCardsCommand"/>.</summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteLoadCardsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteLoadCards"/>.</summary>
+        </member>
+        <member name="F:InntecMobileNetMaui.ViewModels.CardViewModel.executCardMovementsCommand">
+            <summary>The backing field for <see cref="P:InntecMobileNetMaui.ViewModels.CardViewModel.ExecutCardMovementsCommand"/>.</summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.ExecutCardMovementsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:InntecMobileNetMaui.ViewModels.CardViewModel.ExecutCardMovements(System.Object)"/>.</summary>
+        </member>
         <member name="M:InntecMobileNetMaui.ViewModels.Login.LoginViewModel.#ctor">
             <summary>
             Inicializacion de objetos
@@ -466,6 +937,21 @@
             Inicio de sesion
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:InntecMobileNetMaui.ViewModels.MenuViewModel">
+            <summary>
+            Menu principal
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.MenuViewModel.#ctor">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.MenuViewModel.ExecuteLoadUserDataCommand">
+            <summary>
+            Datos del usuario
+            </summary>
         </member>
         <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.#ctor">
             <summary>
@@ -552,6 +1038,24 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LoadingBalance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LoadingBalance" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CardMovementsResult">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CardMovementsResult" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsRefreshing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Cards">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Cards" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Position">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Position" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Cerrado">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Cerrado" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -563,6 +1067,24 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LoadingBalance">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LoadingBalance" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CardMovementsResult">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CardMovementsResult" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsRefreshing">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Cards">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Cards" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Position">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Position" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Cerrado">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Cerrado" generated properties.</summary>
         </member>
     </members>
 </doc>

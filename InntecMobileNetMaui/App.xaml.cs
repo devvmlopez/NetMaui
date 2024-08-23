@@ -4,10 +4,11 @@ namespace InntecMobileNetMaui
 {
     public partial class App : Application
     {
+        public static List<Models.CardModel> Cards;
         public App()
         {
 
-            //Cards = new List<Models.CardModel>();
+            Cards = new List<Models.CardModel>();
             //BenefitLogin = false;
             //DependencyService.Register<SQLiteDataLogin>();
             //DependencyService.Register<CardsService>();

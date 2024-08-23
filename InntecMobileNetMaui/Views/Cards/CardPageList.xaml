@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage 
-             
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InntecMobileNetMaui.Views.Cards.CardPageList"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              Title="CardPageList">
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+               TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="#90255f84" />
+        </Style>
+    </ContentPage.Resources>
     
     <Grid  IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
            HorizontalOptions="FillAndExpand"
@@ -35,7 +40,7 @@
                 Spacing="5">
 
 
-                <Border HeightRequest="80"
+                <!--<Border HeightRequest="80"
                          WidthRequest="80"
                          StrokeThickness="10"
                          StrokeLineCap="Flat">
@@ -47,21 +52,27 @@
 
                     </Border.Stroke>
 
-                </Border>
+                </Border>-->
+                <Image 
+                    Source="user.png"
+                    HeightRequest="60"
+                    WidthRequest="60"/>
                 <HorizontalStackLayout Margin="0,-10,0,10">
 
                     <Label 
                         Text="Hola, "
                         TextColor="#FFFFFF"
-                        FontAttributes="Bold"
+                        FontFamily="FontMontB"
                         VerticalOptions="Center"
                         Margin="20,10,0,0"/>
 
                     <Label 
                         x:Name="txtUser"
                         TextColor="#FFFFFF"
-                        FontAttributes="Bold"
+                        FontFamily="FontMontB"
                         VerticalOptions="Center"
+                        FontSize="Medium"
+                        Text="{Binding Usuario}" 
                         Margin="0,10,0,0"/>
                 </HorizontalStackLayout>
                 <HorizontalStackLayout Margin="10">
@@ -72,7 +83,7 @@
                     <Label 
                         Text="Mis Tarjetas"
                         TextColor="#FFFFFF"
-                        FontAttributes="Bold"
+                        FontFamily="FontMontB"
                         VerticalOptions="Center"
                         Margin="20,10,0,0"/>
                     <HorizontalStackLayout.GestureRecognizers>
@@ -88,7 +99,7 @@
                     <Label 
                         Text="Mis Datos"
                         TextColor="#FFFFFF"
-                        FontAttributes="Bold"
+                        FontFamily="FontMontB"
                         VerticalOptions="Center"
                         Margin="20,10,0,10"/>
                 </HorizontalStackLayout>
@@ -103,7 +114,7 @@
                     <Label 
                         Text="Cerrar Sesion"
                         TextColor="#FFFFFF"
-                        FontAttributes="Bold"
+                        FontFamily="FontMontB"
                         VerticalOptions="Center"
                         Margin="20,10,0,10"/>
                     <HorizontalStackLayout.GestureRecognizers>
@@ -123,6 +134,7 @@
                         Margin="0,0,0,10">
 
                         <Label 
+                            FontFamily="FontMont"
                             Text="Terminos y condiciones"
                             TextColor="#FFFFFF"
                             HorizontalOptions="CenterAndExpand"
@@ -137,6 +149,7 @@
                         StrokeThickness="0">
 
                         <Label 
+                            FontFamily="FontMont"
                             Text="Aviso de privacidad"
                             TextColor="#FFFFFF"
                             HorizontalOptions="CenterAndExpand"
@@ -151,6 +164,7 @@
                         StrokeThickness="0">
 
                         <Label 
+                            FontFamily="FontMont"
                             Text="V 0.0.3 Alpha"
                             TextColor="#FFFFFF"
                             HorizontalOptions="CenterAndExpand"
@@ -182,7 +196,7 @@
                 >
 
                     <VerticalStackLayout 
-                        BackgroundColor="LightGray"
+                        Style="{StaticResource BackgroundColorViews}"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand"
                         AbsoluteLayout.LayoutFlags="All"
@@ -228,8 +242,8 @@
                         </VerticalStackLayout>-->
 
                         <!--ItemsSource="{Binding Cards}"-->
-                        <!--<CollectionView 
-                            
+                        <CollectionView 
+                            ItemsSource="{Binding Cards}"
                             BackgroundColor="Transparent"
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand"
@@ -238,7 +252,7 @@
                             <CollectionView.ItemTemplate>
                                 <DataTemplate>
 
-                                    --><!-- Swipe design border here --><!--
+                                     <!--Swipe design border here--> 
                                     <Border
                                         StrokeThickness="0"
                                         BackgroundColor="#4E96C8"
@@ -248,7 +262,7 @@
                                         <Border.StrokeShape>
                                             <RoundRectangle CornerRadius="5"/>
                                         </Border.StrokeShape>
-                                        --><!-- back swipe is here--><!--
+                                         <!--back swipe is here-->
                                         <SwipeView 
                                             HorizontalOptions="FillAndExpand"
                                             VerticalOptions="StartAndExpand">
@@ -291,61 +305,70 @@
                                                                         Grid.Row="0" 
                                                                         Grid.Column="2"/>
 
-                                                                <Label Text="NIP"
-                                                                        HorizontalOptions="Center"
-                                                                        TextColor="White"
-                                                                        VerticalOptions="Center"
-                                                                        Grid.Row="1" 
-                                                                        Grid.Column="0"/>
-                                                                <Label Text="Cancelar"
-                                                                        HorizontalOptions="Center"
-                                                                        TextColor="White"
-                                                                        VerticalOptions="Center"
-                                                                        Grid.Row="1" 
-                                                                        Grid.Column="1"/>
-                                                                <Label  Text="Eliminar"
-                                                                        TextColor="White"
-                                                                        HorizontalOptions="Center"
-                                                                        VerticalOptions="Center"
-                                                                        Grid.Row="1" 
-                                                                        Grid.Column="2"/>
-                                                                <Button  x:Name="BtnChangeNIP"
-                                                                         BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
-                                                                         Command="{Binding CardNipCommand}"
-                                                                         CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
-                                                                         BackgroundColor="Transparent"
-                                                                         CornerRadius="5"
-                                                                         HeightRequest="20"
-                                                                         Grid.Row="0"
-                                                                         Grid.RowSpan="2"
-                                                                         Grid.Column="0"/>
-                                                                <Button  x:Name="BtnCancel"
-                                                                         BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
-                                                                         Command="{Binding CancelCardCommand}"
-                                                                         CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
-                                                                         BackgroundColor="Transparent"
-                                                                         CornerRadius="5"
-                                                                         HeightRequest="20"
-                                                                         Grid.Row="0"
-                                                                         Grid.RowSpan="2"
-                                                                         Grid.Column="1"/>
-                                                                <Button  x:Name="BtnDelete"
-                                                                         BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
-                                                                         Command="{Binding DeleteCardCommand}"
-                                                                         CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
-                                                                         BackgroundColor="Transparent"
-                                                                         CornerRadius="5"
-                                                                         HeightRequest="20"
-                                                                         Grid.Row="0"
-                                                                         Grid.RowSpan="2"
-                                                                         Grid.Column="2"/>
+                                                                <Label  
+                                                                    Text="NIP"
+                                                                    FontFamily="FontMont"
+                                                                    HorizontalOptions="Center"
+                                                                    TextColor="White"
+                                                                    VerticalOptions="Center"
+                                                                    Grid.Row="1" 
+                                                                    Grid.Column="0"/>
+                                                                <Label 
+                                                                    Text="Cancelar"
+                                                                    FontFamily="FontMont"
+                                                                    HorizontalOptions="Center"
+                                                                    TextColor="White"
+                                                                    VerticalOptions="Center"
+                                                                    Grid.Row="1" 
+                                                                    Grid.Column="1"/>
+                                                                <Label  
+                                                                    Text="Eliminar"
+                                                                    FontFamily="FontMont"
+                                                                    TextColor="White"
+                                                                    HorizontalOptions="Center"
+                                                                    VerticalOptions="Center"
+                                                                    Grid.Row="1" 
+                                                                    Grid.Column="2"/>
+                                                                <Button  
+                                                                    x:Name="BtnChangeNIP"
+                                                                    BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                                    Command="{Binding CardNipCommand}"
+                                                                    CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                                    BackgroundColor="Transparent"
+                                                                    CornerRadius="5"
+                                                                    HeightRequest="20"
+                                                                    Grid.Row="0"
+                                                                    Grid.RowSpan="2"
+                                                                    Grid.Column="0"/>
+                                                                <Button  
+                                                                    x:Name="BtnCancel"
+                                                                    BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                                    Command="{Binding CancelCardCommand}"
+                                                                    CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                                    BackgroundColor="Transparent"
+                                                                    CornerRadius="5"
+                                                                    HeightRequest="20"
+                                                                    Grid.Row="0"
+                                                                    Grid.RowSpan="2"
+                                                                    Grid.Column="1"/>
+                                                                <Button  
+                                                                    x:Name="BtnDelete"
+                                                                    BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                                    Command="{Binding DeleteCardCommand}"
+                                                                    CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                                    BackgroundColor="Transparent"
+                                                                    CornerRadius="5"
+                                                                    HeightRequest="20"
+                                                                    Grid.Row="0"
+                                                                    Grid.RowSpan="2"
+                                                                    Grid.Column="2"/>
                                                             </Grid>
                                                         </StackLayout>
                                                     </SwipeItemView>
                                                 </SwipeItems>
                                             </SwipeView.BottomItems>
                                             <SwipeView.Content>
-                                                --><!-- swipe size is here --><!--
+                                                 <!--swipe size is here--> 
                                                 <Border 
                                                     HorizontalOptions="FillAndExpand"
                                                     VerticalOptions="StartAndExpand"
@@ -364,7 +387,7 @@
                                                             <Label 
                                                                 Text="{Binding TarjetaF}"
                                                                 FontSize="Small"
-                                                                BackgroundColor="Transparent"/> --><!--Text="{Binding TarjetaF}"--><!--
+                                                                BackgroundColor="Transparent"/> <!--Text="{Binding TarjetaF}"-->
 
                                                         </VerticalStackLayout>
 
@@ -373,7 +396,7 @@
                                                             HorizontalOptions="EndAndExpand"
                                                             Aspect="Fill"
                                                             HeightRequest="80"
-                                                            WidthRequest="120"/> --><!--Source="{Binding ImgProd}"--><!--
+                                                            WidthRequest="120"/> <!--Source="{Binding ImgProd}"-->
 
                                                     </HorizontalStackLayout>
                                                 </Border>
@@ -383,21 +406,26 @@
 
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
-                        </CollectionView>-->
+                        </CollectionView>
 
-                        <!--<CarouselView.ItemsSource>
-                            <x:Array Type="{x:Type sys:String}">
-                                <sys:String>Tarjeta de Credito</sys:String>
-                                <sys:String>Tarjeta de Vales</sys:String>
-                                <sys:String>Tarjeta de Gasolina</sys:String>
-                            </x:Array>
-                        </CarouselView.ItemsSource>-->
-
+                        
+                        
+                        <!--ItemsSource="{Binding Cards}"-->
                         <CarouselView 
-                            BindingContext="TarjetaDemo"
+                            
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
                             BackgroundColor="Transparent"
                             EmptyView="No items to display."
+                            IndicatorView="indicatorView"
                             >
+                            <CarouselView.ItemsSource>
+                                <x:Array Type="{x:Type sys:String}">
+                                    <sys:String>Tarjeta de Credito</sys:String>
+                                    <sys:String>Tarjeta de Vales</sys:String>
+                                    <sys:String>Tarjeta de Gasolina</sys:String>
+                                </x:Array>
+                            </CarouselView.ItemsSource>
                             <CarouselView.ItemTemplate>
                                 <DataTemplate>
                                     <StackLayout>
@@ -411,33 +439,47 @@
                                             VerticalOptions="CenterAndExpand">
                                             <StackLayout>
                                                 <Label 
-                                                    Text="{Binding Tipo}"
+                                                    FontFamily="FontMont"
+                                                    Text="{Binding .}"
                                                     FontAttributes="Bold"
                                                     FontSize="18"
                                                     HorizontalOptions="Center"
-                                                    VerticalOptions="Center" />
+                                                    VerticalOptions="Center" /> <!--Text="{Binding Tipo}"-->
                                                 <Image 
-                                                    Source="{Binding TipoTarjeta}"
+                                                    Source="tarjeta_combustible.png"
                                                     Aspect="Fill"
                                                     HeightRequest="150"
                                                     WidthRequest="300"
                                                     HorizontalOptions="Center" />
                                                 <Label 
-                                                    Text="{Binding Numero}"
+                                                    FontFamily="FontMont"
+                                                    Text="1111-2222-3333-4444"
                                                     HorizontalOptions="Center" />
-                                                <Label Text="{Binding Nombre}"
+                                                <!--Text="{Binding Numero}"-->
+                                                <Label 
+                                                    FontFamily="FontMont"
+                                                    Text="Juan Perez L"
                                                     FontAttributes="Italic"
                                                     HorizontalOptions="Center"
                                                     MaxLines="5"
                                                     LineBreakMode="TailTruncation" />
+                                                <!--Text="{Binding Nombre}"-->
                                             </StackLayout>
+                                            <Frame.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="MisTarjetas_Tapped"/>
+                                            </Frame.GestureRecognizers>
                                         </Frame>
+                                        
                                     </StackLayout>
+                                   
                                 </DataTemplate>
-
                             </CarouselView.ItemTemplate>
                         </CarouselView>
-                            
+                        <IndicatorView 
+                           x:Name="indicatorView"
+                           IndicatorColor="LightGray"
+                           SelectedIndicatorColor="DarkGray"
+                           HorizontalOptions="Center" />
                         
                     </VerticalStackLayout>
 
