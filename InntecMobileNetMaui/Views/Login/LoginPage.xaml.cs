@@ -4,10 +4,12 @@ using System.Net;
 using InntecMobileNetMaui.Resources;
 using InntecMobileNetMaui.ViewModels.Login;
 using Plugin.Fingerprint;
+//using InntecMobileNetMaui.Droid;
 using Plugin.Fingerprint.Abstractions;
 using InntecMobileNetMaui.ViewModels.Alerts;
 using InntecMobileNetMaui.Views.Alerts;
 using InntecMobileNetMaui.Services;
+using InntecMobileNetMaui.Services.ReCaptcha;
 
 namespace InntecMobileNetMaui.Views.Login;
 public partial class LoginPage : ContentPage
@@ -188,7 +190,8 @@ public partial class LoginPage : ContentPage
     /// <param name="e"></param>
     private async void Btn_Registro_Clicked(object sender, EventArgs e)
     {
-       // await Navigation.PushModalAsync(new NavigationPage(new RegisterPage())).ConfigureAwait(false);
+        // await Navigation.PushModalAsync(new NavigationPage(new RegisterPage())).ConfigureAwait(false);
+        await Shell.Current.GoToAsync("//CardMenu");
     }
 
     /// <summary>
@@ -198,7 +201,16 @@ public partial class LoginPage : ContentPage
     /// <param name="e"></param>
     private async void Btn_RecuperarContrasena_Clicked(object sender, EventArgs e)
     {
-       // await Navigation.PushModalAsync(new NavigationPage(new RecoverPasswordPage())).ConfigureAwait(false);
+
+        var captchaToken = await viewModel.reCaptchaService.Verify(Constants.SiteKey, Constants.BaseApiUrl);
+
+        if (captchaToken == null)
+            throw new Exception("Unable to retrieve reCaptcha Token");
+
+        //bool isValidCaptchaToken = await _reCaptcha.Validate(captchaToken);
+        //if (!isValidCaptchaToken)
+        //    throw new Exception("reCaptcha token validation failed.");
+        // await Navigation.PushModalAsync(new NavigationPage(new RecoverPasswordPage())).ConfigureAwait(false);
     }
 
     /// <summary>
@@ -216,6 +228,9 @@ public partial class LoginPage : ContentPage
             if (!viewModel.EsPrimerIntento)
             {
                 captchaToken = await viewModel.reCaptchaService.Verify(Constants.SiteKey, Constants.BaseApiUrl);
+
+                //var evaluacion = await InntecMobileNetMaui.Droid.Services.ReCaptchaService.Verify(Constants.SiteKey, Constants.BaseApiUrl);
+
                 if (captchaToken == null)
                     return;
             }
@@ -227,11 +242,6 @@ public partial class LoginPage : ContentPage
             viewModel.ShowError = true;
             viewModel.Error_description = Constants.ERROR_INTERNET_CONECTION;
             Constants.Error_Descipcion = viewModel.Error_description;
-            //AlertConfig alertConfig = new AlertConfig();
-            //alertConfig.SetMessage(Constants.Error_Descipcion);
-            //alertConfig.SetOkText("Aceptar");
-            //alertConfig.SetTitle("Ha ocurrido un problema!");
-            //UserDialogs.Instance.Alert(alertConfig);
 
             InformativeViewModel.Instance.MessageType = InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel.messageType.Error;
             InformativeViewModel.Instance.Title = "Ha ocurrido un problema!";

@@ -11,14 +11,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyMetadataAttribute("Microsoft.Maui.ApplicationModel.AppInfo.PackageName", "0f80fec4-839d-4369-ad02-854bd92cd5c5")]
-[assembly: System.Reflection.AssemblyMetadataAttribute("Microsoft.Maui.ApplicationModel.AppInfo.PublisherName", "User Name")]
-[assembly: System.Reflection.AssemblyMetadataAttribute("Microsoft.Maui.ApplicationModel.AppInfo.Name", "InntecMobile")]
-[assembly: System.Reflection.AssemblyMetadataAttribute("Microsoft.Maui.ApplicationModel.AppInfo.Version", "1.0.0.1")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("InntecMobileNetMaui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+800e943a690df94c0b7b45fea3727a20ace88fa9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f94e4032d3cdfd45b12063f28d14d4966d1b09e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("InntecMobileNetMaui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InntecMobileNetMaui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

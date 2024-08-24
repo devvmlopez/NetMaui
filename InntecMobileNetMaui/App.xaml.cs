@@ -1,4 +1,5 @@
 ﻿using InntecMobileNetMaui.Services;
+using InntecMobileNetMaui.Services.ReCaptcha;
 
 namespace InntecMobileNetMaui
 {
@@ -13,6 +14,7 @@ namespace InntecMobileNetMaui
             //DependencyService.Register<SQLiteDataLogin>();
             //DependencyService.Register<CardsService>();
             DependencyService.Register<UserService>();
+            DependencyService.Get<IReCaptchaService>();
             //DependencyService.Register<Services.Viatics.ViaticsService>();
             //DependencyService.Register<Services.Gas.GasService>();
             //DependencyService.Register<Services.notificacion.NotifyServices>();

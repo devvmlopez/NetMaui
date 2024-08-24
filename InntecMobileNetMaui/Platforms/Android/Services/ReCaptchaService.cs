@@ -2,12 +2,13 @@
 using Android.Content;
 using Plugin.CurrentActivity;
 using Android.Gms.SafetyNet;
-using InntecMobile.Droid.Services;
+using InntecMobileNetMaui.Droid.Services;
 using InntecMobileNetMaui.Services;
+using InntecMobileNetMaui.Services.ReCaptcha;
 
 //[assembly: Xamarin.Forms.Dependency(typeof(ReCaptchaService))]
 [assembly: Dependency(typeof(ReCaptchaService))]
-namespace InntecMobile.Droid.Services
+namespace InntecMobileNetMaui.Droid.Services
 {
     public class ReCaptchaService : IReCaptchaService
     {

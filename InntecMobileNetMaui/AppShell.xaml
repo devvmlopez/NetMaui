@@ -22,6 +22,10 @@
         Route="CardPageList"/>
     <ShellContent
         Shell.NavBarIsVisible="False"
-        ContentTemplate="{DataTemplate cards:NewCardPage}"
-        Route="NewCardPage"/>
+        ContentTemplate="{DataTemplate cards:CardDetailPage}"
+        Route="CardDetailPage"/>
+    <ShellContent
+        Shell.NavBarIsVisible="False"
+        ContentTemplate="{DataTemplate cards:CardMenu}"
+        Route="CardMenu"/>
 </Shell>

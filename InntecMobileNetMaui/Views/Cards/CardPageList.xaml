@@ -183,7 +183,7 @@
             x:Name="MainContentGrid"
             IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
             BackgroundColor="Transparent"
-            HorizontalOptions="FillAndExpand">
+            HorizontalOptions="FillAndExpand">    <!--BackgroundColor="Transparent"-->
 
             <Border StrokeThickness="0">
                 <Border.StrokeShape>
@@ -193,10 +193,11 @@
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand"
                     x:Name="swipeContent"
-                >
+                    BackgroundColor="#90255f84"   
+                    >
 
                     <VerticalStackLayout 
-                        Style="{StaticResource BackgroundColorViews}"
+                        
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="FillAndExpand"
                         AbsoluteLayout.LayoutFlags="All"

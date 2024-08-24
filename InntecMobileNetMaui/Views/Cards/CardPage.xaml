@@ -9,160 +9,11 @@
             <Setter Property="BackgroundColor" Value="#90255f84" />
         </Style>
     </ContentPage.Resources>
-    
-    <Grid 
+
+    <!--<Grid 
         IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
         HorizontalOptions="FillAndExpand"
         VerticalOptions="FillAndExpand">
-
-
-        <Grid 
-            x:Name="MenuContainer"
-            HorizontalOptions="FillAndExpand"
-            VerticalOptions="FillAndExpand"
-            IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
-            >
-            <Grid.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#666666" Offset="0.0"/>
-                    <GradientStop Color="#000000" Offset="1.0"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-
-            <Grid.GestureRecognizers>
-                <TapGestureRecognizer Tapped="GridArea_Tapped"/>
-            </Grid.GestureRecognizers>
-
-            <VerticalStackLayout 
-                Margin="0,52,0,0"
-                HorizontalOptions="StartAndExpand"
-                VerticalOptions="FillAndExpand"
-                Spacing="5">
-
-
-                <Border HeightRequest="80"
-                    WidthRequest="80"
-                    StrokeThickness="10"
-                    StrokeLineCap="Flat">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="80"/>
-                    </Border.StrokeShape>
-                    <Border.Stroke>
-                        <Color>#FFFFFF</Color>
-
-                    </Border.Stroke>
-
-                </Border>
-                <HorizontalStackLayout Margin="0,-10,0,10">
-
-                    <Label Text="Hola, "
-                           TextColor="#FFFFFF"
-                           FontAttributes="Bold"
-                           VerticalOptions="Center"
-                           Margin="20,10,0,0"/>
-
-                    <Label x:Name="txtUser"
-                           TextColor="#FFFFFF"
-                           FontAttributes="Bold"
-                           VerticalOptions="Center"
-                           Margin="0,10,0,0"/>
-                </HorizontalStackLayout>
-                <HorizontalStackLayout Margin="10">
-                    <Image Source="cards.png"
-                           HeightRequest="20"
-                           WidthRequest="20"/>
-                    <Label Text="Mis Tarjetas"
-                           TextColor="#FFFFFF"
-                           FontAttributes="Bold"
-                           VerticalOptions="Center"
-                           Margin="20,10,0,0"/>
-                    <HorizontalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="MisTarjetas_Tapped"/>
-                    </HorizontalStackLayout.GestureRecognizers>
-                </HorizontalStackLayout>
-
-                <HorizontalStackLayout Margin="10">
-                    <Image Source="mydata.png"
-                           HeightRequest="20"
-                           WidthRequest="20"/>
-                    <Label Text="Mis Datos"
-                           TextColor="#FFFFFF"
-                           FontAttributes="Bold"
-                           VerticalOptions="Center"
-                           Margin="20,10,0,10"/>
-                </HorizontalStackLayout>
-
-                <HorizontalStackLayout 
-                    Margin="10"
-                    x:Name="CerrarSesion">
-                    <HorizontalStackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_CerrarSesion"/>
-                    </HorizontalStackLayout.GestureRecognizers>
-                    <Image 
-                        Source="logout.png"
-                        HeightRequest="20"
-                        WidthRequest="20"/>
-                    <Label 
-                        Text="Cerrar Sesion"
-                        TextColor="#FFFFFF"
-                        FontAttributes="Bold"
-                        VerticalOptions="Center"
-                        Margin="20,10,0,10"/>
-                </HorizontalStackLayout>
-
-                <VerticalStackLayout
-                    HorizontalOptions="EndAndExpand"
-                    VerticalOptions="FillAndExpand"
-                 >
-
-                    <Border 
-                        VerticalOptions="EndAndExpand"
-                        BackgroundColor="#20B8B8B8"
-                        StrokeThickness="0"
-                        Margin="0,0,0,10">
-
-                        <Label 
-                            Text="Terminos y condiciones"
-                            TextColor="#FFFFFF"
-                            HorizontalOptions="CenterAndExpand"
-                            Margin="10"/>
-
-                    </Border>
-
-                    <Border 
-                        VerticalOptions="EndAndExpand"
-                        BackgroundColor="#20B8B8B8"
-                        Margin="0,0,0,10"
-                        StrokeThickness="0">
-
-                        <Label
-                           Text="Aviso de privacidad"
-                           TextColor="#FFFFFF"
-                           HorizontalOptions="CenterAndExpand"
-                           Margin="10"/>
-
-                    </Border>
-
-                    <Border 
-                        VerticalOptions="EndAndExpand"
-                        BackgroundColor="#20B8B8B8"
-                        Margin="0,0,0,10"
-                        StrokeThickness="0">
-
-                        <Label 
-                            Text="V 0.0.3 Alpha"
-                            TextColor="#FFFFFF"
-                            HorizontalOptions="CenterAndExpand"
-                            Margin="10"/>
-
-                    </Border>
-
-                </VerticalStackLayout>
-
-
-            </VerticalStackLayout>
-
-        </Grid>
 
         <Grid 
             x:Name="MainContentGrid"
@@ -172,7 +23,7 @@
             <Border StrokeThickness="0">
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="20" />
-                </Border.StrokeShape>
+                </Border.StrokeShape>-->
                 <AbsoluteLayout HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand"
                     Style="{StaticResource BackgroundColorViews}"
@@ -575,7 +426,7 @@
 
                         </Border>
                     </StackLayout>
-
+                    <!--
 
                     <Image 
                         Source="menu.png"
@@ -585,11 +436,13 @@
                         AbsoluteLayout.LayoutBounds="0.05,0.05,0.5,0.5"
                         HeightRequest="20"
                         WidthRequest="20">
-                        <Image.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
-                        </Image.GestureRecognizers>
+                      
 
                     </Image>
+
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Image.GestureRecognizers>-->
 
                     <Image Source="loading.gif"
                        HeightRequest="90"
@@ -600,9 +453,9 @@
                        AbsoluteLayout.LayoutFlags="All"/>
                     <!--IsAnimationPlaying="{Binding IsBusy}" IsVisible = {Binding IsBusy}-->
                 </AbsoluteLayout>
-            </Border>
+            <!--</Border>
 
         </Grid>
 
-    </Grid>
+    </Grid>-->
 </ContentPage>

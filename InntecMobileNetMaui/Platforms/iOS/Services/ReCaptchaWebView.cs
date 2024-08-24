@@ -7,7 +7,7 @@ using Foundation;
 using UIKit;
 using WebKit;
 
-namespace InntecMobile.iOS.Services
+namespace InntecMobileNetMaui.iOS.Services
 {
     /// <summary>
     /// Hidden WebView that loads Invisible Captcha v2.
@@ -37,7 +37,7 @@ namespace InntecMobile.iOS.Services
         {
             const string htmlFile = "recaptcha_ios.html";
             var assembly = Assembly.GetExecutingAssembly();
-            var resourceName = $"{nameof(InntecMobile)}.iOS.Services.{htmlFile}";
+            var resourceName = $"{nameof(InntecMobileNetMaui)}.iOS.Services.{htmlFile}";
             string htmlContent;
             using (Stream stream = assembly.GetManifestResourceStream(resourceName))
             using (var reader = new StreamReader(stream ?? throw new FileNotFoundException()))

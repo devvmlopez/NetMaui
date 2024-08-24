@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.Cards.CardDetailPage"
+             xmlns:controls="clr-namespace:InntecMobileNetMaui.Views.CustomView"
+             Title="CardDetailPage">
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+            TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="#90255f84" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid 
+     IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
+     HorizontalOptions="FillAndExpand"
+     VerticalOptions="FillAndExpand">
+
+        <Grid 
+         x:Name="MainContentGrid"
+         IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
+         BackgroundColor="Transparent"
+       >
+            <Border StrokeThickness="0">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="20" />
+                </Border.StrokeShape>
+                <AbsoluteLayout HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand"
+                 Style="{StaticResource BackgroundColorViews}"
+                 x:Name="swipeContent"
+                 >
+
+                    <AbsoluteLayout 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="Start"
+                     AbsoluteLayout.LayoutFlags="All"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1">
+                        <Ellipse 
+                          Fill="#4E96C8"
+                          AbsoluteLayout.LayoutFlags="All"
+                          AbsoluteLayout.LayoutBounds="1,0,0.5,0.5"
+                          WidthRequest="250"
+                          HeightRequest="250"
+                          Aspect="Uniform"
+                          Margin="70,-90,0,0"
+              
+                      />
+                        <Ellipse
+                          Fill="#186094"
+                          AbsoluteLayout.LayoutFlags="All"
+                          AbsoluteLayout.LayoutBounds="1,0,0.4,0.4"
+                          WidthRequest="200"
+                          HeightRequest="200"
+                          Aspect="Uniform"
+                          Margin="70,-80,0,0"
+                      />
+
+
+
+                    </AbsoluteLayout>
+
+
+                    <AbsoluteLayout 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     AbsoluteLayout.LayoutFlags="All"
+                     AbsoluteLayout.LayoutBounds="0,1,1,1">
+                        <Ellipse 
+                          Fill="#4E96C8"
+                          AbsoluteLayout.LayoutFlags="All"
+                          AbsoluteLayout.LayoutBounds="-0.3,0.8,0.7,0.7"
+                          WidthRequest="250"
+                          HeightRequest="250"
+                          Aspect="Uniform"
+                          VerticalOptions="EndAndExpand"
+                          Margin="0,0,0,-100"
+                          />
+                        <Ellipse 
+                          Fill="#186094"
+                          AbsoluteLayout.LayoutFlags="All"
+                          AbsoluteLayout.LayoutBounds="-0.25,0.85,0.55,0.55"
+                          WidthRequest="200"
+                          HeightRequest="200"
+                          Aspect="Uniform"
+                          VerticalOptions="EndAndExpand"
+                           Margin="0,0,0,-100"
+                          />
+
+                    </AbsoluteLayout>
+
+                    <AbsoluteLayout 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"
+                     AbsoluteLayout.LayoutFlags="All"
+                     AbsoluteLayout.LayoutBounds="0,1,1,1">
+                        <Border  
+                         BackgroundColor="#90FFFFFF"
+                         AbsoluteLayout.LayoutBounds="0,-0.07,1,0.30"
+                         AbsoluteLayout.LayoutFlags="All"
+                         HorizontalOptions="FillAndExpand"
+                         HeightRequest="250">
+
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="0,0,20,20"/>
+                            </Border.StrokeShape>
+                        </Border>
+
+                    </AbsoluteLayout>
+
+
+                    <StackLayout 
+                      Margin="0,80,0,0"
+                      HorizontalOptions="CenterAndExpand"
+                      AbsoluteLayout.LayoutFlags="All"
+                      AbsoluteLayout.LayoutBounds="0,0,1,1"
+                      >
+                        <StackLayout 
+                          Orientation="Horizontal"
+                          HorizontalOptions="FillAndExpand"
+                          >
+
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <CarouselView 
+                                 ItemsSource="{Binding Cards}"
+                                 x:Name="Crv_Cards"
+                                 Loop="False"
+                                 IndicatorView="indicatorView"
+                                 BackgroundColor="Transparent"
+                                 HeightRequest="150"
+                                 PeekAreaInsets="70"
+                                 FlowDirection="MatchParent"
+                                 Position="{Binding Position}"
+                                 
+                                 Margin="0,10,0,0"><!--CurrentItemChanged="Crv_Cards_CurrentItemChanged"-->
+
+                                    <CarouselView.ItemTemplate>
+                                        <DataTemplate>
+
+                                            <StackLayout
+                                         VerticalOptions="FillAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                                <VisualStateManager.VisualStateGroups>
+                                                    <VisualStateGroup x:Name="CommonStates">
+                                                        <VisualState x:Name="CurrentItem">
+                                                            <VisualState.Setters>
+                                                                <Setter Property="Scale"
+                                                     Value="1.2" />
+                                                            </VisualState.Setters>
+                                                        </VisualState>
+                                                        <VisualState x:Name="PreviousItem">
+                                                            <VisualState.Setters>
+                                                                <Setter Property="Opacity"
+                                                     Value="0.5" />
+                                                            </VisualState.Setters>
+                                                        </VisualState>
+                                                        <VisualState x:Name="NextItem">
+                                                            <VisualState.Setters>
+                                                                <Setter Property="Opacity"
+                                                     Value="0.5" />
+                                                            </VisualState.Setters>
+                                                        </VisualState>
+                                                        <VisualState x:Name="DefaultItem">
+                                                            <VisualState.Setters>
+                                                                <Setter Property="Opacity"
+                                                     Value="0.25" />
+                                                            </VisualState.Setters>
+                                                        </VisualState>
+                                                    </VisualStateGroup>
+                                                </VisualStateManager.VisualStateGroups>
+
+                                                <Frame  
+                                                 BackgroundColor="Transparent"
+                                                 BorderColor="Transparent"
+                                                 Padding="5"
+                                                 HasShadow="False"
+                                                 HorizontalOptions="Center"
+                                                 HeightRequest="130"
+                                                 WidthRequest="200"
+                                                 CornerRadius="10">
+                                                    <AbsoluteLayout 
+                                                         x:Name="Cards"
+                                                         AbsoluteLayout.LayoutFlags="All"
+                                                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                                         >
+                                                        <Image 
+                                                            Source="{Binding ImgProd}"
+                                                            AbsoluteLayout.LayoutFlags="All"
+                                                            AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                                            Aspect="Fill"
+                                                            HeightRequest="120"
+                                                            WidthRequest="185"/>
+                                                        <Label 
+                                                            Text="{Binding TarjetaF}"
+                                                            AbsoluteLayout.LayoutFlags="All"
+                                                            AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                                            Margin="0,0,10,0"
+                                                            FontAttributes="Bold"
+                                                            FontSize="Micro"
+                                                            VerticalOptions="Center"
+                                                            HorizontalOptions="EndAndExpand"
+                                                            TextColor="White"/>
+                                                        <Label 
+                                                         Text="{Binding Balance}"
+                                                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                                         AbsoluteLayout.LayoutFlags="All"
+                                                         Margin="0,25,10,0"
+                                                         FontAttributes="Bold"
+                                                         FontSize="Micro"
+                                                         VerticalOptions="Center"
+                                                         HorizontalOptions="End"
+                                                         TextColor="White">
+                                                            <Label.GestureRecognizers>
+                                                                <TapGestureRecognizer 
+                                                                 Command="{Binding ExecuteBalanceCardCommand}"
+                                                                 CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                                 BindingContext="{Binding Source={x:Reference Crv_Cards}, Path=BindingContext}">
+                                                                </TapGestureRecognizer>
+                                                            </Label.GestureRecognizers>
+
+                                                        </Label>
+                                                    </AbsoluteLayout>
+                                                </Frame>
+
+                                            </StackLayout>
+
+                                        </DataTemplate>
+                                    </CarouselView.ItemTemplate>
+                                </CarouselView>
+                                <IndicatorView 
+                                 x:Name="indicatorView"
+                                 IndicatorColor="White"
+                                 SelectedIndicatorColor="DarkGray"
+                                 HorizontalOptions="Center" />
+                            </StackLayout>
+
+
+                        </StackLayout>
+
+                        <Frame
+                         BackgroundColor="Transparent"
+                         BorderColor="Transparent">
+                            <StackLayout 
+                             VerticalOptions="CenterAndExpand"
+                             HorizontalOptions="CenterAndExpand"
+                             Orientation="Horizontal">
+                                <StackLayout Margin="10">
+                                    <AbsoluteLayout >
+                                        <Ellipse 
+                                          Fill="#B09DBC"
+                                          HeightRequest="50"
+                                          WidthRequest="50"
+                                          Aspect="Uniform"/>
+                                        <Image 
+                                         Source="changenip.png"
+                                         HeightRequest="25"
+                                         WidthRequest="25"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                         AbsoluteLayout.LayoutFlags="All"
+
+                                        />
+                                    </AbsoluteLayout>
+                                    <Label
+                                     Text="NIP"
+                                     TextColor="Black"
+                                     HorizontalOptions="Center"/>
+                                </StackLayout>
+                                <StackLayout 
+                                 Margin="10">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="BlockCard_Tapped"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <AbsoluteLayout >
+                                        <Ellipse
+                                          Fill="#9690AC"
+                                          HeightRequest="50"
+                                          WidthRequest="50"
+                                          Aspect="Uniform"/>
+                                        <Image 
+                                         Source="key.png"
+                                         HeightRequest="20"
+                                         WidthRequest="20"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                         AbsoluteLayout.LayoutFlags="All"/>
+                                    </AbsoluteLayout>
+                                    <Label
+                                    Text="Block"
+                                    TextColor="Black"
+                                    HorizontalOptions="Center"/>
+                                </StackLayout>
+                                <StackLayout 
+                                 Margin="10">
+                                    <AbsoluteLayout >
+                                        <Ellipse 
+                                         Fill="#9DBCBC"
+                                         HeightRequest="50"
+                                         WidthRequest="50"
+                                         Aspect="Uniform"/>
+                                        <Image 
+                                         Source="cancel.png"
+                                         HeightRequest="25"
+                                         WidthRequest="25"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                         AbsoluteLayout.LayoutFlags="All"/>
+                                    </AbsoluteLayout>
+                                    <Label 
+                                     Text="Cancel"
+                                     TextColor="Black"
+                                     HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="CancelCard_Tapped"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                                <StackLayout
+                                 Margin="10">
+                                    <AbsoluteLayout >
+                                        <Ellipse
+                                         Fill="#9690AC"
+                                         HeightRequest="50"
+                                         WidthRequest="50"
+                                         Aspect="Uniform"/>
+                                        <Image 
+                                         Source="delete.png"
+                                         HeightRequest="20"
+                                         WidthRequest="20"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                         AbsoluteLayout.LayoutFlags="All"/>
+                                    </AbsoluteLayout>
+                                    <Label 
+                                     Text="Elimina"
+                                     TextColor="Black"
+                                     HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="DeleteCard_Tapped"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                                <StackLayout 
+                                 Margin="10">
+
+                                    <AbsoluteLayout >
+                                        <Ellipse 
+                                         Fill="#A8AC90"
+                                         HeightRequest="50"
+                                         WidthRequest="50"
+                                         Aspect="Uniform"/>
+                                        <Image 
+                                         Source="credit_card_add.png"
+                                         HeightRequest="30"
+                                         WidthRequest="30"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center"
+                                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                         AbsoluteLayout.LayoutFlags="All"/>
+
+                                    </AbsoluteLayout>
+                                    <Label 
+                                     Text="Nueva"
+                                     TextColor="Black"
+                                     HorizontalOptions="Center"/>
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="AddNewCard_Tapped"/>
+                                    </StackLayout.GestureRecognizers>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+                        <Border 
+                         BackgroundColor="#90FFFFFF"
+                         Padding="5"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand"
+                         AbsoluteLayout.LayoutFlags="All"
+                         AbsoluteLayout.LayoutBounds="0,0,1,1"
+                         >
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="20,20,0,0"/>
+                            </Border.StrokeShape>
+
+
+                            <CollectionView 
+                             ItemsSource="{Binding CardMovementsResult.ListMovimientos}"
+                             BackgroundColor="Transparent"
+                             VerticalOptions="FillAndExpand"
+                             VerticalScrollBarVisibility="Always"
+                             ItemsUpdatingScrollMode="KeepScrollOffset"
+                         >
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Frame 
+                                         BackgroundColor="Transparent"
+                                         BorderColor="Transparent"
+                                         >
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout HorizontalOptions="Start">
+                                                    <Label
+                                                     Text="{Binding ComercioAbreviado}"
+                                                     FontSize="Small"
+                                                     TextColor="{Binding ColorMonto}"
+                                                     BackgroundColor="Transparent"/>
+                                                    <Label 
+                                                     Text="{Binding Fecha}"
+                                                     FontSize="Micro"
+                                                     TextColor="{Binding ColorMonto}"
+                                                     BackgroundColor="Transparent"/>
+                                                </StackLayout>
+                                                <Label 
+                                                 Text="{Binding MontoProcesadoLocal}"
+                                                 TextColor="{Binding ColorMonto}"
+                                                 HorizontalOptions="EndAndExpand"
+                                                />
+                                            </StackLayout>
+
+                                        </Frame>
+
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+
+
+                        </Border>
+                    </StackLayout>
+
+
+                    <Image 
+                        Source="loading.gif"
+                        HeightRequest="90"
+                        WidthRequest="90"
+                        IsAnimationPlaying="False"
+                        IsVisible="False"  
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"/>
+                    <!--IsAnimationPlaying="{Binding IsBusy}" IsVisible = {Binding IsBusy}-->
+
+                    <controls:CustomMenu
+                        IconIzq="cards"
+                        IconIzqEnable="False"
+                        IconCentroIzq="credit_card_add"
+                        IconCentroIzqEnable="True"
+                        IconCentroDer="faq"
+                        IconCentroDerEnable="True"
+                        IconDer="user"
+                        IconDerEnable="True"
+                        IconCentro="innteclogo"
+                        IconCentroEnable="True"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="CenterAndExpand"
+                        AbsoluteLayout.LayoutBounds="0.2,1,1,0.09"
+                        AbsoluteLayout.LayoutFlags="All"
+                       >
+                    </controls:CustomMenu>
+                </AbsoluteLayout>
+            </Border>
+
+        </Grid>
+
+    </Grid>
+</ContentPage>

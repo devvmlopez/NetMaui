@@ -1,0 +1,1 @@
+C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\InntecMobileNetMaui.csproj;x64

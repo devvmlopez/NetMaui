@@ -21,7 +21,7 @@
             Text="{Binding Text}"
             IsPassword="{Binding IsPassword}"
             TextColor="Black"
-            x:Name="MeEntry">
+            x:Name="MeEntry">  <!---->
             <controls:BorderlessEntry.Margin>
                 <OnPlatform x:TypeArguments="Thickness">
                     <On Platform="iOS" Value="20,0,20,0"/>

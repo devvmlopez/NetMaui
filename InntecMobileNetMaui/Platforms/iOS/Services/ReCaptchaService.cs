@@ -1,13 +1,14 @@
 ﻿using System.Threading.Tasks;
 using Foundation;
-using InntecMobile.iOS.Services;
+using InntecMobileNetMaui.iOS.Services;
 using InntecMobileNetMaui.Services;
+using InntecMobileNetMaui.Services.ReCaptcha;
 using UIKit;
 using WebKit;
 
 //[assembly: Xamarin.Forms.Dependency(typeof(ReCaptchaService))]
 [assembly: Dependency(typeof(ReCaptchaService))]
-namespace InntecMobile.iOS.Services
+namespace InntecMobileNetMaui.iOS.Services
 {
 	public class ReCaptchaService : IReCaptchaService
 	{

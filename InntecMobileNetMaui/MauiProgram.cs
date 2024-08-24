@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
-//using InntecMobileNetMaui.Platforms.Android.Services;
+//using InntecMobileNetMaui.Droid.Services;
 //using InntecMobileNetMaui.iOS.Services;
-using InntecMobileNetMaui.Services;
+using InntecMobileNetMaui.Views.Login;
 
 namespace InntecMobileNetMaui
 {
@@ -21,14 +21,8 @@ namespace InntecMobileNetMaui
                     fonts.AddFont("Montserrat.ttf", "FontMont");
                     fonts.AddFont("Montserrat-Bold.ttf", "FontMontB");
                 });
-//             .ConfigureMauiHandlers((handlers) =>
-//              {
-//#if ANDROID
-//                handlers.AddHandler(typeof(IReCaptchaService), typeof(InntecMobileNetMaui.Droid.Services.ReCaptchaService));
-//#elif IOS
-//                handlers.AddHandler(typeof(IReCaptchaService), typeof(InntecMobileNetMaui.iOS.Services.ReCaptchaService));
-//#endif
-//              });
+                   // builder.Services.AddSingleton<LoginPage>();builder.Services.AddSingleton<ReCaptchaService>();
+                    return builder.Build();
 
 #if DEBUG
             builder.Logging.AddDebug();
