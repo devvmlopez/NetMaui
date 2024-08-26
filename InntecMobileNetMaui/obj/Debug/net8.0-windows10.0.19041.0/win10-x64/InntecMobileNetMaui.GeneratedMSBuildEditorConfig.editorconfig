@@ -125,3 +125,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Login.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Login\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Login\LoginPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/MyDataPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.MyDataPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MyDataPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MyDataPage.xaml

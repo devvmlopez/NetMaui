@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InntecMobileNetMaui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+f94e4032d3cdfd45b12063f28d14d4966d1b09e5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+63fc407e48392cc140ad94362ec852b2a828b37c")]
 [assembly: System.Reflection.AssemblyProductAttribute("InntecMobileNetMaui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InntecMobileNetMaui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

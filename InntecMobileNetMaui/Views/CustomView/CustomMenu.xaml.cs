@@ -92,7 +92,7 @@ public partial class CustomMenu : ContentView
 
     private async void TapIconoDer_Tapped(object sender, TappedEventArgs e)
     {
-        await Shell.Current.GoToAsync("//Login");
+        await Shell.Current.GoToAsync("//MyDatePage");
     }
 
     public static readonly BindableProperty IconDerEnableProperty = BindableProperty.Create("IconDerEnable",

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.MyDataPage"
+             xmlns:controls="clr-namespace:InntecMobileNetMaui.RendererControls"
+             xmlns:Menucontrols="clr-namespace:InntecMobileNetMaui.Views.CustomView"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+               TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="#90255f84" />
+        </Style>
+        <Style x:Key="BackgroundColorCustomControl"
+               TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout 
+            Style="{StaticResource BackgroundColorViews}"
+            HorizontalOptions="FillAndExpand" 
+            VerticalOptions="FillAndExpand">
+            <StackLayout 
+                Style="{StaticResource BackgroundColorCustomControl}"
+                AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                AbsoluteLayout.LayoutFlags="All"  
+                VerticalOptions="StartAndExpand"
+                Padding="0,10,0,0">
+                <Image 
+                    Source="inntec.png" 
+                    HeightRequest="80" 
+                    WidthRequest="210"
+                    Margin="0,16"/>
+                <ScrollView 
+                    Style="{StaticResource BackgroundColorCustomControl}">
+                    <StackLayout 
+                        Style="{StaticResource BackgroundColorCustomControl}"
+                        HorizontalOptions="FillAndExpand" 
+                        Padding="30,8,30,8">
+                        <Frame
+                            BackgroundColor="White"
+                            BorderColor="LightGray"
+                            Margin="8,0"
+                            Padding="8"
+                            IsClippedToBounds="True"
+                            CornerRadius="10">
+                            <StackLayout>
+                                <Label 
+                                    x:Name="lblName" 
+                                    FontFamily="FontMontB" 
+                                    Text="Nombre(s)"/>
+                                <Entry 
+                                    x:Name="txtName" 
+                                    FontFamily="FontMont" 
+                                    Text="{Binding UserModel.Nombre}"/>
+
+                                <Label 
+                                    x:Name="lblPaterno" 
+                                    FontFamily="FontMontB" 
+                                    Text="Apellido paterno"/>
+                                <Entry 
+                                    x:Name="txtPaterno" 
+                                    FontFamily="FontMont" 
+                                    Text="{Binding UserModel.Paterno}"/>
+
+                                <Label 
+                                    x:Name="lblMaterno" 
+                                    FontFamily="FontMontB" 
+                                    Text="Apellido materno"/>
+                                <Entry 
+                                    x:Name="txtMaterno" 
+                                    FontFamily="FontMont" 
+                                    Text="{Binding UserModel.Materno}"/>
+
+                                <Label 
+                                    x:Name="lblCorreo" 
+                                    FontFamily="FontMontB" 
+                                    Text="Correo electronico"/>
+                                <Entry 
+                                    x:Name="txtCorreo" 
+                                    FontFamily="FontMont"
+                                    Text="{Binding UserModel.Email}"/>
+
+                                <Label 
+                                    x:Name="lblTelefono" 
+                                    FontFamily="FontMontB" 
+                                    Text="Telefono"/>
+                                <Entry 
+                                    x:Name="txtTelefono" 
+                                    FontFamily="FontMont" 
+                                    Text="{Binding UserModel.Telefono}"/>
+
+                                <Label 
+                                    x:Name="lblCelular"
+                                    FontFamily="FontMontB"
+                                    Text="Celular"/>
+                                <Entry 
+                                    x:Name="txtCelular" 
+                                    FontFamily="FontMont" 
+                                    Text="{Binding UserModel.Celular}"/>
+
+                                <Label 
+                                    x:Name="lblFecha"
+                                    FontFamily="FontMontB" 
+                                    Text="Fecha de nacimiento"/>
+                                <DatePicker
+                                    x:Name="dtFecha" 
+                                    FontFamily="FontMont" 
+                                    Date="{Binding UserModel.FechaNacimiento}"/>
+
+                                <Label 
+                                    x:Name="lblBeneficiario" 
+                                    FontFamily="FontMontB" 
+                                    Text="Beneficiario"/>
+                                <Entry 
+                                    x:Name="txtBeneficiario"
+                                    FontFamily="FontMont" 
+                                    Text="{Binding UserModel.Beneficiarios}"/>
+                            </StackLayout>
+                        </Frame>
+                        <Button 
+                            Text="Guardar"
+                            CornerRadius="10"
+                            BackgroundColor="#3487CB"
+                            TextColor="White"
+                            Margin="4,8"
+                            Clicked="Button_Clicked"
+                            /> 
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+            <AbsoluteLayout 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                AbsoluteLayout.LayoutFlags="All"
+                BackgroundColor="#00000000"
+                IsVisible="{Binding IsBusy}">
+              
+                <Image 
+                    Source="loading.gif"
+                    HeightRequest="70"
+                    WidthRequest="70"
+                    IsAnimationPlaying="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"/>
+            </AbsoluteLayout>
+            <Menucontrols:CustomMenu
+                 IconIzq="cards"
+                 IconIzqEnable="True"
+                 IconCentroIzq="credit_card_add"
+                 IconCentroIzqEnable="True"
+                 IconCentroDer="faq"
+                 IconCentroDerEnable="True"
+                 IconDer="user"
+                 IconDerEnable="False"
+                 IconCentro="innteclogo"
+                 IconCentroEnable="True"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="CenterAndExpand"
+                 AbsoluteLayout.LayoutBounds="0.2,1,1,0.09"
+                 AbsoluteLayout.LayoutFlags="All"
+                 >  
+            </Menucontrols:CustomMenu>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

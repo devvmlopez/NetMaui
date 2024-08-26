@@ -953,6 +953,34 @@
             Datos del usuario
             </summary>
         </member>
+        <member name="T:InntecMobileNetMaui.ViewModels.MyDataViewModel">
+            <summary>
+            Datos del usaurio
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.MyDataViewModel.#ctor(InntecMobileNetMaui.Views.MyDataPage)">
+            <summary>
+            Inicializar objetos
+            </summary>
+            <param name="myDataPage">Pagina de Binding</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.MyDataViewModel.ExecuteSaveUserData">
+            <summary>
+            Actualizacion de datos
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.MyDataViewModel.ExecuteLoadUserData(InntecMobileNetMaui.Models.LoginModel)">
+            <summary>
+            Carga de datos
+            </summary>
+            <param name="loginModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.MyDataViewModel.ExecuteLoadUserData">
+            <summary>
+            Datos del usuario
+            </summary>
+        </member>
         <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.#ctor">
             <summary>
             Inicializar objetos
@@ -1025,6 +1053,19 @@
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.MyDataPage.Button_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Actualizar datos
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.MyDataPage.OnBackButtonPressed">
+            <summary>
+            Regresar a pagina principal
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>

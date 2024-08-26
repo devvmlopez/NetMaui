@@ -232,13 +232,14 @@
 
         </AbsoluteLayout>
 
-        <Image Source="loading.gif"
-         HeightRequest="70"
-         WidthRequest="70"
-         IsAnimationPlaying="{Binding IsBusy}"
-         IsVisible="{Binding IsBusy}"
-         AbsoluteLayout.LayoutBounds="0,0,1,1"
-         AbsoluteLayout.LayoutFlags="All"/>
+        <Image 
+            Source="loading.gif"
+            HeightRequest="70"
+            WidthRequest="70"
+            IsAnimationPlaying="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"/>
         
     </AbsoluteLayout>
 </ContentPage>
