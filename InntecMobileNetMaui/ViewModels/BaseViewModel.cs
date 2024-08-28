@@ -1,6 +1,5 @@
 ﻿using InntecMobileNetMaui.Models;
 using InntecMobileNetMaui.Services;
-using InntecMobileNetMaui.Services.ReCaptcha;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
@@ -9,7 +8,7 @@ namespace InntecMobileNetMaui.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
         public IDataStore<LoginModel> DataLogin => DependencyService.Get<IDataStore<LoginModel>>();
-        //public ICardsService<CardModel> DataCard => DependencyService.Get<ICardsService<CardModel>>();
+        public ICardsService<CardModel> DataCard => DependencyService.Get<ICardsService<CardModel>>();
         public IUserService<UserModel> DataUser => DependencyService.Get<IUserService<UserModel>>();
         //public Services.Viatics.IViaticsService<Models.Viatics.InfoNewRequest> DataViatics => DependencyService.Get<Services.Viatics.IViaticsService<Models.Viatics.InfoNewRequest>>();
         //public Services.Gas.IGasService<Guid> DataGas => DependencyService.Get<Services.Gas.IGasService<Guid>>();

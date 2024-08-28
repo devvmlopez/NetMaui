@@ -25,7 +25,7 @@ namespace InntecMobileNetMaui
             //OnBackPressed();
             CrossCurrentActivity.Current.Init(this, savedInstanceState);
             RequestPermissionAsync(this);
-            // Android.Gms.SafetyNet.SafetyNetClass.GetClient(Platform.CurrentActivity);
+            Android.Gms.SafetyNet.SafetyNetClass.GetClient(Platform.CurrentActivity);
             //UserDialogs.Init(this);  // Para aplicar la autenticacion con huella 
             //CrossFingerprint.SetCurrentActivityResolver(() => this);
             //global::ZXing.Net.Mobile.Forms.Android.Platform.Init();  // Para aplicar el lector QR y de Barras

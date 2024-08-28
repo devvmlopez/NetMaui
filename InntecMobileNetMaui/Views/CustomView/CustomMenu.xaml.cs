@@ -16,14 +16,14 @@ public partial class CustomMenu : ContentView
 		get { return GetValue(IconIzqProperty) as ImageSource;}
 		set { SetValue(IconIzqProperty , value); }	
     }
-    public static readonly BindableProperty MenuTextoProperty = BindableProperty.Create("IconIzqEnable",
+    public static readonly BindableProperty IconIzqEnableProperty = BindableProperty.Create("IconIzqEnable",
                                                                                       typeof(string),
                                                                                       typeof(ContentView));
 
     public string IconIzqEnable
     {
-        get { return GetValue(MenuTextoProperty) as string; }
-        set { SetValue(MenuTextoProperty, value); }
+        get { return GetValue(IconIzqEnableProperty) as string; }
+        set { SetValue(IconIzqEnableProperty, value); }
     }
     private async void TapIconoIzq_Tapped(object sender, TappedEventArgs e)
     {
@@ -116,7 +116,7 @@ public partial class CustomMenu : ContentView
 
     private async void TapIconoCentro_Tapped(object sender, TappedEventArgs e)
     {
-        await Shell.Current.GoToAsync("//CardMenu");
+        await Shell.Current.GoToAsync("//CardsPage");
     }
     public static readonly BindableProperty IconCentroEnableProperty = BindableProperty.Create("IconCentroEnable",
                                                                                      typeof(string),

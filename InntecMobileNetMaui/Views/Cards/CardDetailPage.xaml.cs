@@ -1,14 +1,32 @@
+using InntecMobileNetMaui.Models;
+using InntecMobileNetMaui.ViewModels.Cards;
 using InntecMobileNetMaui.Views.CustomView;
 using Mopups.Services;
+using System;
 
 namespace InntecMobileNetMaui.Views.Cards;
 
-public partial class CardDetailPage : ContentPage
+public partial class CardDetailPage : ContentPage, IDisposable
 {
-	public CardDetailPage()
-	{
-		InitializeComponent();
-	}
+    CardDetailViewModel ViewModels;
+    CardModel cardModel;
+    //AssistModel assistModel;
+    //bool Assist;
+    /// <summary>
+    /// Inicializar objetos
+    /// </summary>
+    /// <param name="cardModel">Datos de tarjeta</param>
+    /// <param name="login">Datos del usuario que inicio sesion</param>
+    public CardDetailPage(CardModel cardModel)
+    {
+        InitializeComponent();
+        this.cardModel = cardModel;
+        //assistModel = new AssistModel();
+        //assistModel.CsmId = cardModel.UsuarioCsmTarjetaId;
+        this.BindingContext = ViewModels = new CardDetailViewModel(cardModel, this);
+        //Assist = false;
+
+    }
     async void TapGestureRecognizer_Tapped_CerrarSesion(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
     {
         // GridArea_Tapped(this, new TappedEventArgs(null));
@@ -47,4 +65,19 @@ public partial class CardDetailPage : ContentPage
         await MopupService.Instance.PushAsync(new BlockCardOptionsPage());
 
     }
+    private void Pkr_Month_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        ViewModels.CardMovementsMonthCommand.Execute(((Picker)sender).SelectedItem);
+    }
+
+    public void Dispose()
+    {
+        ViewModels.Dispose();
+    }
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        GC.Collect();
+    }
+
 }

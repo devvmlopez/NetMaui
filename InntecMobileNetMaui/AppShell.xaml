@@ -19,8 +19,8 @@
         Route="MyDatePage"/>
     <ShellContent
         Shell.NavBarIsVisible="False"
-        ContentTemplate="{DataTemplate cards:CardPage}"
-        Route="CardPage"/>
+        ContentTemplate="{DataTemplate cards:CardsPage}"
+        Route="CardsPage"/>
     <ShellContent
         Shell.NavBarIsVisible="False"
         ContentTemplate="{DataTemplate cards:CardPageList}"
@@ -29,9 +29,9 @@
         Shell.NavBarIsVisible="False"
         ContentTemplate="{DataTemplate cards:CardDetailPage}"
         Route="CardDetailPage"/>
-    <ShellContent
+    <!--<ShellContent
         Shell.NavBarIsVisible="False"
-        ContentTemplate="{DataTemplate cards:CardMenu}"
-        Route="CardMenu"/>
+        ContentTemplate="{DataTemplate cards:CardsPage}"
+        Route="CardMenu"/>-->
    
 </Shell>

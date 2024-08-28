@@ -9,7 +9,7 @@ using Plugin.Fingerprint.Abstractions;
 using InntecMobileNetMaui.ViewModels.Alerts;
 using InntecMobileNetMaui.Views.Alerts;
 using InntecMobileNetMaui.Services;
-using InntecMobileNetMaui.Services.ReCaptcha;
+
 
 namespace InntecMobileNetMaui.Views.Login;
 public partial class LoginPage : ContentPage
@@ -191,7 +191,7 @@ public partial class LoginPage : ContentPage
     private async void Btn_Registro_Clicked(object sender, EventArgs e)
     {
         // await Navigation.PushModalAsync(new NavigationPage(new RegisterPage())).ConfigureAwait(false);
-        await Shell.Current.GoToAsync("//CardMenu");
+        await Shell.Current.GoToAsync("//CardsPage");
     }
 
     /// <summary>
@@ -202,10 +202,20 @@ public partial class LoginPage : ContentPage
     private async void Btn_RecuperarContrasena_Clicked(object sender, EventArgs e)
     {
 
-        var captchaToken = await viewModel.reCaptchaService.Verify(Constants.SiteKey, Constants.BaseApiUrl);
-
-        if (captchaToken == null)
-            throw new Exception("Unable to retrieve reCaptcha Token");
+        //try
+        //{
+        //    var response = await SafetyNetClass.GetClient(this.context).VerifyWithRecaptchaAsync(Constants.SiteKey);
+        //    if (!string.IsNullOrEmpty(response.TokenResult))
+        //    {
+        //        // Validate the user response token using the
+        //        // reCAPTCHA siteverify API.
+        //    }
+        //}
+        //catch (Exception ex)
+        //{
+        //    // Handle exception
+        //    throw ex;
+        //}
 
         //bool isValidCaptchaToken = await _reCaptcha.Validate(captchaToken);
         //if (!isValidCaptchaToken)

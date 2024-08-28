@@ -31,17 +31,17 @@ public final class R {
 		public static final int tag = 0x7f040457;
 	}
 	public static final class id {
-		public static final int adjacent = 0x7f090047;
-		public static final int always = 0x7f09004e;
-		public static final int alwaysAllow = 0x7f09004f;
-		public static final int alwaysDisallow = 0x7f090050;
-		public static final int androidx_window_activity_scope = 0x7f090051;
-		public static final int bottomToTop = 0x7f090064;
-		public static final int locale = 0x7f090107;
-		public static final int ltr = 0x7f090108;
-		public static final int never = 0x7f090154;
-		public static final int rtl = 0x7f090182;
-		public static final int topToBottom = 0x7f0901f9;
+		public static final int adjacent = 0x7f090048;
+		public static final int always = 0x7f09004f;
+		public static final int alwaysAllow = 0x7f090050;
+		public static final int alwaysDisallow = 0x7f090051;
+		public static final int androidx_window_activity_scope = 0x7f090052;
+		public static final int bottomToTop = 0x7f090065;
+		public static final int locale = 0x7f09010a;
+		public static final int ltr = 0x7f09010b;
+		public static final int never = 0x7f090159;
+		public static final int rtl = 0x7f090187;
+		public static final int topToBottom = 0x7f0901ff;
 	}
 	public static final class styleable {
 		public static final int[] ActivityFilter = new int[] { 0x7f040027, 0x7f040029 };

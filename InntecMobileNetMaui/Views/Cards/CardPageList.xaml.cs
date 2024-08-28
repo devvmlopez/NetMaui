@@ -1,5 +1,5 @@
 using InntecMobileNetMaui.Models;
-using InntecMobileNetMaui.Services.Card;
+using InntecMobileNetMaui.Services;
 using InntecMobileNetMaui.ViewModels;
 
 
@@ -9,7 +9,7 @@ namespace InntecMobileNetMaui.Views.Cards;
 public partial class CardPageList : ContentPage
 {   
     CardViewModel cardViewModel;
-    ICardService<CardModel> cardService;
+    ICardsService<CardModel> cardService;
     private bool isClosed = true;
     private const uint AnimationDuration = 200u;
    // public CardPageList(CardViewModel cardViewModel, ICardService<CardModel> cardService)

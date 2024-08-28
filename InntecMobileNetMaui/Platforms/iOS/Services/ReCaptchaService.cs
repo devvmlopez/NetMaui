@@ -2,7 +2,6 @@
 using Foundation;
 using InntecMobileNetMaui.iOS.Services;
 using InntecMobileNetMaui.Services;
-using InntecMobileNetMaui.Services.ReCaptcha;
 using UIKit;
 using WebKit;
 

@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
 using InntecMobileNetMaui.Models;
 using InntecMobileNetMaui.Resources;
-using InntecMobileNetMaui.Services.Card;
+using InntecMobileNetMaui.Services;
 using InntecMobileNetMaui.ViewModels.Alerts;
 using InntecMobileNetMaui.ViewModels.Messages;
 using InntecMobileNetMaui.Views.Alerts;
@@ -43,7 +43,7 @@ namespace InntecMobileNetMaui.ViewModels
 
         private int year, month;
         public List<Menu> MyMenu { get; set; }
-        private ICardService<CardModel> cardService;
+        private ICardsService<CardModel> cardService;
 
         private List<Menu> GetMenus()
         {
@@ -57,7 +57,7 @@ namespace InntecMobileNetMaui.ViewModels
             };
         }
 
-        public CardViewModel(ICardService<CardModel> cardService)
+        public CardViewModel(ICardsService<CardModel> cardService)
         {
 
             Cerrado = true;
@@ -151,7 +151,7 @@ namespace InntecMobileNetMaui.ViewModels
                 IsRefreshing = true;
                 Cards.Clear();
 
-                var cardResult = await cardService.GetItemsAsync();
+                var cardResult = await cardService.GetItemsV2Async();
 
                 foreach (CardModel card in cardResult)
                 {

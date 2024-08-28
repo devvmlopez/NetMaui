@@ -119,8 +119,8 @@ namespace InntecMobileNetMaui.Resources
         }
 
 
-        public const string ERROR_INTERNET_CONECTION = "Revisa tu conexión de internet e inténtalo nuevamente.";
-        public const string ERROR_EXCEPTION_SERVICE = "Se ha presentado un error de conexión con el servidor, por favor inténtelo de nuevo 5 minutos.";
+        public const string ERROR_INTERNET_CONECTION = "Revisa tu conexión de internet \n e inténtalo nuevamente.";
+        public const string ERROR_EXCEPTION_SERVICE = "Se ha presentado un error de conexión \n con el servidor, por favor inténtelo de \n nuevo 5 minutos.";
 
 
         #endregion

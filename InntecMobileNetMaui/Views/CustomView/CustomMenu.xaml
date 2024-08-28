@@ -4,7 +4,7 @@
              x:Class="InntecMobileNetMaui.Views.CustomView.CustomMenu"
              x:Name="thisView">
     <Frame
-        BackgroundColor="#90FFFFFF"
+        BackgroundColor="LightGray"
         HasShadow="True"
         Margin="4"
         CornerRadius="20"

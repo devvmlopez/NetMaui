@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="InntecMobileNetMaui.Views.Cards.CardsPage"
+             xmlns:Menucontrols="clr-namespace:InntecMobileNetMaui.Views.CustomView"
+             
+             Title="{Binding Title}" 
+             >
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+               TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="#90255f84" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="{Binding notifyIco}" Command="{Binding ShowNotificationsCommand}"  />
+        <ToolbarItem IconImageSource="credit_card_add.png" Command="{Binding AddNewCardCommand}" Text="Agregar Tarjeta" />
+
+    </ContentPage.ToolbarItems>
+
+    <AbsoluteLayout
+               Style="{StaticResource BackgroundColorViews}">
+        <Image AbsoluteLayout.LayoutFlags="All" 
+               AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+               Source="{DynamicResource backgroundImage}" 
+               Aspect="AspectFill"/>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All">
+
+            <StackLayout Orientation="Horizontal">
+
+                <AbsoluteLayout Margin="0,5,0,0"
+                                         IsVisible="{Binding ROL_COMBUSTIBLE}"
+                                         HeightRequest="60"   
+                                         MinimumHeightRequest="40"
+                                         HorizontalOptions="FillAndExpand"
+                                         BackgroundColor="Transparent">
+                    <Image AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                                       AbsoluteLayout.LayoutFlags="All"
+                                       Source="Back_combustible.png"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand"
+                                       Aspect="AspectFill"
+                                       Margin="8,0"/>
+                    <Image AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                                       AbsoluteLayout.LayoutFlags="All"
+                                       Source="Stripe_combustible.png"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="Center"
+                                       HeightRequest="40"
+                                       MinimumHeightRequest="20"
+                                       WidthRequest="300"
+                                       MinimumWidthRequest="40"
+                                       Aspect="AspectFill"
+                                       Margin="8,0"/>
+                    <Image AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                                       AbsoluteLayout.LayoutFlags="All"
+                                       Source="Tarjeta_combustible.png"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                   
+                                       Margin="30,0"/>
+                    <Image AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                                       AbsoluteLayout.LayoutFlags="All"
+                                       Source="Combustible.png"
+                                       HeightRequest="100"
+                                       WidthRequest="180"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       Margin="15,0"/>
+                    <Button AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                                        AbsoluteLayout.LayoutFlags="All"
+                                        Clicked="Gas_Clicked"
+                                        AutomationId="Btn_Combustible"
+                                        BackgroundColor="#00000000"
+                                        Margin="8,0"/>
+                </AbsoluteLayout>
+
+                <AbsoluteLayout Margin="0,5,0,0"
+                                         IsVisible="{Binding ROL_VIATICOS}"
+                                         HeightRequest="60"   
+                                         MinimumHeightRequest="40"
+                                         HorizontalOptions="FillAndExpand"
+                                         BackgroundColor="Transparent">
+                    <Image AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                                       AbsoluteLayout.LayoutFlags="All"
+                                       Source="Back.png"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="FillAndExpand"
+                                       Aspect="AspectFill"
+                                       Margin="8,0"/>
+                    <Image AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                                       AbsoluteLayout.LayoutFlags="All"
+                                       Source="Stripe_viaticos.png"
+                                       HorizontalOptions="FillAndExpand"
+                                       VerticalOptions="Center"
+                                       HeightRequest="40"
+                                       MinimumHeightRequest="20"
+                                       WidthRequest="300"
+                                       MinimumWidthRequest="40"
+                                       Aspect="AspectFill"
+                                       Margin="8,0"/>
+                    <Image AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                                       AbsoluteLayout.LayoutFlags="All"
+                                       Source="Tarjeta_viaticos.png"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                   
+                                       Margin="30,0"/>
+                    <Image AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                                       AbsoluteLayout.LayoutFlags="All"
+                                       Source="Viaticos.png"
+                                       HeightRequest="100"
+                                       WidthRequest="150"
+                                       HorizontalOptions="Start"
+                                       VerticalOptions="Center"
+                                       Margin="15,0"/>
+                    <Button AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                                        AbsoluteLayout.LayoutFlags="All"
+                                        Clicked="Viatics_Clicked"
+                                        AutomationId="Btn_Viaticos"
+                                        BackgroundColor="#00000000"
+                                        Margin="8,0"/>
+                </AbsoluteLayout>
+            </StackLayout>
+            <AbsoluteLayout Margin="0,5,0,0"
+                    HeightRequest="90"   
+                    MinimumHeightRequest="40"
+                    HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Transparent">
+                <Image AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                                AbsoluteLayout.LayoutFlags="All"
+                                Source="Stipe_BenefitHub.png"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand"
+                                Aspect="AspectFill"
+                                Margin="8,0"/>
+                <Image AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                    AbsoluteLayout.LayoutFlags="All"
+                    Source="Conoce.png"
+                    WidthRequest="350"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    Margin="15,0"/>
+                <Image AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                    AbsoluteLayout.LayoutFlags="All"
+                    Source="LogoInntecDescuentos.png"
+                    WidthRequest="400"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="Center"
+                    Margin="0,0"/>
+                <Button AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                    AbsoluteLayout.LayoutFlags="All"
+                    Clicked="Benefit_Hub"
+                    BackgroundColor="#00000000"
+                    Margin="8,0"/>
+            </AbsoluteLayout>
+
+            <CarouselView x:Name="MainCarouselPromos"
+                      ItemsSource="{Binding Images}"
+                      HeightRequest="150"
+                      Loop="False"
+                      IsVisible="{Binding CarouselVisible}"
+                      IndicatorView="indicatorView">
+                <CarouselView.PeekAreaInsets>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="Android" Value="120,0"/>
+                        <On Platform="iOS" Value="130,0"/>
+                    </OnPlatform>
+                </CarouselView.PeekAreaInsets>
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="{Binding paddinCarousel}"
+                                 x:Name="Images">
+                            <Frame BackgroundColor="Transparent"
+                                Padding="0">
+                                <StackLayout >
+
+                                    <Image Source="{Binding URLImage}"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                   WidthRequest="100"
+                                                   HeightRequest="100"
+                                                   >
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer BindingContext="{Binding Source={x:Reference MainCarouselPromos}, Path=BindingContext}"
+                                                                        Command="{Binding LoadPromoPageCommand}"
+                                                                        CommandParameter="{Binding Source={x:Reference Images}, Path=BindingContext}"/>
+
+
+                                        </Image.GestureRecognizers>
+                                    </Image>
+
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+
+            <IndicatorView x:Name="indicatorView"
+            IndicatorColor="LightGray"
+            SelectedIndicatorColor="DarkGray"
+                    HorizontalOptions="Center" />
+
+
+                <!--<ListView 
+                    x:Name="LstCards"
+                    ItemsSource="{Binding Cards}"
+                    HasUnevenRows="true"
+                    BackgroundColor="Transparent"
+                    SeparatorColor="Transparent"
+                    CachingStrategy="RetainElement"
+                    SelectionMode="Single"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    ItemSelected="LstCards_ItemSelected"> 
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell >
+                                <Frame 
+                                    HasShadow="True" 
+                                    Margin="5"
+                                    Padding="5"
+                                    CornerRadius="5"
+                                    BorderColor="LightGray"
+                                    BackgroundColor="{DynamicResource titlecardviewcolor}">
+                                    <StackLayout
+                                        BackgroundColor="#90FFFFFF">
+                                        --><!--<StackLayout 
+                                            BackgroundColor="#90255f84">
+                                            <Grid x:Name="Cards">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="30"/>
+                                                    <RowDefinition Height="20"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Image 
+                                                    x:Name="ImgMovs"
+                                                    Source="movement.png"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    HeightRequest="20"
+                                                    Grid.Row="0" 
+                                                    Grid.Column="0"/>
+                                                <Image 
+                                                    x:Name="ImgNIP"
+                                                    Source="changeNip.png"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    HeightRequest="20"
+                                                    Grid.Row="0" 
+                                                    Grid.Column="1"/>
+                                                <Image 
+                                                    Source="Cancel.png"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    Aspect="AspectFit"
+                                                    HeightRequest="20"
+                                                    Grid.Row="0" 
+                                                    Grid.Column="2"/>
+                                                <Image 
+                                                    Source="delete.png"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    Aspect="AspectFit"
+                                                    HeightRequest="20"
+                                                    Grid.Row="0" 
+                                                    Grid.Column="3"/>
+                                                <Label 
+                                                    Text="Movimientos"
+                                                    AutomationId="{Binding Index, StringFormat='BtnMov{0}'}"
+                                                    HorizontalOptions="Center"
+                                                    TextColor="{DynamicResource textcolor}"
+                                                    VerticalOptions="Center"
+                                                    Grid.Row="1" 
+                                                    Grid.Column="0"/>
+                                                <Label 
+                                                    Text="NIP"
+                                                    HorizontalOptions="Center"
+                                                    TextColor="{DynamicResource textcolor}"
+                                                    VerticalOptions="Center"
+                                                    Grid.Row="1" 
+                                                    Grid.Column="1"/>
+                                                <Label 
+                                                    Text="Reportar"
+                                                    HorizontalOptions="Center"
+                                                    TextColor="{DynamicResource textcolor}"
+                                                    VerticalOptions="Center"
+                                                    Grid.Row="1" 
+                                                    Grid.Column="2"/>
+                                                <Label 
+                                                    Text="Eliminar"
+                                                    TextColor="{DynamicResource textcolor}"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    Grid.Row="1" 
+                                                    Grid.Column="3"/>
+                                                <Button 
+                                                    x:Name="BtnMov"
+                                                    AutomationId="{Binding Index, StringFormat='BtnMov{0}'}"
+                                                    BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                    Command="{Binding CardMovementsCommand}"
+                                                    CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                    BackgroundColor="Transparent"
+                                                    CornerRadius="5"
+                                                    HeightRequest="20"
+                                                    Grid.Row="0"
+                                                    Grid.RowSpan="2"
+                                                    Grid.Column="0">
+                                                </Button>
+                                                <Button 
+                                                    x:Name="BtnChangeNIP"
+                                                    BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                    Command="{Binding CardNipCommand}"
+                                                    CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                    BackgroundColor="Transparent"
+                                                    CornerRadius="5"
+                                                    HeightRequest="20"
+                                                    Grid.Row="0"
+                                                    Grid.RowSpan="2"
+                                                    Grid.Column="1"/>
+                                                <Button 
+                                                    x:Name="BtnCancel"
+                                                    BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                    Command="{Binding CancelCardCommand}"
+                                                    CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                    BackgroundColor="Transparent"
+                                                    CornerRadius="5"
+                                                    HeightRequest="20"
+                                                    Grid.Row="0"
+                                                    Grid.RowSpan="2"
+                                                    Grid.Column="2"/>
+                                                <Button 
+                                                    x:Name="BtnDelete"
+                                                    BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                    Command="{Binding DeleteCardCommand}"
+                                                    CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                    BackgroundColor="Transparent"
+                                                    CornerRadius="5"
+                                                    HeightRequest="20"
+                                                    Grid.Row="0"
+                                                    Grid.RowSpan="2"
+                                                    Grid.Column="3"/>
+                                            </Grid>
+                                        </StackLayout>--><!--
+                                        <StackLayout 
+                                            BackgroundColor="{DynamicResource background}" 
+                                            Margin="-3,0,-3,0"
+                                            Padding="5,0,0,0">
+                                            <Label 
+                                                Text="{Binding estatusDescripcion}" 
+                                                TextColor="Black"
+                                                HorizontalOptions="CenterAndExpand"
+                                                VerticalOptions="CenterAndExpand"
+                                                FontFamily="MontB"/>
+                                            <Frame 
+                                                BackgroundColor="{Binding Color}"
+                                                CornerRadius="8"
+                                                WidthRequest="1"
+                                                HeightRequest="1"
+                                                Margin="-5,0,0,-5"
+                                                Padding="0,0,0,2"/>
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <Label 
+                                                    Text="{Binding Tarjeta}" 
+                                                    TextColor="{DynamicResource cardtextcolor}"
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    VerticalOptions="CenterAndExpand"
+                                                    FontFamily="MontB"
+                                                    Grid.Row="3" 
+                                                    Grid.ColumnSpan="3"
+                                                    Grid.Column="0" />
+                                                <Frame Padding="0,0,0,0"
+                                                       Margin="0"
+                                                       HorizontalOptions="CenterAndExpand"
+                                                       VerticalOptions="CenterAndExpand"
+                                                       IsVisible="{Binding BVisible}"
+                                                       Grid.Row="0"
+                                                       Grid.RowSpan="2"
+                                                       Grid.Column="3"
+                                                       HasShadow="False"
+                                                       x:Name="FrmMoreOptions">
+                                                    <StackLayout Orientation="Horizontal"
+                                                                 HorizontalOptions="Center"
+                                                                 VerticalOptions="Center">
+                                                        <StackLayout.GestureRecognizers>
+                                                            <TapGestureRecognizer  BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                                                   Command="{Binding MoreOptionsCommand}"
+                                                                                   CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"/>
+                                                        </StackLayout.GestureRecognizers>
+                                                        <Path Fill="{DynamicResource cardtextcolor}"
+                                                              Aspect="Uniform"
+                                                              WidthRequest="25"
+                                                              HeightRequest="25"
+                                                              Data="M97.856,49.821c0.426-2.44,0.661-4.95,0.661-7.516C98.517,18.979,80.088,0,57.436,0C34.783,0,16.353,18.979,16.353,42.305
+		c0,2.566,0.236,5.074,0.663,7.516c-3.567,2.278-5.939,6.261-5.939,10.81v41.415c0,7.084,5.743,12.826,12.825,12.826h67.067
+		c7.08,0,12.822-5.742,12.822-12.826h0.004V60.631C103.795,56.083,101.425,52.099,97.856,49.821z M63.095,85.983v9
+		c0,3.128-2.534,5.662-5.661,5.662c-3.127,0-5.661-2.534-5.661-5.662v-9.004c-3.631-2.001-6.094-5.862-6.094-10.302
+		c0-6.492,5.263-11.756,11.757-11.756s11.758,5.264,11.758,11.756C69.194,80.119,66.729,83.983,63.095,85.983z M82.886,47.804
+		H31.985c-0.349-1.775-0.535-3.616-0.535-5.499c0-15.003,11.657-27.208,25.986-27.208c14.328,0,25.984,12.204,25.984,27.208
+		C83.42,44.188,83.236,46.029,82.886,47.804z"/>
+
+                                                    </StackLayout>
+
+                                                </Frame>
+
+
+                                                <Grid x:Name="CardImage"
+                                                  HorizontalOptions="CenterAndExpand"
+                                                  Grid.Row="0" 
+                                                  Grid.RowSpan="2"
+                                                  Grid.Column="0"
+                                                  Grid.ColumnSpan="3">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="auto"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="auto" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Image 
+                                                        VerticalOptions="CenterAndExpand"
+                                                        HorizontalOptions="CenterAndExpand"
+                                                        Source="{Binding ImgProd}"
+                                                        HeightRequest="150"
+                                                        WidthRequest="200"
+                                                        Grid.Row="0" 
+                                                        Grid.Column="0"
+                                                        Grid.ColumnSpan="3"/>
+                                                    --><!--<Button 
+                                                        BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                        Command="{Binding CardMovementsCommand}"
+                                                        CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                        BackgroundColor="Transparent"
+                                                        Grid.Row="0" 
+                                                        Grid.Column="0"/>--><!--
+                                                </Grid>
+                                            </Grid>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->  <!--Version 01-->
+                <!--<CarouselView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="LstCards_ItemSelected"/>
+                </CarouselView.GestureRecognizers>--> <!--="No hay tarjetas para mostrar."-->
+                <ListView 
+                    x:Name="LstCards"
+                    ItemsSource="{Binding Cards}"
+                    HasUnevenRows="true"
+                    BackgroundColor="Transparent"
+                    SeparatorColor="Transparent"
+                    CachingStrategy="RetainElement"
+                    SelectionMode="Single"
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="0,0,0,48"
+                    ItemSelected="LstCards_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Border 
+                                    Stroke="LightGray"
+                                    StrokeThickness="2"
+                                    StrokeShape="RoundRectangle 20,20,20,20"
+                                    Padding="0"
+                                    Margin="-8,8"
+                                    BackgroundColor="#90FFFFFF"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="Center">
+                                        <StackLayout
+                                                WidthRequest="300"
+                                                Padding="0"
+                                                Margin="8"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"
+                                                BackgroundColor="Transparent">
+
+                                        <StackLayout 
+                                                BackgroundColor="Transparent"
+                                                Margin="-8,4,-8,4"
+                                                Padding="0,0,0,0">
+                                            <HorizontalStackLayout Margin="8">
+                                            <Label 
+                                                Text="{Binding EstatusDescripcion}" 
+                                                TextColor="Black"
+                                                HorizontalOptions="Fill"
+                                                VerticalOptions="Fill"
+                                                FontFamily="FontMont"
+                                                FontSize="Medium"/>
+                                            <Frame 
+                                                BackgroundColor="{Binding Color}"
+                                                CornerRadius="8"
+                                                WidthRequest="1"
+                                                HeightRequest="1"
+                                                Margin="0"
+                                                Padding="0,0,0,2"
+                                                HorizontalOptions="FillAndExpand"
+                                                VerticalOptions="FillAndExpand"/>
+                                                <Path 
+                                                    Fill="{DynamicResource cardtextcolor}"
+                                                    Aspect="Uniform"
+                                                    WidthRequest="25"
+                                                    HeightRequest="25"
+                                                    IsVisible="{Binding BVisible}"
+                                                    Data="M97.856,49.821c0.426-2.44,0.661-4.95,0.661-7.516C98.517,18.979,80.088,0,57.436,0C34.783,0,16.353,18.979,16.353,42.305
+c0,2.566,0.236,5.074,0.663,7.516c-3.567,2.278-5.939,6.261-5.939,10.81v41.415c0,7.084,5.743,12.826,12.825,12.826h67.067
+c7.08,0,12.822-5.742,12.822-12.826h0.004V60.631C103.795,56.083,101.425,52.099,97.856,49.821z M63.095,85.983v9
+c0,3.128-2.534,5.662-5.661,5.662c-3.127,0-5.661-2.534-5.661-5.662v-9.004c-3.631-2.001-6.094-5.862-6.094-10.302
+c0-6.492,5.263-11.756,11.757-11.756s11.758,5.264,11.758,11.756C69.194,80.119,66.729,83.983,63.095,85.983z M82.886,47.804
+H31.985c-0.349-1.775-0.535-3.616-0.535-5.499c0-15.003,11.657-27.208,25.986-27.208c14.328,0,25.984,12.204,25.984,27.208
+C83.42,44.188,83.236,46.029,82.886,47.804z"/>
+                                            </HorizontalStackLayout>
+                                            <Grid BackgroundColor="Transparent">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+
+                                                <Label 
+                                                    Text="{Binding Tarjeta}" 
+                                                    TextColor="{DynamicResource cardtextcolor}"
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    VerticalOptions="CenterAndExpand"
+                                                    FontFamily="FontMontB"
+                                                    FontSize="Medium"
+                                                    Grid.Row="3" 
+                                                    Grid.ColumnSpan="3"
+                                                    Grid.Column="0" />
+                                                <!--<Frame 
+                                                    Padding="0,0,0,0"
+                                                    Margin="0"
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    VerticalOptions="CenterAndExpand"
+                                                    IsVisible="{Binding BVisible}"
+                                                    Grid.Row="0"
+                                                    Grid.RowSpan="2"
+                                                    Grid.Column="3"
+                                                    HasShadow="False"
+                                                    x:Name="FrmMoreOptions">
+                                                    <StackLayout 
+                                                        Orientation="Horizontal"
+                                                        HorizontalOptions="Center"
+                                                        VerticalOptions="Center">
+                                                        <StackLayout.GestureRecognizers>
+                                                            <TapGestureRecognizer  BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                                                           Command="{Binding MoreOptionsCommand}"
+                                                                                           CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"/>
+                                                        </StackLayout.GestureRecognizers>
+                                                        <Path Fill="{DynamicResource cardtextcolor}"
+                                                                      Aspect="Uniform"
+                                                                      WidthRequest="25"
+                                                                      HeightRequest="25"
+                                                                      Data="M97.856,49.821c0.426-2.44,0.661-4.95,0.661-7.516C98.517,18.979,80.088,0,57.436,0C34.783,0,16.353,18.979,16.353,42.305
+                c0,2.566,0.236,5.074,0.663,7.516c-3.567,2.278-5.939,6.261-5.939,10.81v41.415c0,7.084,5.743,12.826,12.825,12.826h67.067
+                c7.08,0,12.822-5.742,12.822-12.826h0.004V60.631C103.795,56.083,101.425,52.099,97.856,49.821z M63.095,85.983v9
+                c0,3.128-2.534,5.662-5.661,5.662c-3.127,0-5.661-2.534-5.661-5.662v-9.004c-3.631-2.001-6.094-5.862-6.094-10.302
+                c0-6.492,5.263-11.756,11.757-11.756s11.758,5.264,11.758,11.756C69.194,80.119,66.729,83.983,63.095,85.983z M82.886,47.804
+                H31.985c-0.349-1.775-0.535-3.616-0.535-5.499c0-15.003,11.657-27.208,25.986-27.208c14.328,0,25.984,12.204,25.984,27.208
+                C83.42,44.188,83.236,46.029,82.886,47.804z"/>
+
+                                                    </StackLayout>
+
+                                                </Frame>-->
+
+
+                                                <Grid x:Name="CardImage"
+                                                          HorizontalOptions="CenterAndExpand"
+                                                          Grid.Row="0" 
+                                                          Grid.RowSpan="2"
+                                                          Grid.Column="0"
+                                                          Grid.ColumnSpan="3">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="auto"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="auto" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Image 
+                                                        VerticalOptions="CenterAndExpand"
+                                                        HorizontalOptions="CenterAndExpand"
+                                                        Source="{Binding ImgProd}"
+                                                        HeightRequest="180"
+                                                        WidthRequest="250"
+                                                        Grid.Row="0" 
+                                                        Grid.Column="0"
+                                                        Grid.ColumnSpan="3">
+                                                    </Image>
+                                                </Grid>
+                                            </Grid>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Border>
+                            </ViewCell >
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+            <AbsoluteLayout 
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                        AbsoluteLayout.LayoutFlags="All"
+                        Margin="0,-1100,0,0"
+                        BackgroundColor="Transparent"
+                        IsVisible="{Binding IsBusy}">
+            </AbsoluteLayout>
+
+
+        <!--<pancakeview:PancakeView x:Name="menu_button"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="End"
+                                     WidthRequest="100"
+                                     HeightRequest="50"
+                                     CornerRadius="20,0,20,0"  
+                                     BackgroundColor="#ffffff"
+                                     Margin="0,10,0,0"
+                                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                     AbsoluteLayout.LayoutFlags="All">
+            <pancakeview:PancakeView.GestureRecognizers>-->
+                <!--<TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+
+                <SwipeGestureRecognizer Swiped="SwipeGestureRecognizer_Swiped" 
+                                            Direction="Left"/>
+
+
+            </pancakeview:PancakeView.GestureRecognizers>
+
+            <StackLayout Orientation="Horizontal" >
+                <Image Source="FAQ.png"
+                           HeightRequest="20"
+                           WidthRequest="20"
+                           Margin="10,0,0,0"/>
+                <Label Text="FAQs" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="CenterAndExpand"
+                           TextColor="Black"/>
+            </StackLayout>
+
+        </pancakeview:PancakeView>-->
+
+        <!--<pancakeview:PancakeView x:Name="productos_button"
+                                     VerticalOptions="Start"
+                                     HorizontalOptions="EndAndExpand"
+                                     CornerRadius="20,0,20,0"  
+                                     BackgroundColor="#ffffff"
+                                     Margin="0,10,0,0"
+                                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                     AbsoluteLayout.LayoutFlags="All">
+            <pancakeview:PancakeView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </pancakeview:PancakeView.GestureRecognizers>
+
+            <StackLayout Margin="10,10">
+                <Button Text="TOKEN"
+                             x:Name="BtnToken"
+                             HorizontalOptions="CenterAndExpand" 
+                             VerticalOptions="CenterAndExpand"
+                             BackgroundColor="Transparent"
+                             Pressed="BtnToken_Pressed"
+                             TextColor="Black"/>
+                <Button Text="DESPENSA"
+                             x:Name="BtnDespensa"
+                             HorizontalOptions="CenterAndExpand" 
+                             VerticalOptions="CenterAndExpand"
+                             BackgroundColor="Transparent"
+                             TextColor="Black"
+                             Pressed="BtnDespensa_Pressed"
+                     />
+                <Button Text="COMBUSTIBLE"
+                            x:Name="BtnCombustible"
+                            HorizontalOptions="CenterAndExpand" 
+                            VerticalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            Pressed="BtnCombustible_Pressed"
+                            CommandParameter="COMBUSTIBLE"/>
+                <Button Text="PREMIUM"
+                            x:Name="BtnPremium"
+                           HorizontalOptions="CenterAndExpand" 
+                           VerticalOptions="CenterAndExpand"
+                            BackgroundColor="Transparent"
+                           TextColor="Black"
+                            Pressed="BtnPremium_Pressed"/>
+                <Button Text="VIATICOS"
+                            x:Name="BtnViaticos"
+                           HorizontalOptions="CenterAndExpand" 
+                           VerticalOptions="CenterAndExpand"
+                           BackgroundColor="Transparent"
+                            Pressed="BtnViaticos_Pressed"
+                           TextColor="Black"/>
+            </StackLayout>
+
+        </pancakeview:PancakeView>-->
+        <!--<Button x:Name="btn_Cerrar"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    Text="X"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    CornerRadius="25"
+                    HorizontalOptions="End"
+                    VerticalOptions="Start"
+                    AbsoluteLayout.LayoutBounds="0,0,0.68,0.95"
+                    AbsoluteLayout.LayoutFlags="All"
+                    Pressed="btn_Cerrar_Pressed">
+
+        </Button>-->
+        <Image 
+            Source="loading.gif"
+            HeightRequest="70"
+            WidthRequest="70"
+            IsAnimationPlaying="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"/>
+        <Menucontrols:CustomMenu
+            IconIzq="cards"
+            IconIzqEnable="True"
+            IconCentroIzq="credit_card_add"
+            IconCentroIzqEnable="True"
+            IconCentroDer="faq"
+            IconCentroDerEnable="True"
+            IconDer="user"
+            IconDerEnable="True"
+            IconCentro="innteclogo"
+            IconCentroEnable="False"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="CenterAndExpand"
+            AbsoluteLayout.LayoutBounds="0.2,1,1,0.09"
+            AbsoluteLayout.LayoutFlags="All" >
+        </Menucontrols:CustomMenu>
+
+    </AbsoluteLayout>
+</ContentPage>

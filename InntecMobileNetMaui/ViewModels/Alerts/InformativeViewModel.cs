@@ -56,7 +56,7 @@ namespace InntecMobileNetMaui.ViewModels.Alerts
         }
 
         public bool AnimationPlaying { get => (string.IsNullOrEmpty(Message) ? false : true); }
-        public string Ico { get => (MessageType == messageType.Informative) ? "done.gif" : ((MessageType == messageType.Message)) ? "loading.gif" : ((MessageType == messageType.Error)) ? "" : "error.gif"; }
+        public string Ico { get => (MessageType == messageType.Informative) ? "done.gif" : ((MessageType == messageType.Message)) ? "loading.gif" : ((MessageType == messageType.Error)) ? "error.gif" : "error.gif"; }
 
 
         #endregion

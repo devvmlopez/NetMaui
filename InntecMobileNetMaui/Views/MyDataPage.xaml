@@ -38,7 +38,7 @@
                         HorizontalOptions="FillAndExpand" 
                         Padding="30,8,30,8">
                         <Frame
-                            BackgroundColor="White"
+                            BackgroundColor="#90FFFFFF"
                             BorderColor="LightGray"
                             Margin="8,0"
                             Padding="8"

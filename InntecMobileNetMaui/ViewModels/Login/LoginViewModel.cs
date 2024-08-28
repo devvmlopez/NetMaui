@@ -114,7 +114,7 @@ namespace InntecMobileNetMaui.ViewModels.Login
                 ShowError = true;
                 //App.Current.MainPage = new CardPageList();
                 
-                await Shell.Current.GoToAsync("//CardMenu");
+                await Shell.Current.GoToAsync("//CardsPage");
 
             }
             else
