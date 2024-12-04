@@ -26,6 +26,6 @@ public partial class CustomBackMenu : ContentView
     }
     private async void TapIconoIzq_Tapped(object sender, TappedEventArgs e)
     {
-        await Shell.Current.GoToAsync("//CardMenu");
+        await Shell.Current.GoToAsync("//NotifyPage");
     }
 }

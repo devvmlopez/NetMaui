@@ -1,0 +1,93 @@
+﻿<mopups:PopupPage  
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.Alerts.AcceptCancelAlert"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+             Title="AcceptCancelAlert">
+    <mopups:PopupPage.Animation>
+        <mopupsanim:ScaleAnimation
+            DurationIn="200"
+            EasingIn="SinOut"
+            PositionIn="Bottom"
+            EasingOut="SinIn"
+            PositionOut="Bottom"
+            ScaleIn="1"
+            ScaleOut="1"/>
+    </mopups:PopupPage.Animation>
+
+
+    <AbsoluteLayout 
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+        <Border 
+            WidthRequest="300"
+            HeightRequest="350"
+            BackgroundColor="White"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0,1,1,1"
+            >
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20,20,20,20"/>
+            </Border.StrokeShape>
+
+            <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                             Margin="20,50,20,0">
+                <Label 
+                    Text="{Binding Title}"
+                    FontSize="Subtitle"
+                    TextColor="Black"
+                    FontAutoScalingEnabled="False"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="Center"
+                    FontFamily="FontMontB"/>
+
+                <Label 
+                    Text="{Binding Message}"
+                    Margin="0,10,0,0"
+                    TextColor="Black"
+                    FontAutoScalingEnabled="False"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center"
+                    FontFamily="FontMont"/>
+
+
+                <Button 
+                    Text="Continuar"
+                    x:Name="ButtonConfirm"
+                    TextColor="White"
+                    BackgroundColor="#367fb6"
+                    VerticalOptions="EndAndExpand"
+                    Clicked="ButtonConfirm_Clicked"
+                    FontFamily="FontMontB"
+                    BorderColor="LightGray"
+                    Margin="10,20,10,0"/>
+                <Button 
+                    Text="Cancelar"
+                    x:Name="ButtonCancel"
+                    TextColor="White"
+                    BackgroundColor="#f22b2b"
+                    VerticalOptions="EndAndExpand"
+                    Clicked="ButtonCancel_Clicked"
+                    FontFamily="FontMontB"
+                    BorderColor="LightGray"
+                    Margin="10,20,10,0"/>
+            </VerticalStackLayout>
+        </Border>
+
+        <Image
+            Source="{Binding Ico}"
+            IsAnimationPlaying="{Binding AnimationPlaying}"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="100"
+            WidthRequest="100" 
+            Aspect="AspectFit"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0,0,1,0.6"/>
+
+
+
+    </AbsoluteLayout>
+</mopups:PopupPage>

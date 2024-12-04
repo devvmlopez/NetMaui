@@ -13,12 +13,12 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("InntecMobileNetMaui")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+1a88f87aaf219a637670a5cf5fc345357d17efea")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("4.1.3.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("4.1.3+bd0d1b5151e5aecf4e41e9a7ad775aa652215f48")]
 [assembly: System.Reflection.AssemblyProductAttribute("InntecMobileNetMaui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InntecMobileNetMaui")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
-[assembly: System.Runtime.Versioning.TargetPlatformAttribute("iOS17.5")]
+[assembly: System.Reflection.AssemblyVersionAttribute("4.1.3.0")]
+[assembly: System.Runtime.Versioning.TargetPlatformAttribute("iOS18.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("iOS11.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

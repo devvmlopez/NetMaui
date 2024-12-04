@@ -17,20 +17,22 @@
             VerticalOptions="FillAndExpand"
             HorizontalOptions="FillAndExpand"
             VerticalTextAlignment="Center"
+            BackgroundColor="White"
             FontFamily="FontMont"
             Text="{Binding Text}"
             IsPassword="{Binding IsPassword}"
             TextColor="Black"
+            ReturnType="Done"
             x:Name="MeEntry">  <!---->
             <controls:BorderlessEntry.Margin>
                 <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="iOS" Value="20,0,20,0"/>
+                    <On Platform="iOS" Value="10,10,10,0"/>
                     <On Platform="Android" Value="0,10,0,0"/>
                 </OnPlatform>
             </controls:BorderlessEntry.Margin>
         </controls:BorderlessEntry>
     </Border>
-
+    <!--<On Platform="iOS" Value="20,0,20,0"/>-->
     <Label 
         Margin="15,20,10,20"
         FontFamily="FontMont"

@@ -10,34 +10,34 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>0f80fec4-839d-4369-ad02-854bd92cd5c5</PackageIdentityName>
     <PackageIdentityPublisher>CN=User Name</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\</IntermediateOutputPath>
     <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath></WindowsSdkPath>
-    <LayoutDir>C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
+    <LayoutDir>C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\InntecMobileNetMaui.runtimeconfig.json">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\InntecMobileNetMaui.runtimeconfig.json">
       <PackagePath>InntecMobileNetMaui.runtimeconfig.json</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\InntecMobileNetMaui.dll">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\InntecMobileNetMaui.dll">
       <PackagePath>InntecMobileNetMaui.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>InntecMobileNetMaui.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\InntecMobileNetMaui.deps.json">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\InntecMobileNetMaui.deps.json">
       <PackagePath>InntecMobileNetMaui.deps.json</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.20\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
@@ -607,7 +607,7 @@
     <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.34\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\acr.userdialogs\7.2.0.564\lib\netstandard2.0\Acr.UserDialogs.dll">
+    <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\acr.userdialogs\8.0.1\lib\net6.0\Acr.UserDialogs.dll">
       <PackagePath>Acr.UserDialogs.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\asyncawaitbestpractices\6.0.4\lib\netstandard2.1\AsyncAwaitBestPractices.dll">
@@ -615,6 +615,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\bouncycastle.netcore\2.2.1\lib\netstandard2.0\BouncyCastle.Crypto.dll">
       <PackagePath>BouncyCastle.Crypto.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\camera.maui\1.2.1\lib\net7.0-windows10.0.19041\Camera.MAUI.dll">
+      <PackagePath>Camera.MAUI.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\communitytoolkit.mvvm\8.2.0\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
@@ -697,7 +700,7 @@
     <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\microsoft.windowsappsdk\1.2.221209.1\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\mopups\1.1.1\lib\net7.0\Mopups.dll">
+    <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\mopups\1.0.0\lib\net6.0\Mopups.dll">
       <PackagePath>Mopups.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\newtonsoft.json\13.0.3\lib\net6.0\Newtonsoft.Json.dll">
@@ -706,11 +709,29 @@
     <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\plugin.fingerprint\2.1.5\lib\netstandard2.0\Plugin.Fingerprint.dll">
       <PackagePath>Plugin.Fingerprint.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\sqlite-net-pcl\1.9.172\lib\netstandard2.0\SQLite-net.dll">
+      <PackagePath>SQLite-net.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\sqlitepclraw.bundle_green\2.1.2\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll">
+      <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\sqlitepclraw.core\2.1.2\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+      <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\sqlitepclraw.provider.e_sqlite3\2.1.2\lib\net6.0-windows7.0\SQLitePCLRaw.provider.e_sqlite3.dll">
+      <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\zxing.net\0.16.9\lib\net7.0\zxing.dll">
+      <PackagePath>zxing.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\microsoft.graphics.win2d\1.0.5.1\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\microsoft.windowsappsdk\1.2.221209.1\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.1.2\runtimes\win-x64\native\e_sqlite3.dll">
+      <PackagePath>e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\microsoft.maui.controls.ref.win\7.0.101\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
@@ -721,370 +742,931 @@
     <AppxPackagedFile Include="C:\Users\vlopez\.nuget\packages\microsoft.maui.core.ref.win\7.0.101\ref\net7.0-windows10.0.19041\Microsoft.Maui.pri">
       <PackagePath>Microsoft.Maui.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\Resources\Raw\AboutAssets.txt">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splash_logoSplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splash_logoSplashScreen.scale-100.png">
       <PackagePath>splash_logoSplashScreen.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splash_logoSplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splash_logoSplashScreen.scale-125.png">
       <PackagePath>splash_logoSplashScreen.scale-125.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splash_logoSplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splash_logoSplashScreen.scale-150.png">
       <PackagePath>splash_logoSplashScreen.scale-150.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splash_logoSplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splash_logoSplashScreen.scale-200.png">
       <PackagePath>splash_logoSplashScreen.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splash_logoSplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splash_logoSplashScreen.scale-400.png">
       <PackagePath>splash_logoSplashScreen.scale-400.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Montserrat-Bold.ttf">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\fontello.ttf">
+      <PackagePath>fontello.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Montserrat-Bold.ttf">
       <PackagePath>Montserrat-Bold.ttf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Montserrat.ttf">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\Montserrat.ttf">
       <PackagePath>Montserrat.ttf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\back.scale-100.png">
       <PackagePath>back.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\back_combustible.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\back_combustible.scale-100.png">
       <PackagePath>back_combustible.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\benefitw.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\benefitw.scale-100.png">
       <PackagePath>benefitw.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bkgpeople.scale-100.jpg">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bkgpeople.scale-100.jpg">
       <PackagePath>bkgpeople.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bloqueos.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\bloqueos.scale-100.png">
       <PackagePath>bloqueos.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cacao.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cacao.scale-100.png">
       <PackagePath>cacao.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cancel.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cancel.scale-100.png">
       <PackagePath>cancel.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cards.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cancel.scale-125.png">
+      <PackagePath>cancel.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cancel.scale-150.png">
+      <PackagePath>cancel.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cancel.scale-200.png">
+      <PackagePath>cancel.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cancel.scale-400.png">
+      <PackagePath>cancel.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cards.scale-100.png">
       <PackagePath>cards.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\carnet.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cards.scale-125.png">
+      <PackagePath>cards.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cards.scale-150.png">
+      <PackagePath>cards.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cards.scale-200.png">
+      <PackagePath>cards.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\cards.scale-400.png">
+      <PackagePath>cards.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\carnet.scale-100.png">
       <PackagePath>carnet.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\changenip.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\changenip.scale-100.png">
       <PackagePath>changenip.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\check.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\changenip.scale-125.png">
+      <PackagePath>changenip.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\changenip.scale-150.png">
+      <PackagePath>changenip.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\changenip.scale-200.png">
+      <PackagePath>changenip.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\changenip.scale-400.png">
+      <PackagePath>changenip.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\check.scale-100.png">
       <PackagePath>check.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\combustible.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\check.scale-125.png">
+      <PackagePath>check.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\check.scale-150.png">
+      <PackagePath>check.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\check.scale-200.png">
+      <PackagePath>check.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\check.scale-400.png">
+      <PackagePath>check.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\combustible.scale-100.png">
       <PackagePath>combustible.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\conoce.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\conoce.scale-100.png">
       <PackagePath>conoce.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\credit_card_add.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\credit_card_add.scale-100.png">
       <PackagePath>credit_card_add.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\credit_card_add.scale-125.png">
+      <PackagePath>credit_card_add.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\credit_card_add.scale-150.png">
+      <PackagePath>credit_card_add.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\credit_card_add.scale-200.png">
+      <PackagePath>credit_card_add.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\credit_card_add.scale-400.png">
+      <PackagePath>credit_card_add.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkcancel.scale-100.png">
+      <PackagePath>darkcancel.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkcancel.scale-125.png">
+      <PackagePath>darkcancel.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkcancel.scale-150.png">
+      <PackagePath>darkcancel.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkcancel.scale-200.png">
+      <PackagePath>darkcancel.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkcancel.scale-400.png">
+      <PackagePath>darkcancel.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkchangenip.scale-100.png">
+      <PackagePath>darkchangenip.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkchangenip.scale-125.png">
+      <PackagePath>darkchangenip.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkchangenip.scale-150.png">
+      <PackagePath>darkchangenip.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkchangenip.scale-200.png">
+      <PackagePath>darkchangenip.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkchangenip.scale-400.png">
+      <PackagePath>darkchangenip.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkcheck.scale-100.png">
+      <PackagePath>darkcheck.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkcheck.scale-125.png">
+      <PackagePath>darkcheck.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkcheck.scale-150.png">
+      <PackagePath>darkcheck.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkcheck.scale-200.png">
+      <PackagePath>darkcheck.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkcheck.scale-400.png">
+      <PackagePath>darkcheck.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkdelete.scale-100.png">
+      <PackagePath>darkdelete.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkdelete.scale-125.png">
+      <PackagePath>darkdelete.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkdelete.scale-150.png">
+      <PackagePath>darkdelete.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkdelete.scale-200.png">
+      <PackagePath>darkdelete.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkdelete.scale-400.png">
+      <PackagePath>darkdelete.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkkey.scale-100.png">
+      <PackagePath>darkkey.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkkey.scale-125.png">
+      <PackagePath>darkkey.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkkey.scale-150.png">
+      <PackagePath>darkkey.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkkey.scale-200.png">
+      <PackagePath>darkkey.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkkey.scale-400.png">
+      <PackagePath>darkkey.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darklist_viatic.scale-100.png">
+      <PackagePath>darklist_viatic.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darklist_viatic.scale-125.png">
+      <PackagePath>darklist_viatic.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darklist_viatic.scale-150.png">
+      <PackagePath>darklist_viatic.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darklist_viatic.scale-200.png">
+      <PackagePath>darklist_viatic.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darklist_viatic.scale-400.png">
+      <PackagePath>darklist_viatic.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darknew_viatic_request.scale-100.png">
+      <PackagePath>darknew_viatic_request.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darknew_viatic_request.scale-125.png">
+      <PackagePath>darknew_viatic_request.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darknew_viatic_request.scale-150.png">
+      <PackagePath>darknew_viatic_request.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darknew_viatic_request.scale-200.png">
+      <PackagePath>darknew_viatic_request.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darknew_viatic_request.scale-400.png">
+      <PackagePath>darknew_viatic_request.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkqrcode_solidw.scale-100.png">
+      <PackagePath>darkqrcode_solidw.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkqrcode_solidw.scale-125.png">
+      <PackagePath>darkqrcode_solidw.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkqrcode_solidw.scale-150.png">
+      <PackagePath>darkqrcode_solidw.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkqrcode_solidw.scale-200.png">
+      <PackagePath>darkqrcode_solidw.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darkqrcode_solidw.scale-400.png">
+      <PackagePath>darkqrcode_solidw.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksim_card_solidw.scale-100.png">
+      <PackagePath>darksim_card_solidw.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksim_card_solidw.scale-125.png">
+      <PackagePath>darksim_card_solidw.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksim_card_solidw.scale-150.png">
+      <PackagePath>darksim_card_solidw.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksim_card_solidw.scale-200.png">
+      <PackagePath>darksim_card_solidw.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksim_card_solidw.scale-400.png">
+      <PackagePath>darksim_card_solidw.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksvgcombustible.scale-100.png">
+      <PackagePath>darksvgcombustible.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksvgcombustible.scale-125.png">
+      <PackagePath>darksvgcombustible.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksvgcombustible.scale-150.png">
+      <PackagePath>darksvgcombustible.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksvgcombustible.scale-200.png">
+      <PackagePath>darksvgcombustible.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksvgcombustible.scale-400.png">
+      <PackagePath>darksvgcombustible.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksvgviaticos.scale-100.png">
+      <PackagePath>darksvgviaticos.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksvgviaticos.scale-125.png">
+      <PackagePath>darksvgviaticos.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksvgviaticos.scale-150.png">
+      <PackagePath>darksvgviaticos.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksvgviaticos.scale-200.png">
+      <PackagePath>darksvgviaticos.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\darksvgviaticos.scale-400.png">
+      <PackagePath>darksvgviaticos.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete.scale-100.png">
       <PackagePath>delete.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\done.scale-100.gif">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete.scale-125.png">
+      <PackagePath>delete.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete.scale-150.png">
+      <PackagePath>delete.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete.scale-200.png">
+      <PackagePath>delete.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\delete.scale-400.png">
+      <PackagePath>delete.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\done.scale-100.gif">
       <PackagePath>done.scale-100.gif</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dorso.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dorso.scale-100.png">
       <PackagePath>dorso.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\down.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\down.scale-100.png">
       <PackagePath>down.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\error.scale-100.gif">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\error.scale-100.gif">
       <PackagePath>error.scale-100.gif</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\faceid.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\faceid.scale-100.png">
       <PackagePath>faceid.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\faq.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\faq.scale-100.png">
       <PackagePath>faq.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\fileac.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\faq.scale-125.png">
+      <PackagePath>faq.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\faq.scale-150.png">
+      <PackagePath>faq.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\faq.scale-200.png">
+      <PackagePath>faq.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\faq.scale-400.png">
+      <PackagePath>faq.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\fileac.scale-100.png">
       <PackagePath>fileac.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\footer.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\fileac.scale-125.png">
+      <PackagePath>fileac.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\fileac.scale-150.png">
+      <PackagePath>fileac.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\fileac.scale-200.png">
+      <PackagePath>fileac.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\fileac.scale-400.png">
+      <PackagePath>fileac.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\footer.scale-100.png">
       <PackagePath>footer.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\frente.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\frente.scale-100.png">
       <PackagePath>frente.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcher.ico">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_combustible.scale-100.png">
+      <PackagePath>icon_combustible.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_viaticos.scale-100.png">
+      <PackagePath>icon_viaticos.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcher.ico">
       <PackagePath>ic_launcher.ico</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLargeTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLargeTile.scale-100.png">
       <PackagePath>ic_launcherLargeTile.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLargeTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLargeTile.scale-125.png">
       <PackagePath>ic_launcherLargeTile.scale-125.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLargeTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLargeTile.scale-150.png">
       <PackagePath>ic_launcherLargeTile.scale-150.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLargeTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLargeTile.scale-200.png">
       <PackagePath>ic_launcherLargeTile.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLargeTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLargeTile.scale-400.png">
       <PackagePath>ic_launcherLargeTile.scale-400.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-lightunplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>ic_launcherLogo.altform-lightunplated_targetsize-16.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-lightunplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>ic_launcherLogo.altform-lightunplated_targetsize-24.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-lightunplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>ic_launcherLogo.altform-lightunplated_targetsize-256.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-lightunplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>ic_launcherLogo.altform-lightunplated_targetsize-32.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-lightunplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>ic_launcherLogo.altform-lightunplated_targetsize-48.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-unplated_targetsize-16.png">
       <PackagePath>ic_launcherLogo.altform-unplated_targetsize-16.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-unplated_targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-unplated_targetsize-24.png">
       <PackagePath>ic_launcherLogo.altform-unplated_targetsize-24.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-unplated_targetsize-256.png">
       <PackagePath>ic_launcherLogo.altform-unplated_targetsize-256.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-unplated_targetsize-32.png">
       <PackagePath>ic_launcherLogo.altform-unplated_targetsize-32.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.altform-unplated_targetsize-48.png">
       <PackagePath>ic_launcherLogo.altform-unplated_targetsize-48.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.scale-100.png">
       <PackagePath>ic_launcherLogo.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.scale-125.png">
       <PackagePath>ic_launcherLogo.scale-125.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.scale-150.png">
       <PackagePath>ic_launcherLogo.scale-150.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.scale-200.png">
       <PackagePath>ic_launcherLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.scale-400.png">
       <PackagePath>ic_launcherLogo.scale-400.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.targetsize-16.png">
       <PackagePath>ic_launcherLogo.targetsize-16.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.targetsize-24.png">
       <PackagePath>ic_launcherLogo.targetsize-24.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.targetsize-256.png">
       <PackagePath>ic_launcherLogo.targetsize-256.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.targetsize-32.png">
       <PackagePath>ic_launcherLogo.targetsize-32.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherLogo.targetsize-48.png">
       <PackagePath>ic_launcherLogo.targetsize-48.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherMediumTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherMediumTile.scale-100.png">
       <PackagePath>ic_launcherMediumTile.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherMediumTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherMediumTile.scale-125.png">
       <PackagePath>ic_launcherMediumTile.scale-125.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherMediumTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherMediumTile.scale-150.png">
       <PackagePath>ic_launcherMediumTile.scale-150.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherMediumTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherMediumTile.scale-200.png">
       <PackagePath>ic_launcherMediumTile.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherMediumTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherMediumTile.scale-400.png">
       <PackagePath>ic_launcherMediumTile.scale-400.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherSmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherSmallTile.scale-100.png">
       <PackagePath>ic_launcherSmallTile.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherSmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherSmallTile.scale-125.png">
       <PackagePath>ic_launcherSmallTile.scale-125.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherSmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherSmallTile.scale-150.png">
       <PackagePath>ic_launcherSmallTile.scale-150.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherSmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherSmallTile.scale-200.png">
       <PackagePath>ic_launcherSmallTile.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherSmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherSmallTile.scale-400.png">
       <PackagePath>ic_launcherSmallTile.scale-400.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherStoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherStoreLogo.scale-100.png">
       <PackagePath>ic_launcherStoreLogo.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherStoreLogo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherStoreLogo.scale-125.png">
       <PackagePath>ic_launcherStoreLogo.scale-125.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherStoreLogo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherStoreLogo.scale-150.png">
       <PackagePath>ic_launcherStoreLogo.scale-150.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherStoreLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherStoreLogo.scale-200.png">
       <PackagePath>ic_launcherStoreLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherStoreLogo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherStoreLogo.scale-400.png">
       <PackagePath>ic_launcherStoreLogo.scale-400.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherWideTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherWideTile.scale-100.png">
       <PackagePath>ic_launcherWideTile.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherWideTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherWideTile.scale-125.png">
       <PackagePath>ic_launcherWideTile.scale-125.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherWideTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherWideTile.scale-150.png">
       <PackagePath>ic_launcherWideTile.scale-150.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherWideTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherWideTile.scale-200.png">
       <PackagePath>ic_launcherWideTile.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherWideTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\ic_launcherWideTile.scale-400.png">
       <PackagePath>ic_launcherWideTile.scale-400.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec.scale-100.png">
       <PackagePath>inntec.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\innteclogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\innteclogo.scale-100.png">
       <PackagePath>innteclogo.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntecsw.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntecsw.scale-100.png">
       <PackagePath>inntecsw.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntecw.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntecw.scale-100.png">
       <PackagePath>inntecw.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\key.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_combustible.scale-100.png">
+      <PackagePath>inntec_combustible.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_combustible.scale-125.png">
+      <PackagePath>inntec_combustible.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_combustible.scale-150.png">
+      <PackagePath>inntec_combustible.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_combustible.scale-200.png">
+      <PackagePath>inntec_combustible.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_combustible.scale-400.png">
+      <PackagePath>inntec_combustible.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_despensa.scale-100.png">
+      <PackagePath>inntec_despensa.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_despensa.scale-125.png">
+      <PackagePath>inntec_despensa.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_despensa.scale-150.png">
+      <PackagePath>inntec_despensa.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_despensa.scale-200.png">
+      <PackagePath>inntec_despensa.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_despensa.scale-400.png">
+      <PackagePath>inntec_despensa.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_elite.scale-100.png">
+      <PackagePath>inntec_elite.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_elite.scale-125.png">
+      <PackagePath>inntec_elite.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_elite.scale-150.png">
+      <PackagePath>inntec_elite.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_elite.scale-200.png">
+      <PackagePath>inntec_elite.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_elite.scale-400.png">
+      <PackagePath>inntec_elite.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_premium_carnet.scale-100.png">
+      <PackagePath>inntec_premium_carnet.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_premium_carnet.scale-125.png">
+      <PackagePath>inntec_premium_carnet.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_premium_carnet.scale-150.png">
+      <PackagePath>inntec_premium_carnet.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_premium_carnet.scale-200.png">
+      <PackagePath>inntec_premium_carnet.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_premium_carnet.scale-400.png">
+      <PackagePath>inntec_premium_carnet.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_premium_mc.scale-100.png">
+      <PackagePath>inntec_premium_mc.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_premium_mc.scale-125.png">
+      <PackagePath>inntec_premium_mc.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_premium_mc.scale-150.png">
+      <PackagePath>inntec_premium_mc.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_premium_mc.scale-200.png">
+      <PackagePath>inntec_premium_mc.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_premium_mc.scale-400.png">
+      <PackagePath>inntec_premium_mc.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_restaurante.scale-100.png">
+      <PackagePath>inntec_restaurante.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_restaurante.scale-125.png">
+      <PackagePath>inntec_restaurante.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_restaurante.scale-150.png">
+      <PackagePath>inntec_restaurante.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_restaurante.scale-200.png">
+      <PackagePath>inntec_restaurante.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\inntec_restaurante.scale-400.png">
+      <PackagePath>inntec_restaurante.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\key.scale-100.png">
       <PackagePath>key.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\left.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\key.scale-125.png">
+      <PackagePath>key.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\key.scale-150.png">
+      <PackagePath>key.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\key.scale-200.png">
+      <PackagePath>key.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\key.scale-400.png">
+      <PackagePath>key.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\left.scale-100.png">
       <PackagePath>left.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\list_viatic.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\list_viatic.scale-100.png">
       <PackagePath>list_viatic.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\loading.scale-100.gif">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\list_viatic.scale-125.png">
+      <PackagePath>list_viatic.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\list_viatic.scale-150.png">
+      <PackagePath>list_viatic.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\list_viatic.scale-200.png">
+      <PackagePath>list_viatic.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\list_viatic.scale-400.png">
+      <PackagePath>list_viatic.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\loading.scale-100.gif">
       <PackagePath>loading.scale-100.gif</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\logoinntecdescuentos.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\logoinntecdescuentos.scale-100.png">
       <PackagePath>logoinntecdescuentos.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\logout.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\logout.scale-100.png">
       <PackagePath>logout.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mastercard.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\logout.scale-125.png">
+      <PackagePath>logout.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\logout.scale-150.png">
+      <PackagePath>logout.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\logout.scale-200.png">
+      <PackagePath>logout.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\logout.scale-400.png">
+      <PackagePath>logout.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mastercard.scale-100.png">
       <PackagePath>mastercard.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\menu.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\menu.scale-100.png">
       <PackagePath>menu.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\movement.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\movement.scale-100.png">
       <PackagePath>movement.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\muestra68.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\movement.scale-125.png">
+      <PackagePath>movement.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\movement.scale-150.png">
+      <PackagePath>movement.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\movement.scale-200.png">
+      <PackagePath>movement.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\movement.scale-400.png">
+      <PackagePath>movement.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\muestra68.scale-100.png">
       <PackagePath>muestra68.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mydata.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mydata.scale-100.png">
       <PackagePath>mydata.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\new_viatic_request.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mydata.scale-125.png">
+      <PackagePath>mydata.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mydata.scale-150.png">
+      <PackagePath>mydata.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mydata.scale-200.png">
+      <PackagePath>mydata.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\mydata.scale-400.png">
+      <PackagePath>mydata.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\new_viatic_request.scale-100.png">
       <PackagePath>new_viatic_request.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notification.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\new_viatic_request.scale-125.png">
+      <PackagePath>new_viatic_request.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\new_viatic_request.scale-150.png">
+      <PackagePath>new_viatic_request.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\new_viatic_request.scale-200.png">
+      <PackagePath>new_viatic_request.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\new_viatic_request.scale-400.png">
+      <PackagePath>new_viatic_request.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notification.scale-100.png">
       <PackagePath>notification.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notificationr.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notification.scale-125.png">
+      <PackagePath>notification.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notification.scale-150.png">
+      <PackagePath>notification.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notification.scale-200.png">
+      <PackagePath>notification.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notification.scale-400.png">
+      <PackagePath>notification.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notificationr.scale-100.png">
       <PackagePath>notificationr.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notificationsbk.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notificationr.scale-125.png">
+      <PackagePath>notificationr.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notificationr.scale-150.png">
+      <PackagePath>notificationr.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notificationr.scale-200.png">
+      <PackagePath>notificationr.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notificationr.scale-400.png">
+      <PackagePath>notificationr.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\notificationsbk.scale-100.png">
       <PackagePath>notificationsbk.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\people.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\people.scale-100.png">
       <PackagePath>people.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\placeholder.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\placeholder.scale-100.png">
       <PackagePath>placeholder.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\qrcode_solidw.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\placeholder.scale-125.png">
+      <PackagePath>placeholder.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\placeholder.scale-150.png">
+      <PackagePath>placeholder.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\placeholder.scale-200.png">
+      <PackagePath>placeholder.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\placeholder.scale-400.png">
+      <PackagePath>placeholder.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\qrcode_solidw.scale-100.png">
       <PackagePath>qrcode_solidw.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\right.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\qrcode_solidw.scale-125.png">
+      <PackagePath>qrcode_solidw.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\qrcode_solidw.scale-150.png">
+      <PackagePath>qrcode_solidw.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\qrcode_solidw.scale-200.png">
+      <PackagePath>qrcode_solidw.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\qrcode_solidw.scale-400.png">
+      <PackagePath>qrcode_solidw.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\right.scale-100.png">
       <PackagePath>right.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\rojo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\rojo.scale-100.png">
       <PackagePath>rojo.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\save.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\save.scale-100.png">
       <PackagePath>save.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\sim_card_solidw.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\save.scale-125.png">
+      <PackagePath>save.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\save.scale-150.png">
+      <PackagePath>save.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\save.scale-200.png">
+      <PackagePath>save.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\save.scale-400.png">
+      <PackagePath>save.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\sim_card_solidw.scale-100.png">
       <PackagePath>sim_card_solidw.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\splash.scale-100.jpg">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\sim_card_solidw.scale-125.png">
+      <PackagePath>sim_card_solidw.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\sim_card_solidw.scale-150.png">
+      <PackagePath>sim_card_solidw.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\sim_card_solidw.scale-200.png">
+      <PackagePath>sim_card_solidw.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\sim_card_solidw.scale-400.png">
+      <PackagePath>sim_card_solidw.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\splash.scale-100.jpg">
       <PackagePath>splash.scale-100.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\splash_logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\splash_logo.scale-100.png">
       <PackagePath>splash_logo.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\splash_screen.scale-100.xml">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\splash_screen.scale-100.xml">
       <PackagePath>splash_screen.scale-100.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\stipe_benefithub.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\stipe_benefithub.scale-100.png">
       <PackagePath>stipe_benefithub.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\stripe_combustible.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\stripe_combustible.scale-100.png">
       <PackagePath>stripe_combustible.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\stripe_viaticos.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\stripe_viaticos.scale-100.png">
       <PackagePath>stripe_viaticos.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\tarjeta_combustible.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svgcombustible.scale-100.png">
+      <PackagePath>svgcombustible.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svgcombustible.scale-125.png">
+      <PackagePath>svgcombustible.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svgcombustible.scale-150.png">
+      <PackagePath>svgcombustible.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svgcombustible.scale-200.png">
+      <PackagePath>svgcombustible.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svgcombustible.scale-400.png">
+      <PackagePath>svgcombustible.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svginntec.scale-100.png">
+      <PackagePath>svginntec.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svginntec.scale-125.png">
+      <PackagePath>svginntec.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svginntec.scale-150.png">
+      <PackagePath>svginntec.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svginntec.scale-200.png">
+      <PackagePath>svginntec.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svginntec.scale-400.png">
+      <PackagePath>svginntec.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svgviaticos.scale-100.png">
+      <PackagePath>svgviaticos.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svgviaticos.scale-125.png">
+      <PackagePath>svgviaticos.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svgviaticos.scale-150.png">
+      <PackagePath>svgviaticos.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svgviaticos.scale-200.png">
+      <PackagePath>svgviaticos.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\svgviaticos.scale-400.png">
+      <PackagePath>svgviaticos.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\tarjeta_combustible.scale-100.png">
       <PackagePath>tarjeta_combustible.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\tarjeta_viaticos.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\tarjeta_viaticos.scale-100.png">
       <PackagePath>tarjeta_viaticos.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\touchid.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\touchid.scale-100.png">
       <PackagePath>touchid.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\user.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\user.scale-100.png">
       <PackagePath>user.scale-100.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\NetMaui\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\viaticos.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\user.scale-125.png">
+      <PackagePath>user.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\user.scale-150.png">
+      <PackagePath>user.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\user.scale-200.png">
+      <PackagePath>user.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\user.scale-400.png">
+      <PackagePath>user.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\vlopez\Documents\GitHub\InntecMovilApp\InntecMobileNetMaui\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\viaticos.scale-100.png">
       <PackagePath>viaticos.scale-100.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

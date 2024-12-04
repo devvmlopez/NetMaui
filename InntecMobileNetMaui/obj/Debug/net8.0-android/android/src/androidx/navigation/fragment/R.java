@@ -14,7 +14,7 @@ public final class R {
 		public static final int sliding_pane_detail_pane_width = 0x7f070302;
 	}
 	public static final class id {
-		public static final int nav_host_fragment_container = 0x7f09014c;
+		public static final int nav_host_fragment_container = 0x7f09014b;
 		public static final int sliding_pane_detail_container = 0x7f0901b8;
 		public static final int sliding_pane_layout = 0x7f0901b9;
 	}

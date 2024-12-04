@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.Gas.ActivationRequestReportDetailPage"
+             Shell.BackgroundColor="#367fb6"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <Style 
+            x:Key="BackgroundColorViews"
+            TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
+        </Style>
+        <Style
+            x:Key="BackgroundFramItems"
+            TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3DB, Dark= #f2f2f7}" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout
+              AbsoluteLayout.LayoutBounds="{OnPlatform iOS= '0,0,1,1', Android='0,0,1,1'}"
+              AbsoluteLayout.LayoutFlags="All"
+              Style="{StaticResource BackgroundColorViews}">
+            <StackLayout  
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,1,1,0.95">
+                <StackLayout 
+                    Orientation="Horizontal"
+                    Margin="8">
+                    <StackLayout 
+                        Margin="4,0,-28,0"
+                        HorizontalOptions="StartAndExpand">
+                        <Label 
+                            FontFamily="FontMontB"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            HorizontalTextAlignment="Center"
+                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                            Text="No. Tarjeta"/>
+                        <Label 
+                            Text="{Binding Param.NoTarjeta}"
+                            FontFamily="FontMont"
+                            FontAutoScalingEnabled="False"
+                            FontSize="16"
+                            TextColor="Black"/>
+
+                    </StackLayout>
+                    <StackLayout 
+                        Margin="0"
+                        HorizontalOptions="CenterAndExpand">
+                        <Label 
+                            FontFamily="FontMontB"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                            Text="Estatus"/>
+                        <Label 
+                            Text="{Binding Param.Estatus}"
+                            FontFamily="FontMont"
+                            FontAutoScalingEnabled="False"
+                            FontSize="16"
+                            TextColor="Black"/>
+
+                    </StackLayout>
+                </StackLayout>
+                <Image 
+                    Source="loading.gif"
+                    HeightRequest="70"
+                    WidthRequest="70"
+                    IsAnimationPlaying="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+                <ListView 
+                    Margin="0,4"
+                    ItemsSource="{Binding Param.ListadoDetalleTrackingSolicitud}" 
+                    HasUnevenRows="True"
+                    BackgroundColor="Transparent"
+                    SeparatorColor="Transparent"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    CachingStrategy="RetainElement"
+                    SelectionMode="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Border
+                                        Stroke="LightGray"
+                                        StrokeThickness="4"
+                                        Margin="8"
+                                        Style="{StaticResource BackgroundFramItems}"
+                                        StrokeShape="RoundRectangle 0,10,0,0">
+                                        <StackLayout
+                                            Padding="4"
+                                            Spacing="4">
+                                            <Label 
+                                                Text="{Binding FechaMovimiento, StringFormat='{0:MMMM d, yyyy HH:mm}'}"
+                                                FontFamily="FontMontB"
+                                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                                FontAutoScalingEnabled="False"
+                                                FontSize="Small"/>
+                                            <Label 
+                                                Text="{Binding Observaciones}"
+                                                FontFamily="FontMont"
+                                                FontAutoScalingEnabled="False"
+                                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                                FontSize="Medium"/>
+                                        </StackLayout>
+                                    </Border>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

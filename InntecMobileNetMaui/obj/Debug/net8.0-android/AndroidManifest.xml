@@ -5,11 +5,21 @@
     Changes to this file may cause incorrect behavior and will be lost if
     the contents are regenerated.
     -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" package="com.companyname.inntecmobilenetmaui" android:versionName="1.0">
-  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="34" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="4001003" package="mx.com.inntecmp.miinntecmovilapp" android:versionName="4.1.3">
+  <uses-sdk android:minSdkVersion="26" android:targetSdkVersion="34" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher" android:supportsRtl="true" android:name="crc64cec145d8296a922f.MainApplication" android:label="InntecMobile" android:debuggable="true" android:extractNativeLibs="true">
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.LOCATION_HARDWARE" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+  <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <application android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:usesCleartextTraffic="true" android:supportsRtl="true" android:name="crc64cec145d8296a922f.MainApplication" android:label="Mi Inntec Movil" android:debuggable="true" android:extractNativeLibs="true">
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <activity android:configChanges="density|orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:theme="@style/Maui.SplashTheme" android:name="crc64cec145d8296a922f.MainActivity" android:exported="true">
       <intent-filter>
@@ -18,14 +28,25 @@
       </intent-filter>
     </activity>
     <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="crc6468b6408a11370c2f.WebAuthenticatorIntermediateActivity" />
-    <provider android:authorities="com.companyname.inntecmobilenetmaui.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="microsoft.maui.essentials.fileProvider">
+    <provider android:authorities="mx.com.inntecmp.miinntecmovilapp.fileProvider" android:exported="false" android:grantUriPermissions="true" android:name="microsoft.maui.essentials.fileProvider">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/microsoft_maui_essentials_fileprovider_file_paths" />
     </provider>
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Connectivity Broadcast Receiver" android:name="crc64e53d2f592022988e.ConnectivityBroadcastReceiver" />
     <activity android:configChanges="orientation|screenSize" android:exported="false" android:name="crc64ba438d8f48cf7e75.IntermediateActivity" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Battery Broadcast Receiver" android:name="crc640a8d9a12ddbf2cf2.BatteryBroadcastReceiver" />
     <receiver android:enabled="true" android:exported="false" android:label="Essentials Energy Saver Broadcast Receiver" android:name="crc640a8d9a12ddbf2cf2.EnergySaverBroadcastReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Plugin LocalNotification Geofence Transitions Receiver" android:name="plugin.LocalNotification.GeofenceTransitionsIntentReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Plugin LocalNotification Action Receiver" android:name="plugin.LocalNotification.NotificationActionReceiver" />
+    <receiver android:enabled="true" android:exported="false" android:label="Plugin LocalNotification Scheduled Alarm Receiver" android:name="plugin.LocalNotification.ScheduledAlarmReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+        <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+        <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+        <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+        <category android:name="android.intent.category.HOME" />
+      </intent-filter>
+    </receiver>
     <service android:name="crc64396a3fe5f8138e3f.KeepAliveService" />
-    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:authorities="com.companyname.inntecmobilenetmaui.mono.MonoRuntimeProvider.__mono_init__" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:authorities="mx.com.inntecmp.miinntecmovilapp.mono.MonoRuntimeProvider.__mono_init__" />
   </application>
 </manifest>

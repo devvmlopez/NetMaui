@@ -1,7 +1,4 @@
 using Acr.UserDialogs;
-//using Android.OS;
-//using Android.OS.Strictmode;
-//using Android.Telephony.Euicc;
 using InntecMobileNetMaui.ViewModels.Alerts;
 using InntecMobileNetMaui.ViewModels.Cards;
 using InntecMobileNetMaui.Views.Alerts;
@@ -15,8 +12,17 @@ public partial class NewCardPage
 	{
 		InitializeComponent();
         this.BindingContext = viewModel = new NewCardViewModel(this);
+        Btn_NewCard.Clicked -= Btn_NewCard_Clicked;
+        Btn_NewCard.Clicked += new System.EventHandler(Btn_NewCard_Clicked);
+
+
+        Btn_Cancel.Clicked -= Btn_Cancel_Pressed;
+        Btn_Cancel.Clicked += new System.EventHandler(Btn_Cancel_Pressed);
     }
 
+    /// <summary>
+    /// Evento que controla la navegacion hacia atras al cerrar el control
+    /// </summary>
     void Button_Clicked(System.Object sender, System.EventArgs e)
     {
         MopupService.Instance.PopAsync();
@@ -32,47 +38,40 @@ public partial class NewCardPage
     {
         MopupService.Instance.PopAsync();
     }
-
-    private void Btn_NewCard_Clicked(object sender, System.EventArgs e)
+    /// <summary>
+    /// Agregar una nueva tarjeta
+    /// </summary>
+    private async void Btn_NewCard_Clicked(object sender, System.EventArgs e)
     {
         if (IsBusy) return;
         IsBusy = true;
 
-        //AlertConfig alertConfig = new AlertConfig();
-        //alertConfig.SetTitle("Se han detectado errores");
-        //alertConfig.SetOkText("Aceptar");
-
-        //InformativeViewModel.Instance.MessageType = ;
-        InformativeViewModel.Instance.Title = "Se han detectado errores";
-        InformativeViewModel.Instance.Message = "La sesión ha terminado, ingresa de nuevo.";
-        //MopupService.Instance.PushAsync(InformativeAlert.Instance);
-        //Shell.Current.GoToAsync("//LoginPage");
-
-
         if (string.IsNullOrEmpty(Txt_CardNumber.Text))
         {
-            //alertConfig.SetMessage("Ingresa el número de tarjeta");
-            //UserDialogs.Instance.Alert(alertConfig);
 
+            InformativeViewModel.Instance.MessageType = InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel.messageType.Error;
+            InformativeViewModel.Instance.Title = "Se han detectado errores";
             InformativeViewModel.Instance.Message = "Ingresa el número de tarjeta.";
-            MopupService.Instance.PushAsync(InformativeAlert.Instance);
+            await MopupService.Instance.PushAsync(InformativeAlert.Instance);
         }
         else if (string.IsNullOrEmpty(TxtToken.Text))
         {
-            //alertConfig.SetMessage("Ingresa el token de seguridad");
-            //UserDialogs.Instance.Alert(alertConfig);
 
+            InformativeViewModel.Instance.MessageType = InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel.messageType.Error;
+            InformativeViewModel.Instance.Title = "Se han detectado errores";
             InformativeViewModel.Instance.Message = "Ingresa el token de seguridad.";
-            MopupService.Instance.PushAsync(InformativeAlert.Instance);
+            await MopupService.Instance.PushAsync(InformativeAlert.Instance);
         }
         else
         {
             Btn_NewCard.IsEnabled = false;
             viewModel.IsBusy = true;
             viewModel.SaveNewCardCommand.Execute(null);
-            //PopupNavigation.Instance.PopAsync(true);
-            MopupService.Instance.PopAsync();
+            viewModel.IsBusy = false;
+            Shell.Current.GoToAsync("//CardsPage");
         }
+        MopupService.Instance.PopAsync();
         IsBusy = false;
+        
     }
 }

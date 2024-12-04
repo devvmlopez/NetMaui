@@ -1,134 +1,180 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InntecMobileNetMaui.Views.MyDataPage"
              xmlns:controls="clr-namespace:InntecMobileNetMaui.RendererControls"
+             xmlns:local="clr-namespace:InntecMobileNetMaui.RendererControls"
              xmlns:Menucontrols="clr-namespace:InntecMobileNetMaui.Views.CustomView"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             Shell.BackgroundColor="#367fb6">
     <ContentPage.Resources>
         <Style x:Key="BackgroundColorViews"
                TargetType="StackLayout">
-            <Setter Property="BackgroundColor" Value="#90255f84" />
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
         </Style>
         <Style x:Key="BackgroundColorCustomControl"
                TargetType="StackLayout">
             <Setter Property="BackgroundColor" Value="Transparent" />
         </Style>
+        <Style x:Key="PicturePlatform"
+               TargetType="Image">
+              <Setter Property="Source" Value="{OnPlatform iOS={AppThemeBinding Dark='pnginntec_bnco.png', Light='pnginntec.png'} , Android= {AppThemeBinding Dark='pnginntec_bnco.png', Light='svginntec.svg'}}" />
+        </Style>
     </ContentPage.Resources>
     <ContentPage.Content>
         <AbsoluteLayout 
-            Style="{StaticResource BackgroundColorViews}"
+            Style="{StaticResource BackgroundColorViews}" 
             HorizontalOptions="FillAndExpand" 
             VerticalOptions="FillAndExpand">
+            <AbsoluteLayout 
+                BackgroundColor="Transparent"
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,1,1,1">
+            </AbsoluteLayout>
+            <HorizontalStackLayout
+                BackgroundColor="Transparent"
+                HorizontalOptions="CenterAndExpand"
+                AbsoluteLayout.LayoutBounds="0.2,0,0,0.16"
+                AbsoluteLayout.LayoutFlags="All">
+            <Image 
+                Style="{StaticResource PicturePlatform}"
+                HeightRequest="70" 
+                WidthRequest="210"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                Margin="16,8"/>
+
+            </HorizontalStackLayout>
             <StackLayout 
                 Style="{StaticResource BackgroundColorCustomControl}"
-                AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                AbsoluteLayout.LayoutBounds="0,0.4,1,0.65"
+                BackgroundColor="Transparent"
                 AbsoluteLayout.LayoutFlags="All"  
                 VerticalOptions="StartAndExpand"
                 Padding="0,10,0,0">
-                <Image 
-                    Source="inntec.png" 
-                    HeightRequest="80" 
-                    WidthRequest="210"
-                    Margin="0,16"/>
                 <ScrollView 
+                    AbsoluteLayout.LayoutBounds="{OnPlatform iOS= '0,0,0.8,0.9', Android='0,0,0.8,1'}"
+                    AbsoluteLayout.LayoutFlags="All"  
+                    VerticalOptions="StartAndExpand"
                     Style="{StaticResource BackgroundColorCustomControl}">
                     <StackLayout 
                         Style="{StaticResource BackgroundColorCustomControl}"
                         HorizontalOptions="FillAndExpand" 
-                        Padding="30,8,30,8">
-                        <Frame
-                            BackgroundColor="#90FFFFFF"
-                            BorderColor="LightGray"
-                            Margin="8,0"
-                            Padding="8"
-                            IsClippedToBounds="True"
-                            CornerRadius="10">
+                        Padding="20,8,20,8">
+                        <Border 
+                             Stroke="LightGray"
+                             StrokeThickness="5"
+                             StrokeShape="RoundRectangle 30,0,0,30"
+                             BackgroundColor="White"
+                             Padding="12">
                             <StackLayout>
                                 <Label 
                                     x:Name="lblName" 
                                     FontFamily="FontMontB" 
+                                    TextColor="{AppThemeBinding Light=Black, Dark=Gray}"
                                     Text="Nombre(s)"/>
                                 <Entry 
                                     x:Name="txtName" 
                                     FontFamily="FontMont" 
+                                    TextColor="Black"
                                     Text="{Binding UserModel.Nombre}"/>
 
                                 <Label 
                                     x:Name="lblPaterno" 
                                     FontFamily="FontMontB" 
+                                    TextColor="{AppThemeBinding Light=Black, Dark=Gray}"
                                     Text="Apellido paterno"/>
                                 <Entry 
                                     x:Name="txtPaterno" 
                                     FontFamily="FontMont" 
+                                    TextColor="Black"
                                     Text="{Binding UserModel.Paterno}"/>
 
                                 <Label 
                                     x:Name="lblMaterno" 
                                     FontFamily="FontMontB" 
+                                    TextColor="{AppThemeBinding Light=Black, Dark=Gray}"
                                     Text="Apellido materno"/>
                                 <Entry 
                                     x:Name="txtMaterno" 
                                     FontFamily="FontMont" 
+                                    TextColor="Black"
                                     Text="{Binding UserModel.Materno}"/>
 
                                 <Label 
                                     x:Name="lblCorreo" 
                                     FontFamily="FontMontB" 
+                                    TextColor="{AppThemeBinding Light=Black, Dark=Gray}"
                                     Text="Correo electronico"/>
                                 <Entry 
                                     x:Name="txtCorreo" 
                                     FontFamily="FontMont"
+                                    TextColor="Black"
                                     Text="{Binding UserModel.Email}"/>
 
                                 <Label 
                                     x:Name="lblTelefono" 
                                     FontFamily="FontMontB" 
+                                    TextColor="{AppThemeBinding Light=Black, Dark=Gray}"
                                     Text="Telefono"/>
                                 <Entry 
                                     x:Name="txtTelefono" 
                                     FontFamily="FontMont" 
+                                    TextColor="Black"
+                                    Keyboard="Numeric"
                                     Text="{Binding UserModel.Telefono}"/>
 
                                 <Label 
                                     x:Name="lblCelular"
                                     FontFamily="FontMontB"
+                                    TextColor="{AppThemeBinding Light=Black, Dark=Gray}"
                                     Text="Celular"/>
                                 <Entry 
                                     x:Name="txtCelular" 
                                     FontFamily="FontMont" 
+                                    TextColor="Black"
+                                    Keyboard="Numeric"
                                     Text="{Binding UserModel.Celular}"/>
 
                                 <Label 
                                     x:Name="lblFecha"
                                     FontFamily="FontMontB" 
+                                    TextColor="{AppThemeBinding Light=Black, Dark=Gray}"
                                     Text="Fecha de nacimiento"/>
                                 <DatePicker
                                     x:Name="dtFecha" 
                                     FontFamily="FontMont" 
+                                    TextColor="Black"
                                     Date="{Binding UserModel.FechaNacimiento}"/>
 
                                 <Label 
                                     x:Name="lblBeneficiario" 
                                     FontFamily="FontMontB" 
+                                    TextColor="{AppThemeBinding Light=Black, Dark=Gray}"
                                     Text="Beneficiario"/>
                                 <Entry 
                                     x:Name="txtBeneficiario"
-                                    FontFamily="FontMont" 
+                                    FontFamily="FontMont"
+                                    TextColor="Black"
                                     Text="{Binding UserModel.Beneficiarios}"/>
                             </StackLayout>
-                        </Frame>
-                        <Button 
-                            Text="Guardar"
-                            CornerRadius="10"
-                            BackgroundColor="#3487CB"
-                            TextColor="White"
-                            Margin="4,8"
-                            Clicked="Button_Clicked"
-                            /> 
+                        </Border>
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
+            <Button 
+                Text="Guardar"
+                CornerRadius="10"
+                Margin="16,0"
+                Clicked="Button_Clicked"
+                AbsoluteLayout.LayoutBounds="{OnPlatform iOS= '0,0,1,0.9', Android='0,0,1,0.88'}"
+                AbsoluteLayout.LayoutFlags="All"  
+                VerticalOptions="End"
+                FontFamily="FontMont"
+                BackgroundColor="{AppThemeBinding Light= '#3487CB', Dark='White'}"
+                TextColor="{AppThemeBinding Light= 'White', Dark='#3487CB'}"
+                BorderColor="{OnPlatform iOS= 'Black', Android='LightGray'}"
+                />
             <AbsoluteLayout 
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="FillAndExpand"
@@ -147,21 +193,21 @@
                     AbsoluteLayout.LayoutFlags="All"/>
             </AbsoluteLayout>
             <Menucontrols:CustomMenu
-                 IconIzq="cards"
-                 IconIzqEnable="True"
-                 IconCentroIzq="credit_card_add"
-                 IconCentroIzqEnable="True"
-                 IconCentroDer="faq"
-                 IconCentroDerEnable="True"
-                 IconDer="user"
-                 IconDerEnable="False"
-                 IconCentro="innteclogo"
-                 IconCentroEnable="True"
-                 VerticalOptions="FillAndExpand"
-                 HorizontalOptions="CenterAndExpand"
-                 AbsoluteLayout.LayoutBounds="0.2,1,1,0.09"
-                 AbsoluteLayout.LayoutFlags="All"
-                 >  
+                x:Name="MenuPrincipal"
+                IconIzqEnable="True"         
+                IconCentroIzqEnable="True"
+                IconCentroDerEnable="True"
+                IconDerEnable="True"
+                IconIzq="{OnPlatform iOS= 'pngnotification', Android={AppThemeBinding Dark='notification', Light='pngnotification'}}"
+                IconCentroIzq="{OnPlatform iOS= 'pngcredit_card_add', Android={AppThemeBinding Dark='credit_card_add', Light='pngcredit_card_add'}}"
+                IconCentroDer="{OnPlatform iOS= 'pngfaq', Android={AppThemeBinding Dark='faq', Light='pngfaq'}}"
+                IconDer="{OnPlatform iOS= 'pnguser', Android={AppThemeBinding Dark='user', Light='pnguser'}}"
+                IconCentro="innteclogo"
+                IconCentroEnable="True"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,0.995,1,0.1" >  
             </Menucontrols:CustomMenu>
         </AbsoluteLayout>
     </ContentPage.Content>

@@ -17,21 +17,21 @@ public final class R {
 		public static final int action_divider = 0x7f09003d;
 		public static final int cancel_action = 0x7f09006e;
 		public static final int chronometer = 0x7f09007b;
-		public static final int end_padder = 0x7f0900ba;
-		public static final int icon = 0x7f0900e6;
-		public static final int info = 0x7f0900f0;
-		public static final int line1 = 0x7f0900fd;
-		public static final int line3 = 0x7f0900fe;
-		public static final int media_actions = 0x7f09011e;
-		public static final int media_controller_compat_view_tag = 0x7f09011f;
-		public static final int notification_main_column = 0x7f09015a;
-		public static final int notification_main_column_container = 0x7f09015b;
-		public static final int right_side = 0x7f09017a;
-		public static final int status_bar_latest_event_content = 0x7f0901ba;
-		public static final int text = 0x7f0901ce;
-		public static final int text2 = 0x7f0901cf;
-		public static final int time = 0x7f0901df;
-		public static final int title = 0x7f0901e0;
+		public static final int end_padder = 0x7f0900bb;
+		public static final int icon = 0x7f0900ea;
+		public static final int info = 0x7f0900f4;
+		public static final int line1 = 0x7f090101;
+		public static final int line3 = 0x7f090102;
+		public static final int media_actions = 0x7f090122;
+		public static final int media_controller_compat_view_tag = 0x7f090123;
+		public static final int notification_main_column = 0x7f09015e;
+		public static final int notification_main_column_container = 0x7f09015f;
+		public static final int right_side = 0x7f09017f;
+		public static final int status_bar_latest_event_content = 0x7f0901bf;
+		public static final int text = 0x7f0901d3;
+		public static final int text2 = 0x7f0901d4;
+		public static final int time = 0x7f0901e4;
+		public static final int title = 0x7f0901e5;
 	}
 	public static final class integer {
 		public static final int cancel_button_image_alpha = 0x7f0a0004;

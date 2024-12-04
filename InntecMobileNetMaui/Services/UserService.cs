@@ -69,7 +69,7 @@ namespace InntecMobileNetMaui.Services
                     Constants.Error_Descipcion = loginModel.error_description;
                     Constants.Error = loginModel.error;
                     Constants.User = loginModel.Usuario;
-                    Constants.Psw = (login.rememberPWS) ? AesGcm.EncryptString(loginModel.Password, loginModel.access_token) : "";
+                    Constants.Psw = ((login.rememberPWS)||(login.savepass)) ? AesGcm.EncryptString(loginModel.Password, loginModel.access_token) : "";
                     Constants.rememberPSW = loginModel.rememberPWS;
 
                 }
@@ -90,51 +90,6 @@ namespace InntecMobileNetMaui.Services
             }
             return loginModel;
         }
-
-        ///// <summary>
-        ///// Registro de usuario
-        ///// </summary>
-        ///// <param name="userModel">Datos del usuario a registrar</param>
-        ///// <returns>Datos que indican el siguiente paso</returns>
-        //public async Task<RegisterResultModel> RegisterAsync(UserModel userModel)
-        //{
-        //    RegisterResultModel Result;
-
-        //    userModel.UsuarioNombre = userModel.UsuarioNombre.Trim();
-        //    userModel.Email = userModel.Email.Trim();
-
-        //    try
-        //    {
-        //        Result = new RegisterResultModel();
-
-        //        var request = new HttpRequestMessage(HttpMethod.Post, Constants.Url_Base + "/api/Account/Register");
-        //        request.Content = new StringContent(JsonConvert.SerializeObject(userModel),
-        //                                Encoding.UTF8,
-        //                                "application/json");
-        //        var client = new HttpClient();
-        //        client.DefaultRequestHeaders
-        //              .Accept
-        //              .Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        //        var response = await client.SendAsync(request).ConfigureAwait(true);
-        //        var content = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
-        //        JObject jwtDynamic = JsonConvert.DeserializeObject(content) as JObject;
-        //        Result.HttpStatusCode = response.StatusCode;
-        //        if (jwtDynamic != null)
-        //            Result.Message = jwtDynamic.Value<string>("Message");
-        //        if (response.StatusCode == System.Net.HttpStatusCode.OK)
-        //        {
-        //            Result.Message = "Revisa el correo enviado a tu correo para validar la cuenta.";
-        //            MailConfirmModel mailConfirm = new MailConfirmModel { Email = userModel.Email, UserName = userModel.UsuarioNombre };
-        //            _ = await sendConfirmEmail(mailConfirm).ConfigureAwait(true);
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-        //        Result = new RegisterResultModel();
-        //        Result.Message = Constants.ERROR_EXCEPTION_SERVICE;
-        //    }
-        //    return Result;
-        //}
 
         /// <summary>
         /// Nuevo Registro de usuario
@@ -275,10 +230,12 @@ namespace InntecMobileNetMaui.Services
                 var content = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
                 Result = JsonConvert.DeserializeObject<UserModel>(content);
                 Result.StatusCode = response.StatusCode;
+                Preferences.Default.Set("TipoMensaje", "Confirm");
                 if (Result.StatusCode == System.Net.HttpStatusCode.BadRequest)
                 {
                     userModel.Message = Result.Message;
                     Result = userModel;
+                    Preferences.Default.Set("TipoMensaje", "Error");
                 }
             }
             catch
@@ -286,50 +243,10 @@ namespace InntecMobileNetMaui.Services
                 Result = new UserModel();
                 Result.StatusCode = System.Net.HttpStatusCode.BadRequest;
                 Result.Message = "Se produjo un error en el proceso de guardado, intentelo mas tarde.";
+                Preferences.Default.Set("TipoMensaje", "Error");
             }
             return Result;
         }
-
-        ///// <summary>
-        ///// Recuperar password de usuario
-        ///// </summary>
-        ///// <param name="recoverPasswordModel">Datos necesarios para recuperar password</param>
-        ///// <returns>Resultado de la operacion</returns>
-        //public async Task<RecoverPasswordModel> RecoverUserPassAsync(RecoverPasswordModel recoverPasswordModel)
-        //{
-        //    RecoverPasswordModel Result = new RecoverPasswordModel();
-        //    try
-        //    {
-
-        //        var request = new HttpRequestMessage(HttpMethod.Post, Constants.Url_Base + "/api/account/sendrecovery");
-        //        request.Content = new StringContent(JsonConvert.SerializeObject(recoverPasswordModel),
-        //                                Encoding.UTF8,
-        //                                "application/json");
-        //        var client = new HttpClient();
-        //        client.DefaultRequestHeaders
-        //              .Accept
-        //              .Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-        //        var response = await client.SendAsync(request).ConfigureAwait(true);
-        //        var content = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
-        //        JObject ResultText = JsonConvert.DeserializeObject(content) as JObject;
-        //        if (ResultText != null)
-        //        {
-        //            Result.Message = ResultText["Message"].ToString();
-        //        }
-        //        else
-        //        {
-        //            Result.Message = "Se ha enviado un enlace al correo para recuperar el password.";
-        //        }
-        //        Result.StatusCode = response.StatusCode;
-        //    }
-        //    catch
-        //    {
-        //        Result.Message = "Se produjo un error al contactar con el servidor, intentelo mas tarde.";
-        //        Result.StatusCode = System.Net.HttpStatusCode.NotFound;
-        //    }
-        //    return Result;
-        //}
 
         /// <summary>
         /// Recuperar password de usuario

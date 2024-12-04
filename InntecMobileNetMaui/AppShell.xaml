@@ -7,6 +7,8 @@
     xmlns:login="clr-namespace:InntecMobileNetMaui.Views.Login"
     xmlns:cards="clr-namespace:InntecMobileNetMaui.Views.Cards"
     xmlns:views="clr-namespace:InntecMobileNetMaui.Views"
+    xmlns:faq="clr-namespace:InntecMobileNetMaui.Views.FAQ"
+    xmlns:notify="clr-namespace:InntecMobileNetMaui.Views.Notify"
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
@@ -23,15 +25,30 @@
         Route="CardsPage"/>
     <ShellContent
         Shell.NavBarIsVisible="False"
-        ContentTemplate="{DataTemplate cards:CardPageList}"
-        Route="CardPageList"/>
+        ContentTemplate="{DataTemplate views:RegisterPage}"
+        Route="RegisterPage"/>
     <ShellContent
         Shell.NavBarIsVisible="False"
         ContentTemplate="{DataTemplate cards:CardDetailPage}"
         Route="CardDetailPage"/>
-    <!--<ShellContent
+     <ShellContent
+         Shell.NavBarIsVisible="False"
+         ContentTemplate="{DataTemplate views:TermsAndConditionsPage}"
+         Route="TermsAndConditionsPage"/>
+    <ShellContent
         Shell.NavBarIsVisible="False"
-        ContentTemplate="{DataTemplate cards:CardsPage}"
-        Route="CardMenu"/>-->
-   
+        ContentTemplate="{DataTemplate views:RecoverPasswordPage}"
+        Route="RecoverPasswordPage"/>
+    <ShellContent
+        Shell.NavBarIsVisible="False"
+        ContentTemplate="{DataTemplate faq:FAQmenu}"
+        Route="FAGsPage"/>
+    <ShellContent
+        Shell.NavBarIsVisible="False"
+        ContentTemplate="{DataTemplate notify:NotityPage}"
+        Route="NotifyPage"/>
+    <ShellContent
+        Shell.NavBarIsVisible="False"
+        ContentTemplate="{DataTemplate views:OptionsPage}"
+        Route="OptionsPage"/>
 </Shell>

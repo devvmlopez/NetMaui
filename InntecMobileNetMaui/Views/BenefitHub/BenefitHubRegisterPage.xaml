@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.BenefitHub.BenefitHubRegisterPage"
+             xmlns:control="clr-namespace:InntecMobileNetMaui.RendererControls"
+             Title="{Binding Title}">
+    <StackLayout 
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand"
+        Margin="0,20,0,0">
+
+        <control:WebViewRenderer 
+            x:Name="LoginBenefit"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            IsVisible="{Binding LoginPage}">
+        </control:WebViewRenderer>
+
+        <StackLayout IsVisible="{Binding PasswordPage}">
+            <StackLayout Orientation="Horizontal">
+                <Label 
+                    Text="Beneficiario:"
+                    FontSize="Medium"
+                    HorizontalOptions="Start"
+                    Margin="20,0,0,0"
+                    IsVisible="{Binding RegisterPass}"/>
+                <Label 
+                    Text="{Binding Name}"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start"
+                    />
+                <Label 
+                    Text="{Binding LastName}"
+                    FontSize="Caption"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Start"
+                    />
+            </StackLayout>
+
+            <Label 
+                Text="{Binding Email}"
+                FontSize="Large"
+                Margin="20,0,0,20"/>
+
+            <StackLayout 
+                Padding="20,0"
+                IsVisible="{Binding RegisterPass}">
+                <Label Text="Codigo Postal"/>
+                <Entry 
+                    WidthRequest="50"
+                    x:Name="CP"
+                    Text="{Binding CodigoPostal}"
+                    Keyboard="Numeric"
+                    MaxLength="5"/>
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout>
+                        <Label Text="Contraseña"/>
+                        <Entry 
+                            WidthRequest="50"
+                            Text="{Binding Password}"
+                            TextChanged="Entry_TextChanged"
+                            IsPassword="True"/>
+                        <Label Text="Confirmar Contraseña"/>
+                        <Entry 
+                            WidthRequest="100"
+                            Text="{Binding ConfirmPassword}"
+                            IsPassword="True"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label 
+                            Text="· 8 o más caracteres"
+                            IsVisible="{Binding Largo}"/>
+                        <Label 
+                            Text="· Una letra con mayúscula"
+                            IsVisible="{Binding Mayus}"/>
+                        <Label 
+                            Text="· Incluir un numero"
+                            IsVisible="{Binding Numero}"/>
+                        <Label 
+                            Text="· No incluir caracteres especiales"
+                             IsVisible="{Binding Caracter}"/>
+                    </StackLayout>
+                </StackLayout>
+                <Button 
+                    x:Name="BtnRegister"
+                    Text="Registrar"
+                    HorizontalOptions="End"
+                    Margin="10"/>
+
+            </StackLayout>
+
+            <StackLayout 
+                Orientation="Horizontal"
+                VerticalOptions="Center"
+                IsVisible="{Binding RegisterPass}"
+                Padding="10">
+                <CheckBox x:Name="chkTerm" IsChecked="{Binding RequestResult.terms}" />
+                <StackLayout>
+                    <Label>He leído y acepto los Términos y Condiciones de BenefitHub</Label>
+                    <Button 
+                        HorizontalOptions="Start"
+                        x:Name="BtnTerms"
+                        TextColor="CadetBlue"
+                        BackgroundColor="Transparent" Text="Terms and Conditions"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout 
+                Orientation="Horizontal"
+                VerticalOptions="Center"
+                IsVisible="{Binding RegisterPass}"
+                Padding="10">
+                <CheckBox x:Name="chkPromos" IsChecked="{Binding RequestResult.promo}"/>
+                <StackLayout>
+                    <Label>Acepto recibir emails con promociones y descuentos</Label>
+                    <Label HorizontalOptions="Start"
+                           FontSize="Small">Recibirás únicamente mensajes relevantes a tu cuenta, promociones y descuentos. Nunca compartiremos con nadie tu email.</Label>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+        <AbsoluteLayout 
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            AbsoluteLayout.LayoutBounds="0,0,1,1" 
+            AbsoluteLayout.LayoutFlags="All" 
+            BackgroundColor="#30000000"
+            IsVisible="{Binding IsBusy}">
+            <Image 
+                Source="loading.gif"
+                HeightRequest="70"
+                WidthRequest="70"
+                IsAnimationPlaying="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"/>
+        </AbsoluteLayout>
+
+    </StackLayout>
+</ContentPage>

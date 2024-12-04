@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.Contigo.MenuContigo"
+             xmlns:Menucontrols="clr-namespace:InntecMobileNetMaui.Views.CustomView"
+             Shell.BackgroundColor="#367fb6"
+             Title="Inntec Contigo">
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+             TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
+        </Style>
+        <Style x:Key="BackgroundColorCustomControl"
+             TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+        </Style>
+        <Style x:Key="PicturePlatform"
+             TargetType="Image">
+            <Setter Property="Source" Value="{OnPlatform iOS={AppThemeBinding Dark='pnginntec_bnco.png', Light='pnginntec.png'} , Android= {AppThemeBinding Dark='pnginntec_bnco.png', Light='svginntec.svg'}}" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout 
+            Style="{StaticResource BackgroundColorViews}" 
+            HorizontalOptions="FillAndExpand" 
+            VerticalOptions="FillAndExpand">
+            <HorizontalStackLayout
+                BackgroundColor="Transparent"
+                AbsoluteLayout.LayoutBounds="0.1,0,0,0.2"
+                AbsoluteLayout.LayoutFlags="All">
+                <Image 
+                    Style="{StaticResource PicturePlatform}"
+                    HeightRequest="70" 
+                    WidthRequest="210"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Margin="32,2"/>
+            </HorizontalStackLayout>
+            <Frame
+                BorderColor="LightGray"
+                IsClippedToBounds="True"
+                HeightRequest="60" 
+                BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                Margin="8,0"
+                Padding="4"
+                x:Name="ModalDespensa"
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,0.596,1,3.4">
+
+                <VerticalStackLayout
+                    Margin="16,0"
+                    Spacing="0"
+                    Padding="0"
+                    BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                    VerticalOptions="CenterAndExpand">
+                        <Label 
+                             Margin="0,8,0,16"
+                             Text="Mis beneficios DESPENSA"
+                             FontSize="Medium"
+                             FontAutoScalingEnabled="False"
+                             TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                             VerticalTextAlignment="Center"
+                             HorizontalTextAlignment="Start"
+                             FontFamily="FontMont">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer  
+                                Tapped="TapDespensa_Tapped" >
+                            </TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                        <HorizontalStackLayout
+                            Margin="16,4"
+                            HeightRequest="50"
+                            Spacing="0"
+                            Padding="0"
+                            BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                            VerticalOptions="CenterAndExpand">
+                            <Label 
+                                Margin="8,0,0,0"
+                                x:Name="dentalDes"
+                                Text="Limpieza Dental"
+                                FontSize="Medium"
+                                FontAutoScalingEnabled="False"
+                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                FontFamily="FontMont">
+                            </Label>
+                            <Label
+                                  Margin="8,0,0,0"
+                                  FontSize="24"
+                                  FontAutoScalingEnabled="False"
+                                  TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                  BackgroundColor="Transparent"
+                                  HorizontalTextAlignment="End"
+                                  VerticalTextAlignment="Center"
+                                  Text="&#xE801;"
+                                  FontFamily="FontIco">
+                                <Label.Triggers>
+                                    <DataTrigger 
+                                        TargetType="Label"
+                                        Binding="{Binding beneficios}"
+                                        Value="true">
+                                        <Setter 
+                                            Property="IsVisible"
+                                            Value="true" />
+                                    </DataTrigger>
+                                    <DataTrigger 
+                                        TargetType="Label"
+                                        Binding="{Binding beneficios}"
+                                        Value="false">
+                                        <Setter 
+                                            Property="IsVisible"
+                                            Value="false" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer  
+                                        Tapped="Consultar_Tapped">
+                                    </TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label
+                                Margin="8,0,0,0"
+                                FontSize="24"
+                                FontAutoScalingEnabled="False"
+                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                BackgroundColor="Transparent"
+                                HorizontalTextAlignment="End"
+                                VerticalTextAlignment="Center"
+                                Text="&#xE803;"
+                                FontFamily="FontIco">
+                                <Label.Triggers>
+                                    <DataTrigger 
+                                        TargetType="Label"
+                                        Binding="{Binding plan}"
+                                        Value="true">
+                                        <Setter 
+                                            Property="IsVisible"
+                                            Value="true" />
+                                    </DataTrigger>
+                                    <DataTrigger 
+                                        TargetType="Label"
+                                        Binding="{Binding plan}"
+                                        Value="false">
+                                        <Setter 
+                                            Property="IsVisible"
+                                            Value="false" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer  
+                                        Tapped="NoDisponible_Tapped">
+                                    </TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Margin="16,4"
+                            HeightRequest="50"
+                            Spacing="0"
+                            Padding="0"
+                            BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                            VerticalOptions="CenterAndExpand">
+                            <Label 
+                                x:Name="atencionDes"
+                                Text="Atencion Medica"
+                                FontSize="Medium"
+                                FontAutoScalingEnabled="False"
+                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                FontFamily="FontMont">
+                            </Label>
+                            <Label
+                                Margin="8,0,0,0"
+                                FontSize="24"
+                                FontAutoScalingEnabled="False"
+                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                BackgroundColor="Transparent"
+                                HorizontalTextAlignment="End"
+                                VerticalTextAlignment="Center"
+                                Text="&#xE801;"
+                                FontFamily="FontIco">
+                                <Label.Triggers>
+                                    <DataTrigger 
+                                        TargetType="Label"
+                                        Binding="{Binding beneficios}"
+                                        Value="true">
+                                        <Setter 
+                                            Property="IsVisible"
+                                            Value="true" />
+                                    </DataTrigger>
+                                    <DataTrigger 
+                                        TargetType="Label"
+                                        Binding="{Binding beneficios}"
+                                        Value="false">
+                                        <Setter 
+                                            Property="IsVisible"
+                                            Value="false" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                            </Label>
+                            <Label
+                                Margin="8,0,0,0"
+                                FontSize="24"
+                                FontAutoScalingEnabled="False"
+                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                BackgroundColor="Transparent"
+                                HorizontalTextAlignment="End"
+                                VerticalTextAlignment="Center"
+                                Text="&#xE802;"
+                                FontFamily="FontIco">
+                                <Label.Triggers>
+                                    <DataTrigger 
+                                        TargetType="Label"
+                                        Binding="{Binding plan}"
+                                        Value="true">
+                                        <Setter 
+                                            Property="IsVisible"
+                                            Value="true" />
+                                    </DataTrigger>
+                                    <DataTrigger 
+                                        TargetType="Label"
+                                        Binding="{Binding plan}"
+                                        Value="false">
+                                        <Setter 
+                                            Property="IsVisible"
+                                            Value="false" />
+                                    </DataTrigger>
+                                </Label.Triggers>
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer  
+                                         Tapped="Disponible_Tapped">
+                                    </TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Margin="16,4"
+                            HeightRequest="60"
+                            Spacing="0"
+                            Padding="0"
+                            BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                            VerticalOptions="CenterAndExpand">
+                            <Label 
+                                x:Name="roboDes"
+                                Text="Robo de efectivo"
+                                FontSize="Medium"
+                                FontAutoScalingEnabled="False"
+                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                FontFamily="FontMont">
+                            </Label>
+                            <Label
+                                Margin="8,0,0,0"
+                                FontSize="24"
+                                FontAutoScalingEnabled="False"
+                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                BackgroundColor="Transparent"
+                                HorizontalTextAlignment="End"
+                                VerticalTextAlignment="Center"
+                                Text="&#xE801;"
+                                FontFamily="FontIco">
+                            </Label>
+                        </HorizontalStackLayout>
+                        <HorizontalStackLayout
+                            Margin="16,4"
+                            HeightRequest="50"
+                            Spacing="0"
+                            Padding="0"
+                            BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                            VerticalOptions="CenterAndExpand">
+                            <Label 
+                                x:Name="asesporiaDes"
+                                Text="Asesoria Juridica"
+                                FontSize="Medium"
+                                FontAutoScalingEnabled="False"
+                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                FontFamily="FontMont">
+                            </Label>
+                            <Label
+                                Margin="8,0,0,0"
+                                FontSize="24"
+                                FontAutoScalingEnabled="False"
+                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                BackgroundColor="Transparent"
+                                HorizontalTextAlignment="End"
+                                VerticalTextAlignment="Center"
+                                Text="&#xE801;"
+                                FontFamily="FontIco">
+                            </Label>
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+            </Frame>
+            <Frame
+                 BorderColor="LightGray"
+                 IsClippedToBounds="True"
+                 HeightRequest="60" 
+                 BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                 Margin="8,0"
+                 Padding="4"
+                 x:Name="ModalCombustible"
+                 AbsoluteLayout.LayoutFlags="All"
+                 AbsoluteLayout.LayoutBounds="0,0.6,1,2.6">
+
+                <VerticalStackLayout
+                     Margin="16,0"
+                     Spacing="0"
+                     Padding="0"
+                     BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                     VerticalOptions="CenterAndExpand">
+                    <Label 
+                        Margin="0,8,0,16"
+                        Text="Mis beneficios COMBUSTIBLE"
+                        FontSize="Medium"
+                        FontAutoScalingEnabled="False"
+                        TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        FontFamily="FontMont">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer  
+                                Tapped="TapCombustible_Tapped" >
+                            </TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <HorizontalStackLayout
+                        Margin="16,4"
+                        HeightRequest="50"
+                        Spacing="0"
+                        Padding="0"
+                        BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                        VerticalOptions="CenterAndExpand">
+                        <Label 
+                            Margin="8,0,0,0"
+                            x:Name="asistenciaCombustible"
+                            Text="Asistencia vial"
+                            FontSize="Medium"
+                            FontAutoScalingEnabled="False"
+                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                            FontFamily="FontMont">
+                        </Label>
+                        <Label
+                            Margin="8,0,0,0"
+                            FontSize="24"
+                            FontAutoScalingEnabled="False"
+                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                            BackgroundColor="Transparent"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Text="&#xE801;"
+                            FontFamily="FontIco">
+                            <Label.Triggers>
+                                <DataTrigger 
+                                TargetType="Label"
+                                Binding="{Binding beneficios}"
+                                Value="true">
+                                    <Setter 
+                                    Property="IsVisible"
+                                    Value="true" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                TargetType="Label"
+                                Binding="{Binding beneficios}"
+                                Value="false">
+                                    <Setter 
+                                    Property="IsVisible"
+                                    Value="false" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer  
+                                    Tapped="Consultar_Tapped">
+                                </TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label
+                            Margin="8,0,0,0"
+                            FontSize="24"
+                            FontAutoScalingEnabled="False"
+                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                            BackgroundColor="Transparent"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Text="&#xE803;"
+                            FontFamily="FontIco">
+                            <Label.Triggers>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding plan}"
+                                    Value="true">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="true" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding plan}"
+                                    Value="false">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="false" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer  
+                                        Tapped="NoDisponible_Tapped">
+                                </TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout
+                        Margin="16,4"
+                        HeightRequest="50"
+                        Spacing="0"
+                        Padding="0"
+                        BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                        VerticalOptions="CenterAndExpand">
+                        <Label 
+                            x:Name="boletoCombustible"
+                            Text="Perdida de boleto"
+                            FontSize="Medium"
+                            FontAutoScalingEnabled="False"
+                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                            FontFamily="FontMont">
+                        </Label>
+                        <Label
+                            Margin="8,0,0,0"
+                            FontSize="24"
+                            FontAutoScalingEnabled="False"
+                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                            BackgroundColor="Transparent"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Text="&#xE801;"
+                            FontFamily="FontIco">
+                            <Label.Triggers>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding beneficios}"
+                                    Value="true">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="true" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding beneficios}"
+                                    Value="false">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="false" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <Label
+                            Margin="8,0,0,0"
+                            FontSize="24"
+                            FontAutoScalingEnabled="False"
+                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                            BackgroundColor="Transparent"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Text="&#xE802;"
+                            FontFamily="FontIco">
+                            <Label.Triggers>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding plan}"
+                                    Value="true">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="true" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding plan}"
+                                    Value="false">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="false" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer  
+                                          Tapped="Disponible_Tapped">
+                                </TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout
+                         Margin="16,4"
+                         HeightRequest="60"
+                         Spacing="0"
+                         Padding="0"
+                         BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                         VerticalOptions="CenterAndExpand">
+                        <Label 
+                            x:Name="roboCombustible"
+                            Text="Robo de efectivo"
+                            FontSize="Medium"
+                            FontAutoScalingEnabled="False"
+                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                            FontFamily="FontMont">
+                        </Label>
+                        <Label
+                            Margin="8,0,0,0"
+                            FontSize="24"
+                            FontAutoScalingEnabled="False"
+                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                            BackgroundColor="Transparent"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Text="&#xE801;"
+                            FontFamily="FontIco">
+                        </Label>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout
+                        Margin="16,4"
+                        HeightRequest="50"
+                        Spacing="0"
+                        Padding="0"
+                        BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                        VerticalOptions="CenterAndExpand">
+                        <Label 
+                            x:Name="asesporiaCombustible"
+                            Text="Asesoria Juridica"
+                            FontSize="Medium"
+                            FontAutoScalingEnabled="False"
+                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                            VerticalTextAlignment="Center"
+                            HorizontalTextAlignment="Start"
+                            FontFamily="FontMont">
+                        </Label>
+                        <Label
+                            Margin="8,0,0,0"
+                            FontSize="24"
+                            FontAutoScalingEnabled="False"
+                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                            BackgroundColor="Transparent"
+                            HorizontalTextAlignment="End"
+                            VerticalTextAlignment="Center"
+                            Text="&#xE801;"
+                            FontFamily="FontIco">
+                        </Label>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button
+                Text="Suscribirse"
+                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                IsVisible="True"
+                Margin="16,0"
+                FontFamily="FontMont"
+                BorderColor="LightGray"
+                HeightRequest="60"
+                AbsoluteLayout.LayoutFlags="All"
+                Command="{Binding suscribirContigoCommand}"
+                AbsoluteLayout.LayoutBounds="0,0.2,1,2" >
+                <Button.Triggers>
+                    <DataTrigger 
+                        TargetType="Button"
+                        Binding="{Binding plan}"
+                        Value="false">
+                        <Setter 
+                            Property="IsVisible"
+                            Value="True" />
+                    </DataTrigger>
+                    <DataTrigger 
+                        TargetType="Button"
+                        Binding="{Binding plan}"
+                        Value="true">
+                        <Setter 
+                            Property="IsVisible"
+                            Value="False" />
+                    </DataTrigger>
+                </Button.Triggers>
+
+            </Button>
+            <AbsoluteLayout 
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
+               AbsoluteLayout.LayoutBounds="0,0,1,1" 
+               AbsoluteLayout.LayoutFlags="All"
+               BackgroundColor="Transparent"
+               IsVisible="{Binding IsBusy}">
+
+                <Image 
+                    Source="loading.gif"
+                    HeightRequest="70"
+                    WidthRequest="70"
+                    IsAnimationPlaying="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"/>
+            </AbsoluteLayout>
+            <Menucontrols:CustomMenu
+                 x:Name="MenuPrincipal"
+                 IconIzqEnable="True"         
+                 IconCentroIzqEnable="True"
+                 IconCentroDerEnable="True"
+                 IconDerEnable="True"
+                 IconIzq="{OnPlatform iOS= 'pngnotification', Android={AppThemeBinding Dark='notification', Light='pngnotification'}}"
+                 IconCentroIzq="{OnPlatform iOS= 'pngcredit_card_add', Android={AppThemeBinding Dark='credit_card_add', Light='pngcredit_card_add'}}"
+                 IconCentroDer="{OnPlatform iOS= 'pngfaq', Android={AppThemeBinding Dark='faq', Light='pngfaq'}}"
+                 IconDer="{OnPlatform iOS= 'pnguser', Android={AppThemeBinding Dark='user', Light='pnguser'}}"
+                 IconCentro="innteclogo"
+                 IconCentroEnable="True"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="CenterAndExpand"
+                 AbsoluteLayout.LayoutFlags="All"
+                 AbsoluteLayout.LayoutBounds="0,0.995,1,0.1" >
+            </Menucontrols:CustomMenu>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

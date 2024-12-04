@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage 
+             BackgroundColor="Transparent"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+             x:Class="InntecMobileNetMaui.Views.Alerts.MoreOptionsPage"
+             Title="MoreOptionsPage">
+    <mopups:PopupPage.Animation>
+        <mopupsanim:ScaleAnimation
+               DurationIn="200"
+               EasingIn="SinOut"
+               PositionIn="Bottom"
+               EasingOut="SinIn"
+               PositionOut="Bottom"
+               ScaleIn="1"
+               ScaleOut="1"/>
+    </mopups:PopupPage.Animation>
+
+    <AbsoluteLayout 
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+        <Border 
+            WidthRequest="300"
+            HeightRequest="280"
+            Stroke="LightGray"
+            StrokeThickness="3"
+            BackgroundColor="White"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0,1,1,1">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20,20,20,20"/>
+            </Border.StrokeShape>
+
+            <VerticalStackLayout
+                VerticalOptions="StartAndExpand"
+                Margin="8,8,8,8">
+
+                <Frame 
+                    x:Name="MainFrame" 
+                    BackgroundColor="#255f84" 
+                    IsClippedToBounds="True"
+                    BorderColor="LightGray"
+                    CornerRadius="8">
+                    <StackLayout 
+                        Orientation="Horizontal">
+                        <Button 
+                            Text="X"
+                            Margin="0"
+                            FontAutoScalingEnabled="False"
+                            FontFamily="MontB"
+                            CornerRadius="20"
+                            BackgroundColor="#FF0000"
+                            TextColor="White"
+                            WidthRequest="45"
+                            HeightRequest="45"
+                            FontSize="Large"
+                            Pressed="Button_Pressed"/>
+                        <Label 
+                            Text="Opciones de bloqueo"
+                            FontAutoScalingEnabled="False"
+                            LineBreakMode="WordWrap"
+                            MaxLines="2"
+                            Margin="8,0,0,0"
+                            TextColor="White"
+                            HeightRequest="60"
+                            WidthRequest="200"
+                            HorizontalOptions="Center"
+                            VerticalTextAlignment="Center"
+                            FontSize="Medium"
+                            FontFamily="MontB"
+                            VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </Frame>
+                <StackLayout
+                    BackgroundColor="Transparent"
+                    Spacing="4"
+                    Margin="0,8">
+                    <StackLayout
+                        BackgroundColor="Transparent"
+                        Orientation="Horizontal"
+                        VerticalOptions="CenterAndExpand"
+                        Margin="4"
+                        x:Name="Stk_temporal">
+                        <VerticalStackLayout
+                            WidthRequest="200"
+                            HeightRequest="80"
+                            >
+                            <Label 
+                                Text="{Binding EstatusTarjeta}"
+                                FontAutoScalingEnabled="False"
+                                FontFamily="MontB"
+                                x:Name="LblEstatus"
+                                FontSize="Medium"
+                                VerticalTextAlignment="Center"
+                                TextColor="Black">
+                            </Label>
+                            <Label 
+                                Text="Activacion y bloqueo de tarjeta"
+                                FontAutoScalingEnabled="False"
+                                MaxLines="2"
+                                WidthRequest="200"
+                                HeightRequest="60"
+                                LineBreakMode="WordWrap"
+                                FontFamily="MontB"
+                                VerticalTextAlignment="Start"
+                                TextColor="#858588"/>
+                        </VerticalStackLayout>
+                        <Switch
+                             Margin="0"
+                             x:Name="sw_bloqueotmp"
+                             IsToggled="{Binding cardModel.BEstatus}"
+                             IsVisible="{Binding cardModel.BVisible}"
+                             Toggled ="SwitchInntec_Toggled"
+                             ThumbColor="Red"
+                             BackgroundColor="Transparent"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Start"
+                             OnColor="#367fb6">
+                           
+                        </Switch>
+                        <Label
+                            Margin="4,8,0,0"
+                            FontSize="22"
+                            TextColor="Black"
+                            FontAutoScalingEnabled="False"
+                            BackgroundColor="Transparent"
+                            VerticalTextAlignment="Start"
+                            HorizontalOptions="EndAndExpand"
+                            Text="&#xF13E;"
+                            FontFamily="FontIco">
+                            <Label.Triggers>
+                                <DataTrigger 
+                                     TargetType="Label"
+                                     Binding="{Binding IconEstatusTarjeta}"
+                                     Value="true">
+                                    <Setter 
+                                         Property="IsVisible"
+                                         Value="true" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                      TargetType="Label"
+                                      Binding="{Binding IconEstatusTarjeta}"
+                                      Value="false">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="false" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <Label
+                            Margin="4,8,0,0"
+                            FontSize="22"
+                            TextColor="Black"
+                            FontAutoScalingEnabled="False"
+                            BackgroundColor="Transparent"
+                            VerticalTextAlignment="Start"
+                            HorizontalOptions="EndAndExpand"
+                            Text="&#xE800;"
+                            FontFamily="FontIco">
+                            <Label.Triggers>
+                                <DataTrigger 
+                                     TargetType="Label"
+                                     Binding="{Binding IconEstatusTarjeta}"
+                                     Value="false">
+                                    <Setter 
+                                         Property="IsVisible"
+                                         Value="true" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                      TargetType="Label"
+                                      Binding="{Binding IconEstatusTarjeta}"
+                                      Value="true">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="false" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </StackLayout>
+                    <StackLayout 
+                        Orientation="Horizontal"
+                        VerticalOptions="StartAndExpand"
+                        Margin="4,4,4,8"
+                        x:Name="Stk_ecommerce">
+                        <VerticalStackLayout
+                            WidthRequest="200"
+                            HeightRequest="80">
+                            <Label 
+                                Text="{Binding EstatusEcommers}"
+                                FontAutoScalingEnabled="False"
+                                FontFamily="MontB"
+                                x:Name="LblEcommers"
+                                FontSize="Medium"
+                                VerticalTextAlignment="Center"
+                                TextColor="Black">
+                            </Label>
+                            <Label
+                                Text="Compras en linea "
+                                FontAutoScalingEnabled="False"
+                                MaxLines="3"
+                                WidthRequest="200"
+                                HeightRequest="60"
+                                LineBreakMode="WordWrap"
+                                FontFamily="MontB"
+                                VerticalTextAlignment="Start"
+                                TextColor="#858588"/>
+                        </VerticalStackLayout>
+                        <Switch 
+                             Margin="-4,0,0,0"
+                             x:Name="sw_bloqueoecom"
+                             IsToggled="{Binding cardModel.EstatusEcommerce}"
+                             IsVisible="{Binding cardModel.BVisible}"
+                             Toggled ="SwitchInntec_BlockEcommerce_Toggled"
+                             ThumbColor="red"
+                             BackgroundColor="Transparent"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Start"
+                             OnColor="#367fb6">
+                            
+                        </Switch>
+                        <Label
+                             Margin="4,16,-4,0"
+                             FontSize="22"
+                             TextColor="Black"
+                             FontAutoScalingEnabled="False"
+                             BackgroundColor="Transparent"
+                             VerticalTextAlignment="Start"
+                             HorizontalOptions="EndAndExpand"
+                             Text="&#xF13E;"
+                             FontFamily="FontIco">
+                            <Label.Triggers>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding IconEstatusEcommers}"
+                                    Value="true">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="true" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding IconEstatusEcommers}"
+                                    Value="false">
+                                    <Setter 
+                                         Property="IsVisible"
+                                         Value="false" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <Label
+                             Margin="4,16,-4,0"
+                             FontSize="22"
+                             TextColor="Black"
+                             FontAutoScalingEnabled="False"
+                             BackgroundColor="Transparent"
+                             VerticalTextAlignment="Start"
+                             HorizontalOptions="EndAndExpand"
+                             Text="&#xE800;"
+                             FontFamily="FontIco">
+                            <Label.Triggers>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding IconEstatusEcommers}"
+                                    Value="false">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="true" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                       TargetType="Label"
+                                       Binding="{Binding IconEstatusEcommers}"
+                                       Value="true">
+                                    <Setter 
+                                         Property="IsVisible"
+                                         Value="false" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </VerticalStackLayout>
+        </Border>
+
+        <Image 
+            Source="loading.gif"
+            HeightRequest="70"
+            WidthRequest="70"
+            x:Name="lottie"
+            IsAnimationPlaying="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"/>
+
+    </AbsoluteLayout>
+</mopups:PopupPage>

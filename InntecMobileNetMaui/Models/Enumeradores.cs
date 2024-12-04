@@ -48,7 +48,8 @@ namespace InntecMobileNetMaui.Models
             POR_COMPROBAR = 5,
             COMPROBADA = 6,
             CERRADA_COMPROBADA = 7,
-            CANCELADA = 8
+            CANCELADA = 8,
+            TODO = 0
         }
 
         /// <summary>

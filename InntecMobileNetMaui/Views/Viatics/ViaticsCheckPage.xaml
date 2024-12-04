@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.Viatics.ViaticsCheckPage"
+             Shell.BackgroundColor="#367fb6"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <Style 
+            x:Key="BackgroundColorViews"
+            TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
+        </Style>
+        <Style 
+            x:Key="BackgroundFramItems"
+            TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3DB, Dark= #f2f2f7}" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout
+            AbsoluteLayout.LayoutBounds="{OnPlatform iOS= '0,0,1,1', Android='0,0,1,1'}"
+            AbsoluteLayout.LayoutFlags="All"
+            Style="{StaticResource BackgroundColorViews}">
+            <StackLayout
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,1,1,1">
+                <StackLayout 
+                    Orientation="Horizontal"
+                    Margin="15,5,15,0">
+                    <StackLayout
+                        Margin="0,0,4,0"
+                        HorizontalOptions="FillAndExpand">
+                        <Label
+                            FontAutoScalingEnabled="False"
+                            FontFamily="FontMontB" 
+                            Text="Folio" />
+                        <Entry
+                            FontAutoScalingEnabled="False"
+                            FontFamily="FontMont" 
+                            Text="{Binding ViaticsListModel.folio}"
+                            Placeholder="SV00000000"
+                            TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                            BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                            VerticalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout
+                        Margin="4,0,0,0">
+                        <Label
+                            FontAutoScalingEnabled="False"
+                            FontFamily="FontMontB" 
+                            Text="Estatus Comprobacion" />
+                        <Picker
+                            FontAutoScalingEnabled="False"
+                            FontFamily="FontMont" 
+                            VerticalOptions="EndAndExpand"
+                            TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                            BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                            SelectedIndexChanged="Picker_SelectedIndexChanged"
+                            ItemsSource="{Binding LstStatus}" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout 
+                    Orientation="Horizontal"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="12,0">
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label
+                            FontAutoScalingEnabled="False"
+                            FontFamily="FontMontB" 
+                            Text="Desde:" />
+                        <DatePicker
+                            FontAutoScalingEnabled="False"
+                            FontFamily="FontMont" 
+                            Date="{Binding ViaticsListModel.fechaDesde}"
+                            TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                            BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                            VerticalOptions="EndAndExpand"/>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label 
+                            FontFamily="FontMontB"
+                            FontAutoScalingEnabled="False"
+                            Text="Hasta:" />
+                        <DatePicker 
+                            FontFamily="FontMont"
+                            FontAutoScalingEnabled="False"
+                            TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                            BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                            Date="{Binding ViaticsListModel.fechaHasta}" />
+                    </StackLayout>
+                    <Button 
+                        Text="Buscar"
+                        FontFamily="FontMontB" 
+                        Command="{Binding ViaticsConsumptionDetail}"
+                        BackgroundColor="#3487CB" 
+                        TextColor="White"
+                        CornerRadius="5"
+                        Margin="10,0"
+                        BorderColor="LightGray"
+                        VerticalOptions="EndAndExpand"
+                        HorizontalOptions="EndAndExpand"
+                        WidthRequest="100"/>
+                </StackLayout>
+            </StackLayout>
+            <!--<ListView 
+     AbsoluteLayout.LayoutFlags="All"
+     AbsoluteLayout.LayoutBounds="0,1,1,0.8"
+     ItemsSource="{Binding viaticsChecList}" 
+     HasUnevenRows="True"
+     BackgroundColor="Transparent"
+     SeparatorColor="Transparent"
+     VerticalOptions="FillAndExpand"
+     HorizontalOptions="FillAndExpand"
+     CachingStrategy="RetainElement"
+     SelectionMode="None"
+     ItemTapped="ListView_ItemTapped">-->
+            <CollectionView 
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,1,1,0.8"
+                ItemsSource="{Binding viaticsChecList}" 
+                BackgroundColor="Transparent"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                SelectionMode="Single"
+                SelectionChanged="CollectionView_SelectionChanged">
+                <!--IsRefreshing="{Binding IsBusy}"-->
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Border
+                                    Stroke="Black"
+                                    StrokeThickness="2"
+                                    Margin="8"
+                                    Style="{StaticResource BackgroundFramItems}"
+                                    StrokeShape="RoundRectangle 0,20,0,0">
+                                <StackLayout Margin ="8">
+                                    <Label 
+                                            FontFamily="FontMont" 
+                                            TextColor="Black"
+                                            FontAutoScalingEnabled="False"
+                                            Text="{Binding FechaRegistro, StringFormat='{0:D}'}"
+                                            FontSize="Small"/>
+                                    <Label 
+                                            FontFamily="FontMont" 
+                                            TextColor="Black"
+                                            Text="{Binding Folio}"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Title"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label 
+                                                FontFamily="FontMont" 
+                                                TextColor="Black"
+                                                Text="{Binding NoTarjeta}"
+                                                FontAutoScalingEnabled="False"
+                                                FontSize="Subtitle"/>
+                                        <Label 
+                                                FontFamily="FontMont" 
+                                                TextColor="Black"
+                                                FontAutoScalingEnabled="False"
+                                                Text="{Binding MontoTransaccion, StringFormat='{0:$ #,##0.00}'}"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="EndAndExpand"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label 
+                                                FontFamily="FontMont" 
+                                                TextColor="Black"
+                                                FontAutoScalingEnabled="False"
+                                                Text="{Binding DatosComerciante}" />
+                                        <Label 
+                                                FontFamily="FontMontB" 
+                                                TextColor="Black"
+                                                Text="{Binding Status}"
+                                                VerticalOptions="Center"
+                                                FontAutoScalingEnabled="False"
+                                                HorizontalOptions="EndAndExpand"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Border>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <AbsoluteLayout 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                AbsoluteLayout.LayoutFlags="All"
+                BackgroundColor="#00000000"
+                IsVisible="{Binding IsBusy}">
+
+                <Image 
+                    Source="loading.gif"
+                    HeightRequest="70"
+                    WidthRequest="70"
+                    IsAnimationPlaying="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"/>
+            </AbsoluteLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

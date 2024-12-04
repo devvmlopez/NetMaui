@@ -4,17 +4,21 @@ using System.Net;
 using InntecMobileNetMaui.Resources;
 using InntecMobileNetMaui.ViewModels.Login;
 using Plugin.Fingerprint;
-//using InntecMobileNetMaui.Droid;
 using Plugin.Fingerprint.Abstractions;
 using InntecMobileNetMaui.ViewModels.Alerts;
 using InntecMobileNetMaui.Views.Alerts;
 using InntecMobileNetMaui.Services;
+using Microsoft.Maui.Controls.PlatformConfiguration;
+using System.Diagnostics;
+using InntecMobileNetMaui.Views.CustomView.Validador;
+using System.Threading.Tasks;
 
 
 namespace InntecMobileNetMaui.Views.Login;
 public partial class LoginPage : ContentPage
 {
     public LoginViewModel viewModel { get; set; }
+    int intentosLogin = 2;
 
     /// <summary>
     /// Inicializar objetos
@@ -157,6 +161,7 @@ public partial class LoginPage : ContentPage
 
         if (Constants.Token_Expires != DateTime.FromOADate(0))
             Constants.Token_Expires = DateTime.FromOADate(0);
+       
 
         viewModel.FingerPrint = await CrossFingerprint.Current.IsAvailableAsync().ConfigureAwait(true);
 
@@ -167,13 +172,27 @@ public partial class LoginPage : ContentPage
             viewModel.Usuario = Constants.UserName;
             if (MapDeviceiOS(DeviceInfo.Model).biometricType == BiometricMap.facialrecognition)
             {
-                BtnBiometrico.Source = "faceid";
+                BtnBiometrico.Source = "faceid.png";
             }
             else
             {
-                BtnBiometrico.Source = "touchId";
+                BtnBiometrico.Source = "touchid.png";
                 BiometricLogin_Pressed(BtnPorPass, new EventArgs());
             }
+        }
+        else if (!Constants.rememberPSW && Constants.savedPSW)
+        {
+            
+            CheckPass.IsChecked = Constants.savedPSW;
+            viewModel.LoginBiometrico = false;
+            viewModel.LoginPass = true;
+            viewModel.Usuario = Constants.UserName;
+            viewModel.Contrasena = viewModel.SavedPassword();
+            TxtUsuario.Placeholder = Constants.UserName;
+            TxtUsuario.IsEnabled = false;
+            TxtContrasena.Placeholder = "************";
+            TxtContrasena.IsEnabled = false;
+
         }
         else
         {
@@ -181,6 +200,39 @@ public partial class LoginPage : ContentPage
             viewModel.LoginPass = true;
         }
         viewModel.IsBusy = false;
+
+        await CheckAndRequestLocationPermission();
+        PermissionStatus status = await Permissions.RequestAsync<Permissions.PostNotifications>();
+        
+
+    }
+
+    /// <summary>
+    /// Comprobacion del permisos de las notificaciones 
+    /// </summary>
+
+    public async Task<PermissionStatus> CheckAndRequestLocationPermission()
+    {
+        PermissionStatus status = await Permissions.CheckStatusAsync<Permissions.PostNotifications>();
+
+        if (status == PermissionStatus.Granted)
+            return status;
+
+        if (status == PermissionStatus.Denied && DeviceInfo.Platform == DevicePlatform.iOS)
+        {
+            // Prompt the user to turn on in settings
+            // On iOS once a permission has been denied it may not be requested again from the application
+            return status;
+        }
+
+        if (Permissions.ShouldShowRationale<Permissions.PostNotifications>())
+        {
+            // Prompt the user with additional information as to why the permission is needed
+        }
+
+        status = await Permissions.RequestAsync<Permissions.PostNotifications>();
+
+        return status;
     }
 
     /// <summary>
@@ -190,8 +242,9 @@ public partial class LoginPage : ContentPage
     /// <param name="e"></param>
     private async void Btn_Registro_Clicked(object sender, EventArgs e)
     {
-        // await Navigation.PushModalAsync(new NavigationPage(new RegisterPage())).ConfigureAwait(false);
-        await Shell.Current.GoToAsync("//CardsPage");
+        Btn_Registro.IsEnabled = false;
+        await Shell.Current.GoToAsync("//RegisterPage");
+        Btn_Registro.IsEnabled = true;
     }
 
     /// <summary>
@@ -201,35 +254,20 @@ public partial class LoginPage : ContentPage
     /// <param name="e"></param>
     private async void Btn_RecuperarContrasena_Clicked(object sender, EventArgs e)
     {
-
-        //try
-        //{
-        //    var response = await SafetyNetClass.GetClient(this.context).VerifyWithRecaptchaAsync(Constants.SiteKey);
-        //    if (!string.IsNullOrEmpty(response.TokenResult))
-        //    {
-        //        // Validate the user response token using the
-        //        // reCAPTCHA siteverify API.
-        //    }
-        //}
-        //catch (Exception ex)
-        //{
-        //    // Handle exception
-        //    throw ex;
-        //}
-
-        //bool isValidCaptchaToken = await _reCaptcha.Validate(captchaToken);
-        //if (!isValidCaptchaToken)
-        //    throw new Exception("reCaptcha token validation failed.");
-        // await Navigation.PushModalAsync(new NavigationPage(new RecoverPasswordPage())).ConfigureAwait(false);
+        Btn_Recuperar.IsEnabled = false;
+        await Shell.Current.GoToAsync("//RecoverPasswordPage");
+        Btn_Recuperar.IsEnabled = true;
     }
 
     /// <summary>
     /// Inicializacion de sesion
     /// </summary>
+    /// popupValidador es el nuevo Recapchat 
     /// <param name="sender"></param>
     /// <param name="e"></param>
     private async void Btn_IniciarSesion_Clicked(object sender, EventArgs e)
     {
+        Btn_Entrar.IsEnabled = false;
         viewModel.IsBusy = true;
 
         if (HayConexion())
@@ -237,14 +275,19 @@ public partial class LoginPage : ContentPage
             var captchaToken = "";
             if (!viewModel.EsPrimerIntento)
             {
-                captchaToken = await viewModel.reCaptchaService.Verify(Constants.SiteKey, Constants.BaseApiUrl);
+                intentosLogin--;
+                if (intentosLogin <= 0)
+                {
+                    var popupValidador = new CustomValidator();
+                    InformativeViewModel.Instance.Title = "Mensaje";
+                    InformativeViewModel.Instance.Message = "Siga las instrucciones para continuar.";
+                    await MopupService.Instance.PushAsync(popupValidador);
+                    captchaToken = await popupValidador.PopupDismissedTask;
 
-                //var evaluacion = await InntecMobileNetMaui.Droid.Services.ReCaptchaService.Verify(Constants.SiteKey, Constants.BaseApiUrl);
-
-                if (captchaToken == null)
-                    return;
+                    if (captchaToken == null)
+                        return;
+                }
             }
-
             Login(captchaToken, (DeviceInfo.Platform == DevicePlatform.Android) ? 1 : 2);
         }
         else
@@ -261,8 +304,11 @@ public partial class LoginPage : ContentPage
 
             viewModel.IsBusy = false;
         }
+        Btn_Entrar.IsEnabled = true;
     }
-
+    /// <summary>
+    /// Verifica que exita una conexion a internet
+    /// </summary>
     private bool HayConexion()
     {
         try
@@ -292,6 +338,7 @@ public partial class LoginPage : ContentPage
     /// </remarks>
     private async void Login(string token, int Plataforma)
     {
+        string MensajeError = "";
         try
         {
             viewModel.ShowError = false;
@@ -299,7 +346,17 @@ public partial class LoginPage : ContentPage
         }
         catch (Exception ex)
         {
-            await DisplayAlert("Error", ex.Message, "Aceptar").ConfigureAwait(true);
+            if (ex.Message == "Object reference not set to an instance of an object.")
+                MensajeError = "Error al iniciar session,  intentelo mas tarde";
+            else
+            {
+                MensajeError = ex.Message;
+            }
+
+            InformativeViewModel.Instance.MessageType = InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel.messageType.Error;
+            InformativeViewModel.Instance.Title = "Error";
+            InformativeViewModel.Instance.Message = MensajeError;
+            await MopupService.Instance.PushAsync(InformativeAlert.Instance);
         }
     }
 
@@ -311,9 +368,16 @@ public partial class LoginPage : ContentPage
     async void BiometricLogin_Pressed(System.Object sender, System.EventArgs e)
     {
 
-        if (!HayConexion()) { _ = DisplayAlert("Alerta!", Constants.ERROR_INTERNET_CONECTION, "Aceptar"); return; }
+        if (!HayConexion()) 
+        { 
+            InformativeViewModel.Instance.MessageType = InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel.messageType.Error;
+            InformativeViewModel.Instance.Title = "Alerta!";
+            InformativeViewModel.Instance.Message = Constants.ERROR_INTERNET_CONECTION;
+            await MopupService.Instance.PushAsync(InformativeAlert.Instance);
+            return; 
+        }
 
-        AuthenticationRequestConfiguration authenticationRequestConfiguration = new AuthenticationRequestConfiguration("Inicio Biometrico", "Login")
+        AuthenticationRequestConfiguration authenticationRequestConfiguration = new AuthenticationRequestConfiguration("Inicio Biometrico", "Login InntecMovil")
         {
             CancelTitle = "Cancelar"
         };
@@ -337,7 +401,10 @@ public partial class LoginPage : ContentPage
         }
         catch (Exception)
         {
-            _ = DisplayAlert("Alerta!", "Lector digital no disponible.", "Aceptar");
+            InformativeViewModel.Instance.MessageType = InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel.messageType.Error;
+            InformativeViewModel.Instance.Title = "Alerta!";
+            InformativeViewModel.Instance.Message = "Lector digital no disponible.";
+            await MopupService.Instance.PushAsync(InformativeAlert.Instance);
         }
     }
 
@@ -348,18 +415,35 @@ public partial class LoginPage : ContentPage
     /// <param name="e"></param>
     void BtnPorPass_Pressed(System.Object sender, System.EventArgs e)
     {
-        TxtContrasena.Text = "";
+
+        InformativeViewModel.Instance.MessageType = InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel.messageType.Informative;
+        InformativeViewModel.Instance.Title = "Mensaje";
+        InformativeViewModel.Instance.Message = "Es necesario volver a ingresar las credenciales de tu cuenta.";
+        MopupService.Instance.PushAsync(InformativeAlert.Instance);
+
         viewModel.LoginBiometrico = false;
         viewModel.LoginPass = true;
+        viewModel.Usuario = " ";
+        viewModel.Contrasena = " ";
+        TxtContrasena.Text = " ";
+        TxtUsuario.Text = " ";
+        TxtContrasena.Placeholder = "Contraseña";
+        TxtUsuario.Placeholder = "Usuario";
+        CheckPass.IsChecked = false;
+        CheckBio.IsChecked = false;
+
+    }
+    /// <summary>
+    /// Para bloquear TxTUsuario y TxTContraseña cuando esta opcion esta activa
+    /// </summary>
+    private void CheckPass_CheckedChanged(object sender, CheckedChangedEventArgs e)
+    {
+        if (CheckPass.IsChecked == false)
+        {
+            TxtUsuario.Placeholder = "Usuario";
+            TxtUsuario.IsEnabled = true;
+            TxtContrasena.Placeholder = "Contraseña";
+            TxtContrasena.IsEnabled = true;
+        }
     }
 }
-//private void Btn_Entrar_Clicked(object sender, EventArgs e)
-//{
-//    Shell.Current.GoToAsync("//CardPageList");
-//}
-
-//private void Btn_Recuperar_Clicked(object sender, EventArgs e)
-//{
-//    // Shell.Current.GoToAsync("//NewCardPage");
-
-//}

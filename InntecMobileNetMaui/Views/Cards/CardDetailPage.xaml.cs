@@ -1,4 +1,5 @@
 using InntecMobileNetMaui.Models;
+using InntecMobileNetMaui.ViewModels;
 using InntecMobileNetMaui.ViewModels.Cards;
 using InntecMobileNetMaui.Views.CustomView;
 using Mopups.Services;
@@ -10,8 +11,8 @@ public partial class CardDetailPage : ContentPage, IDisposable
 {
     CardDetailViewModel ViewModels;
     CardModel cardModel;
-    //AssistModel assistModel;
-    //bool Assist;
+    CardsViewModel viewModel;
+    string evaluarDark;
     /// <summary>
     /// Inicializar objetos
     /// </summary>
@@ -19,60 +20,66 @@ public partial class CardDetailPage : ContentPage, IDisposable
     /// <param name="login">Datos del usuario que inicio sesion</param>
     public CardDetailPage(CardModel cardModel)
     {
+        var OnlyOneCard = cardModel as CardModel;
         InitializeComponent();
         this.cardModel = cardModel;
-        //assistModel = new AssistModel();
-        //assistModel.CsmId = cardModel.UsuarioCsmTarjetaId;
         this.BindingContext = ViewModels = new CardDetailViewModel(cardModel, this);
-        //Assist = false;
-
+        Application.Current.RequestedThemeChanged += OnRequestedThemeChanged;
     }
-    async void TapGestureRecognizer_Tapped_CerrarSesion(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
+    protected override void OnAppearing()
     {
-        // GridArea_Tapped(this, new TappedEventArgs(null));
 
-        await Shell.Current.GoToAsync("//Login");
-
+        AppTheme currentTheme = Application.Current.RequestedTheme;
+        evaluarDark = Preferences.Default.Get("IconNotificacion", string.Empty);
+        if (currentTheme == AppTheme.Light && DeviceInfo.Platform == DevicePlatform.Android)
+        {
+            evaluarDark = "png" + evaluarDark;
+        }
+        MenuPrincipal.IconIzq = evaluarDark;
     }
+    /// <summary>
+    /// Registra los cambios del tema para mostrar el icono de notificaciones dependiendo el modo 
+    /// </summary>
+    private void OnRequestedThemeChanged(object sender, AppThemeChangedEventArgs e)
+    {
+
+        AppTheme currentTheme = Application.Current.RequestedTheme;
+        evaluarDark = Preferences.Default.Get("IconNotificacion", string.Empty);
+        if (currentTheme == AppTheme.Light && DeviceInfo.Platform == DevicePlatform.Android)
+        {
+            evaluarDark = "png" + evaluarDark;
+        }
+        MenuPrincipal.IconIzq = evaluarDark;
+    }
+    /// <summary>
+    /// Navega hacia el login "Evento cerrar session"
+    /// </summary>
+    async void TapGestureRecognizer_Tapped_CerrarSesion(object sender, TappedEventArgs e)
+    {
+        await Shell.Current.GoToAsync("//Login");
+    }
+    /// <summary>
+    /// Navega hacia el detalle de la tarjeta "para refrescar los cambios"
+    /// </summary>
     private void MisTarjetas_Tapped(object sender, TappedEventArgs e)
     {
-        //CloseAnimation();
         Shell.Current.GoToAsync("//CardPageList");
     }
-
-    private async void DeleteCard_Tapped(object sender, TappedEventArgs e)
-    {
-        await MopupService.Instance.PushAsync(new DeleteCard());
-    }
-
-    private async void CancelCard_Tapped(object sender, TappedEventArgs e)
-    {
-        await MopupService.Instance.PushAsync(new CancelCard());
-    }
-
-    async void AddNewCard_Tapped(System.Object sender, System.EventArgs e)
-    {
-        //await MopupService.Instance.PushAsync(new NewCardPage(new NewCardViewModel()), true);
-        await MopupService.Instance.PushAsync(new NewCardPage());
-    }
-    async void BlockCard_Tapped(System.Object sender, System.EventArgs e)
-    {
-        //var item = Crv_Cards.CurrentItem;
-
-        //BlockCardOptionsPage blockCard = new BlockCardOptionsPage((Models.CardModel)item, new BlockCardOptionsViewModel(cardService));
-        //await MopupService.Instance.PushAsync(blockCard);
-
-        await MopupService.Instance.PushAsync(new BlockCardOptionsPage());
-
-    }
+    /// <summary>
+    /// Evento que controla el filtro de movimientos de la tarjeta
+    /// </summary>
     private void Pkr_Month_SelectedIndexChanged(object sender, EventArgs e)
     {
         ViewModels.CardMovementsMonthCommand.Execute(((Picker)sender).SelectedItem);
     }
-
     public void Dispose()
     {
         ViewModels.Dispose();
+    }
+    protected override bool OnBackButtonPressed()
+    {
+        // Return true to prevent back button 
+        return true;
     }
     protected override void OnDisappearing()
     {
@@ -80,4 +87,64 @@ public partial class CardDetailPage : ContentPage, IDisposable
         GC.Collect();
     }
 
+    /// <summary>
+    /// Cancelar tarjeta 
+    /// </summary>
+    private void Cancelar_card(object sender, TappedEventArgs e)
+    {
+        var myCard = cardModel as CardModel;
+        viewModel.CancelCardCommand.Execute(cardModel as CardModel);
+    }
+
+    private async void Cancelar_Tarjeta(object sender , TappedEventArgs e)
+    {
+        var myCard = cardModel as CardModel;
+        viewModel.CancelCardCommand.Execute(cardModel as CardModel);
+    }
+    /// <summary>
+    /// Bloquear tarjeta 
+    /// </summary>
+    private void BlockCard_Tapped(object sender, TappedEventArgs e)
+    {
+        var myCard = cardModel as CardModel;
+        ViewModels.BlockCardCommand.Execute(cardModel as CardModel);
+    }
+    /// <summary>
+    /// Eliminar tarjeta 
+    /// </summary>
+    private async void DeleteCard_Tapped(object sender, TappedEventArgs e)
+    {
+        DeleteCard.IsEnabled = false;
+        var myCard = cardModel as CardModel;
+        ViewModels.DeleteCardCommand.Execute(cardModel as CardModel);//.ConfigureAwait(true);
+        DeleteCard.IsEnabled = true;
+    }
+    /// <summary>
+    /// Cancelar tarjeta BTN
+    /// </summary>
+    private async void CancelCard_Tapped(object sender, TappedEventArgs e)
+    {
+        TimeSpan.FromSeconds(1);
+        CancelCard.IsEnabled = false;
+           // var myCard = cardModel as CardModel;
+        ViewModels.CancelCardCommand.Execute(cardModel);
+        CancelCard.IsEnabled = true;
+        
+    }
+
+    /// <summary>
+    /// MoreOptions  de tarjeta  
+    /// </summary>
+    private async void MoreOptionsCard_Tapped(object sender, TappedEventArgs e)
+    {
+        BlockCard.IsEnabled = false;
+        var myCard = cardModel as CardModel;
+        await MopupService.Instance.PushAsync(new Views.Alerts.MoreOptionsPage(cardModel, true)).ConfigureAwait(true);
+        BlockCard.IsEnabled = true;
+    }
+
+    void TapFiltroMes_Tapped(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
+    {
+         Pkr_Month.Focus();
+    }
 }

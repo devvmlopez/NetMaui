@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage 
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.CustomView.Validador.CustomValidator"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+             Title="CustomValidator">
+    <mopups:PopupPage.Animation>
+        <mopupsanim:ScaleAnimation
+            DurationIn="200"
+            EasingIn="SinOut"
+            PositionIn="Bottom"
+            EasingOut="SinIn"
+            PositionOut="Bottom"
+            ScaleIn="1"
+            ScaleOut="1"/>
+    </mopups:PopupPage.Animation>
+
+
+    <AbsoluteLayout 
+        HorizontalOptions="Center"
+        VerticalOptions="Center">
+        <Border 
+            WidthRequest="300"
+            HeightRequest="300"
+            BackgroundColor="White"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0,1,1,1"
+            >
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20,20,20,20"/>
+            </Border.StrokeShape>
+
+            <VerticalStackLayout 
+                VerticalOptions="CenterAndExpand"
+                Margin="12,12,12,0">
+                <Label 
+                    Text="Mensaje"
+                    FontSize="Subtitle"
+                    TextColor="Black"
+                    VerticalOptions="StartAndExpand" 
+                    HorizontalOptions="Center"
+                    FontFamily="FontMontB"/>
+
+                <Label 
+                    Text="Sigue las instrucciones para continuar"
+                    Margin="0,4,0,0"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center"
+                    FontFamily="FontMont"/>
+
+                <Label 
+                    Text="Mueve la esfera de color negro en el sentido de la flecha hasta llegar al final de la línea: "
+                    x:Name="Valor"
+                    Margin="0,4,0,0"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="Center"
+                    FontFamily="FontMont"/>
+                <Image
+                    x:Name="FlechaEvaluar"
+                    HeightRequest="40"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand">
+                    
+                </Image>
+
+                <Slider
+                    x:Name="evaluarEstado"
+                    MaximumTrackColor="#367fb6"
+                    Minimum="0"
+                    Value="25"
+                    Maximum="50"
+                    MinimumTrackColor="#367fb6"
+                    BackgroundColor="White"
+                    ThumbColor="Black"
+                    HeightRequest="60"
+                    WidthRequest="200"
+                    ValueChanged="evaluarEstado_ValueChanged">
+
+                </Slider>
+
+            </VerticalStackLayout>
+        </Border>
+
+        <Image 
+            Source="{Binding Ico}"
+            IsAnimationPlaying="{Binding AnimationPlaying}"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Margin="0,0,0,-20"
+            HeightRequest="100"
+            WidthRequest="100" 
+            Aspect="AspectFit"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0,0,1,0.5"/>
+        
+    </AbsoluteLayout>
+</mopups:PopupPage>

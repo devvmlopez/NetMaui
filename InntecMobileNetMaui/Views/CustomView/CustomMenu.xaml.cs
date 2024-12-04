@@ -1,9 +1,15 @@
 
+using InntecMobileNetMaui.Views.FAQ;
+using InntecMobileNetMaui.Views.Notify;
 using Microsoft.Maui.Controls.Shapes;
+using Mopups.Services;
 namespace InntecMobileNetMaui.Views.CustomView;
 public partial class CustomMenu : ContentView
 {
-	public CustomMenu()
+    /// <summary>
+    /// Todas las opciones del Custom Menu control personalizado
+    /// </summary>
+    public CustomMenu()
 	{
 		InitializeComponent();
 	}
@@ -27,10 +33,8 @@ public partial class CustomMenu : ContentView
     }
     private async void TapIconoIzq_Tapped(object sender, TappedEventArgs e)
     {
-        await Shell.Current.GoToAsync("//CardDetailPage");
+        await Shell.Current.GoToAsync("//NotifyPage");
     }
-
-    
     public static readonly BindableProperty IconCentroIzqProperty = BindableProperty.Create("IconCentroIzq",
                                                                                      typeof(ImageSource),
                                                                                      typeof(ContentView));
@@ -42,7 +46,9 @@ public partial class CustomMenu : ContentView
     }
     private async void TapIconoCentroIzq_Tapped(object sender, TappedEventArgs e)
     {
-        await Shell.Current.GoToAsync("//CardPageList");
+        IconCentroIzqEnable = "False";
+        await MopupService.Instance.PushAsync(new NewCardPage());
+        IconCentroIzqEnable = "True";
     }
 
     public static readonly BindableProperty IconCentroIzqEnableProperty = BindableProperty.Create("IconCentroIzqEnable",
@@ -66,7 +72,9 @@ public partial class CustomMenu : ContentView
     }
     private async void TapIconoCentroDer_Tapped(object sender, TappedEventArgs e)
     {
-        await Shell.Current.GoToAsync("//CardPageList");
+        IconCentroDerEnable = "False";
+        await MopupService.Instance.PushAsync(new FAQmenu());
+        IconCentroDerEnable = "True";
     }
 
     public static readonly BindableProperty IconCentroDerEnableProperty = BindableProperty.Create("IconCentroDerEnable",
@@ -92,7 +100,7 @@ public partial class CustomMenu : ContentView
 
     private async void TapIconoDer_Tapped(object sender, TappedEventArgs e)
     {
-        await Shell.Current.GoToAsync("//MyDatePage");
+        await Shell.Current.GoToAsync("//OptionsPage");
     }
 
     public static readonly BindableProperty IconDerEnableProperty = BindableProperty.Create("IconDerEnable",

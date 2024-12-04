@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -112,6 +113,12 @@ namespace InntecMobileNetMaui.Resources
             set => Preferences.Set("rememberPSW", value);
         }
 
+        public static bool savedPSW
+        {
+            get => Preferences.Get("savedPSW", false);
+            set => Preferences.Set("savedPSW", value);
+        }
+
         public static string Products
         {
             get => Preferences.Get("Products", null);
@@ -120,7 +127,7 @@ namespace InntecMobileNetMaui.Resources
 
 
         public const string ERROR_INTERNET_CONECTION = "Revisa tu conexión de internet \n e inténtalo nuevamente.";
-        public const string ERROR_EXCEPTION_SERVICE = "Se ha presentado un error de conexión \n con el servidor, por favor inténtelo de \n nuevo 5 minutos.";
+        public const string ERROR_EXCEPTION_SERVICE = "Se ha presentado un error de conexión \n con el servidor, por favor inténtelo de nuevo en 5 minutos.";
 
 
         #endregion
@@ -142,10 +149,10 @@ namespace InntecMobileNetMaui.Resources
         // public const string Url_Base = "http://localhost:65266";
 
         // DESARROLLO
-        public const string Url_Base = "https://ambientedesarrolloapi.azurewebsites.net/csmAPIv2";
+        //public const string Url_Base = "https://ambientedesarrolloapi.azurewebsites.net/csmAPIv2";
 
         // QA
-        // public const string Url_Base = "https://qa.inntecmp.com.mx/csmAPIv2";
+         public const string Url_Base = "https://qa.inntecmp.com.mx/csmAPIv2";
 
 #else
         // QA
@@ -156,5 +163,7 @@ namespace InntecMobileNetMaui.Resources
 
 #endif
         #endregion
+        public const string TokenCapchatIZQ = "";
+        public const string TokenCapchatDER = "";
     }
 }

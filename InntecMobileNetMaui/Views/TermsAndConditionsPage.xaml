@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.TermsAndConditionsPage"
+             Shell.NavBarIsVisible="{Binding navegacionAtras}"
+             Shell.FlyoutItemIsVisible="False"
+             Shell.BackgroundColor="#367fb6">
+    <Shell.TitleView>
+        <HorizontalStackLayout IsVisible="False">
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+            TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
+        </Style>
+        <Style x:Key="BackgroundFramItems"
+             TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3DB, Dark= #f2f2f7}" />
+        </Style>
+        <Style x:Key="PicturePlatform"
+         TargetType="Image">
+            <Setter Property="Source" Value="{OnPlatform iOS={AppThemeBinding Dark='pnginntec_bnco.png', Light='pnginntec.png'} , Android= {AppThemeBinding Dark='pnginntec_bnco.png', Light='svginntec.svg'}}" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource BackgroundColorViews}">
+            <StackLayout 
+                x:Name="Titulo" Orientation="Horizontal"
+                VerticalOptions="Start"
+                HorizontalOptions="CenterAndExpand">
+                <Image 
+                    Style="{StaticResource PicturePlatform}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Scale="0.85"/>
+            </StackLayout>
+
+            <AbsoluteLayout 
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand">
+                <ScrollView 
+                    AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                    AbsoluteLayout.LayoutFlags="All"  
+                    VerticalOptions="StartAndExpand">
+                    <StackLayout>
+                        <Border 
+                            Padding="8"
+                            Stroke="LightGray"
+                            StrokeThickness="5"
+                            StrokeShape="RoundRectangle 30,0,0,30"
+                            Style="{StaticResource BackgroundFramItems}"
+                            x:Name="DatosPersonales"  
+                            Margin="5">
+                            <Label
+                                FontSize="Body"
+                                TextColor="#000000"
+                                LineBreakMode="WordWrap"
+                                FontAutoScalingEnabled="False"
+                                Text="Inntec Medios de Pago S.A. de C.V. (en adelante Inntec Medios de Pago ) empresa legalmente constituida de conformidad con las Leyes Mexicanas, con domicilio legal para oír y recibir todo tipo de notificaciones en Av. Américas N. 1930 , Piso 4, Unidad G , Colonia Country Club; Guadalajara, Jalisco, C.P. 44610, en cumplimiento de sus obligaciones, emite el siguiente:
+
+AVISO DE PRIVACIDAD
+A fin de dar cumplimiento a lo que establece La Ley Federal para la Protección de Datos Personales en Posesión de Particulares, su Reglamento y los Lineamientos del Aviso de Privacidad (enseguida LA LEY, EL REGLAMENTO y LOS LINEAMIENTOS respectivamente) y demás normatividad aplicable, Inntec Medios de Pago, hace constar la responsabilidad frente al tratamiento de datos personales observando los principios de licitud, consentimiento, información, calidad, lealtad, proporcionalidad y responsabilidad previstos en LA LEY.
+
+Finalidades del tratamiento.
+Los datos personales que Inntec Medios de Pago recaba de Usted, son utilizados para las finalidades necesarias para el servicio que solicita y son las siguientes:
+• Proveer los servicios y productos requeridos por Usted.
+• Informar sobre nuevos servicios o productos que tengan relación con los ya contratados o adquiridos por Usted o cambios de éstos últimos.
+• Dar cumplimiento a obligaciones que sean contraídas con Usted.
+• Identificarlo en cualquier tipo de relación jurídica o de negocios.
+
+Finalidades Secundarias
+De manera adicional, Inntec Medios de Pago utiliza su información personal para las siguientes finalidades que no son necesarias para el servicio que solicita, pero permiten y facilitan brindarle una mejor atención.
+• Evaluar la calidad del servicio que se brinda.
+• Elaborar estudios y programas que son necesarios para determinar hábitos de consumo.
+• Envío de promociones, avisos y otros de carácter comercial, publicidad o prospección comercial y de mercadotecnia.
+En caso de que no se obtenga de Usted, oposición expresa para que sus datos personales sean tratados en la forma y términos antes descritos, se entenderá que ha otorgado a Inntec Medios de Pago, su consentimiento en forma tácita para ello.
+
+Datos personales sometidos a tratamiento.
+Todos los datos personales concernientes a su persona y la información de su empresa u organización que en su caso Inntec Medios de Pago, recabe, para las finalidades que más adelante se señalan, se enumeran de la siguiente manera:
+1. Identificativos: Nombre completo, domicilio, teléfono de casa, número de celular, correo electrónico, estado civil, Clave Única de Registro Poblacional (CURP), identificación oficial, número de seguro social (NSS), lugar y fecha de nacimiento, edad, nombres de familiares (padres, hijos, hermanos), dependientes económicos. Denominación o razón social, acta constitutiva y modificaciones.
+2. Laborales: Ocupación, nombre de la organización, empresa o dependencia, puesto, área o departamento, domicilio laboral, teléfono laboral, correo electrónico laboral, actividades extracurriculares, referencias laborales. Registro patronal.
+3. Fiscales: Registro Federal de Contribuyente (RFC), domicilio fiscal, correo electrónico para recibir facturas.
+Y se han obtenido de la siguiente manera:
+a) Personal: Cuando Usted nos proporciona personalmente sus datos personales, en entrevista con el personal de Inntec Medios de Pago S.A. de C.V., (ventas, operación, recursos humanos, atención de clientes).
+b) Directa: Cuando Usted nos proporciona sus datos personales por cualquier medio electrónico, óptico, sonoro, visual o a través de cualquier otra tecnología (a través de una llamada telefónica, cuando visita nuestro sitio de internet, o utiliza nuestros servicios en línea, llenando formatos a través de internet en el que proporciona su información personal).
+c) Indirecta: Cuando obtenemos su información a través de otras fuentes autorizadas en la LEY: transferencia hecha por un tercero y fuentes de acceso público (directorios telefónicos, diarios, gacetas o boletines oficiales, medios de comunicación social, medios remotos o locales de comunicación electrónica, óptica u otra tecnología en que se facilite la información al público y esté abierto a la consulta general).
+
+Datos personales sensibles.
+Inntec Medios de Pago, le informa que en ninguna forma solicita datos personales sensibles señalados por el artículo 3 fracción VI de la LEY (origen racial o étnico, estado de salud presente y futuro, información genética, creencias religiosas, filosóficas y morales, afiliación sindical, opiniones políticas y preferencia sexual). De llegar a ser necesario, para cumplir con las finalidades previstas en este AVISO, recabar de Usted datos personales sensibles, Inntec Medios de Pago, se compromete a que los mismos serán tratados bajo las más estrictas medidas de seguridad que garanticen su confidencialidad; debiendo solicitar a Usted previo consentimiento expreso y por escrito para el tratamiento de sus datos personales sensibles.
+Mecanismos para manifestar negativa al tratamiento de las finalidades que no son necesarias para la relación jurídica principal.
+Usted cuenta con un plazo de cinco días para que, de ser el caso, pueda manifestar su negativa al tratamiento de sus datos personales para las finalidades que no son necesarias para la relación jurídica principal que celebra con Inntec Medios de Pago, enviando su solicitud al e-mail proteccion.datos@inntecmp.com.mx. La negativa para el uso de sus datos personales para las finalidades que no son necesarias para la relación jurídica principal que celebra con Inntec Medios de Pago, no es motivo para que se le niegue los servicios y productos que solicita o contrata con Inntec Medios de Pago.
+Usted puede dejar de recibir mensajes promocionales por teléfono fijo o celular dando el correspondiente aviso mediante un correo electrónico a la dirección proteccion.datos@inntecmp.com.mx. Asimismo, puede dejar de recibir correo postal publicitario y correos electrónicos con promocionales enviando su instrucción al e-mail: proteccion.datos@inntecmp.com.mx.
+
+Transferencias de los datos personales.
+Inntec Medios de Pago, informa a Usted, que sus datos personales serán compartidos (remisión) dentro y fuera del país a las empresas con las que tiene firmado o llegará a firmar contrato de prestación de servicios para la fabricación de tarjetas electrónicas y para la transaccionalidad asociada a dichas tarjetas; remisión que Inntec Medios de Pago, realiza única y exclusivamente con esa finalidad. También pueden ser transferidos a autoridades laborales, civiles, administrativas y fiscales en ejercicio de sus atribuciones y mediante requerimiento oficial.
+
+Protección de sus datos personales.
+Inntec Medios de Pago, le informa que para el tratamiento de sus datos personales ha establecido y mantiene medidas de seguridad administrativas, técnicas y físicas, que permiten proteger sus datos personales contra daño, pérdida, alteración, destrucción o uso, acceso y tratamiento no autorizados; que no son menores a las que mantiene para el manejo de su propia información. Inntec Medios de Pago, le informará inmediatamente, personal, electrónicamente o por cualquier otro medio (sonoro, oral o impreso), toda vulneración a la seguridad, que afecte de forma significativa sus derechos patrimoniales o morales, a fin de que esté en la posibilidad de tomar las medidas correspondientes para la defensa de sus derechos.
+
+Opciones, medios y mecanismos para limitar el uso o divulgación de sus datos personales.
+Así mismo Inntec Medios de Pago, hace de su conocimiento que existen otros mecanismo para limitar el uso y divulgación de sus datos personales, distintos al ejercicio de los derechos ARCO, como son; el Registro Público para Evitar Publicidad (REPEP) de la Procuraduría Federal del Consumidor (PROFECO) o el Registro Público de Usuarios (REUS) de la Comisión Nacional Para la Protección y Defensa de los Usuarios de Servicios Financieros (CONDUSEF), para mayor información y proceder a su registro lo puede realizar desde las páginas web de las dependencias mencionadas.
+
+Derechos ARCO
+Inntec Medios de Pago, informa a Usted qué:
+• En todo momento tiene derecho a conocer qué datos personales de Usted posee, para qué son utilizados y las condiciones del uso que se le está dando, así como conocer el Aviso de Privacidad al que está sujeto el tratamiento de sus datos personales. (Derecho de Acceso).
+• Es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (Derecho de Rectificación).
+• Tendrá en todo momento el derecho a cancelar (eliminar) sus datos personales. (Derecho de Cancelación); sus datos personales serán dados de baja de nuestros registros, sistemas o bases de datos, cuando Usted considere que los mismos no están siendo utilizados adecuadamente, conforme a los principios, deberes y obligaciones previstos en la normatividad o Usted no quiere que sigan siendo tratados.
+• Es su derecho, en todo momento y por causa legítima, oponerse al uso de sus datos personales para fines específicos (Derecho de oposición).
+A estos derechos se les conocen como derechos ARCO. El ejercicio de cualquiera de ellos no es requisito previo ni impide el ejercicio de otro. Si en ejercicio de su derecho de cancelación, solicita que sus datos sean eliminados de nuestras bases de datos, es importante señalar que seguirán en nuestros sistemas, hasta en tanto no se extingan las acciones que pudieran derivar de nuestra relación jurídica, conocido como 'periodo de bloqueo', en el que serán conservados exclusivamente para efectos de las responsabilidades nacidas de su tratamiento. Una vez que sea eliminado de nuestros sistemas se le dará aviso oportuno.
+Inntec Medios de Pago , le hace saber, que, de conformidad con LA LEY, el ejercicio de cualquiera de los derechos ARCO podrá restringirse por razones de seguridad nacional, disposiciones de orden público, seguridad y salud públicas o para proteger los derechos de terceras personas.
+Inntec Medios de Pago , podrá negar el acceso, parcial o total, a sus datos personales cuando exista un impedimento legal o resolución de autoridad competente que lo restrinja o no permita la rectificación, cancelación u oposición de sus datos personales.
+Inntec Medios de Pago S.A. de C.V.
+
+Atención de protección de datos personales.
+Inntec Medios de Pago , pone a su disposición el Departamento de Protección de Datos Personales, adscrito a la dirección ubicado en Av. Américas N. 1930 , Piso 4, Unidad G  Colonia Country Club; Guadalajara, Jalisco, C.P. 44600 con correo electrónico proteccion.datos@inntecmp.com.mx y número telefónico 33 9690 7719.
+
+Medios para ejercer los derechos ARCO.
+Usted podrá, en cualquier momento, ejercitar cualquiera de los derechos ARCO, mediante el formato para ejercer los derechos ARCO que Inntec Medios de Pago S.A. de C.V. , pone a su disposición, debiendo presentarla directamente en el domicilio del Departamento de Protección de Datos Personales o enviarla al correo electrónico proteccion.datos@inntecmp.com.mx.
+Inntec Medios de Pago , también pone a su disposición la siguiente línea telefónica: 33 9690 7719, para cualquier duda o comentario.
+
+Procedimiento para ejercer los derechos ARCO.
+1.- La solicitud deberá contener:
+• Su nombre completo, nombre del tutor, representante legal o apoderado según sea el caso.
+• El domicilio o medio electrónico para comunicarle la respuesta a su solicitud.
+• Señalamiento del derecho que está ejercitando; de acceso, de rectificación, de cancelación o de oposición (ARCO).
+• Una descripción precisa de los datos personales respecto de los que se busca ejercer alguno de los derechos ARCO.
+• En caso de que se trate del derecho de rectificación, deberá señalar los datos personales que fueren incorrectos, o que se deseen actualizar y las modificaciones a realizar, aportando la documentación que sustente su petición.
+• En caso de que se trate del derecho de cancelación u oposición, deberá señalar los datos sobre lo que ejercita esos d erechos y algún dato o información por el que Usted considere deben proceder esos derechos.
+• Cualquier elemento o documento que facilite la localización de los datos personales.
+• La forma en que requiere la información: copia simple, documento electrónico o por otro medio (especificar).
+Al tratarse de un derecho personalísimo, al momento en que reciba la respuesta que haya recaído a su solicitud, Usted deberá acreditar su personalidad con
+• Credencial para votar, expedida por el Instituto Federal Electoral.
+• Pasaporte.
+• Cédula Profesional.
+• Cartilla Militar.
+2.- En un plazo máximo de 20 días contados desde la fecha en que se reciba su solicitud, Inntec Medios de Pago , le comunicará la resolución correspondiente.
+3.- Si Inntec Medios de Pago , resuelve que su solicitud es procedente, se hará efectiva dentro de los 15 días siguientes a la fecha en que se le comunicó la resolución.
+Tratándose de solicitudes de acceso a sus datos personales, Inntec Medios de Pago , procederá a su entrega, previa acreditación de su identidad o la de su representante legal; procediendo a la expedición de copias simples o documentos electrónicos. Usted deberá cubrir únicamente los gastos justificados de envío y el costo de reproducción en copias y otros formatos.
+Los periodos de comunicación de la resolución y en el que se haga efectiva su solicitud podrán ampliarse una sola vez por un periodo igual, siempre y cuando así lo justifiquen las circunstancias.
+4.- Cuando Inntec Medios de Pago , resuelva negar a Usted el acceso a sus datos personales o el ejercicio de los demás derechos ARCO, deberá informarle el motivo de la negativa dentro en un plazo máximo de 20 días contados desde la fecha en que recibió su solicitud, acompañando las pruebas que crea pertinentes. Mecanismos y procedimientos para revocar el consentimiento al tratamiento de datos personales. En cualquier momento puede revocar el consentimiento que otorgó a Inntec Medios de Pago , previamente, para tal efecto, deberá observar el procedimiento señalado en el capítulo Procedimiento para el ejercicio de los derechos ARCO.
+
+Cambios al aviso de privacidad.
+Inntec Medios de Pago se compromete desde este momento, a comunicar a Usted, cualquier modificación futura al presente AVISO, por medio de nuestras páginas de internet www.inntecmp.com.mx, o por cualquier otro medio (oral, sonoro, impreso o electrónico) que Inntec Medios de Pago , considere idóneo para tal efecto.
+Si Usted considera que su derecho a la protección de sus datos personales ha sido lesionado por alguna conducta u omisión por parte de Inntec Medios de Pago , o presume alguna violación a las disposiciones previstas en la LEY, su REGLAMENTO y demás ordenamientos aplicables, podrá interponer su inconformidad o denuncia ante el Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales (INAI). Para mayor información, Inntec Medios de Pago , le sugiere visitar la página de Internet del INAI
+. México, a 01 de febrero de 2017"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+                        </Border>
+                        <StackLayout Margin="4,8">
+                            <StackLayout Orientation="Horizontal">
+                                <Button 
+                                    x:Name="Btn_Cancel"
+                                    Clicked="Btn_Cancel_Clicked"
+                                    Text="Atras"
+                                    TextColor="White"
+                                    CornerRadius="5"
+                                    Margin="16,0"
+                                    FontFamily="FontMont"
+                                    HorizontalOptions="CenterAndExpand"
+                                    WidthRequest="230"
+                                    BorderColor="LightGray"
+                                    BackgroundColor="#f22b2b"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+                <AbsoluteLayout HorizontalOptions="FillAndExpand"
+                        VerticalOptions="FillAndExpand"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                        AbsoluteLayout.LayoutFlags="All" 
+                        BackgroundColor="#30000000"
+                        IsVisible="{Binding IsBusy}">
+                    <Image 
+                        Source="loading.gif"
+                        HeightRequest="70"
+                        WidthRequest="70"
+                        IsAnimationPlaying="{Binding IsBusy}"
+                        IsVisible="{Binding IsBusy}"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"/> 
+                </AbsoluteLayout>
+            </AbsoluteLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

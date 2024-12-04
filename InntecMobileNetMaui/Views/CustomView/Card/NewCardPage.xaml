@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <mopups:PopupPage 
-             BackgroundColor="Transparent"
+             BackgroundColor="#90255f84"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
              xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
              xmlns:controls="clr-namespace:InntecMobileNetMaui.RendererControls"
-             x:Class="InntecMobileNetMaui.Views.CustomView.NewCardPage"
-            >
+             x:Class="InntecMobileNetMaui.Views.CustomView.NewCardPage" >
     <mopups:PopupPage.Animation>
         <mopupsanim:ScaleAnimation
               DurationIn="200"
@@ -18,85 +17,113 @@
               ScaleIn="1"
               ScaleOut="1"/>
     </mopups:PopupPage.Animation>
-    <AbsoluteLayout HorizontalOptions="FillAndExpand" 
-                  VerticalOptions="FillAndExpand" 
-                  x:Name="swipeContent">
-        <Frame AbsoluteLayout.LayoutBounds="0,0,1,1" 
-                 AbsoluteLayout.LayoutFlags="All"
-                 Padding="0"
-                 VerticalOptions="Center"
-                 HorizontalOptions="Center"
-                 CornerRadius="10">
-            <StackLayout HorizontalOptions="FillAndExpand">
-                <Frame x:Name="MainFrame" 
-                 BackgroundColor="#255f84" 
-                     Padding="5"
-                         CornerRadius="0">
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Nueva Tarjeta"
-                             Margin="10,0,0,0"
-                             TextColor="White"
-                             HorizontalOptions="Center"
-                             FontSize="Large"
-                             FontAttributes="Bold"
-                             VerticalOptions="CenterAndExpand"/>
+    <AbsoluteLayout 
+        HorizontalOptions="FillAndExpand" 
+        VerticalOptions="FillAndExpand" 
+        x:Name="swipeContent">
+        <Border 
+            AbsoluteLayout.LayoutBounds="0,0,1,1" 
+            AbsoluteLayout.LayoutFlags="All"
+            Padding="4"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Stroke="LightGray"
+            StrokeThickness="5"
+            BackgroundColor="White"
+            StrokeShape="RoundRectangle 20,20,20,20">
+            <StackLayout 
+                HorizontalOptions="FillAndExpand">
+                <Frame 
+                    x:Name="MainFrame" 
+                    BackgroundColor="#255f84" 
+                    Padding="0"
+                    Margin="-8,-4,-8,4"
+                    BorderColor="LightGray"
+                    HeightRequest="50"
+                    CornerRadius="8">
+                    <StackLayout 
+                        Margin="-4,4"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Orientation="Horizontal">
+                        <Label 
+                            Text="Nueva Tarjeta"
+                            Margin="8,0,8,0"
+                            TextColor="White"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="Center"
+                            FontSize="Large"
+                            FontFamily="FontMont"
+                            VerticalOptions="CenterAndExpand"/>
                     </StackLayout>
                 </Frame>
                 <StackLayout HorizontalOptions="Center">
-                    <controls:CustomEntry x:Name="Txt_CardNumber"
-                                 WidthRequest="200"
-                                 Text="{Binding CardModel.Tarjeta}"
-                                 Placeholder="No. Tarjeta"
-                                 Mask="XXXX-XXXX-XXXX-XXXX"
-                                 KeyBoard="Numeric"
-                                 BackgroundColor="White"                                  
-                                 HorizontalOptions="Center"
-                                 Margin="10,10,10,0"
-                                 >
-
+                    <controls:CustomEntry 
+                        x:Name="Txt_CardNumber"
+                        WidthRequest="200"
+                        Text="{Binding CardModel.Tarjeta}"
+                        Placeholder="No. Tarjeta"
+                        Mask="XXXX-XXXX-XXXX-XXXX"
+                        KeyBoard="Numeric"
+                        BackgroundColor="White"                                  
+                        HorizontalOptions="Center"
+                        Margin="10,10,10,4" >
                     </controls:CustomEntry>
 
 
-                    <controls:CustomEntry x:Name="TxtToken"
-                                 Text="{Binding CardModel.TokenUnico}"
-                                 Placeholder="Token"
-                                 BackgroundColor="White"
-                                 WidthRequest="200"
-                                 Margin="10,0,10,0"
-                                      />
+                    <controls:CustomEntry
+                        x:Name="TxtToken"
+                        Text="{Binding CardModel.TokenUnico}"
+                        Placeholder="Token"
+                        BackgroundColor="White"
+                        WidthRequest="200"
+                        IsPassword="True"
+                        Margin="10,4,10,4"/>
                 </StackLayout>
 
 
                 <VerticalStackLayout>
-                    <Button x:Name="Btn_NewCard"
-                          x:FieldModifier="Public"
-                          Text="Guardar"
-                          TextColor="White"
-                          HorizontalOptions="FillAndExpand"
-                          Command="{Binding ExecuteSaveNewCardCommand}"
-                          Margin="10"
-                          BackgroundColor="#3487CB"/>
-                    <Button x:Name="Btn_Cancel"
-                                  Text="Cancelar"
-                                  TextColor="White"
-                                  HorizontalOptions="FillAndExpand"
-                                  Margin="10,0,10,10"
-                                  Pressed="Btn_Cancel_Pressed"
-                                  BackgroundColor="#f22b2b"/>
+                    <Button 
+                        x:Name="Btn_NewCard"
+                        FontFamily="FontMont"
+                        x:FieldModifier="Public"
+                        Text="Guardar"
+                        TextColor="White"
+                        HorizontalOptions="FillAndExpand"
+                        Command="{Binding ExecuteSaveNewCardCommand}"
+                        Margin="10"
+                        BackgroundColor="#3487CB"/>
+                    <Button 
+                        x:Name="Btn_Cancel"
+                        FontFamily="FontMont"
+                        Text="Cancelar"
+                        TextColor="White"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="10,0,10,10"
+                        Pressed="Btn_Cancel_Pressed"
+                        BackgroundColor="#f22b2b"/>
                 </VerticalStackLayout>
             </StackLayout>
-        </Frame>
-
-        <Image Source="loading.gif"
-             HeightRequest="70"
-             WidthRequest="70"
-             IsAnimationPlaying="False"
-             IsVisible="False"
-             AbsoluteLayout.LayoutBounds="0,0,1,1"
-             AbsoluteLayout.LayoutFlags="All"/>
-
-             <!--IsAnimationPlaying="{Binding IsBusy}"
-             IsVisible="{Binding IsBusy}"-->
+        </Border>
+        <Image 
+            Source="loading.gif"
+            IsAnimationPlaying="True"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="70"
+            WidthRequest="70" 
+            Aspect="AspectFit"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0,0,1,0.45"/>
+        
+        <Image 
+            Source="loading.gif"
+            HeightRequest="70"
+            WidthRequest="70"
+            IsAnimationPlaying="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"/>
 
     </AbsoluteLayout>
 </mopups:PopupPage>

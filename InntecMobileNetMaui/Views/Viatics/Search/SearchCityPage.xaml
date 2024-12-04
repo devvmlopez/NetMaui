@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage  
+             BackgroundColor="#90255f84"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+             x:Class="InntecMobileNetMaui.Views.Viatics.Search.SearchCityPage"
+             Title="SearchCityPage">
+    <mopups:PopupPage.Animation>
+        <mopupsanim:ScaleAnimation
+             DurationIn="200"
+             EasingIn="SinOut"
+             PositionIn="Bottom"
+             EasingOut="SinIn"
+             PositionOut="Bottom"
+             ScaleIn="1"
+             ScaleOut="1"/>
+    </mopups:PopupPage.Animation>
+    <Border
+        Stroke="LightGray"
+        StrokeThickness="4"
+        Margin="8,40"
+        BackgroundColor="White"
+        VerticalOptions="CenterAndExpand"
+        StrokeShape="RoundRectangle 0,40,40,0"
+        AbsoluteLayout.LayoutBounds="0,0,1,1"
+        AbsoluteLayout.LayoutFlags="All">
+
+        <StackLayout
+            Margin="16,32">
+            <Entry 
+                HorizontalOptions="FillAndExpand"
+                Text="{Binding Filter}"
+                FontFamily="FontMontB"
+                Placeholder="Filtro"
+                TextColor="Black"
+                TextChanged="Entry_TextChanged"/>
+            <ListView 
+                ItemsSource="{Binding filterCity}"
+                HasUnevenRows="true"
+                BackgroundColor="#90FFFFFF"
+                SeparatorColor="Transparent"
+                CachingStrategy="RetainElement"
+                SelectionMode="Single"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Border
+                                Stroke="Black"
+                                StrokeThickness="1"
+                                Margin="0"
+                                BackgroundColor="White"
+                                VerticalOptions="CenterAndExpand"
+                                HeightRequest="50"
+                                StrokeShape="RoundRectangle 10,0,0,10">
+                                <Label 
+                                    FontFamily="FontMont"
+                                    TextColor="Black"
+                                    Margin="16,0"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Text="{Binding Nombre}"/>
+                            </Border>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button 
+                x:Name="BtnCancelar" 
+                Text="Cancelar" 
+                FontFamily="FontMontB"
+                BorderColor="LightGray"
+                Pressed="BtnCancelar_Pressed" />
+        </StackLayout>
+    </Border>
+</mopups:PopupPage>

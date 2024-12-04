@@ -12,8 +12,6 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
 //[assembly: Dependency(typeof(InntecMobile.Services.CardsService))]
 
 namespace InntecMobileNetMaui.Services
@@ -25,39 +23,7 @@ namespace InntecMobileNetMaui.Services
     {
         bool isBusy;
 
-        ///// <summary>
-        ///// Agregar tarjeta nueva al usuario.
-        ///// </summary>
-        ///// <param name="login">objeto del login</param>
-        ///// <param name="item">tarjeta que se agregara</param>
-        ///// <returns></returns>
-        //public async Task<CardModel> AddItemAsync(CardModel item)
-        //{
-        //    if (isBusy) { return null; }
-        //    isBusy = true;
-
-        //    CardModel Result = null;
-        //    item.EstatusDescripcion = "";
-
-        //    var request = new HttpRequestMessage(HttpMethod.Post, Constants.Url_Base + "/api/Tarjeta");
-
-        //    var client = new HttpClient();
-        //    request.Content = new StringContent(JsonConvert.SerializeObject(item),
-        //                               Encoding.UTF8,
-        //                               "application/json");
-        //    client.DefaultRequestHeaders
-        //          .Accept
-        //          .Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        //    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(Constants.Token_Type, Constants.Token);
-
-        //    var response = await client.SendAsync(request).ConfigureAwait(true);
-        //    var content = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
-        //    Result = JsonConvert.DeserializeObject<CardModel>(content);
-        //    Result.StatusCode = response.StatusCode;
-        //    isBusy = false;
-        //    return Result;
-        //}
-
+        // Se removio la version anterior de AddItemAsync 
         /// <summary>
         /// Agregar tarjeta nueva al usuario.
         /// </summary>
@@ -87,32 +53,8 @@ namespace InntecMobileNetMaui.Services
             return Result;
         }
 
-        ///// <summary>
-        ///// Obtencion del listado de tarjetas relacionadas al usuario.
-        ///// </summary>
-        ///// <param name="login">objeto de login, para identificar al usuario</param>
-        ///// <param name="forceRefresh"></param>
-        ///// <returns></returns>
-        //public async Task<IEnumerable<CardModel>> GetItemsAsync(bool forceRefresh = false)
-        //{
 
-        //    IEnumerable<CardModel> Result = null;
-
-        //    var request = new HttpRequestMessage(HttpMethod.Get, Constants.Url_Base + "/api/Tarjeta");
-
-        //    var client = new HttpClient();
-        //    client.DefaultRequestHeaders
-        //          .Accept
-        //          .Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        //    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(Constants.Token_Type, Constants.Token);
-
-        //    var response = await client.SendAsync(request).ConfigureAwait(true);
-        //    var content = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
-        //    Result = JsonConvert.DeserializeObject<List<CardModel>>(content);
-
-        //    return Result;
-        //}
-
+        // Se removio la version anterior de GetItemsAsync 
         /// <summary>
         /// Obtencion del listado de tarjetas relacionadas al usuario.
         /// </summary>
@@ -135,36 +77,7 @@ namespace InntecMobileNetMaui.Services
             return Result;
         }
 
-        ///// <summary>
-        ///// Eliminar tarjeta relacionada a un usuario
-        ///// </summary>
-        ///// <param name="login">Objeto de login</param>
-        ///// <param name="card">Tarjeta a eliminar</param>
-        ///// <param name="forceRefresh"></param>
-        ///// <returns></returns>
-        //public async Task<string> DeleteItemAsync(CardModel card, bool forceRefresh = false)
-        //{
-        //    JObject Result = null;
-
-        //    var request = new HttpRequestMessage(HttpMethod.Delete, Constants.Url_Base + $"/api/Tarjeta/{card.UsuarioCsmTarjetaId}");
-
-        //    var client = new HttpClient();
-        //    client.DefaultRequestHeaders
-        //          .Accept
-        //          .Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        //    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(Constants.Token_Type, Constants.Token);
-
-        //    var response = await client.SendAsync(request).ConfigureAwait(true);
-        //    var content = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
-        //    Result = JsonConvert.DeserializeObject(content) as JObject;
-        //    if (response.StatusCode == System.Net.HttpStatusCode.OK)
-        //    {
-        //        return "Tarjeta eliminada correctamente.";
-        //    }
-        //    else
-        //        return Result["Message"].ToString();
-        //}
-
+        // Se removio la version anterior de DeleteItemAsync 
         /// <summary>
         /// Eliminar tarjeta relacionada a un usuario
         /// </summary>
@@ -189,10 +102,12 @@ namespace InntecMobileNetMaui.Services
             Result = JsonConvert.DeserializeObject(content) as JObject;
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
+                Preferences.Default.Set("TipoMensaje", "Confirm");
                 return "La tarjeta fue removida con éxito";
             }
             else
             {
+                Preferences.Default.Set("TipoMensaje", "Error");
                 return Result["Message"].ToString();
             }
         }
@@ -221,44 +136,7 @@ namespace InntecMobileNetMaui.Services
             return balance;
         }
 
-        ///// <summary>
-        ///// Reportar tarjeta y bloquear
-        ///// </summary>
-        ///// <param name="loginModel">Objeto de login</param>
-        ///// <param name="cardreport">Tarjeta con motivo de cancelacion</param>
-        ///// <returns></returns>
-        //public async Task<string> CancelItemAsync(CardReport cardreport)
-        //{
-        //    string Result = string.Empty;
-        //    try
-        //    {
-
-        //        var request = new HttpRequestMessage(HttpMethod.Post, Constants.Url_Base + "/api/Tarjeta/Reportar");
-        //        request.Content = new StringContent(JsonConvert.SerializeObject(cardreport),
-        //                                Encoding.UTF8,
-        //                                "application/json");
-        //        var client = new HttpClient();
-
-        //        client.DefaultRequestHeaders
-        //          .Accept
-        //          .Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        //        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(Constants.Token_Type, Constants.Token);
-
-        //        var response = await client.SendAsync(request).ConfigureAwait(true);
-        //        var content = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
-        //        JObject jwtDynamic = JsonConvert.DeserializeObject(content) as JObject;
-
-        //        if (jwtDynamic != null)
-        //            Result = jwtDynamic.Value<string>("Message");
-
-        //    }
-        //    catch
-        //    {
-        //        Result = "No se pudo conectar con el servidor, intentalo mas tarde";
-        //    }
-        //    return Result;
-        //}        
-
+        // Se removio la version anterior de CancelItemAsync 
         /// <summary>
         /// Reportar tarjeta y bloquear
         /// </summary>
@@ -306,45 +184,7 @@ namespace InntecMobileNetMaui.Services
             }
             return Result;
         }
-
-        ///// <summary>
-        ///// Bloqueo permanente de tarjeta.
-        ///// </summary>
-        ///// <param name="loginModel">Objeto de login</param>
-        ///// <param name="cardModel">Tarjeta que se bloqueara</param>
-        ///// <returns></returns>
-        //public async Task<CardModel> BlockItemAsync(CardModel cardModel)
-        //{
-        //    CardModel Result;
-        //    try
-        //    {
-
-        //        var request = new HttpRequestMessage(HttpMethod.Post, Constants.Url_Base + $"/api/Tarjeta/Estatus/{cardModel.UsuarioCsmTarjetaId}");
-        //        var client = new HttpClient();
-
-        //        client.DefaultRequestHeaders
-        //          .Accept
-        //          .Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        //        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(Constants.Token_Type, Constants.Token);
-
-        //        var response = await client.SendAsync(request).ConfigureAwait(true);
-        //        var content = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
-        //        Result = JsonConvert.DeserializeObject<CardModel>(content);
-        //        Result.StatusCode = response.StatusCode;
-        //        if (response.IsSuccessStatusCode)
-        //        {
-        //            Result.Message = "El estatus de la tarjeta ha sido actualizado con exito.";
-        //        }
-        //    }
-        //    catch
-        //    {
-        //        Result = new CardModel();
-        //        Result.StatusCode = System.Net.HttpStatusCode.NotFound;
-        //        Result.Message = "Hubo un problema al actualizar el estatus de la tarjeta, intenta mas tarde.";
-        //    }
-        //    return Result;
-        //}
-
+        // Se removio la version anterior de BlockItemAsync 
         /// <summary>
         /// Bloqueo permanente de tarjeta.
         /// </summary>
@@ -367,7 +207,7 @@ namespace InntecMobileNetMaui.Services
 
                 var response = await client.SendAsync(request).ConfigureAwait(true);
                 var content = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
-                // Result = JsonConvert.DeserializeObject<CardModel>(content);
+                //Result = JsonConvert.DeserializeObject<CardModel>(content);
                 JObject jwtDynamic = JsonConvert.DeserializeObject(content) as JObject;
                 Result.StatusCode = response.StatusCode;
                 if (response.IsSuccessStatusCode)
@@ -397,52 +237,53 @@ namespace InntecMobileNetMaui.Services
         /// <returns></returns>
         public async Task<CardModel> BlockEcommerceItemAsync(CardModel cardModel)
         {
-            //CardModel Result = cardModel;
-            //try
-            //{
-            //    HttpRequestMessage request;
-            //    BlockEcommerSayabhaModel parameter = new BlockEcommerSayabhaModel()
-            //    {
-            //        AllowEcommerce = cardModel.EstatusEcommerce,
-            //        UsuarioCsmTarjetaId = cardModel.UsuarioCsmTarjetaId
-            //    };
+            //Revisar esta parte 
+            CardModel Result = cardModel;
+            try
+            {
+                HttpRequestMessage request;
+                BlockEcommerSayabhaModel parameter = new BlockEcommerSayabhaModel()
+                {
+                    AllowEcommerce = cardModel.EstatusEcommerce,
+                    UsuarioCsmTarjetaId = cardModel.UsuarioCsmTarjetaId
+                };
 
 
-            //    request = new HttpRequestMessage(HttpMethod.Put, Constants.Url_Base + $"/api/v2/Tarjeta/Ecommerce/")
-            //    {
-            //        Content = new StringContent(JsonConvert.SerializeObject(parameter), Encoding.UTF8, "application/json")
-            //    };
-            //    var client = new HttpClient();
+                request = new HttpRequestMessage(HttpMethod.Put, Constants.Url_Base + $"/api/v2/Tarjeta/Ecommerce/")
+                {
+                    Content = new StringContent(JsonConvert.SerializeObject(parameter), Encoding.UTF8, "application/json")
+                };
+                var client = new HttpClient();
 
-            //    client.DefaultRequestHeaders
-            //      .Accept
-            //      .Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            //    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(Constants.Token_Type, Constants.Token);
+                client.DefaultRequestHeaders
+                  .Accept
+                  .Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(Constants.Token_Type, Constants.Token);
 
-            //    var response = await client.SendAsync(request).ConfigureAwait(true);
-            //    var content = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
-            //    if (!cardModel.EsProductoSayabha)
-            //        Result = JsonConvert.DeserializeObject<CardModel>(content);
+                var response = await client.SendAsync(request).ConfigureAwait(true);
+                var content = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
+                if (!cardModel.EsProductoSayabha)
+                    Result = JsonConvert.DeserializeObject<CardModel>(content);
 
-            //    Result.StatusCode = response.StatusCode;
-            //    if (response.IsSuccessStatusCode)
-            //    {
-            //        Result.Message = Result.EstatusEcommerce ? "El estatus ha sido actualizado, a partir de este momento SI podrá realizar compras en línea." : "El estatus ha sido actualizado, a partir de este momento NO podrá realizar compras en línea.";
-            //    }
-            //    else
-            //    {
-            //        Result.Message = "Ocurrio un problema con el cambio de estatus.";
-            //    }
-            //}
-            //catch(Exception ex)
-            //{
-            //    Log.Error("error ecommerce", ex.ToString());
-            //    Result = new CardModel();
-            //    Result.StatusCode = System.Net.HttpStatusCode.NotFound;
-            //    Result.Message = Constants.ERROR_EXCEPTION_SERVICE;
-            //}
-            //return Result;
-            return null;
+                Result.StatusCode = response.StatusCode;
+                if (response.IsSuccessStatusCode)
+                {
+                    Result.Message = Result.EstatusEcommerce ? "El estatus ha sido actualizado, a partir de este momento SI podrá realizar compras en línea." : "El estatus ha sido actualizado, a partir de este momento NO podrá realizar compras en línea.";
+                }
+                else
+                {
+                    Result.Message = "Ocurrio un problema con el cambio de estatus.";
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error("error ecommerce", ex.ToString());
+                Result = new CardModel();
+                Result.StatusCode = System.Net.HttpStatusCode.NotFound;
+                Result.Message = Constants.ERROR_EXCEPTION_SERVICE;
+            }
+            return Result;
+           // return null;
         }
 
         /// <summary>
@@ -514,45 +355,45 @@ namespace InntecMobileNetMaui.Services
         ///// <param name="loginModel">Objeto de login</param>
         ///// <param name="cardNipMc">Nuevo NIP</param>
         ///// <returns></returns>
-        //public async Task<CardNipModel> ChangeNIPAsync(CardNipModel cardNipMc)
-        //{
-        //    CardNipModel Result = new CardNipModel();
-        //    try
-        //    {
-        //        DateTime tt;
-        //        if (DateTime.TryParse(cardNipMc.FechaVencimiento, out tt))
-        //            cardNipMc.FechaVencimiento = AesGcm.EncryptString(cardNipMc.FechaVencimiento, Constants.Token);
+        public async Task<CardNipModel> ChangeNIPAsync(CardNipModel cardNipMc)
+        {
+            CardNipModel Result = new CardNipModel();
+            try
+            {
+                DateTime tt;
+                if (DateTime.TryParse(cardNipMc.FechaVencimiento, out tt))
+                    cardNipMc.FechaVencimiento = AesGcm.EncryptString(cardNipMc.FechaVencimiento, Constants.Token);
 
-        //        if (cardNipMc.Nip.All(char.IsDigit))
-        //            cardNipMc.Nip = AesGcm.EncryptString(cardNipMc.Nip, Constants.Token);
+                if (cardNipMc.Nip.All(char.IsDigit))
+                    cardNipMc.Nip = AesGcm.EncryptString(cardNipMc.Nip, Constants.Token);
 
-        //        var request = new HttpRequestMessage(HttpMethod.Post, Constants.Url_Base + "/api/tarjeta/Servicios/Nip");
-        //        request.Content = new StringContent(JsonConvert.SerializeObject(cardNipMc),
-        //                                Encoding.UTF8,
-        //                                "application/json");
-        //        var client = new HttpClient();
+                var request = new HttpRequestMessage(HttpMethod.Post, Constants.Url_Base + "/api/tarjeta/Servicios/Nip");
+                request.Content = new StringContent(JsonConvert.SerializeObject(cardNipMc),
+                                        Encoding.UTF8,
+                                        "application/json");
+                var client = new HttpClient();
 
-        //        client.DefaultRequestHeaders
-        //          .Accept
-        //          .Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        //        client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(Constants.Token_Type, Constants.Token);
+                client.DefaultRequestHeaders
+                  .Accept
+                  .Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(Constants.Token_Type, Constants.Token);
 
-        //        var response = await client.SendAsync(request).ConfigureAwait(true);
-        //        var content = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
-        //        JObject jwtDynamic = JsonConvert.DeserializeObject(content) as JObject;
+                var response = await client.SendAsync(request).ConfigureAwait(true);
+                var content = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
+                JObject jwtDynamic = JsonConvert.DeserializeObject(content) as JObject;
 
-        //        if (jwtDynamic != null)
-        //            Result.Message = jwtDynamic.Value<string>("Message");
-        //        Result.StatusCode = response.StatusCode;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Log.Error("error cambio nip", ex.ToString());
-        //        Result.StatusCode = System.Net.HttpStatusCode.NotFound;
-        //        Result.Message = Constants.ERROR_EXCEPTION_SERVICE;
-        //    }
-        //    return Result;
-        //}
+                if (jwtDynamic != null)
+                    Result.Message = jwtDynamic.Value<string>("Message");
+                Result.StatusCode = response.StatusCode;
+            }
+            catch (Exception ex)
+            {
+                Log.Error("error cambio nip", ex.ToString());
+                Result.StatusCode = System.Net.HttpStatusCode.NotFound;
+                Result.Message = Constants.ERROR_EXCEPTION_SERVICE;
+            }
+            return Result;
+        }
 
         public async Task<CardNipModel> ChangeNipV2Async(CardNipModel cardNipModel)
         {

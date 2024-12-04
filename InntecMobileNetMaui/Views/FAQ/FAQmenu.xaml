@@ -1,0 +1,114 @@
+﻿<mopups:PopupPage 
+             BackgroundColor="Transparent"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:local="clr-namespace:InntecMobileNetMaui.RendererControls"
+             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+             x:Class="InntecMobileNetMaui.Views.FAQ.FAQmenu"
+             Title="FAQmenu">
+    <mopups:PopupPage.Animation>
+            <mopupsanim:ScaleAnimation
+            DurationIn="200"
+            EasingIn="SinOut"
+            PositionIn="Bottom"
+            EasingOut="SinIn"
+            PositionOut="Bottom"
+            x:Name="FAQMENU"
+            ScaleIn="1"
+            ScaleOut="1"/>
+        </mopups:PopupPage.Animation>
+    <Frame 
+        x:Name="productos_button"
+        VerticalOptions="EndAndExpand"
+        HorizontalOptions="EndAndExpand"
+        CornerRadius="20"  
+        BackgroundColor="LightGray"
+        Margin="8,10,8,48"
+        AbsoluteLayout.LayoutBounds="0,0,1,1"
+        AbsoluteLayout.LayoutFlags="All">
+
+        <StackLayout Margin="4,4">
+
+            <local:MyImage
+                BackgroundColor="Transparent"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="50"
+                WidthRequest="50" 
+                Aspect="AspectFit"
+                Source="{OnPlatform iOS= 'pngfaq', Android='faq'}"
+                TintColor="{AppThemeBinding Dark='White', Light='#3B3A3A'}" />   
+            <Button 
+                Text="TOKEN"
+                FontFamily="FontMontB"
+                x:Name="BtnToken"
+                IsEnabled="{Binding btnToken}"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="Transparent"
+                Command="{Binding TokenCommand}"
+                TextColor="Black"/>
+            <Button 
+                FontFamily="FontMontB"
+                Text="DESPENSA"
+                x:Name="BtnDespensa"
+                IsEnabled="{Binding btnDespensa}"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="Transparent"
+                TextColor="Black"
+                Command="{Binding DespensaCommand}" />
+            <Button 
+                FontFamily="FontMontB"
+                Text="COMBUSTIBLE"
+                x:Name="BtnCombustible"
+                IsEnabled="{Binding btnCombustible}"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="Transparent"
+                TextColor="Black"
+                Command="{Binding CombustibleCommand}"
+                CommandParameter="COMBUSTIBLE"/>
+            <Button 
+                FontFamily="FontMontB"
+                Text="PREMIUM"
+                x:Name="BtnPremium"
+                IsEnabled="{Binding btnPremium}"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="Transparent"
+                TextColor="Black"
+                Command="{Binding PremiumCommand}"/>
+            <Button 
+                FontFamily="FontMontB"
+                Text="VIATICOS"
+                x:Name="BtnViaticos"
+                IsEnabled="{Binding btnViaticos}"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="Transparent"
+                Command="{Binding ViaticosCommand}"
+                TextColor="Black"/>
+            <Button 
+                FontFamily="FontMontB"
+                Text="Terminos y condiciones"
+                x:Name="BtnTerminos"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="Transparent"
+                Pressed="BtnTerminos_Pressed"
+                TextColor="Black"/>
+            <Button 
+                 FontFamily="FontMontB"
+                 Text="Aviso de privacidad"
+                 x:Name="BtnPrivacidad"
+                 HorizontalOptions="CenterAndExpand" 
+                 VerticalOptions="CenterAndExpand"
+                 BackgroundColor="Transparent"
+                 Pressed="BtnPrivacidad_Pressed"
+                 TextColor="Black"/>
+        </StackLayout>
+
+    </Frame>
+</mopups:PopupPage>

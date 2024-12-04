@@ -40,12 +40,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Render
 build_metadata.AdditionalFiles.TargetPath = RendererControls\CustomEntry.xaml
 build_metadata.AdditionalFiles.RelativePath = RendererControls\CustomEntry.xaml
 
-[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/RendererControls/CustomSwitch.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.RendererControls.CustomSwitch.xaml
-build_metadata.AdditionalFiles.TargetPath = RendererControls\CustomSwitch.xaml
-build_metadata.AdditionalFiles.RelativePath = RendererControls\CustomSwitch.xaml
-
 [C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Resources.Styles.Colors.xaml
@@ -58,11 +52,53 @@ build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Resour
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Alerts/AcceptCancelAlert.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Alerts.AcceptCancelAlert.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Alerts\AcceptCancelAlert.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Alerts\AcceptCancelAlert.xaml
+
 [C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Alerts/InformativeAlert.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Alerts.InformativeAlert.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Alerts\InformativeAlert.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Alerts\InformativeAlert.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Alerts/MoreOptionsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Alerts.MoreOptionsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Alerts\MoreOptionsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Alerts\MoreOptionsPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Alerts/MultiOpcion.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Alerts.MultiOpcion.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Alerts\MultiOpcion.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Alerts\MultiOpcion.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Alerts/YesOrNotAlert.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Alerts.YesOrNotAlert.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Alerts\YesOrNotAlert.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Alerts\YesOrNotAlert.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Asistencia/AssistPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Asistencia.AssistPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Asistencia\AssistPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Asistencia\AssistPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/BenefitHub/BenefitHubRegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.BenefitHub.BenefitHubRegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\BenefitHub\BenefitHubRegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\BenefitHub\BenefitHubRegisterPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/BenefitHub/BenefitHubTemsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.BenefitHub.BenefitHubTemsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\BenefitHub\BenefitHubTemsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\BenefitHub\BenefitHubTemsPage.xaml
 
 [C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Cards/CardDetailPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -70,41 +106,23 @@ build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.
 build_metadata.AdditionalFiles.TargetPath = Views\Cards\CardDetailPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Cards\CardDetailPage.xaml
 
-[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Cards/CardMenu.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Cards.CardMenu.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Cards\CardMenu.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Cards\CardMenu.xaml
-
-[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Cards/CardPageList.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Cards.CardPageList.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\Cards\CardPageList.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\Cards\CardPageList.xaml
-
 [C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Cards/CardsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Cards.CardsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\Cards\CardsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\Cards\CardsPage.xaml
 
-[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/CustomView/Card/BlockCardOptionsPage.xaml]
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Contigo/MenuContigo.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.CustomView.Card.BlockCardOptionsPage.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\CustomView\Card\BlockCardOptionsPage.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\CustomView\Card\BlockCardOptionsPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Contigo.MenuContigo.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Contigo\MenuContigo.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Contigo\MenuContigo.xaml
 
-[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/CustomView/Card/CancelCard.xaml]
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/CustomView/Card/CardNipPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.CustomView.Card.CancelCard.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\CustomView\Card\CancelCard.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\CustomView\Card\CancelCard.xaml
-
-[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/CustomView/Card/DeleteCard.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.CustomView.Card.DeleteCard.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\CustomView\Card\DeleteCard.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\CustomView\Card\DeleteCard.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.CustomView.Card.CardNipPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CustomView\Card\CardNipPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CustomView\Card\CardNipPage.xaml
 
 [C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/CustomView/Card/NewCardPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
@@ -124,6 +142,48 @@ build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.
 build_metadata.AdditionalFiles.TargetPath = Views\CustomView\CustomMenu.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\CustomView\CustomMenu.xaml
 
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/CustomView/Validador/CustomValidator.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.CustomView.Validador.CustomValidator.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CustomView\Validador\CustomValidator.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CustomView\Validador\CustomValidator.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/FAQ/FAQmenu.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.FAQ.FAQmenu.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\FAQ\FAQmenu.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\FAQ\FAQmenu.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/FAQ/FAQsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.FAQ.FAQsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\FAQ\FAQsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\FAQ\FAQsPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Gas/ActivateCardPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Gas.ActivateCardPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Gas\ActivateCardPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Gas\ActivateCardPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Gas/ActivationRequestReportDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Gas.ActivationRequestReportDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Gas\ActivationRequestReportDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Gas\ActivationRequestReportDetailPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Gas/ActivationRequestReportPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Gas.ActivationRequestReportPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Gas\ActivationRequestReportPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Gas\ActivationRequestReportPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Gas/MainGasPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Gas.MainGasPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Gas\MainGasPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Gas\MainGasPage.xaml
+
 [C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Login/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Login.LoginPage.xaml
@@ -135,3 +195,93 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.MyDataPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\MyDataPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\MyDataPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Notify/NotificationPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Notify.NotificationPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Notify\NotificationPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Notify\NotificationPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Notify/NotityPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Notify.NotityPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Notify\NotityPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Notify\NotityPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/OptionsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.OptionsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\OptionsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\OptionsPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Promotions/PromotionsListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Promotions.PromotionsListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Promotions\PromotionsListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Promotions\PromotionsListPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/QR/ReaderQR.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.QR.ReaderQR.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\QR\ReaderQR.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\QR\ReaderQR.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/RecoverPasswordPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.RecoverPasswordPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\RecoverPasswordPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\RecoverPasswordPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\RegisterPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/TermsAndConditionsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.TermsAndConditionsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\TermsAndConditionsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\TermsAndConditionsPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Viatics/MainViaticsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Viatics.MainViaticsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Viatics\MainViaticsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Viatics\MainViaticsPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Viatics/Search/SearchCityPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Viatics.Search.SearchCityPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Viatics\Search\SearchCityPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Viatics\Search\SearchCityPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Viatics/ViaticDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Viatics.ViaticDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Viatics\ViaticDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Viatics\ViaticDetailPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Viatics/ViaticsCheckDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Viatics.ViaticsCheckDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Viatics\ViaticsCheckDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Viatics\ViaticsCheckDetailPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Viatics/ViaticsCheckPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Viatics.ViaticsCheckPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Viatics\ViaticsCheckPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Viatics\ViaticsCheckPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Viatics/ViaticsListPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Viatics.ViaticsListPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Viatics\ViaticsListPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Viatics\ViaticsListPage.xaml
+
+[C:/Users/vlopez/Documents/GitHub/NetMaui/InntecMobileNetMaui/Views/Viatics/ViaticsRequestPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = InntecMobileNetMaui.Views.Viatics.ViaticsRequestPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Viatics\ViaticsRequestPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Viatics\ViaticsRequestPage.xaml

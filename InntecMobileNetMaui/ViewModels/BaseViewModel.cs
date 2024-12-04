@@ -10,13 +10,16 @@ namespace InntecMobileNetMaui.ViewModels
         public IDataStore<LoginModel> DataLogin => DependencyService.Get<IDataStore<LoginModel>>();
         public ICardsService<CardModel> DataCard => DependencyService.Get<ICardsService<CardModel>>();
         public IUserService<UserModel> DataUser => DependencyService.Get<IUserService<UserModel>>();
-        //public Services.Viatics.IViaticsService<Models.Viatics.InfoNewRequest> DataViatics => DependencyService.Get<Services.Viatics.IViaticsService<Models.Viatics.InfoNewRequest>>();
-        //public Services.Gas.IGasService<Guid> DataGas => DependencyService.Get<Services.Gas.IGasService<Guid>>();
-        //public Services.notificacion.INotifyServices DataNotify = DependencyService.Get<Services.notificacion.INotifyServices>();
-        //public Services.Promociones.IPromotionServices<Models.Promotions.StorePromotion> DataPromos = DependencyService.Get<Services.Promociones.IPromotionServices<Models.Promotions.StorePromotion>>();
-        //public Services.Aclaracion.IAclaracionService DataAclaracion = DependencyService.Get<Services.Aclaracion.IAclaracionService>();
+        public IMenuContigoServices<UserModel> ContigoServices => DependencyService.Get<IMenuContigoServices<UserModel>>();
+        public Services.Viatics.IViaticsService<Models.Viatics.InfoNewRequest> DataViatics => DependencyService.Get<Services.Viatics.IViaticsService<Models.Viatics.InfoNewRequest>>();
+        public Services.Gas.IGasService<Guid> DataGas => DependencyService.Get<Services.Gas.IGasService<Guid>>();
+        public Services.Notification.INotifyServices DataNotify = DependencyService.Get<Services.Notification.INotifyServices>();
+        public Services.Promociones.IPromotionServices<Models.Promotions.StorePromotion> DataPromos = DependencyService.Get<Services.Promociones.IPromotionServices<Models.Promotions.StorePromotion>>();
+        public Services.Aclaracion.IAclaracionService DataAclaracion = DependencyService.Get<Services.Aclaracion.IAclaracionService>();
 
         public IReCaptchaService reCaptchaService = DependencyService.Get<IReCaptchaService>();
+
+
 
         bool isBusy = false;
         public bool IsBusy
@@ -48,7 +51,7 @@ namespace InntecMobileNetMaui.ViewModels
         {
             if (EqualityComparer<T>.Default.Equals(backingStore, value))
                 return false;
-
+            
             backingStore = value;
             onChanged?.Invoke();
             OnPropertyChanged(propertyName);

@@ -64,6 +64,10 @@ namespace InntecMobileNetMaui.Models
         /// </summary>
         public bool rememberPWS { get; set; }
         /// <summary>
+        /// Indicador para recordar el Usuario y la contraseña
+        /// </summary>
+        public bool savepass { get; set; }
+        /// <summary>
         /// Rol
         /// </summary>
         public string rol { get; set; }

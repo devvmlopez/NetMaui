@@ -13,7 +13,7 @@ public final class R {
 		public static final int colorScheme = 0x7f04012c;
 		public static final int imageAspectRatio = 0x7f040249;
 		public static final int imageAspectRatioAdjust = 0x7f04024a;
-		public static final int scopeUris = 0x7f0403c6;
+		public static final int scopeUris = 0x7f0403c8;
 	}
 	public static final class color {
 		public static final int common_google_signin_btn_text_dark = 0x7f060038;
@@ -48,19 +48,19 @@ public final class R {
 		public static final int common_google_signin_btn_text_light_focused = 0x7f08009d;
 		public static final int common_google_signin_btn_text_light_normal = 0x7f08009e;
 		public static final int common_google_signin_btn_text_light_normal_background = 0x7f08009f;
-		public static final int googleg_disabled_color_18 = 0x7f0800b4;
-		public static final int googleg_standard_color_18 = 0x7f0800b5;
+		public static final int googleg_disabled_color_18 = 0x7f0800bf;
+		public static final int googleg_standard_color_18 = 0x7f0800c0;
 	}
 	public static final class id {
-		public static final int adjust_height = 0x7f090049;
-		public static final int adjust_width = 0x7f09004a;
-		public static final int auto = 0x7f09005a;
-		public static final int dark = 0x7f090097;
-		public static final int icon_only = 0x7f0900ec;
-		public static final int light = 0x7f090101;
-		public static final int none = 0x7f09015e;
+		public static final int adjust_height = 0x7f090048;
+		public static final int adjust_width = 0x7f090049;
+		public static final int auto = 0x7f090059;
+		public static final int dark = 0x7f090096;
+		public static final int icon_only = 0x7f0900ed;
+		public static final int light = 0x7f090102;
+		public static final int none = 0x7f09015d;
 		public static final int standard = 0x7f0901cb;
-		public static final int wide = 0x7f090218;
+		public static final int wide = 0x7f090217;
 	}
 	public static final class string {
 		public static final int common_google_play_services_enable_button = 0x7f10002e;
@@ -86,7 +86,7 @@ public final class R {
 		public static final int LoadingImageView_circleCrop = 0;
 		public static final int LoadingImageView_imageAspectRatio = 1;
 		public static final int LoadingImageView_imageAspectRatioAdjust = 2;
-		public static final int[] SignInButton = new int[] { 0x7f0400a4, 0x7f04012c, 0x7f0403c6 };
+		public static final int[] SignInButton = new int[] { 0x7f0400a4, 0x7f04012c, 0x7f0403c8 };
 		public static final int SignInButton_buttonSize = 0;
 		public static final int SignInButton_colorScheme = 1;
 		public static final int SignInButton_scopeUris = 2;

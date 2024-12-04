@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.Notify.NotityPage"
+             xmlns:Menucontrols="clr-namespace:InntecMobileNetMaui.Views.CustomView"
+             Title="Notificaciones"
+             Shell.BackgroundColor="#367fb6"
+             BindingContext="{Binding Source={x:Reference LstNotify}, Path=BindingContext}"
+             Visual="Material">
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+               TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
+        </Style>
+        <Style x:Key="BackgroundFramItems"
+               TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3DB, Dark= #f2f2f7}" />
+        </Style>
+    </ContentPage.Resources>
+    <NavigationPage.TitleView
+        AbsoluteLayout.LayoutBounds="{OnPlatform iOS= '0,0,1,1', Android='0,0,1,1'}"
+        AbsoluteLayout.LayoutFlags="All"
+        Style="{StaticResource BackgroundColorViews}">
+        <StackLayout 
+            Style="{StaticResource BackgroundColorViews}"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Label 
+                Text="Notificaciones"
+                TextColor="{DynamicResource cardtextcolor}"
+                FontAttributes="Bold" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <AbsoluteLayout
+            Style="{StaticResource BackgroundColorViews}">
+            <AbsoluteLayout 
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,1,1,1"
+                Visual="Material">
+            <Border
+                Stroke="LightGray"
+                StrokeThickness="4"
+                StrokeShape="RoundRectangle 0,40,40,0"
+                VerticalOptions="StartAndExpand" 
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All">
+            <Image 
+                Source="notificationsbk.png" 
+                />
+            </Border>
+            <ListView 
+                x:Name="LstNotify"
+                AbsoluteLayout.LayoutBounds="0.25, 1, 1, 0.64" 
+                AbsoluteLayout.LayoutFlags="All"
+                ItemsSource="{Binding Notifications}"
+                VerticalScrollBarVisibility="Always"
+                HasUnevenRows="true"
+                SeparatorColor="Transparent"
+                CachingStrategy="RetainElement"
+                SelectionMode="None"
+                BackgroundColor="Transparent"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Border 
+                                Padding="0" 
+                                Stroke="LightGray"
+                                StrokeThickness="3"
+                                StrokeShape="RoundRectangle 20,0,0,20"
+                                HeightRequest="95"
+                                Margin="8,16"
+                                BackgroundColor="White"
+                                Visual="Material">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        BindingContext="{Binding Source={x:Reference LstNotify}, Path=BindingContext}"
+                                        Command="{Binding ShowNotifyCommand}"
+                                        CommandParameter="{Binding Source={x:Reference Notifications}, Path=BindingContext}"/>
+                                </Border.GestureRecognizers>
+                                <StackLayout 
+                                    x:Name="Notifications"
+                                    Orientation="Horizontal"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand">
+
+                                    <AbsoluteLayout 
+                                        HorizontalOptions="FillAndExpand"
+                                        VerticalOptions="FillAndExpand">
+
+                                        <StackLayout 
+                                            Orientation="Horizontal"
+                                            HorizontalOptions="StartAndExpand"
+                                            VerticalOptions="CenterAndExpand"
+                                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                                            AbsoluteLayout.LayoutFlags="All">
+                                            <Image 
+                                                Source="innteclogo.png"
+                                                VerticalOptions="CenterAndExpand"
+                                                WidthRequest="80"
+                                                HeightRequest="80"
+                                                Margin="0,0,0,0"/>
+                                            <StackLayout>
+                                                <Label 
+                                                    Text="{Binding Titulo}"
+                                                    TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                                    FontSize="Title"
+                                                    FontFamily="FontMontB"
+                                                    FontAutoScalingEnabled="False"
+                                                    Margin="0,0,12,0"/>
+                                                <Label 
+                                                    Text="{Binding Descripcion}"
+                                                    HorizontalOptions="StartAndExpand"
+                                                    TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                                    FontFamily="FontMont"
+                                                    FontAutoScalingEnabled="False"
+                                                    Margin="0,0,12,0"
+                                                    LineBreakMode="WordWrap"
+                                                    MaxLines="2"
+                                                    FontSize="Caption"/>
+                                            </StackLayout>
+                                        </StackLayout>
+
+
+                                        <Image 
+                                            Source="{Binding Leida}"
+                                            HorizontalOptions="EndAndExpand"
+                                            Margin="0,0,10,0"
+                                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+                                            AbsoluteLayout.LayoutFlags="All"
+                                            WidthRequest="20"
+                                            HeightRequest="20"/>
+
+                                    </AbsoluteLayout>
+                                </StackLayout>
+                            </Border>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </AbsoluteLayout>
+            <Menucontrols:CustomMenu
+                x:Name="MenuPrincipal"
+                IconIzqEnable="False"
+                IconCentroIzqEnable="True"
+                IconCentroDerEnable="True"
+                IconDerEnable="True"
+                IconIzq="{OnPlatform iOS= 'pngnotification', Android={AppThemeBinding Dark='notification', Light='pngnotification'}}"
+                IconCentroIzq="{OnPlatform iOS= 'pngcredit_card_add', Android={AppThemeBinding Dark='credit_card_add', Light='pngcredit_card_add'}}"
+                IconCentroDer="{OnPlatform iOS= 'pngfaq', Android={AppThemeBinding Dark='faq', Light='pngfaq'}}"
+                IconDer="{OnPlatform iOS= 'pnguser', Android={AppThemeBinding Dark='user', Light='pnguser'}}"                
+                IconCentro="innteclogo"
+                IconCentroEnable="True"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                AbsoluteLayout.LayoutBounds="0.2,1,1,0.09"
+                AbsoluteLayout.LayoutFlags="All" >
+            </Menucontrols:CustomMenu>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

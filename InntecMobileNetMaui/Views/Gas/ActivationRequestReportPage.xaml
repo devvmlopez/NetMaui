@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.Gas.ActivationRequestReportPage"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             Shell.BackgroundColor="#367fb6"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+             TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
+        </Style>
+        <Style x:Key="BackgroundFramItems"
+              TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3DB, Dark= #f2f2f7}" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout
+            AbsoluteLayout.LayoutBounds="{OnPlatform iOS= '0,0,1,1', Android='0,0,1,1'}"
+            AbsoluteLayout.LayoutFlags="All"
+            VerticalOptions="FillAndExpand"
+            Style="{StaticResource BackgroundColorViews}">
+            <StackLayout 
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,1,1,0.95"
+                Padding="0">
+
+                <StackLayout 
+                    AbsoluteLayout.LayoutFlags="All"
+                    AbsoluteLayout.LayoutBounds="0,1,1,1"
+                    Orientation="Horizontal" 
+                    Padding="8,4">
+                <StackLayout 
+                    HorizontalOptions="CenterAndExpand" >
+                    <Label 
+                        FontFamily="FontMontB"
+                        FontAutoScalingEnabled="False"
+                        FontSize="Medium"
+                        Text="Fecha Ini."/>
+                    <DatePicker 
+                        FontFamily="FontMont"
+                        Format="M/d/yyyy"
+                        TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                        BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                        Date="{Binding FilterModel.dateStart}"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="CenterAndExpand" >
+                    <Label
+                        FontFamily="FontMontB"
+                        FontAutoScalingEnabled="False"
+                        FontSize="Medium"
+                        Text="Fecha Fin."/>
+                    <DatePicker  
+                        FontFamily="FontMont"
+                        Format="M/d/yyyy"
+                        TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                        BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                        Date="{Binding FilterModel.dataEnd }"/>
+                </StackLayout>
+                <StackLayout HorizontalOptions="EndAndExpand">
+                    <Label 
+                        FontFamily="FontMontB"
+                        FontAutoScalingEnabled="False"
+                        FontSize="Medium"
+                        Text="Estatus"/>
+                    <Picker 
+                        x:Name="PkrStatus" 
+                        ItemsSource="{Binding LstStatus}"
+                        SelectedIndex="0"
+                        TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                        BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                        ios:Picker.UpdateMode="WhenFinished"
+                        FontFamily="FontMont"
+                        SelectedIndexChanged="PkrStatus_SelectedIndexChanged"
+                        HorizontalOptions="EndAndExpand"
+                        WidthRequest="100"/>
+                </StackLayout>
+            </StackLayout>
+            <Button 
+                Text="Filtrar" 
+                FontFamily="FontMontB"
+                Margin="20,0" 
+                CornerRadius="5"
+                BackgroundColor="{AppThemeBinding Light= '#3487CB', Dark='White'}"
+                TextColor="{AppThemeBinding Light= 'White', Dark='#3487CB'}"
+                BorderColor="{OnPlatform iOS= 'Black', Android='LightGray'}"
+                Clicked="Button_Clicked"/>
+            <Image 
+                Source="loading.gif"
+                HeightRequest="70"
+                WidthRequest="70"
+                IsAnimationPlaying="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <CollectionView 
+                Style="{StaticResource BackgroundColorViews}"
+                ItemsSource="{Binding RequestList}"
+                SelectionMode="Single"
+                VerticalOptions="StartAndExpand"
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,0.9,1,0.75"
+                Margin="-4,4"
+                SelectionChanged="CollectionView_SelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border 
+                            Margin="-16,8"
+                            Stroke="LightGray"
+                            WidthRequest="350"
+                            StrokeThickness="3"
+                            StrokeShape="RoundRectangle 8,8,8,8"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="CenterAndExpand"
+                            BackgroundColor="{DynamicResource titlecardviewcolor}">
+                            <StackLayout 
+                                BackgroundColor="White"
+                                Padding="2">
+                                <StackLayout 
+                                    Orientation="Vertical" 
+                                    BackgroundColor="{Binding Color}">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label 
+                                            Text="Folio:"
+                                            FontFamily="FontMontB"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            Margin="8,0"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                                        <Label 
+                                            Text="{Binding Folio}"
+                                            Margin="8,0"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label 
+                                            Text="Tarjeta:"
+                                            FontFamily="FontMontB"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            Margin="8,0"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                                        <Label 
+                                            Text="{Binding NoTarjeta}"
+                                            Margin="8,0"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"/>
+                                    </StackLayout>
+                                </StackLayout>
+                                <StackLayout 
+                                    Margin="-8,0"
+                                    BackgroundColor="Transparent"
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand">
+                                    <Grid 
+                                        BackgroundColor="Transparent"
+                                        Padding="4"
+                                        ColumnSpacing="16"
+                                        VerticalOptions="CenterAndExpand"
+                                        HorizontalOptions="CenterAndExpand">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Label 
+                                            Text="Solicitado" 
+                                            FontFamily="FontMontB"
+                                            Grid.Column="0" 
+                                            Grid.Row="0"
+                                            Grid.ColumnSpan="2"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                            HorizontalOptions="Start" />
+                                        <Label 
+                                            Text="Precio" 
+                                            FontFamily="FontMontB"
+                                            Grid.Column="2"
+                                            Grid.Row="0"
+                                            Grid.ColumnSpan="2"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                            HorizontalOptions="CenterAndExpand"/>
+                                        <Label 
+                                            Text="KM"
+                                            FontFamily="FontMontB"
+                                            Grid.Column="4"
+                                            Grid.Row="0"
+                                            Grid.ColumnSpan="2"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                            HorizontalOptions="CenterAndExpand" />
+                                        <Label 
+                                            Text="Litros" 
+                                            FontFamily="FontMontB"
+                                            Grid.Column="1" 
+                                            Grid.Row="2"
+                                            Grid.ColumnSpan="2"
+                                            Margin="-8,0"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                            HorizontalOptions="StartAndExpand"/>
+                                        <Label 
+                                            Text="Fecha" 
+                                            FontFamily="FontMontB"
+                                            Grid.Column="3" 
+                                            Grid.Row="2"
+                                            Grid.ColumnSpan="2"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                            HorizontalOptions="CenterAndExpand"/>
+                                        <Label 
+                                            Text="{Binding MontoSolicitado, StringFormat='{0:#,##0.00}'}" 
+                                            Grid.Column="0" 
+                                            Grid.Row="1"
+                                            Grid.ColumnSpan="2"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                            HorizontalOptions="CenterAndExpand" />
+                                        <Label 
+                                            Text="{Binding Precio, StringFormat='{0:#,##0.00}'}" 
+                                            Grid.Column="2"
+                                            Grid.Row="1"
+                                            Grid.ColumnSpan="2"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                            HorizontalOptions="CenterAndExpand"/>
+                                        <Label 
+                                            Text="{Binding KmActual}"
+                                            Grid.Column="4"
+                                            Grid.Row="1"
+                                            Grid.ColumnSpan="2"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                            HorizontalOptions="CenterAndExpand" />
+                                        <Label 
+                                            Text="{Binding Litros, StringFormat='{0:##0.00}'}"
+                                            Grid.Column="1" 
+                                            Grid.Row="3"
+                                            Grid.ColumnSpan="2"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                            HorizontalOptions="StartAndExpand"/>
+                                        <Label 
+                                            Text="{Binding FechaSolicitud, StringFormat='{0:dd/MM/yy}'}"
+                                            Grid.Column="3" 
+                                            Grid.Row="3"
+                                            Grid.ColumnSpan="2"
+                                            FontAutoScalingEnabled="False"
+                                            FontSize="Medium"
+                                            TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                            HorizontalOptions="CenterAndExpand"/>
+                                    </Grid>
+                                </StackLayout>
+                            </StackLayout>
+                        </Border>
+                    </DataTemplate>
+                    </CollectionView.ItemTemplate>
+            </CollectionView>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

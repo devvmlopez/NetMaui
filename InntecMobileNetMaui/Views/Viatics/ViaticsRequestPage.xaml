@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.Viatics.ViaticsRequestPage"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             Shell.BackgroundColor="#367fb6"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <Style 
+            x:Key="BackgroundColorViews"
+            TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
+        </Style>
+        <Style 
+            x:Key="BackgroundFramItems"
+            TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3DB, Dark= #f2f2f7}" />
+        </Style>
+        <Style x:Key="PicturePlatform"
+            TargetType="Image">
+             <Setter Property="Source" Value="{OnPlatform iOS={AppThemeBinding Dark='pnginntec_bnco.png', Light='pnginntec.png'} , Android= {AppThemeBinding Dark='pnginntec_bnco.png', Light='svginntec.svg'}}" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Text="Guardar"
+            IconImageSource="{OnPlatform iOS= pngsave.png, Android= save.svg}"
+            Command="{Binding SaveRequest}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <AbsoluteLayout
+            AbsoluteLayout.LayoutBounds="{OnPlatform iOS= '0,0,1,1', Android='0,0,1,1'}"
+            AbsoluteLayout.LayoutFlags="All"
+            Style="{StaticResource BackgroundColorViews}">
+            <StackLayout 
+                AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                AbsoluteLayout.LayoutFlags="All"  
+                VerticalOptions="StartAndExpand"
+                Padding="0,10,0,0">
+                <Image 
+                    Style="{StaticResource PicturePlatform}"
+                    HeightRequest="70" 
+                    WidthRequest="200"/>
+
+                <StackLayout 
+                    HorizontalOptions="FillAndExpand" 
+                    Padding="20,12,30,0">
+                    <StackLayout 
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout 
+                            Orientation="Vertical">
+                            <Label 
+                                FontSize="Medium"
+                                HorizontalTextAlignment="Center"
+                                FontFamily="FontMontB" 
+                                Text="Tarjeta"/>
+                            <Entry 
+                                FontFamily="FontMont" 
+                                HorizontalTextAlignment="Center"
+                                TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                                BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                                Text="{Binding InfoNewRequest.Tarjeta}"
+                                Placeholder="0000-0000-0000-0000"
+                                WidthRequest="200"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Vertical">
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout 
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal">
+                        <StackLayout 
+                            Margin="8,0"
+                            Orientation="Vertical">
+                            <Label 
+                                FontFamily="FontMontB" 
+                                HorizontalTextAlignment="Center"
+                                Text="F. Inicio"/>
+                            <DatePicker
+                                x:Name="DpkrStart"
+                                FontFamily="FontMont"
+                                TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                                BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                                Date="{Binding NewViaticsRequest.FechaIni}" />
+                        </StackLayout>
+                        <StackLayout 
+                            Margin="8,0"
+                            Orientation="Vertical">
+                            <Label 
+                                FontFamily="FontMontB" 
+                                HorizontalTextAlignment="Center"
+                                Text="F. Fin"/>
+                            <DatePicker 
+                                x:Name="DpkrEnd"
+                                FontFamily="FontMont"
+                                TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                                BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                                Date="{Binding NewViaticsRequest.FechaFin}"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Label 
+                        FontFamily="FontMontB" 
+                        HorizontalTextAlignment="Center"
+                        Text="Comentarios"/>
+                    <Entry 
+                        FontFamily="FontMont" 
+                        x:Name="TxtComments"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding NewViaticsRequest.Comentarios}"
+                        TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                        BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                        PlaceholderColor="{AppThemeBinding Dark='Gray' ,Light='Gray'}"
+                        Placeholder="Comentario del viaje"/>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout 
+                            HorizontalOptions="CenterAndExpand"
+                            Orientation="Vertical">
+                            <Label 
+                                FontFamily="FontMontB" 
+                                HorizontalTextAlignment="Center"
+                                Text="Ciudad:"/>
+                            <Picker 
+                                FontFamily="FontMont" 
+                                x:Name="PkrCity" ItemsSource="{Binding InfoNewRequest.InfoCiudades}"
+                                ItemDisplayBinding="{Binding Nombre}"
+                                TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                                BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                                Focused="PkrCity_FocusedAsync"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalTextAlignment="Center"
+                                IsVisible="False"
+                                WidthRequest="180"
+                                HorizontalOptions="StartAndExpand"/>
+                            <Entry
+                                FontFamily="FontMont"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="180"
+                                TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                                BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                                x:Name="controlListCuidades"
+                                Focused="Entry_Focused"
+                                HorizontalTextAlignment="Center"
+                                HorizontalOptions="StartAndExpand"
+                            >
+                            </Entry>
+                        </StackLayout>
+                        <StackLayout 
+                            HorizontalOptions="FillAndExpand"
+                            Orientation="Vertical">
+                            <Label 
+                                FontFamily="FontMontB" 
+                                HorizontalOptions="CenterAndExpand"
+                                HorizontalTextAlignment="Center"
+                                Text="Rubro:"/>
+                            <Picker 
+                                x:Name="PkrItem" 
+                                FontFamily="FontMont"
+                                ios:Picker.UpdateMode="WhenFinished"
+                                ItemsSource="{Binding InfoNewRequest.InfoRubros}"
+                                ItemDisplayBinding="{Binding Descripcion}"
+                                TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                                BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                                SelectedIndex="{Binding ItemSelect}"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="120"
+                                HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Vertical">
+                            <Label
+                                FontFamily="FontMontB" 
+                                HorizontalTextAlignment="Center"
+                                Text="Monto:"/>
+                            <Entry 
+                                x:Name="txtMonto"
+                                FontFamily="FontMont"
+                                PlaceholderColor="{AppThemeBinding Dark='Gray' ,Light='Gray'}"
+                                HorizontalTextAlignment="Center"
+                                TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                                BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                                Keyboard="Numeric" 
+                                Placeholder="0.00" 
+                                WidthRequest="100"/>
+                        </StackLayout>
+                        <StackLayout 
+                            Orientation="Vertical" 
+                            HorizontalOptions="FillAndExpand">
+                            <Button 
+                                Text="Agregar" 
+                                FontFamily="FontMont" 
+                                CornerRadius="5"
+                                BackgroundColor="{AppThemeBinding Light= '#3487CB', Dark='White'}"
+                                TextColor="{AppThemeBinding Light= 'White', Dark='#3487CB'}"
+                                BorderColor="{OnPlatform iOS= 'Black', Android='LightGray'}"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="CenterAndExpand"
+                                WidthRequest="100" 
+                                Clicked="Btn_Add_Clicked"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="1" />
+                        </Grid.RowDefinitions>
+                        <BoxView 
+                            WidthRequest="1" 
+                            HeightRequest="1" 
+                            BackgroundColor="#4cb3e5"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Grid.ColumnSpan="3"/>
+                        <Label 
+                            Text="Ciudad" 
+                            FontFamily="FontMontB"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Body"
+                            FontAttributes="Bold"
+                            Margin="10,0,0,0"
+                            Grid.Column="0"
+                            Grid.Row="1"/>
+                        <Label 
+                            Text="Rubro" 
+                            FontFamily="FontMontB"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Body"
+                            FontAttributes="Bold"
+                            Margin="10,0,0,0"
+                            Grid.Column="1"
+                            Grid.Row="1"/>
+                        <Label
+                            Text="Monto"
+                            FontFamily="FontMontB" 
+                            FontSize="Body"
+                            FontAttributes="Bold"
+                            FontAutoScalingEnabled="False"
+                            HorizontalOptions="EndAndExpand"
+                            Margin="10,0,0,0"
+                            Grid.Column="2"
+                            Grid.Row="1"/>
+                        <BoxView 
+                            WidthRequest="1" 
+                            HeightRequest="1" 
+                            BackgroundColor="#4cb3e5"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="3"/>
+                    </Grid>
+                </StackLayout>
+
+            </StackLayout>
+            <Border
+                Stroke="LightGray"
+                StrokeThickness="4"
+                AbsoluteLayout.LayoutBounds="0,0.95,1,0.28" 
+                AbsoluteLayout.LayoutFlags="All" 
+                Margin="8,0"
+                Style="{StaticResource BackgroundFramItems}"
+                StrokeShape="RoundRectangle 10,10,10,10">
+                <ListView  
+                    x:Name="LstItems"
+                    ItemsSource="{Binding DetailViatic}"
+                    HasUnevenRows="True"                                   
+                    BackgroundColor="Transparent"
+                    CachingStrategy="RetainElement"
+                    SeparatorColor="Transparent">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem 
+                                        x:Name="MenuDelete" 
+                                        Text="Eliminar"
+                                        Clicked="MenuDelete_Clicked"
+                                        CommandParameter="{Binding .}"
+                                        IsDestructive="True"/>
+                                </ViewCell.ContextActions>
+                                <StackLayout 
+                                    HorizontalOptions="FillAndExpand"
+                                    Margin="10">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="150"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label 
+                                            Text="{Binding CiudadDesc}" 
+                                            TextColor="Black"
+                                            FontFamily="FontMont" 
+                                            Grid.Row="0"
+                                            Grid.Column="0"/>
+                                        <Label 
+                                            Text="{Binding RubroDesc}" 
+                                            TextColor="Black"
+                                            FontFamily="FontMont" 
+                                            Grid.Row="0"
+                                            Grid.Column="1"/>
+                                        <Label 
+                                            Text="{Binding MontoSolicitado, StringFormat='{0:#,##0.00}'}" 
+                                            FontFamily="FontMont" 
+                                            TextColor="Black"
+                                            HorizontalOptions="EndAndExpand"
+                                            Grid.Row="0"
+                                            Grid.Column="2"/>
+                                    </Grid>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Border>
+            <Image 
+                Source="loading.gif"
+                HeightRequest="70"
+                WidthRequest="70"
+                IsAnimationPlaying="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

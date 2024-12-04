@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.OptionsPage"
+             xmlns:Menucontrols="clr-namespace:InntecMobileNetMaui.Views.CustomView"
+             Shell.BackgroundColor="#367fb6"
+             Title="Opciones">
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+            TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
+        </Style>
+        <Style x:Key="BackgroundColorCustomControl"
+               TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="Transparent" />
+        </Style>
+        <Style x:Key="PicturePlatform"
+            TargetType="Image">
+            <Setter Property="Source" Value="{OnPlatform iOS={AppThemeBinding Dark='pnginntec_bnco.png', Light='pnginntec.png'} , Android= {AppThemeBinding Dark='pnginntec_bnco.png', Light='svginntec.svg'}}" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+    <AbsoluteLayout 
+        Style="{StaticResource BackgroundColorViews}" 
+        HorizontalOptions="FillAndExpand" 
+        VerticalOptions="FillAndExpand">
+            <HorizontalStackLayout
+                BackgroundColor="Transparent"
+                HorizontalOptions="CenterAndExpand"
+                AbsoluteLayout.LayoutBounds="0.2,0,0,0.16"
+                AbsoluteLayout.LayoutFlags="All">
+                <Image 
+                    Style="{StaticResource PicturePlatform}"
+                    HeightRequest="70" 
+                    WidthRequest="210"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Margin="16,8"/>
+            </HorizontalStackLayout>
+            <ScrollView
+                Padding="4"
+                Margin="8,0"
+                BackgroundColor="Transparent"
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,0.6,1,0.7">
+                <VerticalStackLayout>
+                    <Frame
+                        BorderColor="Transparent"
+                        IsClippedToBounds="True"
+                        HeightRequest="80" 
+                        BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                        Margin="0"
+                        Padding="4">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer  
+                                Tapped="User_Tapped">
+                            </TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout
+                            Margin="16,0"
+                            Spacing="0"
+                            Padding="0"
+                            BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                            VerticalOptions="CenterAndExpand">
+                            <Label 
+                                x:Name="datosUser"
+                                Text="Datos del usuario"
+                                FontSize="Medium"
+                                FontAutoScalingEnabled="False"
+                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                FontFamily="FontMont">
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        BorderColor="Transparent"
+                        IsClippedToBounds="True"
+                        HeightRequest="80"
+                        BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                        Margin="0"
+                        Padding="4">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer  
+                                Tapped="Terminos_Tapped">
+                            </TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout
+                            Margin="16,0"
+                            Spacing="0"
+                            Padding="0"
+                            BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                            VerticalOptions="CenterAndExpand">
+                            <Label 
+                                x:Name="datosTerminos"
+                                Text="Términos y condiciones"
+                                FontSize="Medium"
+                                FontAutoScalingEnabled="False"
+                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                FontFamily="FontMont">
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        BorderColor="Transparent"
+                        IsClippedToBounds="True"
+                        HeightRequest="80"
+                        Margin="0"
+                        BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                        Padding="4">
+                        <StackLayout
+                            Margin="16,0"
+                            Spacing="0"
+                            Padding="0"
+                            BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                            VerticalOptions="CenterAndExpand">
+                            
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        BorderColor="Transparent"
+                        IsClippedToBounds="True"
+                        BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                        HeightRequest="80">
+                        <StackLayout
+                            Margin="16,0"
+                            Spacing="0"
+                            Padding="0"
+                            BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                            VerticalOptions="CenterAndExpand">
+
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        BorderColor="Transparent"
+                        IsClippedToBounds="True"
+                        HeightRequest="80"
+                        Margin="0"
+                        BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                        Padding="4">
+                        <StackLayout
+                            Margin="16,0"
+                            Spacing="0"
+                            Padding="0"
+                            BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                            VerticalOptions="CenterAndExpand">
+
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        BorderColor="Transparent"
+                        IsClippedToBounds="True"
+                        HeightRequest="80"
+                        Margin="0"
+                        BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                        Padding="4">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer  
+                                Tapped="Logout_Tapped">
+                            </TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout
+                            Margin="16,0"
+                            Spacing="0"
+                            Padding="0"
+                            BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                            VerticalOptions="CenterAndExpand">
+                            <Label 
+                                x:Name="datosCerrar"
+                                Text="Cerrar Sesión"
+                                FontSize="Medium"
+                                FontAutoScalingEnabled="False"
+                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                FontFamily="FontMont">
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        BorderColor="Transparent"
+                        IsClippedToBounds="True"
+                        HeightRequest="80"
+                        Margin="0"
+                        BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                        Padding="4">
+                        <StackLayout
+                            Margin="16,0"
+                            Spacing="0"
+                            Padding="0"
+                            BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                            VerticalOptions="CenterAndExpand">
+
+                        </StackLayout>
+                    </Frame>
+                    <Frame
+                        BorderColor="Transparent"
+                        IsClippedToBounds="True"
+                        HeightRequest="80"
+                        Margin="0"
+                        BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                        Padding="4">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer  
+                                Tapped="EliminarCuenta_Tapped">
+                            </TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout
+                            Margin="16,0"
+                            Spacing="0"
+                            Padding="0"
+                            BackgroundColor="{AppThemeBinding Light=White, Dark=White}"
+                            VerticalOptions="CenterAndExpand">
+                            <Label 
+                                 x:Name="datosEliminar"
+                                 Text="Eliminar Cuenta"
+                                 FontSize="Medium"
+                                 FontAutoScalingEnabled="False"
+                                 TextColor="{AppThemeBinding Light=#cc001f, Dark=#cc001f}"
+                                 VerticalTextAlignment="Center"
+                                 HorizontalTextAlignment="Start"
+                                 FontFamily="FontMont">
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                </VerticalStackLayout>
+            </ScrollView>
+            <Label
+                x:Name="CodeVersion"
+                Text=""
+                FontFamily="FontMont"
+                HorizontalTextAlignment="End"
+                VerticalTextAlignment="Center"
+                FontSize="Small"
+                FontAutoScalingEnabled="False"
+                BackgroundColor="Transparent"
+                Margin="0,0,16,0"
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,0.905,1,0.023"></Label>
+        
+            <AbsoluteLayout 
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand"
+                 AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                 AbsoluteLayout.LayoutFlags="All"
+                 BackgroundColor="Transparent"
+                 IsVisible="{Binding IsBusy}">
+
+                <Image 
+                     Source="loading.gif"
+                     HeightRequest="70"
+                     WidthRequest="70"
+                     IsAnimationPlaying="{Binding IsBusy}"
+                     IsVisible="{Binding IsBusy}"
+                     AbsoluteLayout.LayoutBounds="0,0,1,1"
+                     AbsoluteLayout.LayoutFlags="All"/>
+            </AbsoluteLayout>
+            <Menucontrols:CustomMenu
+                HeightRequest="70"
+                x:Name="MenuPrincipal"
+                IconIzqEnable="True"         
+                IconCentroIzqEnable="True"
+                IconCentroDerEnable="True"
+                IconIzq="{OnPlatform iOS= 'pngnotification', Android={AppThemeBinding Dark='notification', Light='pngnotification'}}"
+                IconCentroIzq="{OnPlatform iOS= 'pngcredit_card_add', Android={AppThemeBinding Dark='credit_card_add', Light='pngcredit_card_add'}}"
+                IconCentroDer="{OnPlatform iOS= 'pngfaq', Android={AppThemeBinding Dark='faq', Light='pngfaq'}}"
+                IconDer="{OnPlatform iOS= 'pnguser', Android={AppThemeBinding Dark='user', Light='pnguser'}}"
+                IconDerEnable="False"
+                IconCentro="innteclogo"
+                IconCentroEnable="True"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                AbsoluteLayout.LayoutBounds="0.22,1,1,0.10"
+                AbsoluteLayout.LayoutFlags="All" >
+            </Menucontrols:CustomMenu>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

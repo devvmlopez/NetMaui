@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.RegisterPage"
+             xmlns:behavior="clr-namespace:InntecMobileNetMaui.ViewModels"
+             xmlns:controls="clr-namespace:InntecMobileNetMaui.RendererControls"
+             Shell.BackgroundColor="#367fb6">
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+              TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
+        </Style>
+        <Style x:Key="BackgroundFramItems"
+               TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3DB, Dark= #f2f2f7}" />
+        </Style>
+    </ContentPage.Resources>
+    <AbsoluteLayout 
+        Style="{StaticResource BackgroundColorViews}"
+        HorizontalOptions="FillAndExpand" 
+        VerticalOptions="FillAndExpand">
+        <ScrollView 
+            Padding="16"
+            Style="{StaticResource BackgroundColorViews}"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Border 
+                Padding="8"
+                Stroke="LightGray"
+                StrokeThickness="5"
+                StrokeShape="RoundRectangle 30,0,0,30"
+                Style="{StaticResource BackgroundFramItems}">
+                <StackLayout
+                    Margin="16">
+                      <controls:CustomEntry
+                        x:Name="TxtNombre"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding Usr.Nombre}"
+                        Placeholder="Nombre(s)"
+                        /> 
+
+                    <controls:CustomEntry
+                        x:Name="TxtApellidoPaterno"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding Usr.Paterno}"
+                        Placeholder="Apellido Paterno"
+                        /> 
+
+                    <controls:CustomEntry
+                        x:Name="TxtApellidoMaterno"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding Usr.Materno}"
+                        Placeholder="Apellido Materno"
+                        /> 
+
+                    <controls:CustomEntry
+                        x:Name="TxtEmail"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding Usr.Email}"
+                        Placeholder="Email"
+                        /> 
+
+                    <controls:CustomEntry
+                        x:Name="TxtCelular"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding Usr.Celular}"
+                        Placeholder="Celular (10 Digitos)"
+                        KeyBoard="Numeric"
+                        />
+
+                    <controls:CustomEntry
+                        x:Name="TxtTarjeta"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding Usr.Tarjeta}"
+                        Placeholder="No. de tarjeta"
+                        KeyBoard="Numeric"
+                        />
+
+                    <controls:CustomEntry
+                        x:Name="TxtUser"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding Usr.UsuarioNombre}"
+                        Placeholder="Usuario"
+                        /> 
+
+                    <controls:CustomEntry
+                        x:Name="TxtContrasena"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding Usr.Password}"
+                        Placeholder="Contraseña"
+                        IsPassword="True"
+                        /> 
+
+                     <controls:CustomEntry
+                        x:Name="TxtConfirmarContrasena"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding Usr.PasswordConfirm}"
+                        Placeholder="Confirmar contraseña"
+                         IsPassword="True"
+                        /> 
+
+                    <controls:CustomEntry
+                        x:Name="TxtTokenUnico"
+                        HorizontalOptions="FillAndExpand"
+                        Text="{Binding Usr.Usr.TokenUnico}"
+                        Placeholder="Token de seguridad"
+                        IsPassword="True"
+                        /> 
+                    <Label
+                        TextColor="Black"
+                        FontFamily="FontMont"
+                        Text="Este token únicamente puede brindártelo tu empresa o la persona que te otorgo el plástico ya que son los únicos con la facultad de generarlos." />
+                    <StackLayout 
+                        Margin="0,0,0,12"
+                        Orientation="Horizontal">
+                        <CheckBox 
+                            x:Name="Chk_Terms"
+                            Color="Black"
+                            BackgroundColor="Transparent"
+                            Visual="Material"/>
+                        <StackLayout>
+                        <Label 
+                            Text="He leído el aviso de privacidad, los términos y condiciones y estoy de acuerdo con el servicio."
+                            VerticalOptions="CenterAndExpand"
+                            TextColor="#043B72"
+                            FontFamily="FontMont"
+                            LineBreakMode="CharacterWrap"
+                            HorizontalOptions="StartAndExpand"
+                            TextDecorations="Underline">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TermsCommand}" >
+                                </TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <Button 
+                        Text="Crear cuenta" 
+                        BackgroundColor="#3487CB" 
+                        CornerRadius="10"
+                        Margin="10,0,10,4"
+                        TextColor="White"
+                        FontFamily="FontMont"
+                        HorizontalOptions="FillAndExpand"
+                        x:Name="BtnRegistro"
+                        BorderColor="LightGray"
+                        Clicked="BtnRegistro_Clicked"/>
+                    <Button 
+                        x:Name="Btn_Cancel"
+                        Clicked="Btn_Cancel_Clicked"
+                        Text="Cancelar"
+                        TextColor="White"
+                        CornerRadius="10"
+                        Margin="10,4,10,0"
+                        FontFamily="FontMont"
+                        BorderColor="LightGray"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="#f22b2b"/>
+                </StackLayout>
+            </Border>
+        </ScrollView>
+
+        <AbsoluteLayout 
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            AbsoluteLayout.LayoutBounds="0,0,1,1" 
+            AbsoluteLayout.LayoutFlags="All" 
+            BackgroundColor="#30000000"
+            IsVisible="{Binding IsBusy}">
+            <Image 
+                Source="loading.gif"
+                HeightRequest="70"
+                WidthRequest="70"
+                IsAnimationPlaying="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                AbsoluteLayout.LayoutBounds="0,0,1,1"
+                AbsoluteLayout.LayoutFlags="All"/>  
+        </AbsoluteLayout>
+    </AbsoluteLayout>
+</ContentPage>

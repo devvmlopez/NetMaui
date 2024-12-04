@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage 
+             BackgroundColor="#90255f84"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.FAQ.FAQsPage"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+             xmlns:controls="clr-namespace:InntecMobileNetMaui.RendererControls"
+             xmlns:renderercontrols="clr-namespace:InntecMobileNetMaui.RendererControls">
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+           TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="#90255f84" />
+        </Style>
+        <Style x:Key="BackgroundFramItems"
+           TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="#90FFFFFF" />
+        </Style>
+    </ContentPage.Resources>
+    <mopups:PopupPage.Animation>
+        <mopupsanim:ScaleAnimation
+            DurationIn="100"
+            DurationOut="100"
+            EasingIn="CubicOut"
+            EasingOut="CubicIn" 
+            HasBackgroundAnimation="True"
+            PositionIn="Right"
+            PositionOut="Right"
+            ScaleIn="1"
+            ScaleOut="1" />
+    </mopups:PopupPage.Animation>
+    <ScrollView BackgroundColor="Transparent">
+        <StackLayout 
+            BackgroundColor="Transparent" 
+            Padding="0" 
+            Spacing="0">
+        <Frame
+            Margin="8,0"
+            x:Name="MainFrame" 
+            Style="{StaticResource BackgroundColorViews}"
+            CornerRadius="8">
+            <StackLayout Orientation="Horizontal">
+                <Button 
+                    Text="X"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    BackgroundColor="#FF0000"
+                    TextColor="White"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    Pressed="Button_Pressed"/>
+                <Label 
+                    Text="{Binding Title}"
+                    Margin="10,0,0,0"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    FontSize="Large"
+                    FontAttributes="Bold"
+                    VerticalOptions="CenterAndExpand"/>
+                <Image 
+                    BackgroundColor="Transparent"
+                    Source="{OnPlatform Android=faq.svg, iOS=pngfaq.png}"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="Center"
+                    HeightRequest="50"
+                    WidthRequest="50" 
+                    Aspect="AspectFit"/>
+                </StackLayout>
+        </Frame>
+
+        <StackLayout 
+            VerticalOptions="StartAndExpand"
+            Margin="8,4"
+            x:Name="Stack_Q1">
+            <controls:CustomListView
+                x:Name="vw_Faq"
+                ItemsSource="{Binding Lst_Faq}"
+                HasUnevenRows="true"
+                SelectionMode="None"
+                BackgroundColor="Transparent"
+                SeparatorColor="Transparent"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand">
+                <controls:CustomListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <renderercontrols:According 
+                                    x:Name="Q1_Stack"
+                                    CornerRadius="10"
+                                    Margin="20,12"
+                                    BackgroundColor="#255f84"
+                                    VerticalOptions="Start">
+                                    <renderercontrols:According.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                            Tapped="TapGestureRecognizer_Tapped"
+                                            BindingContext="{Binding Source={x:Reference vw_Faq}}"
+                                            CommandParameter="{Binding Source={x:Reference  lbltitle}}"/>
+                                    </renderercontrols:According.GestureRecognizers>
+
+                                    <StackLayout 
+                                        x:Name="stack_1"
+                                        Margin="8,4">
+                                        <Label
+                                            FontAutoScalingEnabled="False"
+                                            x:Name="lbltitle" Text="{Binding title}"
+                                            FontSize="Small"
+                                            FontAttributes="Bold"
+                                            TextColor="White"/>
+                                        <ScrollView>
+                                            <StackLayout>
+                                                <Label
+                                                    FontAutoScalingEnabled="False"
+                                                    Text="{Binding description}"
+                                                    IsVisible="{Binding isVisible}"
+                                                    FontSize="Default"
+                                                    Margin="10,0,0,10"
+                                                    TextColor="White"/>
+                                            </StackLayout>
+                                        </ScrollView>
+                                    </StackLayout>
+
+                                </renderercontrols:According>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </controls:CustomListView.ItemTemplate>
+            </controls:CustomListView>
+        </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</mopups:PopupPage>   

@@ -133,7 +133,8 @@ namespace InntecMobileNetMaui.Services
             }
             catch (Exception e)
             {
-                throw new Exception("Error: Debes ingresar nuevamente por contraseña", e);
+                //throw new Exception("Error: Debes ingresar nuevamente por contraseña", e);
+                return "Error: Debes ingresar nuevamente por contraseña";
             }
         }
         #endregion

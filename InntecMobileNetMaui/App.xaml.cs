@@ -1,6 +1,10 @@
 ﻿using InntecMobileNetMaui.Models.Aclaraciones;
 using InntecMobileNetMaui.Resources;
+using InntecMobileNetMaui.Services.Promociones;
 using InntecMobileNetMaui.Services;
+using InntecMobileNetMaui.ViewModels;
+using InntecMobileNetMaui.Services.SQL;
+using InntecMobileNetMaui.Models;
 
 namespace InntecMobileNetMaui
 {
@@ -13,7 +17,7 @@ namespace InntecMobileNetMaui
         public static bool BenefitLogin;
         public static bool benefithub = false;
         public static Dictionary<string, string> URLAclaracionDocument = new Dictionary<string, string>();
-        //public MainViewModel viewModel;
+        public MainViewModel viewModel;
 
         public static AclaracionModel RegistroAclaracion { get; internal set; }
         public static byte[] LogoArray { get; set; }
@@ -23,15 +27,16 @@ namespace InntecMobileNetMaui
 
             Cards = new List<Models.CardModel>();
             BenefitLogin = false;
-            //DependencyService.Register<SQLiteDataLogin>();
+            DependencyService.Register<SQLiteDataLogin>();
             DependencyService.Register<CardsService>();
             DependencyService.Register<UserService>();
-            DependencyService.Get<IReCaptchaService>();
-            //DependencyService.Register<Services.Viatics.ViaticsService>();
-            //DependencyService.Register<Services.Gas.GasService>();
-            //DependencyService.Register<Services.notificacion.NotifyServices>();
-            //DependencyService.Register<Services.Promociones.PromotionSercies>();
-            //DependencyService.Register<Services.Aclaracion.AclaracionService>();
+            DependencyService.Register<MenuContigoServices>();
+           // DependencyService.Get<IReCaptchaService>();
+            DependencyService.Register<Services.Viatics.ViaticsService>();
+            DependencyService.Register<Services.Gas.GasService>();
+            DependencyService.Register<Services.Notification.NotifyServices>();
+            DependencyService.Register<Services.Promociones.PromotionServices>();
+            DependencyService.Register<Services.Aclaracion.AclaracionService>();
 
             InitializeComponent();
 

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.Viatics.ViaticDetailPage"
+             Shell.BackgroundColor="#367fb6"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <Style 
+            x:Key="BackgroundColorViews"
+            TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
+        </Style>
+        <Style
+            x:Key="BackgroundFramItems"
+            TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3DB, Dark= #f2f2f7}" />
+        </Style>
+        <Style x:Key="PicturePlatform"
+             TargetType="Image">
+             <Setter Property="Source" Value="{OnPlatform iOS={AppThemeBinding Dark='pnginntec_bnco.png', Light='pnginntec.png'} , Android= {AppThemeBinding Dark='pnginntec_bnco.png', Light='svginntec.svg'}}" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout
+            AbsoluteLayout.LayoutBounds="{OnPlatform iOS= '0,0,1,1', Android='0,0,1,1'}"
+            AbsoluteLayout.LayoutFlags="All"
+            Style="{StaticResource BackgroundColorViews}">
+            <StackLayout 
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,1,1,1">
+                <Image 
+                    Style="{StaticResource PicturePlatform}"
+                    HeightRequest="70" 
+                    WidthRequest="200"
+                    Margin="0,20,0,0"/>
+                <CollectionView 
+                    ItemsSource="{Binding ItemDetail}"
+                    VerticalOptions="FillAndExpand"
+                    BackgroundColor="Transparent"
+                    SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border
+                                Stroke="Black"
+                                StrokeThickness="2"
+                                Margin="8"
+                                Style="{StaticResource BackgroundFramItems}"
+                                StrokeShape="RoundRectangle 0,20,0,0">
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label 
+                                            FontFamily="FontMontB" 
+                                            Margin="8"
+                                            FontAutoScalingEnabled="False"
+                                            TextColor="Black"
+                                            Text="Rubro:"/>
+                                        <Label 
+                                            FontFamily="FontMont" 
+                                            Margin="8"
+                                            FontAutoScalingEnabled="False"
+                                            TextColor="Black"
+                                            Text="{Binding DescRubro}" />
+                                    </StackLayout>
+                                    <StackLayout
+                                        Margin="8">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Label 
+                                                Text="Solicitado"
+                                                FontAutoScalingEnabled="False"
+                                                FontFamily="FontMontB"
+                                                TextColor="Black"
+                                                Grid.Column="0"
+                                                Grid.Row="0"/>
+                                            <Label 
+                                                Text="Autorizado"
+                                                FontAutoScalingEnabled="False"
+                                                FontFamily="FontMontB"
+                                                TextColor="Black"
+                                                Grid.Column="1"
+                                                Grid.Row="0"/>
+                                            <Label 
+                                                Text="Ciudad"
+                                                FontAutoScalingEnabled="False"
+                                                FontFamily="FontMontB"
+                                                TextColor="Black"
+                                                Grid.Column="2"
+                                                Grid.Row="0"/>
+                                            <Label 
+                                                Text="{Binding MontoSolicitado}"
+                                                FontAutoScalingEnabled="False"
+                                                FontFamily="FontMont" 
+                                                HorizontalTextAlignment="Center"
+                                                TextColor="Black"
+                                                Grid.Column="0"
+                                                Grid.Row="1"/>
+                                            <Label 
+                                                Text="{Binding MontoAutorizado}"
+                                                FontAutoScalingEnabled="False"
+                                                FontFamily="FontMont" 
+                                                HorizontalTextAlignment="Center"
+                                                TextColor="Black"
+                                                Grid.Column="1"
+                                                Grid.Row="1"/>
+                                            <Label 
+                                                Text="{Binding Ciudad}"
+                                                FontAutoScalingEnabled="False"
+                                                FontFamily="FontMont" 
+                                                HorizontalTextAlignment="Center"
+                                                TextColor="Black"
+                                                Grid.Column="2"
+                                                Grid.Row="1"/>
+                                        </Grid>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+                <Image 
+                    Source="loading.gif"
+                    HeightRequest="70"
+                    WidthRequest="70"
+                    IsAnimationPlaying="{Binding IsBusy}"
+                    IsVisible="{Binding IsBusy}"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"/>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

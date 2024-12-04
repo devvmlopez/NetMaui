@@ -36,10 +36,10 @@ namespace InntecMobileNetMaui.ViewModels
         /// <param name="myDataPage">Pagina de Binding</param>
         public MyDataViewModel(MyDataPage myDataPage)
         {
-            Title = "Mis datos";
 
             this.UserModel = new UserModel();
             this.myDataPage = myDataPage;
+            
 
             LoadUserData = new Command(() => ExecuteLoadUserData());
             SaveUserData = new Command(() => ExecuteSaveUserData());
@@ -52,9 +52,18 @@ namespace InntecMobileNetMaui.ViewModels
         {
             this.UserModel = await DataUser.SetUserDataAsync(UserModel).ConfigureAwait(true);
             //await myDataPage.DisplayAlert("Mensaje", this.UserModel.Message, "Aceptar").ConfigureAwait(true);
-
-            InformativeViewModel.Instance.MessageType = InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel.messageType.Message;
-            InformativeViewModel.Instance.Title = "Ha ocurrido un problema!";
+            string tipoMensaje = Preferences.Default.Get("TipoMensaje", string.Empty);
+            if (tipoMensaje == "Error")
+            {
+                InformativeViewModel.Instance.MessageType = InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel.messageType.Error;
+                InformativeViewModel.Instance.Title = "Se ha presentado un problema: ";
+            }
+            else 
+            {
+                InformativeViewModel.Instance.MessageType = InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel.messageType.Informative;
+                InformativeViewModel.Instance.Title = "Guardado con éxito ";
+            }
+            
             InformativeViewModel.Instance.Message = this.UserModel.Message;
             await MopupService.Instance.PushAsync(InformativeAlert.Instance);
 
@@ -79,6 +88,7 @@ namespace InntecMobileNetMaui.ViewModels
         {
             IsBusy = true;
             this.UserModel = await DataUser.GetUserDataAsync().ConfigureAwait(true);
+            Title = UserModel.UsuarioNombre;
             IsBusy = false;
         }
     }

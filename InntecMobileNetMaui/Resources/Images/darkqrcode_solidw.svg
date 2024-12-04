@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 150 150">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #414a57;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="Capa_1">
+      <g id="Capa_1-2" data-name="Capa_1">
+        <g>
+          <path class="cls-1" d="M107.7,10.1h32.2v32.2h-12v-20.1h-20.2v-12.2h0Z"/>
+          <path class="cls-1" d="M22,42.4h-12V10.2h32.2v12h-20.2v20.2Z"/>
+          <path class="cls-1" d="M107.7,127.9h20.1v-20.2h12.2v32.2h-32.3s0-12,0-12Z"/>
+          <path class="cls-1" d="M10,107.7h12v20.2h20.3v12H10v-32.2Z"/>
+          <path class="cls-1" d="M93.7,93.1h-12.5v-11.9h11.1c.4,0,1,1.2,1,1.9.2,3.3.3,6.6.4,9.9h0Z"/>
+          <path class="cls-1" d="M105.3,93.2v-11.8h12.3v11.7h-12.4,0Z"/>
+          <path class="cls-1" d="M93.7,105.9v-12.8h11.6v12.7h-11.6Z"/>
+          <path class="cls-1" d="M93.6,105.8c0,2.9-.2,5.8-.3,8.7v3h-12.1v-11.7h12.5,0Z"/>
+          <path class="cls-1" d="M81.2,32.5v36.3h36.4v-36.3s-36.4,0-36.4,0ZM105.3,56.5h-11.9v-11.7h11.9v11.7Z"/>
+          <path class="cls-1" d="M32.4,32.5v36.4h36.3v-36.4s-36.3,0-36.3,0ZM56.5,56.5h-12v-11.7h12v11.7Z"/>
+          <path class="cls-1" d="M32.3,81.4v36.2h36.3v-36.2s-36.3,0-36.3,0ZM56.5,105.4h-12v-11.9h12v11.9Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

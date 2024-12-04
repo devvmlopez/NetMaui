@@ -1,448 +1,590 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="InntecMobileNetMaui.Views.Cards.CardDetailPage"
              BackgroundImageSource="{DynamicResource backgroundImage}"
+             xmlns:local="clr-namespace:InntecMobileNetMaui.RendererControls"
+             xmlns:ios="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+             x:Name="thisCard"
+             Shell.BackgroundColor="#367fb6"
              xmlns:controls="clr-namespace:InntecMobileNetMaui.Views.CustomView"
              Title="{Binding Title}">
     <ContentPage.Resources>
         <Style x:Key="BackgroundColorViews"
             TargetType="StackLayout">
-            <Setter Property="BackgroundColor" Value="#90255f84" />
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
         </Style>
     </ContentPage.Resources>
+    <AbsoluteLayout
+        AbsoluteLayout.LayoutBounds="0,0,1,1"
+        AbsoluteLayout.LayoutFlags="None"
+        Style="{StaticResource BackgroundColorViews}"
+        Margin="0"
+        x:Name="swipeContent">
+        <Frame  
+            BackgroundColor="#90FFFFFF"
+            AbsoluteLayout.LayoutBounds="0,0,1,0.23"
+            AbsoluteLayout.LayoutFlags="All"
+            BorderColor="LightGray"
+            CornerRadius="20"
+            Margin="4"
+            HasShadow="{AppThemeBinding Dark='false', Light='true'}"
+            HorizontalOptions="FillAndExpand">
 
-    <Grid 
-     IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
-     HorizontalOptions="FillAndExpand"
-     VerticalOptions="FillAndExpand">
-
-        <Grid 
-         x:Name="MainContentGrid"
-         IgnoreSafeArea="{OnPlatform Android=False, iOS=True}"
-         BackgroundColor="Transparent"
-       >
-            <Border StrokeThickness="0">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="20" />
-                </Border.StrokeShape>
-                <AbsoluteLayout 
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="FillAndExpand"
-                    Style="{StaticResource BackgroundColorViews}"
-                    x:Name="swipeContent">
-
-                    <AbsoluteLayout 
-                     HorizontalOptions="FillAndExpand"
-                     VerticalOptions="Start"
-                     AbsoluteLayout.LayoutFlags="All"
-                     AbsoluteLayout.LayoutBounds="0,0,1,1">
-                        <Ellipse 
-                          Fill="#4E96C8"
-                          AbsoluteLayout.LayoutFlags="All"
-                          AbsoluteLayout.LayoutBounds="1,0,0.5,0.5"
-                          WidthRequest="250"
-                          HeightRequest="250"
-                          Aspect="Uniform"
-                          Margin="70,-90,0,0"
-              
-                      />
-                        <Ellipse
-                          Fill="#186094"
-                          AbsoluteLayout.LayoutFlags="All"
-                          AbsoluteLayout.LayoutBounds="1,0,0.4,0.4"
-                          WidthRequest="200"
-                          HeightRequest="200"
-                          Aspect="Uniform"
-                          Margin="70,-80,0,0"
-                      />
-                    </AbsoluteLayout>
-
-
-                    <AbsoluteLayout 
-                     HorizontalOptions="FillAndExpand"
-                     VerticalOptions="FillAndExpand"
-                     AbsoluteLayout.LayoutFlags="All"
-                     AbsoluteLayout.LayoutBounds="0,1,1,1">
-                        <Ellipse 
-                          Fill="#4E96C8"
-                          AbsoluteLayout.LayoutFlags="All"
-                          AbsoluteLayout.LayoutBounds="-0.3,0.8,0.7,0.7"
-                          WidthRequest="250"
-                          HeightRequest="250"
-                          Aspect="Uniform"
-                          VerticalOptions="EndAndExpand"
-                          Margin="0,0,0,-100"
-                          />
-                        <Ellipse 
-                          Fill="#186094"
-                          AbsoluteLayout.LayoutFlags="All"
-                          AbsoluteLayout.LayoutBounds="-0.25,0.85,0.55,0.55"
-                          WidthRequest="200"
-                          HeightRequest="200"
-                          Aspect="Uniform"
-                          VerticalOptions="EndAndExpand"
-                           Margin="0,0,0,-100"
-                          />
-
-                    </AbsoluteLayout>
-
-                    <AbsoluteLayout 
-                     HorizontalOptions="FillAndExpand"
-                     VerticalOptions="FillAndExpand"
-                     AbsoluteLayout.LayoutFlags="All"
-                     AbsoluteLayout.LayoutBounds="0,1,1,1">
-                        <Border  
-                         BackgroundColor="#90FFFFFF"
-                         AbsoluteLayout.LayoutBounds="0,-0.17,1,0.30"
-                         AbsoluteLayout.LayoutFlags="All"
-                         HorizontalOptions="FillAndExpand"
-                         HeightRequest="250">
-
-                            <Border.StrokeShape>
-                                <RoundRectangle CornerRadius="0,0,20,20"/>
-                            </Border.StrokeShape>
-                        </Border>
-
-                    </AbsoluteLayout>
-
-
+            <AbsoluteLayout  
+                BackgroundColor="Transparent"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand">
+                <StackLayout 
+                    Padding="4,0"
+                    Spacing="0"
+                    BackgroundColor="Transparent"
+                    Orientation="Horizontal" 
+                    AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                    AbsoluteLayout.LayoutFlags="All" >
                     <StackLayout 
-                        HorizontalOptions="StartAndExpand" 
-                        VerticalOptions="CenterAndExpand">
-                        <StackLayout 
-                         Padding="20"
-                         Orientation="Horizontal"
-                         >
-                            <StackLayout 
-                                VerticalOptions="FillAndExpand" 
-                                HorizontalOptions="FillAndExpand"
-                                Orientation="Vertical"  >
-
-                                <Label 
-                                    Text="Saldo"
-                                    TextColor="White"
-                                    FontSize="Medium"/>
-                                <Label 
-                                    Text="{Binding CardBalanceResult.SaldoDisponible, StringFormat='{0:C2}'}" 
-                                    FontSize="Title"
-                                    FontAttributes="Bold"
-                                    TextColor="White"
-                                    Margin="5"/>
-
-                                <Label 
-                                     Text="{Binding EstatusDescripcion}" 
-                                     TextColor="Black"
-                                     HorizontalOptions="CenterAndExpand"
-                                     VerticalOptions="CenterAndExpand"
-                                     FontFamily="MontB"/>   
-                                <Frame 
-                                     BackgroundColor="{Binding Color}"
-                                     CornerRadius="8"
-                                     WidthRequest="1"
-                                     HeightRequest="1"
-                                     Margin="0"
-                                     Padding="0,0,0,2"
-                                     HorizontalOptions="CenterAndExpand"
-                                     VerticalOptions="CenterAndExpand"/>
-                            </StackLayout>
-
-                            <AbsoluteLayout  
-                                AbsoluteLayout.LayoutBounds="0,0,1,1" 
-                                AbsoluteLayout.LayoutFlags="All">
-                                <Image 
-                                    Source="{Binding Img}"
-                                    WidthRequest="150" 
-                                    HeightRequest="100" />
-                                <Label 
-                                    Text="{Binding Card}"  
-                                    TextColor="White"
-                                    HorizontalOptions="EndAndExpand" 
-                                    VerticalOptions="CenterAndExpand"
-                                    Margin="0,0,20,0"
-                                    AbsoluteLayout.LayoutBounds="0,0,1,1" 
-                                    AbsoluteLayout.LayoutFlags="All"/>
-
-                            </AbsoluteLayout>
-                        </StackLayout> <!--Aqui quedo una modificacion-->
-                        <Frame
-                             Margin="4"
+                        BackgroundColor="Transparent"
+                        AbsoluteLayout.LayoutBounds="0,0,0.5,1" 
+                        AbsoluteLayout.LayoutFlags="All" 
+                        Orientation="Vertical">
+                        <Label 
+                            Text="Saldo"
+                            FontAutoScalingEnabled="False"
+                            Margin="4,0"
+                            TextColor="Black"
+                            FontFamily="MontB"
+                            FontSize="Medium"/>
+                        <Label 
+                            Text="{Binding CardBalanceResult.SaldoDisponible, StringFormat='{0:C2}'}" 
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            FontFamily="MontB"
+                            TextColor="Black"
+                            Margin="4,2"/>
+                        <Label 
+                            Text="{Binding EstadoTarjeta}" 
+                            HorizontalOptions="Start"
+                            FontAutoScalingEnabled="False"
+                            VerticalOptions="CenterAndExpand"
+                            TextColor="Black"
+                            FontFamily="MontB">
+                            <Label.Triggers>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding EstadoTarjeta}"
+                                    Value="Activa">
+                                    <Setter 
+                                        Property="Text"
+                                        Value="Tarjeta Activa" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                        TargetType="Label"
+                                        Binding="{Binding EstadoTarjeta}"
+                                        Value="Bloqueo Temporal">
+                                    <Setter 
+                                        Property="Text"
+                                        Value="Bloqueo Temporal" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                        TargetType="Label"
+                                        Binding="{Binding EstadoTarjeta}"
+                                        Value="Bloqueo">
+                                    <Setter 
+                                        Property="Text"
+                                        Value="Tarjeta Bloqueada" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <Label
+                             Margin="8,0,-8,0"
+                             FontAutoScalingEnabled="False"
+                             FontSize="24"
+                             TextColor="Black"
+                             Padding="0,0,0,2"
+                             Grid.Row="0" 
+                             Grid.Column="2"
                              BackgroundColor="Transparent"
-                             BorderColor="Transparent">
-                            <StackLayout 
-                                 VerticalOptions="CenterAndExpand"
-                                 HorizontalOptions="CenterAndExpand"
-                                 Orientation="Horizontal">          
-                                <StackLayout 
-                                    Margin="10">
-                                    <AbsoluteLayout >
-                                        <Ellipse 
-                                            Fill="#B09DBC"
-                                            HeightRequest="50"
-                                            WidthRequest="50"
-                                            Aspect="Uniform"/>
-                                        <Image 
-                                            Source="changenip.png"
-                                            HeightRequest="25"
-                                            WidthRequest="25"
-                                            HorizontalOptions="Center"
-                                            VerticalOptions="Center"
-                                            AbsoluteLayout.LayoutBounds="0,0,1,1"
-                                            AbsoluteLayout.LayoutFlags="All"
-                                        />      
-                                    </AbsoluteLayout>
-                                    <Label
-                                         Text="NIP"
-                                         TextColor="Black"
-                                         HorizontalOptions="Center"/>   
-                                </StackLayout>
-                                <StackLayout 
-                                    Margin="10">
-                                    <StackLayout.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="BlockCard_Tapped"/>
-                                    </StackLayout.GestureRecognizers>
-                                    <AbsoluteLayout >
-                                        <Ellipse
-                                            Fill="#9690AC"
-                                            HeightRequest="50"
-                                            WidthRequest="50"
-                                            Aspect="Uniform"/>
-                                        <Image 
-                                            Source="key.png"
-                                            HeightRequest="20"
-                                            WidthRequest="20"
-                                            HorizontalOptions="Center"
-                                            VerticalOptions="Center"
-                                            AbsoluteLayout.LayoutBounds="0,0,1,1"
-                                            AbsoluteLayout.LayoutFlags="All"/> 
-                                    </AbsoluteLayout>
-                                    <Label
-                                        Text="Block"
-                                        TextColor="Black"
-                                        HorizontalOptions="Center"/>
-                                </StackLayout>
-                                <StackLayout 
-                                    Margin="10">
-                                    <AbsoluteLayout >
-                                        <Ellipse 
-                                            Fill="#9DBCBC"
-                                            HeightRequest="50"
-                                            WidthRequest="50"
-                                            Aspect="Uniform"/>
-                                        <Image 
-                                            Source="cancel.png"
-                                            HeightRequest="25"
-                                            WidthRequest="25"
-                                            HorizontalOptions="Center"
-                                            VerticalOptions="Center"
-                                            AbsoluteLayout.LayoutBounds="0,0,1,1"
-                                            AbsoluteLayout.LayoutFlags="All"/>     
-                                    </AbsoluteLayout>
-                                    <Label 
-                                        Text="Cancel"
-                                        TextColor="Black"
-                                        HorizontalOptions="Center"/>       
-                                    <StackLayout.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="CancelCard_Tapped"/>
-                                    </StackLayout.GestureRecognizers>
-                                </StackLayout>
-                                <StackLayout
-                                    Margin="10">
-                                    <AbsoluteLayout >
-                                        <Ellipse
-                                            Fill="#9690AC"
-                                            HeightRequest="50"
-                                            WidthRequest="50"
-                                            Aspect="Uniform"/>
-                                        <Image 
-                                            Source="delete.png"
-                                            HeightRequest="20"
-                                            WidthRequest="20"
-                                            HorizontalOptions="Center"
-                                            VerticalOptions="Center"
-                                            AbsoluteLayout.LayoutBounds="0,0,1,1"
-                                            AbsoluteLayout.LayoutFlags="All"/>         
-                                    </AbsoluteLayout>
-                                    <Label 
-                                        Text="Elimina"
-                                        TextColor="Black"
-                                        HorizontalOptions="Center"/>
-                                    <StackLayout.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="DeleteCard_Tapped"/>
-                                    </StackLayout.GestureRecognizers>
-                                </StackLayout>
-                                <StackLayout 
-                                     Margin="10">
+                             HorizontalOptions="Start"
+                             VerticalOptions="CenterAndExpand"
+                             Text="&#xF13E;"
+                             FontFamily="FontIco">
+                            <Label.Triggers>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding EstadoTarjeta}"
+                                    Value="Activa">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="true" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding EstadoTarjeta}"
+                                    Value="Bloqueo">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="false" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                        TargetType="Label"
+                                        Binding="{Binding EstadoTarjeta}"
+                                        Value="Bloqueo Temporal">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="false" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                        <Label
+                             Margin="8,0,-8,0"
+                             FontAutoScalingEnabled="False"
+                             FontSize="24"
+                             TextColor="Black"
+                             Padding="0,0,0,2"
+                             Grid.Row="0" 
+                             Grid.Column="2"
+                             BackgroundColor="Transparent"
+                             HorizontalOptions="Start"
+                             VerticalOptions="CenterAndExpand"
+                             Text="&#xE800;"
+                             FontFamily="FontIco">
+                            <Label.Triggers>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding EstadoTarjeta}"
+                                    Value="Activa">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="false" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                    TargetType="Label"
+                                    Binding="{Binding EstadoTarjeta}"
+                                    Value="Bloqueo">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="true" />
+                                </DataTrigger>
+                                <DataTrigger 
+                                        TargetType="Label"
+                                        Binding="{Binding EstadoTarjeta}"
+                                        Value="Bloqueo Temporal">
+                                    <Setter 
+                                        Property="IsVisible"
+                                        Value="true" />
+                                </DataTrigger>
+                            </Label.Triggers>
+                        </Label>
+                    </StackLayout>
+                    <StackLayout
+                        Margin="0,0,0,0"
+                        HorizontalOptions="FillAndExpand"
+                        AbsoluteLayout.LayoutBounds="0,0,0,0" 
+                        AbsoluteLayout.LayoutFlags="All" >
+                        <AbsoluteLayout  
+                            BackgroundColor="Transparent"
+                            Margin="0,0,8,0"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="EndAndExpand"
+                            AbsoluteLayout.LayoutBounds="1,1,0,0" 
+                            AbsoluteLayout.LayoutFlags="All">
+                            <Image 
+                                Source="{Binding Img}" 
+                                HorizontalOptions="End" 
+                                VerticalOptions="CenterAndExpand"
+                                AbsoluteLayout.LayoutBounds="0.9,0,0.8,0.98" 
+                                AbsoluteLayout.LayoutFlags="All"/>
+                            <Label 
+                                Text="{Binding Card}"  
+                                TextColor="White"
+                                FontFamily="MontB"
+                                FontSize="Large"
+                                FontAutoScalingEnabled="False"
+                                HorizontalOptions="End" 
+                                VerticalOptions="CenterAndExpand"
+                                Margin="0,0,24,0"
+                                AbsoluteLayout.LayoutBounds="0,0,0.95,1" 
+                                AbsoluteLayout.LayoutFlags="All"/>
 
-                                    <AbsoluteLayout >
-                                        <Ellipse 
-                                            Fill="#A8AC90"
-                                            HeightRequest="50"
-                                            WidthRequest="50"
-                                            Aspect="Uniform"/> 
-                                        <Image 
-                                            Source="credit_card_add.png"
-                                            HeightRequest="30"
-                                            WidthRequest="30"
-                                            HorizontalOptions="Center"
-                                            VerticalOptions="Center"
-                                            AbsoluteLayout.LayoutBounds="0,0,1,1"
-                                            AbsoluteLayout.LayoutFlags="All"/>
+                    </AbsoluteLayout>
+                </StackLayout>
+            </StackLayout>
 
-                                    </AbsoluteLayout>
-                                    <Label 
-                                        Text="Nueva"
-                                        TextColor="Black"
-                                        HorizontalOptions="Center"/>       
-                                    <StackLayout.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="AddNewCard_Tapped"/>
-                                    </StackLayout.GestureRecognizers>
-                                </StackLayout>
-                            </StackLayout>
-                        </Frame>
-                            <!--Aqui termina la modificacion-->
-                        <Frame 
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="FillAndExpand"
-                            Margin="4,-8,12,-20"
-                            HeightRequest="350"
-                            HasShadow="True"
-                            CornerRadius="20">
+        </AbsoluteLayout>
+        </Frame>
 
-                            <StackLayout 
-                                Orientation="Vertical"
-                                Padding="15">
-                                <Label 
-                                    Text="Movimientos" 
-                                    FontSize="Medium"
-                                    FontAttributes="Bold"
-                                    TextColor="#28677E"
-                                    VerticalOptions="Center"/>
+        <StackLayout 
+            BackgroundColor="Transparent"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand"
+            AbsoluteLayout.LayoutBounds="0,0,1,0.58" 
+            AbsoluteLayout.LayoutFlags="All"
+            Margin="4,0"
+            Orientation="Horizontal">
+            <StackLayout 
+                IsVisible="False"
+                Margin="10">
+                <AbsoluteLayout >
+                    <Ellipse 
+                        Fill="Transparent"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="Uniform"/>
+                <Image 
+                    Source="changenip.png"
+                    HeightRequest="25"
+                    WidthRequest="25"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All"
+                    />
+                </AbsoluteLayout>
+                <Label
+                    Text="NIP"
+                    TextColor="Black"
+                    FontFamily="MontB"
+                    HorizontalOptions="Center"/>
+            </StackLayout>
+            <StackLayout 
+                x:Name="BlockCard"
+                Margin="12"
+                VerticalOptions="CenterAndExpand">
+                <AbsoluteLayout >
+                    <Ellipse
+                        Fill="Transparent"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="Uniform"/>
+                    <local:MyImage
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        Source="{OnPlatform iOS= {AppThemeBinding Light=pngkey.png , Dark= pngkey.png}, Android={AppThemeBinding Light=darkkey.svg, Dark=key.svg}}"
+                        TintColor="{AppThemeBinding Dark='White', Light='#3B3A3A'}" />
+                </AbsoluteLayout>
+                <Label
+                    Text="Block"
+                    FontFamily="MontB"
+                    TextColor="{AppThemeBinding Dark='White', Light='Black'}"
+                    HorizontalTextAlignment="Start"
+                    HorizontalOptions="Center">
+                    <Label.Triggers>
+                        <DataTrigger 
+                            TargetType="Label"
+                                Binding="{Binding EstadoTarjeta}"
+                                Value="Activa">
+                            <Setter Property="Text"
+                            Value="Bloquear" />
+                        </DataTrigger>
+                        <DataTrigger 
+                            TargetType="Label"
+                            Binding="{Binding EstadoTarjeta}"
+                            Value="Bloqueo Temporal">
+                            <Setter 
+                                Property="Text"
+                                Value="Activar" />
+                        </DataTrigger>
+                        <DataTrigger 
+                            TargetType="Label"
+                            Binding="{Binding EstadoTarjeta}"
+                            Value="Bloqueo">
+                            <Setter 
+                                Property="Text"
+                                Value="Activar" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  
+                         Tapped="MoreOptionsCard_Tapped">
+                    </TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            <StackLayout 
+                Margin="12"
+                x:Name="CancelCard"
+                VerticalOptions="CenterAndExpand">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  
+                        Tapped="CancelCard_Tapped">
+                    </TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+                <AbsoluteLayout >
+                    <Ellipse 
+                        VerticalOptions="CenterAndExpand"
+                        Fill="Transparent"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="Uniform"/>
+                    <local:MyImage
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        Source="{OnPlatform iOS= {AppThemeBinding Light=pngcancel.png , Dark= pngcancel.png}, Android={AppThemeBinding Light=darkcancel.svg, Dark=cancel.svg}}"
+                        TintColor="{AppThemeBinding Dark='White', Light='#3B3A3A'}" />
+                </AbsoluteLayout>
+                <Label 
+                    Text="Cancelar"
+                    FontFamily="MontB"
+                    TextColor="{AppThemeBinding Dark='White', Light='Black'}"
+                    HorizontalOptions="Center"/>
+            </StackLayout>
+            <StackLayout
+                Margin="12"
+                x:Name="DeleteCard"
+                VerticalOptions="CenterAndExpand">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  
+                        Tapped="DeleteCard_Tapped">
+                    </TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+                <AbsoluteLayout >
+                    <Ellipse
+                        Fill="Transparent"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="Uniform"/>
+                    <local:MyImage
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"
+                        Source="{OnPlatform iOS= {AppThemeBinding Light=pngdelete.png , Dark= pngdelete.png}, Android={AppThemeBinding Light=darkdelete.svg, Dark=delete.svg}}"
+                        TintColor="{AppThemeBinding Dark='White', Light='#3B3A3A'}" />
+                </AbsoluteLayout>
+                <Label 
+                    Text="Remover"
+                    FontFamily="MontB"
+                    TextColor="{AppThemeBinding Dark='White', Light='Black'}"
+                    HorizontalOptions="Center"/>
+            </StackLayout>
+            <StackLayout 
+                Margin="12"
+                x:Name="MoreOptionsCard"
+                IsVisible="False"
+                VerticalOptions="CenterAndExpand">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer  
+                        Tapped="MoreOptionsCard_Tapped">
+                    </TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+                <AbsoluteLayout >
+                    <Ellipse 
+                        VerticalOptions="CenterAndExpand"
+                        Fill="Transparent"
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Aspect="Uniform"/>
+                    <Image 
+                        Source="{OnPlatform iOS= {AppThemeBinding Light=pngchangenip.png , Dark= pngchangenip.png}, Android={AppThemeBinding Light=darkchangenip.svg, Dark=darkchangenip.svg}}"
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All">
+                    </Image>
+                </AbsoluteLayout>
+                <Label 
+                    Text="NIP"
+                    FontFamily="MontB"
+                    HorizontalOptions="Center"/>
+            </StackLayout>
+        </StackLayout>
+
+        <Frame 
+            BackgroundColor="{AppThemeBinding Dark= '#90FFFFFF', Light='#90FFFFFF'}"
+            Margin="8,0,8,0"
+            AbsoluteLayout.LayoutBounds="{OnPlatform iOS= '0,0.74,1,0.52', Android='0.5,0.76,1,0.54'}"
+            AbsoluteLayout.LayoutFlags="All"
+            BorderColor="LightGray"
+            Padding="0,16"
+            HasShadow="{AppThemeBinding Dark='false', Light='true'}"
+            CornerRadius="20">
+            <StackLayout 
+                BackgroundColor="Transparent"
+                Orientation="Vertical"
+                Margin="0"
+                Padding="0"
+                Spacing="0">
+                <HorizontalStackLayout 
+                    HorizontalOptions="CenterAndExpand"
+                    HeightRequest="60" 
+                    Margin="0"
+                    Padding="0"
+                    Spacing="8"
+                    BackgroundColor="Transparent">
+                    <Label 
+                        Text="Movimientos" 
+                        FontAutoScalingEnabled="False"
+                        FontSize="Medium"
+                        FontFamily="MontB"
+                        TextColor="#28677E"
+                        VerticalTextAlignment="Center"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="StartAndExpand"/>
+                    <HorizontalStackLayout
+                        VerticalOptions="End"
+                        HorizontalOptions="End"
+                        Padding="0"
+                        Spacing="0"
+                        Margin="0">
+                        <Frame
+                            Margin="0,0,-8,0"
+                            Padding="16"
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="CenterAndExpand"
+                            BorderColor="LightGray"
+                            IsClippedToBounds="True"
+                            BackgroundColor="Transparent">
+                            <HorizontalStackLayout
+                                HorizontalOptions="EndAndExpand"
+                                Padding="0"
+                                Spacing="0"
+                                Margin="0">
                                 <Picker 
                                     x:Name="Pkr_Month"
-                                    WidthRequest="100"
                                     TextColor="#28677E"
+                                    FontFamily="MontB"
+                                    FontAutoScalingEnabled="False"
+                                    FontSize="18"
+                                    ios:Picker.UpdateMode="WhenFinished"
                                     ItemsSource="{Binding MonthList}"
                                     ItemDisplayBinding="{Binding Name}"
                                     SelectedIndex="{Binding ItemSelect}"
                                     SelectedIndexChanged="Pkr_Month_SelectedIndexChanged"
+                                    HorizontalTextAlignment="Start"
+                                    HorizontalOptions="StartAndExpand"
                                     VerticalOptions="Center"
-                                    HorizontalOptions="EndAndExpand"
-                                    Margin="0,-40,0,20"/>
-
-                                <StackLayout>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="100"/>
-                                            <ColumnDefinition Width="80"/>
-                                            <ColumnDefinition Width="*"/>
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="1" />
-                                            <RowDefinition Height="auto" />
-                                            <RowDefinition Height="1" />
-                                            <RowDefinition Height="auto" />
-                                        </Grid.RowDefinitions>
-                                    </Grid>
-                                </StackLayout>
-                                <AbsoluteLayout 
-                                    HorizontalOptions="FillAndExpand" 
-                                    VerticalOptions="FillAndExpand">
-                                    <ListView 
-                                        x:Name="LstDetalleTarjeta"
-                                        ItemsSource="{Binding CardMovementsResult.ListMovimientos}"
-                                        VerticalOptions="FillAndExpand"
-                                        HasUnevenRows="true"
-                                        SeparatorColor="Transparent"
-                                        HorizontalOptions="FillAndExpand" 
-                                        AbsoluteLayout.LayoutBounds="0,0,1,1" 
-                                        AbsoluteLayout.LayoutFlags="All" 
-                                        BackgroundColor="Transparent"
-                                        RefreshCommand="{Binding CardMovementsCommand}"
-                                        SelectionMode="None"
-                                        CachingStrategy="RetainElement">
-                                        <ListView.ItemTemplate>
-                                            <DataTemplate>
-                                                <ViewCell>
-                                                    <StackLayout 
-                                                        HorizontalOptions="FillAndExpand"
-                                                        Margin="10">
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="*"/>
-                                                                <ColumnDefinition Width="80"/>
-                                                            </Grid.ColumnDefinitions>
-                                                            <Label 
-                                                                Text="{Binding MontoProcesadoLocal, StringFormat='{0:#,##0.00}'}" 
-                                                                HorizontalOptions="Center"
-                                                                VerticalOptions="CenterAndExpand"
-                                                                Margin="10,0,0,0"
-                                              
-                                                                Grid.Row="0"
-                                                                Grid.Column="1"/>
-
-                                                            <StackLayout  
-                                                                Grid.Row="0"
-                                                                Grid.Column="0">
-                                                                <Label 
-                                                                    Text="{Binding ComercioAbreviado}"
-                                                                    TextColor="{Binding ColorMonto}"
-                                                                    HeightRequest="20"   />
-                                                                <Label 
-                                                                    Text="{Binding Fecha, StringFormat='{0:dd/MM/yyyy}'}"  />
-                                                            </StackLayout>
-
-                                                        </Grid>
-                                                    </StackLayout>
-                                                </ViewCell>
-                                            </DataTemplate>
-                                        </ListView.ItemTemplate>
-                                    </ListView>
-
-                                    <AbsoluteLayout 
-                                        HorizontalOptions="FillAndExpand"
-                                        VerticalOptions="FillAndExpand"
-                                        AbsoluteLayout.LayoutBounds="1,0,1.2,1" 
-                                        AbsoluteLayout.LayoutFlags="All"
-                                        Margin="0,-100,0,0"
-                                        BackgroundColor="transparent"
-                                        IsVisible="{Binding IsBusy}">
-                                    </AbsoluteLayout>
-                                </AbsoluteLayout>
-                            </StackLayout>
+                                    Margin="4,-12"/>
+                                <Image
+                                    Source="down.png"
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="CenterAndExpand"
+                                    BackgroundColor="Transparent">
+                                </Image>
+                            </HorizontalStackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer  
+                                    Tapped="TapFiltroMes_Tapped">
+                                </TapGestureRecognizer>
+                            </Frame.GestureRecognizers>
                         </Frame>
-                    </StackLayout>
-                    <Image 
-                        Source="loading.gif"
-                        HeightRequest="90"
-                        WidthRequest="90"
-                        IsAnimationPlaying="{Binding IsBusy}"
-                        IsVisible="{Binding IsBusy}" 
-                        AbsoluteLayout.LayoutBounds="0,0,1,1"
-                        AbsoluteLayout.LayoutFlags="All"/>
-                    <!--IsAnimationPlaying="{Binding IsBusy}" IsVisible = {Binding IsBusy}-->
-
-                    <controls:CustomMenu
-                        IconIzq="cards"
-                        IconIzqEnable="False"
-                        IconCentroIzq="credit_card_add"
-                        IconCentroIzqEnable="True"
-                        IconCentroDer="faq"
-                        IconCentroDerEnable="True"
-                        IconDer="user"
-                        IconDerEnable="True"
-                        IconCentro="innteclogo"
-                        IconCentroEnable="True"
+                    </HorizontalStackLayout>
+                </HorizontalStackLayout>
+                <StackLayout
+                    Margin="8,8,8,0"
+                    BackgroundColor="Transparent">
+                    <CollectionView 
+                        x:Name="LstDetalleTarjeta"
+                        BackgroundColor="Transparent"
                         VerticalOptions="FillAndExpand"
-                        HorizontalOptions="CenterAndExpand"
-                        AbsoluteLayout.LayoutBounds="0.2,1,1,0.10"
-                        AbsoluteLayout.LayoutFlags="All"
-                       >
-                    </controls:CustomMenu>
-                </AbsoluteLayout>
-            </Border>
+                        HeightRequest="250"
+                        ItemsSource="{Binding  CardMovementsResult.ListMovimientos}"
+                        Margin="{OnPlatform iOS='0', Android='0,0,0,12'}"
+                        VerticalScrollBarVisibility="Always">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid 
+                                    Margin="4,0"
+                                    Padding="2"
+                                    BackgroundColor="Transparent">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Label 
+                                        Text="{Binding MontoProcesadoLocal, StringFormat='{0:#,##0.00}'}" 
+                                        HorizontalOptions="End"
+                                        FontFamily="Mont"
+                                        TextColor="Black"
+                                        FontAutoScalingEnabled="False"
+                                        FontSize="Medium"
+                                        VerticalOptions="CenterAndExpand"
+                                        Margin="4,0,0,0"
+                                        Grid.Row="0"
+                                        Grid.Column="1"/>
+                                    <VerticalStackLayout   
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Grid.RowSpan="2"
+                                        HorizontalOptions="Start"
+                                        VerticalOptions="CenterAndExpand">
+                                        <Label 
+                                            Text="{Binding ComercioAbreviado}"
+                                            HeightRequest="20"
+                                            TextColor="{Binding ColorMonto}"
+                                            FontFamily="MontB" >
+                                        </Label>
+                                        <Label 
+                                            Text="{Binding Fecha, StringFormat='{0:dd/MM/yyyy}'}"
+                                            TextColor="Black"
+                                            VerticalTextAlignment="Center"
+                                            FontFamily="MontB"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                <BoxView
+                    Color="LightGray"
+                    Margin="0,0,0,0"
+                    VerticalOptions="CenterAndExpand"
+                    HeightRequest="2">
+                </BoxView>
+                </StackLayout>  
+            </StackLayout>
+        </Frame>
+        <AbsoluteLayout 
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="CenterAndExpand"
+            AbsoluteLayout.LayoutBounds="0,0,1,1" 
+            AbsoluteLayout.LayoutFlags="All"
+            BackgroundColor="Transparent"
+            IsVisible="True"
+            IsEnabled="{Binding IsBusy}">
+            <Image 
+                Source="loading.gif"
+                HeightRequest="70"
+                WidthRequest="70"
+                IsAnimationPlaying="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                AbsoluteLayout.LayoutBounds="0,0,1,0.60"
+                AbsoluteLayout.LayoutFlags="All"/>
+        </AbsoluteLayout>
+        <controls:CustomMenu
+            x:Name="MenuPrincipal"
+            IconIzqEnable="True"         
+            IconCentroIzqEnable="True"
+            IconCentroDerEnable="True"
+            IconDerEnable="True"
+            IconIzq="{OnPlatform iOS= 'pngnotification', Android={AppThemeBinding Dark='notification', Light='pngnotification'}}"
+            IconCentroIzq="{OnPlatform iOS= 'pngcredit_card_add', Android={AppThemeBinding Dark='credit_card_add', Light='pngcredit_card_add'}}"
+            IconCentroDer="{OnPlatform iOS= 'pngfaq', Android={AppThemeBinding Dark='faq', Light='pngfaq'}}"
+            IconDer="{OnPlatform iOS= 'pnguser', Android={AppThemeBinding Dark='user', Light='pnguser'}}"
+            IconCentro="innteclogo"
+            IconCentroEnable="True"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="CenterAndExpand"
+            AbsoluteLayout.LayoutBounds="0.22,1,1,0.10"
+            AbsoluteLayout.LayoutFlags="All"
+            >
+        </controls:CustomMenu>
 
-        </Grid>
-
-    </Grid>
+    </AbsoluteLayout>
 </ContentPage>

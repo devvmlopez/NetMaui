@@ -1,0 +1,82 @@
+<mopups:PopupPage 
+             BackgroundColor="Transparent"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             xmlns:mopupsanim="clr-namespace:Mopups.Animations;assembly=Mopups"
+             xmlns:zxing="clr-namespace:ZXing.Net.Maui.Controls;assembly=ZXing.Net.MAUI.Controls"
+             x:Class="InntecMobileNetMaui.Views.QR.ReaderQR"
+             Title="ReaderQR">
+    <mopups:PopupPage.Animation>
+        <mopupsanim:ScaleAnimation
+            DurationIn="200"
+            EasingIn="SinOut"
+            PositionIn="Bottom"
+            EasingOut="SinIn"
+            PositionOut="Bottom"
+            ScaleIn="1"
+            ScaleOut="1"/>
+    </mopups:PopupPage.Animation>
+
+
+    <AbsoluteLayout 
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+        <Border 
+            Padding="0"
+            WidthRequest="400"
+            HeightRequest="600"
+            BackgroundColor="White"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0,1,1,1"
+            >
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20,20,20,20"/>
+            </Border.StrokeShape>
+
+            <StackLayout 
+                Margin="8">
+
+                <Label
+                    VerticalOptions="StartAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Escanea tu codigo QR"
+                    FontFamily="FontMont"
+                    TextColor="Black"
+                    FontSize="Medium"
+                    Margin="8,8,8,0"
+                    />
+                <zxing:CameraBarcodeReaderView
+                    IsDetecting="True"
+                    IsTorchOn="False"
+                    WidthRequest="300"
+                    HeightRequest="250"
+                    Margin="8,4"
+                    VerticalOptions="Center"
+                    BarcodesDetected="CameraBarcodeReaderView_BarcodesDetected"
+                    x:Name="BarcodeReader"/>
+                <Button 
+                    Text="Cancelar"
+                    x:Name="ButtonCancel"
+                    TextColor="White"
+                    BackgroundColor="#f22b2b"
+                    VerticalOptions="EndAndExpand"
+                    Clicked="ButtonCancel_Clicked"
+                    FontFamily="FontMontB"
+                    Margin="16,4,16,0"/>
+            </StackLayout>
+        </Border>
+
+        <Image 
+            Source="{Binding Ico}"
+            IsAnimationPlaying="{Binding AnimationPlaying}"
+            HorizontalOptions="Center"
+            VerticalOptions="Start"
+            HeightRequest="100"
+            WidthRequest="100" 
+            Aspect="AspectFit"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0,0,1,0.6"/>
+
+    </AbsoluteLayout>
+</mopups:PopupPage>

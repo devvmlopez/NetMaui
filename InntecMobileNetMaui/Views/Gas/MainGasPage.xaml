@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.BackgroundColor="#367fb6"
+             x:Class="InntecMobileNetMaui.Views.Gas.MainGasPage">
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+              TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
+        </Style>
+        <Style x:Key="BackgroundFramItems"
+               TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3DB, Dark= #f2f2f7}" />
+        </Style>
+    </ContentPage.Resources>
+    <Shell.TitleView>
+        <HorizontalStackLayout  HorizontalOptions="StartAndExpand">
+            <Image Source="{OnPlatform iOS= {AppThemeBinding Light=pngcombustible_bnco.png , Dark= pngcombustible_bnco.png}, Android={AppThemeBinding Light=svgcombustible.svg,Dark=svgcombustible}}" Scale="0.91"  HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="40,0,0,0" Background="Transparent"/>
+        </HorizontalStackLayout>
+    </Shell.TitleView>
+    <AbsoluteLayout
+        AbsoluteLayout.LayoutBounds="{OnPlatform iOS= '0,0,1,1', Android='0,0,1,1'}"
+        AbsoluteLayout.LayoutFlags="All"
+        Style="{StaticResource BackgroundColorViews}">
+        <RefreshView 
+            x:Name="refresco"
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds="0,1,1,1">
+            <StackLayout 
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand">
+                <ListView x:Name="LstCards"
+                    ItemsSource="{Binding Cards}"
+                    HasUnevenRows="true"
+                    SeparatorColor="Transparent"
+                    RefreshControlColor="{DynamicResource loadingindicator}"
+                    BackgroundColor="Transparent"
+                    CachingStrategy="RetainElement"
+                    SelectionMode="None"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Border 
+                                    Margin="8,4"
+                                    Padding="0" 
+                                    Stroke="LightGray"
+                                    StrokeThickness="4"
+                                    StrokeShape="RoundRectangle 10,0,0,10"
+                                    Style="{StaticResource BackgroundFramItems}">
+                                    <StackLayout>
+                                        <StackLayout >
+                                            <HorizontalStackLayout >
+                                            <Frame
+                                                IsClippedToBounds="True"
+                                                CornerRadius="8"
+                                                VerticalOptions="CenterAndExpand"
+                                                HorizontalOptions="CenterAndExpand"
+                                                BackgroundColor="{Binding Color}"
+                                                IsVisible="False"
+                                                WidthRequest="1"
+                                                HeightRequest="1"
+                                                Margin="4,0,0,0"
+                                                Padding="0,0,0,2"/>
+                                                <Label
+                                                    Margin="8,4,8,0"
+                                                    FontSize="22"
+                                                    FontAutoScalingEnabled="False"
+                                                    TextColor="Black"
+                                                    Padding="0,0,0,2"
+                                                    Grid.Row="0" 
+                                                    Grid.Column="2"
+                                                    BackgroundColor="Transparent"
+                                                    HorizontalOptions="StartAndExpand"
+                                                    VerticalOptions="CenterAndExpand"
+                                                    Text="&#xF13E;"
+                                                    FontFamily="FontIco">
+                                                    <Label.Triggers>
+                                                        <DataTrigger 
+                                                            TargetType="Label"
+                                                            Binding="{Binding EstatusDescripcion}"
+                                                            Value="Activa">
+                                                            <Setter 
+                                                                Property="IsVisible"
+                                                                Value="true" />
+                                                        </DataTrigger>
+                                                        <DataTrigger 
+                                                                TargetType="Label"
+                                                                Binding="{Binding EstatusDescripcion}"
+                                                                Value="Bloqueo">
+                                                            <Setter 
+                                                                Property="IsVisible"
+                                                                Value="false" />
+                                                        </DataTrigger>
+                                                        <DataTrigger 
+                                                                TargetType="Label"
+                                                                Binding="{Binding EstatusDescripcion}"
+                                                                Value="Bloqueo Temporal">
+                                                            <Setter 
+                                                                Property="IsVisible"
+                                                                Value="false" />
+                                                        </DataTrigger>
+                                                    </Label.Triggers>
+                                                </Label>
+                                                <Label
+                                                    Margin="8,4,8,0"
+                                                    FontSize="22"
+                                                    FontAutoScalingEnabled="False"
+                                                    TextColor="Black"
+                                                    Padding="0,0,0,2"
+                                                    Grid.Row="0" 
+                                                    Grid.Column="2"
+                                                    BackgroundColor="Transparent"
+                                                    HorizontalOptions="StartAndExpand"
+                                                    VerticalOptions="CenterAndExpand"
+                                                    Text="&#xE800;"
+                                                    FontFamily="FontIco">
+                                                    <Label.Triggers>
+                                                        <DataTrigger 
+                                                             TargetType="Label"
+                                                             Binding="{Binding EstatusDescripcion}"
+                                                             Value="Activa">
+                                                            <Setter 
+                                                                 Property="IsVisible"
+                                                                 Value="false" />
+                                                        </DataTrigger>
+                                                        <DataTrigger 
+                                                             TargetType="Label"
+                                                             Binding="{Binding EstatusDescripcion}"
+                                                             Value="Bloqueo">
+                                                            <Setter 
+                                                                Property="IsVisible"
+                                                                Value="true" />
+                                                        </DataTrigger>
+                                                        <DataTrigger 
+                                                            TargetType="Label"
+                                                            Binding="{Binding EstatusDescripcion}"
+                                                            Value="Bloqueo Temporal">
+                                                            <Setter 
+                                                                 Property="IsVisible"
+                                                                 Value="true" />
+                                                        </DataTrigger>
+                                                    </Label.Triggers>
+                                                </Label>
+                                                    <Label 
+                                                        Text="{Binding Tarjeta}" 
+                                                        TextColor="Black"
+                                                        FontAutoScalingEnabled="False"
+                                                        HorizontalOptions="Center"
+                                                        Margin="4,0,0,0"
+                                                        FontSize="Large"
+                                                        FontFamily="FontMontB"
+                                                        VerticalOptions="End"
+                                                        Grid.Row="0" 
+                                                        Grid.Column="0" />
+                                            </HorizontalStackLayout>
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="50"/>
+                                                    <RowDefinition Height="50"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="50" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                               
+                                                 <Label 
+                                                    Text="{Binding EstatusDescripcion}" 
+                                                    TextColor="Black"
+                                                    FontAutoScalingEnabled="False"
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    VerticalOptions="CenterAndExpand"
+                                                    FontFamily="FontMont"
+                                                    Margin="4,0,0,0"
+                                                    FontSize="Medium"
+                                                    Grid.Row="0" 
+                                                    Grid.ColumnSpan="2"
+                                                    Grid.RowSpan="2"
+                                                    Grid.Column="0">
+                                                <Label.Triggers>
+                                                    <DataTrigger 
+                                                        TargetType="Label"
+                                                        Binding="{Binding EstatusDescripcion}"
+                                                        Value="Activa">
+                                                        <Setter 
+                                                            Property="Text"
+                                                            Value="Tarjeta Activa" />
+                                                    </DataTrigger>
+                                                    <DataTrigger 
+                                                            TargetType="Label"
+                                                            Binding="{Binding EstatusDescripcion}"
+                                                            Value="Bloqueo Temporal">
+                                                        <Setter 
+                                                            Property="Text"
+                                                            Value="Bloqueo Temporal" />
+                                                    </DataTrigger>
+                                                    <DataTrigger 
+                                                            TargetType="Label"
+                                                            Binding="{Binding EstatusDescripcion}"
+                                                            Value="Bloqueo">
+                                                        <Setter 
+                                                            Property="Text"
+                                                            Value="Tarjeta Bloqueada" />
+                                                    </DataTrigger>
+                                                </Label.Triggers>
+                                            </Label>
+                                                <Grid 
+                                                    x:Name="CardImage" 
+                                                    HorizontalOptions="StartAndExpand"
+                                                    VerticalOptions="CenterAndExpand"
+                                                    Margin="4,0,0,0"
+                                                    Grid.Row="0" 
+                                                    Grid.RowSpan="2"
+                                                    Grid.Column="2">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*" />
+                                                    </Grid.ColumnDefinitions>
+                                                    <Image 
+                                                        Source="{Binding ImgProd}"
+                                                        VerticalOptions="EndAndExpand"
+                                                        HorizontalOptions="EndAndExpand"
+                                                        Grid.Row="0" 
+                                                        Grid.Column="0"/>
+                                                    <Button 
+                                                        BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                        Command="{Binding CardMovementsCommand}"
+                                                        CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                        BackgroundColor="Transparent"
+                                                        Grid.Row="0" 
+                                                        Grid.Column="0"/>
+                                                </Grid>
+                                            </Grid>
+                                        </StackLayout>
+                                        <StackLayout>
+                                            <Grid x:Name="Cards" >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="30"/>
+                                                    <RowDefinition Height="20"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Image 
+                                                    x:Name="ImgLinkQR"
+                                                    IsVisible="{Binding Complemento.LinkQr}"
+                                                    Source="{OnPlatform iOS= {AppThemeBinding Light=pngqrcode_solidw.png , Dark= pngqrcode_solidw.png}, Android={AppThemeBinding Light=darkqrcode_solidw.svg, Dark=darkqrcode_solidw.svg}}"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    HeightRequest="20"
+                                                    Grid.Row="0" 
+                                                    Grid.Column="0"/>
+                                                <Image
+                                                    x:Name="ImgNIP"
+                                                    Source="{OnPlatform iOS= {AppThemeBinding Light=pngqrcode_solidw.png , Dark= pngqrcode_solidw.png}, Android={AppThemeBinding Light=darkqrcode_solidw.svg, Dark=darkqrcode_solidw.svg}}"
+                                                    IsVisible="{Binding Complemento.UnLinkQr}"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    HeightRequest="20"
+                                                    Grid.Row="0" 
+                                                    Grid.Column="1"/>
+                                                <Image 
+                                                    Source="{OnPlatform iOS= {AppThemeBinding Light=pngsim_card_solidw.png , Dark= pngsim_card_solidw.png}, Android={AppThemeBinding Light=darksim_card_solidw.svg, Dark=darksim_card_solidw.svg}}"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    Aspect="AspectFit"
+                                                    Grid.Row="0" 
+                                                    Grid.Column="2"/>
+                                                <Image
+                                                    Source="{OnPlatform iOS= {AppThemeBinding Light=pnglist_viatic.png , Dark= pnglist_viatic.png}, Android={AppThemeBinding Light=darklist_viatic.svg, Dark=darklist_viatic.svg}}"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    Aspect="AspectFit"
+                                                    Grid.Row="0" 
+                                                    Grid.Column="3"/>
+                                                <Label 
+                                                    Text="Enlazar QR"
+                                                    FontAutoScalingEnabled="False"
+                                                    TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                                    IsVisible="{Binding Complemento.LinkQr}"
+                                                    IsEnabled="{Binding Complemento.LinkQr}"
+                                                    FontFamily="FontMont"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    Grid.Row="1" 
+                                                    Grid.Column="0"/>
+                                                <Label 
+                                                    Text="Remover QR"
+                                                    FontAutoScalingEnabled="False"
+                                                    TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                                    IsVisible="{Binding Complemento.UnLinkQr}"
+                                                    IsEnabled="{Binding Complemento.UnLinkQr}"
+                                                    FontFamily="FontMont"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    Grid.Row="1" 
+                                                    Grid.Column="1"/>
+                                                <Label 
+                                                    Text="Nva Solic."
+                                                    FontAutoScalingEnabled="False"
+                                                    TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                                    FontFamily="FontMont"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    Grid.Row="1" 
+                                                    Grid.Column="2"/>
+                                                <Label 
+                                                    Text="Solicitudes"
+                                                    FontAutoScalingEnabled="False"
+                                                    TextColor="Black"
+                                                    FontFamily="FontMont"
+                                                    HorizontalOptions="Center"
+                                                    VerticalOptions="Center"
+                                                    Grid.Row="1" 
+                                                    Grid.Column="3"/>
+                                                <Button 
+                                                    x:Name="BtnLinkedCard"
+                                                    BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                    Command="{Binding LinkCardCommand}"
+                                                    CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                    BackgroundColor="Transparent"
+                                                    IsVisible="{Binding Complemento.LinkQr}"
+                                                    IsEnabled="{Binding Complemento.LinkQr}"
+                                                    CornerRadius="5"
+                                                    HeightRequest="35"
+                                                    Grid.Row="0"
+                                                    Grid.RowSpan="2"
+                                                    Grid.Column="0"/>
+                                                <Button 
+                                                    BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                    Command="{Binding UnLinkCardCommand}"
+                                                    CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                    BackgroundColor="Transparent"
+                                                    IsVisible="{Binding Complemento.UnLinkQr}"
+                                                    IsEnabled="{Binding Complemento.UnLinkQr}"
+                                                    CornerRadius="5"
+                                                    HeightRequest="35"
+                                                    Grid.Row="0"
+                                                    Grid.RowSpan="2"
+                                                    Grid.Column="1"/>
+                                                <Button 
+                                                    x:Name="BtnRequest"
+                                                    BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                    Command="{Binding ActivationRequestCommand}"
+                                                    CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                    BackgroundColor="Transparent"
+                                                    CornerRadius="5"
+                                                    HeightRequest="35"
+                                                    Grid.Row="0"
+                                                    Grid.RowSpan="2"
+                                                    Grid.Column="2"/>
+                                                <Button 
+                                                    x:Name="BtnLstActivation"
+                                                    BindingContext="{Binding Source={x:Reference LstCards}, Path=BindingContext}"
+                                                    Command="{Binding ActivationRequestReportCommand}"
+                                                    CommandParameter="{Binding Source={x:Reference Cards}, Path=BindingContext}"
+                                                    BackgroundColor="Transparent"
+                                                    CornerRadius="5"
+                                                    HeightRequest="35"
+                                                    Grid.Row="0"
+                                                    Grid.RowSpan="2"
+                                                    Grid.Column="3"/>
+                                            </Grid>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Border>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+                <AbsoluteLayout 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                    AbsoluteLayout.LayoutFlags="All"
+                    BackgroundColor="#00000000"
+                    IsVisible="{Binding IsBusy}">
+
+                    <Image 
+                        Source="loading.gif"
+                        HeightRequest="70"
+                        WidthRequest="70"
+                        IsAnimationPlaying="{Binding IsBusy}"
+                        IsVisible="{Binding IsBusy}"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"/>
+                </AbsoluteLayout>
+            </StackLayout>
+        </RefreshView>
+    </AbsoluteLayout>
+</ContentPage>

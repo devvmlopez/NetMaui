@@ -109,6 +109,10 @@ namespace InntecMobileNetMaui.Models
 
         public bool? PuedeCambiarEcommerce { get; set; }
 
+        public bool? PuedeCambiarNip { get; set; }
+
+        public bool EsProductoSayabha { get; set; }
+
         /// <summary>
         /// Color que indica el estatus de la tarjeta(Encabezado)
         /// </summary>

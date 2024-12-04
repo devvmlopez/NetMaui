@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InntecMobileNetMaui.Views.Gas.ActivateCardPage"
+             xmlns:behavior="clr-namespace:InntecMobileNetMaui.ViewModels"
+             Shell.BackgroundColor="#367fb6"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <Style x:Key="BackgroundColorViews"
+             TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3E6, Dark= #367fb6}" />
+        </Style>
+        <Style x:Key="BackgroundFramItems"
+              TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Light= #d3d3d3DB, Dark= #f2f2f7}" />
+        </Style>
+         <Style x:Key="PicturePlatform"
+             TargetType="Image">
+             <Setter Property="Source" Value="{OnPlatform iOS={AppThemeBinding Dark='pnginntec_bnco.png', Light='pnginntec.png'} , Android= {AppThemeBinding Dark='pnginntec_bnco.png', Light='svginntec.svg'}}" />
+        </Style>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout
+            AbsoluteLayout.LayoutBounds="{OnPlatform iOS= '0,0,1,1', Android='0,0,1,1'}"
+            AbsoluteLayout.LayoutFlags="All"
+            Style="{StaticResource BackgroundColorViews}">
+            <Image 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,1,1,1.89"
+                Style="{StaticResource PicturePlatform}"
+                HeightRequest="70"
+                Margin="0,30,0,0"/>
+            <StackLayout 
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,1,1,0.85"
+                Margin="12" >
+                <StackLayout 
+                    Padding="8"
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal">
+                    <StackLayout>
+                        <Label 
+                            HorizontalTextAlignment="Center"
+                            FontFamily="FontMontB"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            Text="Tarjeta"/>
+                        <Label 
+                            x:Name="TxtTarjeta"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            Text="{Binding NoCard}"
+                            FontFamily="FontMont">
+                        </Label>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand" WidthRequest="100">
+                        <Label 
+                            HorizontalTextAlignment="Center"
+                            FontFamily="FontMontB"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            Text="Saldo"/>
+                        <Label 
+                            x:Name="TxtSaldo"
+                            Text="{Binding CardBalanceResult.SaldoDisponible, StringFormat='{0:#,##0.00}'}"
+                            FontSize="Medium"
+                            FontFamily="FontMont"
+                            FontAutoScalingEnabled="False"
+                            HorizontalTextAlignment="Center"
+                            HorizontalOptions="Center"> 
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout
+                    Margin="0,8"
+                    Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label 
+                            FontFamily="FontMontB"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            Text="Monto $" />
+                        <Entry 
+                            x:Name="TxtCantidad"
+                            Text="{Binding requestActivation.Mount}"
+                            Placeholder="0"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                            BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                            Unfocused="TxtCantidad_Unfocused"
+                            TextChanged="TxtCantidad_TextChanged"
+                            Keyboard="Numeric" 
+                            WidthRequest="100" >
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label 
+                            FontFamily="FontMontB"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            Text="Precio" />
+                        <Entry 
+                            x:Name="TxtPrecio"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            Text="{Binding requestActivation.price}"
+                            Placeholder="0"
+                            TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                            BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                            Unfocused="TxtPrecio_Unfocused"
+                            TextChanged="TxtPrecio_TextChanged"
+                            Keyboard="Numeric" 
+                            WidthRequest="100" >
+                        </Entry>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label 
+                            FontFamily="FontMontB"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            Text="Litros" />
+                        <Entry 
+                            x:Name="TxtLitros"
+                            Placeholder="0"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                            BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                            Text="{Binding requestActivation.Liters}"
+                            Keyboard="Numeric"
+                            Unfocused="TxtLitros_Unfocused"
+                            TextChanged="TxtLitros_TextChanged"
+                            WidthRequest="100" >
+                        </Entry>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label 
+                            FontFamily="FontMontB"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            Text="Kilometraje" />
+                        <Entry 
+                            x:Name="TxtOdometro"
+                            Text="{Binding requestActivation.KM}"
+                            Placeholder="0"
+                            FontAutoScalingEnabled="False"
+                            FontSize="Medium"
+                            TextColor="{AppThemeBinding Dark='Black', Light='Black'}"
+                            BackgroundColor="{AppThemeBinding Dark='White', Light='Transparent'}"
+                            Keyboard="Numeric" 
+                            WidthRequest="100" >
+                        </Entry>
+                    </StackLayout>
+                </StackLayout>
+                <AbsoluteLayout 
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                    AbsoluteLayout.LayoutFlags="All"
+                    BackgroundColor="#00000000"
+                    IsVisible="{Binding Busy}">
+                    <Image 
+                        Source="loading.gif"
+                        HeightRequest="70"
+                        WidthRequest="70"
+                        IsAnimationPlaying="{Binding IsBusy}"
+                        IsVisible="{Binding IsBusy}"
+                        AbsoluteLayout.LayoutBounds="0,0,1,1"
+                        AbsoluteLayout.LayoutFlags="All"/>
+                </AbsoluteLayout>
+                <StackLayout 
+                    Orientation="Horizontal" 
+                    HorizontalOptions="Center">
+                    <Button 
+                        Text="Activar Tarjeta" 
+                        FontFamily="FontMontB"
+                        IsVisible="{Binding Visible}"
+                        FontAutoScalingEnabled="False"
+                        FontSize="16"
+                        HorizontalOptions="Center" 
+                        Margin="4,30"
+                        WidthRequest="150"
+                        BackgroundColor="{AppThemeBinding Light= '#3487CB', Dark='White'}"
+                        TextColor="{AppThemeBinding Light= 'White', Dark='#3487CB'}"
+                        BorderColor="{OnPlatform iOS= 'Black', Android='LightGray'}"
+                        Clicked="Button_Clicked"/>
+                    <Button 
+                        Text="Cancelar" 
+                        FontFamily="FontMontB"
+                        IsVisible="{Binding Visible}"
+                        FontAutoScalingEnabled="False"
+                        FontSize="16"
+                        HorizontalOptions="Center" 
+                        Margin="4,30"
+                        WidthRequest="150"
+                        BackgroundColor="#f22b2b"
+                        TextColor="White"
+                        BorderColor="LightGray"
+                        Clicked="Button_Clicked_Cancel"/>
+                </StackLayout>
+            </StackLayout>
+            <Border
+                Stroke="LightGray"
+                StrokeThickness="4"
+                AbsoluteLayout.LayoutBounds="0,0.9,1,0.35" 
+                AbsoluteLayout.LayoutFlags="All" 
+                Margin="8,0"
+                Style="{StaticResource BackgroundFramItems}"
+                StrokeShape="RoundRectangle 10,10,10,10">
+                <ListView 
+                    ItemsSource="{Binding resultActivation.ListObservaciones}" 
+                    x:Name="LstResult"
+                    HasUnevenRows="True"
+                    SeparatorColor="Transparent"
+                    VerticalOptions="CenterAndExpand"
+                    BackgroundColor="Transparent"
+                    CachingStrategy="RetainElement"
+                    SelectionMode="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Frame 
+                                        BackgroundColor="#803C9CEA"
+                                        CornerRadius="5" 
+                                        Margin="4,-2">
+                                        <StackLayout>
+                                            <Label 
+                                                FontFamily="FontMont"
+                                                TextColor="{AppThemeBinding Light=Black, Dark=Black}"
+                                                FontSize="Caption"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Border>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

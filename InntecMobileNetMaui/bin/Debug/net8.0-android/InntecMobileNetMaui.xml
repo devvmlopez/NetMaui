@@ -450,6 +450,206 @@
             Estatus para aclaraciones.
             </summary>
         </member>
+        <member name="T:InntecMobileNetMaui.Models.Gas.ActivationRequestModel">
+            <summary>
+            Datos necesarios para la activacion de una tarjeta de combustibles.
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestModel._guid">
+            <summary>
+            codigo unico de QR
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestModel.CsmUsuarioId">
+            <summary>
+            identificador unico de tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestModel.Mount">
+            <summary>
+            cantidad con la que contara la tarjeta al ser activada
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestModel.price">
+            <summary>
+            Precio por litro de gasolina
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestModel.KM">
+            <summary>
+            Lectura del kilometraje al momento de la activacion de la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestModel.Liters">
+            <summary>
+            Cantidad de litos a comprar
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestModel.GpsLat">
+            <summary>
+            Latitud del lugar donde se activo la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestModel.GpsLng">
+            <summary>
+            Longitud del lugar donde se activo la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestModel.EscaneoQR">
+            <summary>
+            Variable que indica si el QR debe o no ser escaneado.
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel">
+            <summary>
+            Respuesta de la activaion de la tarjeta de combustible
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.SolicitudId">
+            <summary>
+            identificador unico de la solicitud de la activacion de la tarjeta.
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.Folio">
+            <summary>
+            Folio de la activacion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.NoTarjeta">
+            <summary>
+            Tarjeta que se activo
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.MontoSolicitado">
+            <summary>
+            Monto que se solicitu para la activacion de la tarejta.
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.Precio">
+            <summary>
+            Precio del litro de combustible
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.KmActual">
+            <summary>
+            Kilometraje actual del vehiculo
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.Litros">
+            <summary>
+            Litros suministrados
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.FechaSolicitud">
+            <summary>
+            Fecha de solicitud
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.Estatus">
+            <summary>
+            Estatus en el que quedo la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.Color">
+            <summary>
+            Color (Idiciador visual) que indica el estatus en que quedo la activacion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.GpsLatitud">
+            <summary>
+            Latitud de solicitud de activacion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.GpsLongitud">
+            <summary>
+            Longitud de solicitud de activacion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.EscaneoQr">
+            <summary>
+            Indicador de si se varifico el QR
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.ListadoDetalleTrackingSolicitud">
+            <summary>
+            Detalles de la solicitud
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel.#ctor">
+            <summary>
+            Inicializacion del modelo para la activacion.
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Gas.DetalleTrackingSolicitud">
+            <summary>
+            Detalle de la solicitud de activacion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.DetalleTrackingSolicitud.TrackingSolicitudId">
+            <summary>
+            identificador del detalle
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.DetalleTrackingSolicitud.SolicitudId">
+            <summary>
+            identificador de la solicitud de activacion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.DetalleTrackingSolicitud.FechaMovimiento">
+            <summary>
+            Fecha del movimiento
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.DetalleTrackingSolicitud.Observaciones">
+            <summary>
+            observaciones del por que no se activa la tarjeta(en caso de ser denegada).
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Gas.RequestActivationFilterModel">
+            <summary>
+            Tiempo en que permanecera activa la tarjeta de combustible
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.RequestActivationFilterModel.dateStart">
+            <summary>
+            Inicio de la activacion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.RequestActivationFilterModel.dateEnd">
+            <summary>
+            Fecha en que volvera a estar inactiva la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.RequestActivationFilterModel.statusId">
+            <summary>
+            Estatus en el que se encuenta la tarjeta.
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Gas.ResponseActivationRequest">
+            <summary>
+            Reporte de estatus regresados por solicitud de activacion 
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ResponseActivationRequest.Aprobada">
+            <summary>
+            Indicador aprobacion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ResponseActivationRequest.Folio">
+            <summary>
+            Folio del movimiento
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Gas.ResponseActivationRequest.ListObservaciones">
+            <summary>
+            Listado de observaciones (Motivos por los que no se activo la tarjeta)
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Models.Gas.ResponseActivationRequest.#ctor">
+            <summary>
+            Inicializacion del listado(Modelo)
+            </summary>
+        </member>
         <member name="T:InntecMobileNetMaui.Models.HomeMenuItem">
             <summary>
             Menu principal
@@ -540,6 +740,11 @@
             Indicador para recordar la contraseña
             </summary>
         </member>
+        <member name="P:InntecMobileNetMaui.Models.LoginModel.savepass">
+            <summary>
+            Indicador para recordar el Usuario y la contraseña
+            </summary>
+        </member>
         <member name="P:InntecMobileNetMaui.Models.LoginModel.rol">
             <summary>
             Rol
@@ -610,11 +815,6 @@
             Monto del movimiento
             </summary>
         </member>
-        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.MontoMonendaRef">
-            <summary>
-            Monto del movmiento (Ref)
-            </summary>
-        </member>
         <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.Fecha">
             <summary>
             Fecha del movimiento
@@ -633,6 +833,21 @@
         <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.Tipo">
             <summary>
             Tipo de movimiento (Retiro, Depocito)
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.CodigoAutorizacion">
+            <summary>
+            Codigo Autorizacion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.Color">
+            <summary>
+            Color
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.Signo">
+            <summary>
+            Signo del movimiento
             </summary>
         </member>
         <member name="P:InntecMobileNetMaui.Models.MovementsDetailsModel.MontoProcesadoLocal">
@@ -684,6 +899,22 @@
             <summary>
             Estatus de la respuesta del servidor
             </summary>
+        </member>
+        <member name="E:InntecMobileNetMaui.Models.Notify.NotifyUser.PropertyChanged">
+            <summary>
+            Monitor de cambio de propiedades
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Models.Notify.NotifyUser.SetProperty``1(``0@,``0,System.String,System.Action)">
+            <summary>
+            Desencadenador de asigancion de propiedades
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="backingStore"></param>
+            <param name="value"></param>
+            <param name="propertyName"></param>
+            <param name="onChanged"></param>
+            <returns></returns>
         </member>
         <member name="T:InntecMobileNetMaui.Models.RecoverPasswordModel">
             <summary>
@@ -920,6 +1151,514 @@
             Confirmacion de Password para identificar la correcta escritura.
             </summary>
         </member>
+        <member name="T:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail">
+            <summary>
+            Detalles de consumo
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.ViaticoConsumoId">
+            <summary>
+            Identificador del consumo
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.NoTarjeta">
+            <summary>
+            Tarjeta con el que se realizo el movimiento
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.DatosComerciante">
+            <summary>
+            Datos del comercio
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.MontoTransaccion">
+            <summary>
+            Monto de la compra
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.MontoComprobado">
+            <summary>
+            Monto de comprobacion (Factura)
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.FechaRegistro">
+            <summary>
+            Fecha en que se registro el movimiento
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.ExisteXml">
+            <summary>
+            Indicador de existencia de XML
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.UrlXml">
+            <summary>
+            Ruta en que se encuenta el archivo XML en caso de existir
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.ExistePdf">
+            <summary>
+            Indicador de existencia de arhcivo PDF
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.UrlPdf">
+            <summary>
+            Ruta en la que se encuenta el archivo PDF en caso de existir
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.ExisteComp">
+            <summary>
+            Indicador de existencia de comprobante, en caso de no existir factura
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.UrlComprobante">
+            <summary>
+            Ruta en la que se encuenta el archivo del comprobante en caso de existir
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.StatusComprobacionId">
+            <summary>
+            Estatus en el que se encuenta la comprobacion de los movimientos
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.Status">
+            <summary>
+            Estatus en Texto
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.Observacion">
+            <summary>
+            Observacines del movimiento
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.SolicitudId">
+            <summary>
+            Identificador del la solicitud a la que se quiere comprobar el gasto
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.Folio">
+            <summary>
+            Folio de comprobante
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.ClienteId">
+            <summary>
+            identificador del cliente que realiza la comprobacion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.Origen">
+            <summary>
+            Identifador del origen
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ConsumptionDetail.FileName">
+            <summary>
+            Nombre del archivo que comprueba.
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Viatics.FileResult">
+            <summary>
+            Resultado del envio de archivos
+            </summary>
+        </member>
+        <member name="F:InntecMobileNetMaui.Models.Viatics.FileResult.Msg">
+            <summary>
+            mensaje
+            </summary>
+        </member>
+        <member name="F:InntecMobileNetMaui.Models.Viatics.FileResult.HttpRequestMessage">
+            <summary>
+            Respeusta del servidor
+            </summary>
+        </member>
+        <member name="F:InntecMobileNetMaui.Models.Viatics.FileResult.HttpStatusCode">
+            <summary>
+            Indicador del Estatus de la peticion.
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest">
+            <summary>
+            Detalle de una solicitud de viaticos
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest.DetalleId">
+            <summary>
+            Identicador del detalle
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest.SolicitudId">
+            <summary>
+            Identificador de la solicitud a la que se le agregara un detalle
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest.RubroId">
+            <summary>
+            Identificador del rubro a agregar
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest.DescRubro">
+            <summary>
+            Rubro en texto
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest.MontoSolicitado">
+            <summary>
+            Monto que se solicitara para el rubro
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest.MontoAutorizado">
+            <summary>
+            Monto que se autoriza para el rubro seleccionado
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest.MontoComprobado">
+            <summary>
+            Monto que se comprueba
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest.Status">
+            <summary>
+            Estatus del rubro
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest.IdUnico">
+            <summary>
+            Id Unido de rubro (en caso de tener rubros repetidos con ciudad diferente)
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest.Ciudad">
+            <summary>
+            Ciudad para la que se necesita el rubro
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Viatics.InfoNewRequest">
+            <summary>
+            Nueva solicitud de viaticos
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.InfoNewRequest.UsuarioCsmTarjetaId">
+            <summary>
+            Identificador unico de tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.InfoNewRequest.Tarjeta">
+            <summary>
+            Numero de tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.InfoNewRequest.EstatusDescripcion">
+            <summary>
+            Descripcion del estatus de la solicitud
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.InfoNewRequest.ClienteId">
+            <summary>
+            Cliente al que pertenece la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.InfoNewRequest.EmpleadoId">
+            <summary>
+            Empelado de la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.InfoNewRequest.InfoCiudades">
+            <summary>
+            Datos del lugar al que pertenecera la solicitud
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.InfoNewRequest.InfoRubros">
+            <summary>
+            Rubros que perteneceran a la solicitud
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.InfoNewRequest.StatusCode">
+            <summary>
+            Codigo de la solicitud de viaticos
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.InfoNewRequest.Message">
+            <summary>
+            Mensaje del motivo de la solicitud
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Models.Viatics.InfoNewRequest.#ctor">
+            <summary>
+            Inicializacion de las listas que contendra la solicitud de viaticos
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Viatics.InfoCity">
+            <summary>
+            Informacion del Lugar para los rubros
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.InfoCity.IdUnico">
+            <summary>
+            Identicador unico de la ciudad
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.InfoCity.Nombre">
+            <summary>
+            Ciudad-Ciudad-Pais
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Viatics.InfoItem">
+            <summary>
+            Rubros de la solicitud
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.InfoItem.RubroId">
+            <summary>
+            Identificador del rubro
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.InfoItem.Descripcion">
+            <summary>
+            Descripcion del rubro
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Viatics.NewViaticsRequest">
+            <summary>
+            Nueva solicitud de viaticos
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.NewViaticsRequest.UsuarioCsmTarjetaId">
+            <summary>
+            Identificador unico de la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.NewViaticsRequest.EmpleadoId">
+            <summary>
+            Empleado que solicita
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.NewViaticsRequest.FechaIni">
+            <summary>
+            Fecha de salida
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.NewViaticsRequest.FechaFin">
+            <summary>
+            Fecha de regreso
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.NewViaticsRequest.Comentarios">
+            <summary>
+            Comentarios adicionales
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.NewViaticsRequest.ListadoDetalleViatico">
+            <summary>
+            Listado de ciudades y rubros que necesitara
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Models.Viatics.NewViaticsRequest.#ctor">
+            <summary>
+            Inicializacion de Objetos para la nueva solicitud de viaticos
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Viatics.DetailViatic">
+            <summary>
+            Detalle de la solicitud de viaticos
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailViatic.RubroId">
+            <summary>
+            Identificador del rubro solicitado
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailViatic.RubroDesc">
+            <summary>
+            Descripcion del rubro
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailViatic.MontoSolicitado">
+            <summary>
+            Monto solicitado por rubro
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailViatic.IDUnico">
+            <summary>
+            Id unico para el registro del rubro
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.DetailViatic.CiudadDesc">
+            <summary>
+            Descripcion de la ciudad a la que pertenecera el rubro
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Viatics.ViaticsFilterModel">
+            <summary>
+            Tiempo en que permanecera activa la tarjeta de combustible
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsFilterModel.dateStart">
+            <summary>
+            Inicio de la activacion
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsFilterModel.dateEnd">
+            <summary>
+            Fecha en que volvera a estar inactiva la tarjeta
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsFilterModel.statusId">
+            <summary>
+            Estatus en el que se encuenta la tarjeta.
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Viatics.ViaticsListModel">
+            <summary>
+            Datos generales de la solicitud
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsListModel.fechaDesde">
+            <summary>
+            Fecha en que se debe iniciar
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsListModel.fechaHasta">
+            <summary>
+            Fecha en que se debe regresar
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsListModel.folio">
+            <summary>
+            Folio de la solicitud
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsListModel.status">
+            <summary>
+            Estatus en el que se encuenta la solicitud
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.Models.Viatics.ViaticsRequest">
+            <summary>
+            Indicador de la solicitud de viaticos
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.SolicitudId">
+            <summary>
+            Identificador de la solicitud
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.FechaInicio">
+            <summary>
+            Fecha de inicio
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.FechaFin">
+            <summary>
+            Fecha de termino
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.MontoSolicitado">
+            <summary>
+            Monto que se solicito
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.MontoAutorizado">
+            <summary>
+            Monto autorizado
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.MontoComprobado">
+            <summary>
+            Monto comprobado
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.Comentarios">
+            <summary>
+            Comentarios
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.EstatusSolicitudId">
+            <summary>
+            Estatus en el que se encuenta la solicitud de viaticos
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.EstatusSolicitud">
+            <summary>
+            Estatus de la solicitud en Texto
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.ClienteId">
+            <summary>
+            Identificador del cliente
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.EmpleadoId">
+            <summary>
+            Identificador del empleado
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.NoTarjeta">
+            <summary>
+            Numero de la tarjeta a la que se asignara el viatico
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.Origen">
+            <summary>
+            Origen
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.Folio">
+            <summary>
+            Folio de la solicitud
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.CentroDeCostoId">
+            <summary>
+            Centro de costos del que se tomara el capital
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.DescCc">
+            <summary>
+            Descripcion adicional
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.Identificador">
+            <summary>
+            Identicicador de la solicitud
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.PuestoId">
+            <summary>
+            Puesto de quien revisa la solicitud
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.DescPuesto">
+            <summary>
+            Puesto en Texto
+            </summary>
+        </member>
+        <member name="P:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.ListDetalleSolicitud">
+            <summary>
+            Detalle de la solicitud
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Models.Viatics.ViaticsRequest.#ctor">
+            <summary>
+            Inicializacion del detalle
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.RendererControls.According.animateOut(System.String,System.Double,System.Double,System.UInt32)">
+            <summary>
+            animate an object
+            </summary>
+            <param name="property">Properti to animated</param>
+            <param name="start">start the property value</param>
+            <param name="end">end the property valye</param>
+            <param name="time">time of miliseconds</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.RendererControls.According.animateIn(System.String,System.Double,System.Double,System.UInt32)">
+            <summary>
+            animate an object
+            </summary>
+            <param name="property">Properti to animated</param>
+            <param name="start">start the property value</param>
+            <param name="end">end the property valye</param>
+            <param name="time">time of miliseconds</param>
+        </member>
         <member name="M:InntecMobileNetMaui.RendererControls.MaskedBehavior.OnAttachedTo(Microsoft.Maui.Controls.Entry)">
             <summary>
             Al agregar texto
@@ -943,6 +1682,78 @@
             </summary>
             <param name="sender">Objeto con el que se trabaja</param>
             <param name="args">Parametros del eventos</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Aclaracion.AclaracionService.GuardarAclaracion(InntecMobileNetMaui.Models.Aclaraciones.AclaracionModel)">
+            <summary>
+            Inicia el registro de la aclaracion.
+            </summary>
+            <param name="aclaracion">datos de la aclaracion.</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Aclaracion.AclaracionService.GuardarArchivos(System.Collections.Generic.Dictionary{System.String,System.Byte[]},System.Int32)">
+            <summary>
+            Guarda los documentos del usuario.
+            </summary>
+            <param name="Archivos">Listado de archivos a guardar</param>
+            <param name="AclaracionId">Identificador de la aclaracion a la que se le asignaran los archivos.</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Aclaracion.AclaracionService.ActualizarStatus(System.Int32)">
+            <summary>
+            Actualizar el estatus de la aclaracion. (Se utiliza cuando se termina de registrar una aclaracion.)
+            </summary>
+            <param name="AclaracionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Aclaracion.AclaracionService.ObtenerAclaraciones">
+            <summary>
+            Lista de aclaraciones creadas por el usuario
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Aclaracion.AclaracionService.ObtenerAclaracionDetalle(System.Int32)">
+            <summary>
+            Detalle de la aclaracion seleccionada
+            </summary>
+            <param name="AclaracionId">Identificador de la aclaracion.</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Aclaracion.AclaracionService.GenerarPDFs(System.Int32,System.Collections.Generic.Dictionary{System.String,System.Byte[]},InntecMobileNetMaui.Models.Aclaraciones.DatosDocumento)">
+            <summary>
+            Se envia los datos necesarios para generar los archivos PDF.
+            </summary>
+            <param name="AclaracionId">Identificador de la aclaracion a la que se le generaran los archivos.</param>
+            <param name="Imagenes">imagenes de para los encabezados de los archivos, asi como la firma</param>
+            <param name="datosDocumento">datos que se plasmaran en el PDF.</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Aclaracion.AclaracionService.VerificarArchivosAclaracion(System.Int32)">
+            <summary>
+            Se verifica el area de aclaraciones ya cargo algun archivo
+            </summary>
+            <param name="AclaracionId">Identificador de la aclaracion que se quiere revisar.</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Aclaracion.AclaracionService.VerificarPermisoCancelar(System.Int32)">
+            <summary>
+            Se verifica el estatus en el quese encuentra la alcaracion, para saber si se puede cancelar o no.
+            </summary>
+            <param name="AclaracionId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Aclaracion.AclaracionService.CancelarAclaracion(System.Int32)">
+            <summary>
+            Se cancela una Aclaracion
+            </summary>
+            <param name="AclaracionId">Identificador de la aclaracion a cancelar.</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Aclaracion.AclaracionService.DescargarDocumentos(System.Int32)">
+            <summary>
+            Descargar documento de la aclaracion
+            </summary>
+            <param name="AclaracionId">identificador de la aclaracion que contiene el documento</param>
+            <returns></returns>
         </member>
         <member name="M:InntecMobileNetMaui.Services.AesGcm.NewKeyAesGcm">
             <summary>
@@ -1075,6 +1886,180 @@
             <param name="assistModel">Datos para dar de alta asistencia</param>
             <returns>indicador de proceso correcto</returns>
         </member>
+        <member name="T:InntecMobileNetMaui.Services.ExpReg">
+            <summary>
+            Expreciones para validacion de cadenas
+            </summary>
+        </member>
+        <member name="F:InntecMobileNetMaui.Services.ExpReg.ExpRegPassword">
+            <summary>
+            Exprecion para password
+            </summary>
+        </member>
+        <member name="F:InntecMobileNetMaui.Services.ExpReg.ExpRegIdentificador">
+            <summary>
+            Exprecion para Caracteres expeciales
+            </summary>
+        </member>
+        <member name="F:InntecMobileNetMaui.Services.ExpReg.ExpRegEmail">
+            <summary>
+            Exprecion para correo
+            </summary>
+        </member>
+        <member name="F:InntecMobileNetMaui.Services.ExpReg.ExpRegPhone">
+            <summary>
+            Exprecion para numero telefonico de 10 digitos
+            </summary>
+        </member>
+        <member name="F:InntecMobileNetMaui.Services.ExpReg.ExpRegRFC">
+            <summary>
+            Exprecion para RFC
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.ExpReg.ValidarCadena(System.String,InntecMobileNetMaui.Models.Enumeradores.EnumValidar)">
+            <summary>
+            Validacion de la cadena
+            </summary>
+            <param name="cadena">Cadena a validar</param>
+            <param name="validar">Tipo de cadena</param>
+            <returns>Identificador de validacion correcta</returns>
+        </member>
+        <member name="T:InntecMobileNetMaui.Services.Gas.GasService">
+            <summary>
+            Servicios de combustibles
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Gas.GasService.LinkedUser(System.Guid)">
+            <summary>
+            Enlazar usuario a QR
+            </summary>
+            <param name="guid">identificador del QR</param>
+            <param name="login">datos del usuario logeado</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Gas.GasService.UnLinkedUser">
+            <summary>
+            DesEnlazar usuario de un QR
+            </summary>
+            <param name="login">Usuairo que inicio sesion</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Gas.GasService.VerifyQR(System.Guid)">
+            <summary>
+            Verificar QR en tarjeta
+            </summary>
+            <param name="_guid">Identifiador del QR</param>
+            <param name="login">Usuario que hizo login</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Gas.GasService.CheckRestrictions(System.Int32)">
+            <summary>
+            Verificar restricciones para tarjeta de combustibles
+            </summary>
+            <param name="login">Usuario que hizo login</param>
+            <param name="csmId">Identificador unico de tarjeta</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Gas.GasService.ActivateCard(InntecMobileNetMaui.Models.Gas.ActivationRequestModel)">
+            <summary>
+            Activar tarjeta
+            </summary>
+            <param name="login">usuario que inicio sesion</param>
+            <param name="requestActivation">Datos completos para activar tarjeta</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Gas.GasService.GetActivationRequest(System.Int32,InntecMobileNetMaui.Models.Gas.RequestActivationFilterModel,System.Boolean)">
+            <summary>
+            Respuesta de activacion para tarjeta de combustibles
+            </summary>
+            <param name="login">usuario que inicio sesion</param>
+            <param name="csmUsuarioId">identificador unico de tarjeta</param>
+            <param name="filterModel">datos de tiempo que permanesera activa la tarjeta</param>
+            <param name="forceRefresh"></param>
+            <returns>Listado de motivos por el cual una tarjeta no se activa</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Gas.GasService.GetKM(System.Nullable{System.Int32})">
+            <summary>
+            Kilometraje anterior
+            </summary>
+            <param name="login">usuario que inicio sesion</param>
+            <param name="tarjetaId">Identificador unico de tarjeta</param>
+            <returns>Kilometraje</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.MenuContigoServices.CheckBeneficionsContigoAsync(InntecMobileNetMaui.Models.UserModel)">
+            <summary>
+            Implementacion Inntec Contigo Consulta
+            </summary>
+            <param name="userModel">objeto  usuario</param>
+            <param name="item">Datos del usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Notification.NotifyServices.getNotifications(System.String)">
+            <summary>
+            Se obtienen las notificaciones que pertenesen al usuario dependiendo de los productos.
+            </summary>
+            <param name="Products"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Notification.NotifyServices.verifyNewNotify(System.String)">
+            <summary>
+            Verifica si existen nuevas notificaciones para el usuario
+            </summary>
+            <param name="Products"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Notification.NotifyServices.SetNotificationReadtAsync(InntecMobileNetMaui.Models.Notify.NotificationSent)">
+            <summary>
+            Identificar cual es la notificacion que se a abierto.
+            </summary>
+            <param name="notification">datos de la notificacion abierta.</param>
+            <returns>Detalle de la solicitud</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Promociones.PromotionServices.getPromotion(System.Int32)">
+            <summary>
+            Obtener listado de promociones asociadas a un comercio.
+            </summary>
+            <param name="StoreId">Identificador del comercio.</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Promociones.PromotionServices.getStorePromotion">
+            <summary>
+            Obtener un lisatdo de tiendas que tengan alguna promocion activa.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.SQL.SQLiteDataLogin.#ctor(InntecMobileNetMaui.Services.SQL.ISQLiteService)">
+            <summary>
+            Inicializacion de los objetos
+            </summary>
+            <param name="liteService">Interface para la conexion</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.SQL.SQLiteDataLogin.#ctor">
+            <summary>
+            Creacion del objeto para trabajar con los datos de login
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.SQL.SQLiteDataLogin.AddItemAsync(InntecMobileNetMaui.Models.LoginModel)">
+            <summary>
+            agregar nuevo acceso con encriptacion de password(al recordar datos en pantalla de login)
+            </summary>
+            <param name="loginModel">usuario que inicio sesion</param>
+            <returns>indicador de que el proceso fue correcto</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.SQL.SQLiteDataLogin.DeleteItemAsync(System.String)">
+            <summary>
+            Eliminar inicio de sesion automatico
+            </summary>
+            <param name="id">Identificador del Login local</param>
+            <returns>Indicador de que el proceso fue correcto</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.SQL.SQLiteDataLogin.GetItemAsync(System.String)">
+            <summary>
+            Validacion de la existencia de un login
+            </summary>
+            <param name="id">Identificador del Login</param>
+            <returns>Datos del usuario para iniciar sesion</returns>
+        </member>
         <member name="M:InntecMobileNetMaui.Services.UserService.LoginAsync(InntecMobileNetMaui.Models.LoginModel,System.String,System.Int32)">
             <summary>
             Login
@@ -1127,11 +2112,74 @@
             <param name="recoverPasswordModel">Datos necesarios para recuperar password</param>
             <returns>Resultado de la operacion</returns>
         </member>
+        <member name="M:InntecMobileNetMaui.Services.Viatics.ViaticsService.GetViaticsRequestAsync">
+            <summary>
+            Nueva solicitud de viaticos
+            </summary>
+            <returns>Detalle de la solicitud solicitada</returns> 
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Viatics.ViaticsService.GetViaticsRequestAsyncV2(System.Int32)">
+            <summary>
+            Nueva solicitud de viaticos
+            </summary>
+            <returns>Detalle de la solicitud solicitada</returns> 
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Viatics.ViaticsService.SetViaticsRequestAsync(InntecMobileNetMaui.Models.Viatics.NewViaticsRequest)">
+            <summary>
+            Registrar nueva solicitud de viaticos
+            </summary>
+            <param name="newViaticsRequest">Datos de la nueva solicitud de viaticos</param>
+            <returns>Detalle de la solicitud</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Viatics.ViaticsService.SetViaticsRequestAsyncV2(InntecMobileNetMaui.Models.Viatics.NewViaticsRequest)">
+            <summary>
+            Registrar nueva solicitud de viaticos
+            </summary>
+            <param name="newViaticsRequest">Datos de la nueva solicitud de viaticos</param>
+            <returns>Detalle de la solicitud</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Viatics.ViaticsService.GetViaticsListAsync(InntecMobileNetMaui.Models.Viatics.ViaticsFilterModel,System.Int32)">
+            <summary>
+            Listado de solicitudes de viaticos solicitadas
+            </summary>
+            <param name="viaticsListModel">Datos de la solicitud</param>
+            <returns>Listado con datos generales de las solicitudes de vaiticos</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Viatics.ViaticsService.GetViaticsConsumptionDetailAsync(InntecMobileNetMaui.Models.Viatics.ViaticsListModel,System.Int32)">
+            <summary>
+            Detalles de una solicitud de viaticos
+            </summary>
+            <param name="viaticsListModel">Solicitudes de viaticos</param>
+            <returns>Listado del detalle de una solicitud de viaticos</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Services.Viatics.ViaticsService.sendFile(System.Byte[],System.String,InntecMobileNetMaui.Models.Viatics.ConsumptionDetail)">
+            <summary>
+            Envio de archivos(Comprobacion)
+            </summary>
+            <param name="dataArray">Datos de la imagen</param>
+            <param name="kind">Extencion</param>
+            <param name="loginModel">Ususario que inicio sesion</param>
+            <param name="param">Detalle del consumo</param>
+            <returns>Resultado del envio del archivo</returns>
+        </member>
         <member name="T:InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel">
             <inheritdoc/>
         </member>
         <member name="P:InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel.Title">
             <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.Alerts.InformativeViewModel._title"/>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Assistencia.AssistViewModel.#ctor(InntecMobileNetMaui.Models.LoginModel,InntecMobileNetMaui.Models.Assist.AssistModel)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+            <param name="loginModel">Usuario que inicio sesion</param>
+            <param name="assistModel">datos para la asistencia</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Assistencia.AssistViewModel.ExecuteRegisterCommand">
+            <summary>
+            Registro a asistencia
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:InntecMobileNetMaui.ViewModels.BaseAlertViewModel">
             <inheritdoc/>
@@ -1142,7 +2190,38 @@
         <member name="P:InntecMobileNetMaui.ViewModels.BaseAlertViewModel.Title">
             <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.BaseAlertViewModel._title"/>
         </member>
-        <member name="M:InntecMobileNetMaui.ViewModels.Cards.CardDetailViewModel.#ctor(InntecMobileNetMaui.Models.CardModel,InntecMobileNetMaui.Views.Cards.CardDetailPage)">
+        <member name="M:InntecMobileNetMaui.ViewModels.BenefitHub.BenefitHubRegisterViewModel.#ctor(InntecMobileNetMaui.Views.BenefitHub.BenefitHubRegisterPage,InntecMobileNetMaui.Views.Cards.CardsPage)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+            <param name="benefitHubRegisterPage"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.BenefitHub.BenefitHubRegisterViewModel.rules">
+            <summary>
+            Reglas para el password
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.BenefitHub.BenefitHubRegisterViewModel.ExecuteGetUserData(InntecMobileNetMaui.RendererControls.WebViewRenderer)">
+            <summary>
+            Pagina de BenefitHub
+            </summary>
+            <param name="webView">Visor de pagina</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.BenefitHub.BenefitHubRegisterViewModel.ExecutBenefitHubCommand(InntecMobileNetMaui.RendererControls.WebViewRenderer)">
+            <summary>
+            Pre-Registro
+            </summary>
+            <param name="webView">Visor para benefithub</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.BenefitHub.BenefitHubRegisterViewModel.VerifyPass">
+            <summary>
+            Validacion de password
+            </summary>
+            <returns>indicador de validacion correcta para password</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.CardDetailViewModel.#ctor(InntecMobileNetMaui.Models.CardModel,InntecMobileNetMaui.Views.Cards.CardDetailPage)">
             <summary>
             Inicializacion de objetos
             </summary>
@@ -1150,25 +2229,58 @@
             <param name="login">Datos del usuario que inicio sesion</param>
             <param name="cardDetailPage">Pagina del binding</param>
         </member>
-        <member name="M:InntecMobileNetMaui.ViewModels.Cards.CardDetailViewModel.ExecuteVerifyAssistCommand(InntecMobileNetMaui.Models.Assist.AssistModel)">
+        <member name="M:InntecMobileNetMaui.ViewModels.CardDetailViewModel.ExecuteVerifyAssistCommand(InntecMobileNetMaui.Models.Assist.AssistModel)">
             <summary>
             Verificacion de Asistencia
             </summary>
             <param name="assistModel">Datos para la asistencia</param>
             <returns></returns>
         </member>
-        <member name="M:InntecMobileNetMaui.ViewModels.Cards.CardDetailViewModel.LoadDetailCard">
+        <member name="M:InntecMobileNetMaui.ViewModels.CardDetailViewModel.LoadDetailCard">
             <summary>
             Movimientos de la tarejta
             </summary>
             <returns></returns>
         </member>
-        <member name="M:InntecMobileNetMaui.ViewModels.Cards.CardDetailViewModel.ExecutCardMovementsCommand(System.Object)">
+        <member name="M:InntecMobileNetMaui.ViewModels.CardDetailViewModel.ExecutCardMovementsCommand(System.Object)">
             <summary>
             movimientos de tarjeta por mes seleccionado
             </summary>
             <param name="obj">Fecha que se necesita filtrar</param>
             <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.CardDetailViewModel.ExecuteBlockCardCommand(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Cancelar tarjeta
+            </summary>
+            <param name="args">Datos de la tarjeta</param>
+            <returns></returns>
+            <summary>
+            Bloquear tarjeta
+            </summary>
+            <param name="cardModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.CardDetailViewModel.ExecuteCancelCardCommand(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Cancelar tarjeta
+            </summary>
+            <param name="args">Datos de la tarjeta</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.CardDetailViewModel.ExecuteDeleCardCommand(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Eliminar tarjeta
+            </summary>
+            <param name="args">Datos de la tarjeta</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.CardNipViewModel.#ctor(InntecMobileNetMaui.Models.CardModel,InntecMobileNetMaui.Views.CustomView.Card.CardNipPage)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+            <param name="cardModel">datos de tarejta</param>
+            <param name="cardNipPage">Pagina de binding</param>
         </member>
         <member name="M:InntecMobileNetMaui.ViewModels.Cards.CardsViewModel.#ctor(InntecMobileNetMaui.Views.Cards.CardsPage)">
             <summary>
@@ -1180,6 +2292,20 @@
             <summary>
             Inicializacion de objetos
             </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Cards.CardsViewModel.ExecuteLoadPromoPageCommand(System.Object)">
+            <summary>
+            Detalle de la promocion cuando le das click en el listado
+            </summary>
+            <param name="args">Datos de la tarjeta</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Cards.CardsViewModel.ExecuteLoadStoredPromotionsCommand">
+            <summary>
+            Listado de promociones
+            </summary>
+            <param name="args">Datos de la tarjeta</param>
+            <returns></returns>
         </member>
         <member name="M:InntecMobileNetMaui.ViewModels.Cards.CardsViewModel.ExecuteCardNipCommand(InntecMobileNetMaui.Models.CardModel)">
             <summary>
@@ -1246,67 +2372,141 @@
             Guardar nueva tarjeta
             </summary>
         </member>
-        <member name="T:InntecMobileNetMaui.ViewModels.CardViewModel">
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-            <inheritdoc/>
-        </member>
-        <member name="M:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteBalanceCard(System.Object)">
+        <member name="M:InntecMobileNetMaui.ViewModels.Contigo.MenuContigoViewModel.ExecuteLoadUserData(InntecMobileNetMaui.Models.LoginModel)">
             <summary>
-            Saldo de la tarjeta
+            Carga de datos
             </summary>
-            <param name="arg"></param>
+            <param name="loginModel"></param>
             <returns></returns>
         </member>
-        <member name="M:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteLoadCards">
+        <member name="M:InntecMobileNetMaui.ViewModels.Contigo.MenuContigoViewModel.ExecuteLoadUserData">
             <summary>
-            Lisatdo de tarjetas
+            Datos del usuario
+            </summary>
+        </member>
+        <member name="T:InntecMobileNetMaui.ViewModels.Gas.ActivateCardViewModel">
+            <summary>
+            Activacion de tardejas de combustibles
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.ActivateCardViewModel.#ctor(InntecMobileNetMaui.Views.Gas.ActivateCardPage,InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+            <param name="activateCardPage">Objeto para el binding</param>
+            <param name="cardModel">Datos de la tarejta</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.ActivateCardViewModel.ExecutKMCommand">
+            <summary>
+            Verificar el kilometraje anterior
             </summary>
             <returns></returns>
         </member>
-        <member name="M:InntecMobileNetMaui.ViewModels.CardViewModel.ExecutCardMovements(System.Object)">
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.ActivateCardViewModel.ExecuteActivateCard">
             <summary>
-            movimientos de tarjeta por mes seleccionado
+            Activar tarjeta
             </summary>
-            <param name="obj">Fecha que se necesita filtrar</param>
             <returns></returns>
         </member>
-        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.LoadingBalance">
-            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.CardViewModel._loadingBalance"/>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.ActivateCardViewModel.CheckRestrictions">
+            <summary>
+            Verificar restricciones en tarjeta
+            </summary>
+            <returns>indicador del proceso</returns>
         </member>
-        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.CardMovementsResult">
-            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.CardViewModel._cardMovementsResult"/>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.ActivateCardViewModel.Location_locationObtained(System.Object,InntecMobileNetMaui.Location.ILocationEventArgs)">
+            <summary>
+            Obtener coordenadas
+            </summary>
+            <param name="sender">Objeto con el que se trabaja</param>
+            <param name="e">parametros del evento</param>
         </member>
-        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.IsRefreshing">
-            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.CardViewModel._isRefreshing"/>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.ActivateCardViewModel.ExecuteActivateQrReader(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Ejetuar validador de QR
+            </summary>
+            <returns></returns>
         </member>
-        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.Cards">
-            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.CardViewModel._cards"/>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.ActivateCardViewModel.Page_Disappearing(System.Object,System.EventArgs)">
+            <summary>
+            Evitar que se brinquen validacion de QR
+            </summary>
+            <param name="sender">Objeto con el que se trabaja</param>
+            <param name="e">parametros del evento</param>
         </member>
-        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.Position">
-            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.CardViewModel._position"/>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.ActivateCardViewModel.CardsPage">
+            <summary>
+            Regreso a pantalla principal
+            </summary>
         </member>
-        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.Cerrado">
-            <inheritdoc cref="F:InntecMobileNetMaui.ViewModels.CardViewModel._cerrado"/>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.ActivationRequestReportDetailViewModel.#ctor(InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel)">
+            <summary>
+            Inicializar respuesta de activacion de tarjeta
+            </summary>
+            <param name="param"></param>
         </member>
-        <member name="F:InntecMobileNetMaui.ViewModels.CardViewModel.executeBalanceCardCommand">
-            <summary>The backing field for <see cref="P:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteBalanceCardCommand"/>.</summary>
+        <member name="P:InntecMobileNetMaui.ViewModels.Gas.ActivationRequestReportViewModel.RequestList">
+            <summary>
+            Lista de activaciones
+            </summary>
         </member>
-        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteBalanceCardCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteBalanceCard(System.Object)"/>.</summary>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.ActivationRequestReportViewModel.#ctor(InntecMobileNetMaui.Views.Gas.ActivationRequestReportPage,InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Inicializacion de objetos para el reporte de activacion
+            </summary>
+            <param name="activationRequestReportPage">pagina del Binding</param>
+            <param name="args">Datos de la tarjeta</param>
         </member>
-        <member name="F:InntecMobileNetMaui.ViewModels.CardViewModel.executeLoadCardsCommand">
-            <summary>The backing field for <see cref="P:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteLoadCardsCommand"/>.</summary>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.ActivationRequestReportViewModel.ExecuteShowActivationRequestDetailsCommand(InntecMobileNetMaui.Models.Gas.ActivationRequestReportModel)">
+            <summary>
+            navegacion al detalle de activacion del item seleccionado
+            </summary>
+            <param name="param">Reporte de activacion</param>
         </member>
-        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteLoadCardsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:InntecMobileNetMaui.ViewModels.CardViewModel.ExecuteLoadCards"/>.</summary>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.ActivationRequestReportViewModel.ExecuteLoadRequestReportCommand(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Listado de activaciones
+            </summary>
+            <param name="cardmodel">Datos de la tarjeta</param>
+            <returns></returns>
         </member>
-        <member name="F:InntecMobileNetMaui.ViewModels.CardViewModel.executCardMovementsCommand">
-            <summary>The backing field for <see cref="P:InntecMobileNetMaui.ViewModels.CardViewModel.ExecutCardMovementsCommand"/>.</summary>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.MainGasViewModel.#ctor(InntecMobileNetMaui.Views.Gas.MainGasPage)">
+            <summary>
+            Inicializar objetos para combustibles
+            </summary>
+            <param name="mainGasPage">pagina del binding</param>
         </member>
-        <member name="P:InntecMobileNetMaui.ViewModels.CardViewModel.ExecutCardMovementsCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:InntecMobileNetMaui.ViewModels.CardViewModel.ExecutCardMovements(System.Object)"/>.</summary>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.MainGasViewModel.ExecuteActivationRequestReportCommand(InntecMobileNetMaui.Models.CardModel)">
+            <summary >
+            Reporte de activacion
+            </summary>
+            <param name="args">Datos de la tarjeta</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.MainGasViewModel.ExecuteActivationRequestCommand(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Solicitud de activacion
+            </summary>
+            <param name="args">Datos de la tarjeta</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.MainGasViewModel.ExecuteUnLinkCardCommand(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Eliminar QR a la tarjeta
+            </summary>
+            <param name="args">Datos de la tarjeta</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.MainGasViewModel.ExecuteLinkCardCommand(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Enlazar QR a tarjeta
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Gas.MainGasViewModel.ExecuteLoadCardsCommand">
+            <summary>
+            Listado de tarjetas de combustible
+            </summary>
+            <returns></returns>
         </member>
         <member name="M:InntecMobileNetMaui.ViewModels.Login.LoginViewModel.#ctor">
             <summary>
@@ -1342,9 +2542,9 @@
             <param name="args"></param>
             <returns></returns>
         </member>
-        <member name="M:InntecMobileNetMaui.ViewModels.MainViewModel.ExecuteStartQrReader(InntecMobileNetMaui.Models.CardModel)">
+        <member name="M:InntecMobileNetMaui.ViewModels.MainViewModel.ExecuteStartQrReaderV2(InntecMobileNetMaui.Models.CardModel)">
             <summary>
-            Inicializar lectura de QR
+            Inicializar lectura de QR Refactorizada por NetMaui
             </summary>
             <param name="args">Datos de la tarjeta</param>
             <returns></returns>
@@ -1355,6 +2555,35 @@
             </summary>
             <param name="sender">Objeto con el que se trabaja</param>
             <param name="e">Paramtros del evento</param>
+        </member>
+        <member name="T:InntecMobileNetMaui.ViewModels.MaskedBehavior">
+            <summary>
+            marcara para cadena
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.MaskedBehavior.OnAttachedTo(Microsoft.Maui.Controls.Entry)">
+            <summary>
+            Al agregar texto
+            </summary>
+            <param name="entry">Objeto que se esta modificando</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.MaskedBehavior.OnDetachingFrom(Microsoft.Maui.Controls.Entry)">
+            <summary>
+            Al eliminar texto
+            </summary>
+            <param name="entry">Objeto que se esta modificando</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.MaskedBehavior.SetPositions">
+            <summary>
+            Agregar Caracteres
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.MaskedBehavior.OnEntryTextChanged(System.Object,Microsoft.Maui.Controls.TextChangedEventArgs)">
+            <summary>
+            Evento
+            </summary>
+            <param name="sender">Objeto con el que se trabaja</param>
+            <param name="args">Parametros del eventos</param>
         </member>
         <member name="T:InntecMobileNetMaui.ViewModels.MenuViewModel">
             <summary>
@@ -1399,12 +2628,255 @@
             Datos del usuario
             </summary>
         </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.RecoverPasswordViewModel.#ctor(InntecMobileNetMaui.Views.RecoverPasswordPage)">
+            <summary>
+            Inicializar objetos
+            </summary>
+            <param name="recoverPasswordPage"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.RecoverPasswordViewModel.ExecuteCancelRecoveryPassword">
+            <summary>
+            Cancelar recuparacion de password
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.MainViaticsViewModel.#ctor(InntecMobileNetMaui.Views.Viatics.MainViaticsPage)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+            <param name="mainViaticsPage">pagina principal de viaticos</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.MainViaticsViewModel.ExecuteViaticCheckingCommand(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Listado de solicitudes(Comprobacion)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.MainViaticsViewModel.ExecuteViaticListCommand(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+             Listado de solicitudes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.MainViaticsViewModel.ExecuteViaticRequestCommand(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Nueva solicitud de viaticos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.MainViaticsViewModel.ExecuteLoadCardsCommand">
+            <summary>
+            Lista de tarjetas de viaticos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticDetailViewModel.#ctor(System.Collections.Generic.List{InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest})">
+            <summary>
+             Inicializacion de objetos
+            </summary>
+            <param name="Detail">Listado de detalles de solicitud</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticDetailViewModel.ExecuteLoadViaticsDetail">
+            <summary>
+            Destalle de solicitud
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsCheckDetailViewModel.SendXML(System.Byte[],System.String)">
+            <summary>
+            Envio de XML
+            </summary>
+            <param name="fileXML">Archivo</param>
+            <param name="fileName">Nombre del archivo</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsCheckDetailViewModel.SendPDF(System.Byte[],System.String)">
+            <summary>
+            Envio de PDF
+            </summary>
+            <param name="filePDF">Archivo</param>
+            <param name="fileName">Nombre del archivo</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsCheckDetailViewModel.SendVOUCHER(System.Byte[],System.String)">
+            <summary>
+            Envio de comprobante
+            </summary>
+            <param name="fileIMG">Archivo</param>
+            <param name="fileName">Nombre del archivo</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsCheckViewModel.#ctor(InntecMobileNetMaui.Views.Viatics.ViaticsCheckPage,InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+            <param name="viaticsCheckPage">pagina del binding</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsCheckViewModel.ExecuteShowViaticsCheckDetail(InntecMobileNetMaui.Models.Viatics.ConsumptionDetail)">
+            <summary>
+            Detalles la comprobacion
+            </summary>
+            <param name="param">Detalles del consumo</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsCheckViewModel.ExecuteViaticsConsumptionDetail(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Agregar detalle al consumo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsListViewModel.#ctor(InntecMobileNetMaui.Views.Viatics.ViaticsListPage,InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+            <param name="viaticsListPage">Pagina del binding</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsListViewModel.ExecuteShowViaticsDetail(System.Collections.Generic.List{InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest})">
+            <summary>
+            Mostrar detalles de solicitud
+            </summary>
+            <param name="detailsViatics">Datos del detalle</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsListViewModel.ExecuteGetViaticsListRequest(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Listado de solicitudes
+            </summary>
+            <param name="status">Estatus de la solicitud a filtrar</param>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsRequestViewModel.#ctor(InntecMobileNetMaui.Views.Viatics.ViaticsRequestPage,InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+            <param name="viaticsRequestPage">pagina de binding</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsRequestViewModel.ExecuteSaveRequest">
+            <summary>
+            Crear solicitud de viaticos
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsRequestViewModel.ExecuteDeleteItem(InntecMobileNetMaui.Models.Viatics.DetailViatic)">
+            <summary>
+            Eliminar detalle
+            </summary>
+            <param name="detailViatic">Detalle de solicitud</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsRequestViewModel.ExecuteAddItem(System.Collections.Generic.List{System.Object})">
+            <summary>
+            Agregar rubros
+            </summary>
+            <param name="param"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.ViewModels.Viatics.ViaticsRequestViewModel.ExecuteNewRequest(System.Int32)">
+            <summary>
+            Crear nueva solicitud
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Asistencia.AssistPage.BtnClose_Pressed(System.Object,System.EventArgs)">
+            <summary>
+            Regreso a pantalla principal
+            </summary>
+            <param name="sender">Objeto con el que se trabaja</param>
+            <param name="e">Parametros del evento</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Asistencia.AssistPage.BtnActivate_Pressed(System.Object,System.EventArgs)">
+            <summary>
+            Activar Asistencia Inntec
+            </summary>
+            <param name="sender">Objeto con el que se trabaja</param>
+            <param name="e">Parametros del evento</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Asistencia.AssistPage.BtnTerm_Pressed(System.Object,System.EventArgs)">
+            <summary>
+            Ver Terminos y condiciones
+            </summary>
+            <param name="sender">Objeto con el que se trabaja</param>
+            <param name="e">Parametros del evento</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.BenefitHub.BenefitHubRegisterPage.#ctor(InntecMobileNetMaui.Views.Cards.CardsPage)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.BenefitHub.BenefitHubRegisterPage.BtnTerms_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Terminos y condiciones
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.BenefitHub.BenefitHubRegisterPage.BtnRegister_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Registrarse a BenefitHub
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.BenefitHub.BenefitHubRegisterPage.OnAppearing">
+            <summary>
+            Pre-Registrar o Mostrar Pagina de Login Benefit
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.BenefitHub.BenefitHubRegisterPage.Entry_TextChanged(System.Object,Microsoft.Maui.Controls.TextChangedEventArgs)">
+            <summary>
+            Password para cuenta Benefit
+            </summary>
+            <param name="sender">Objeto con el que se trabaja</param>
+            <param name="e">Parametros de evento</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.BenefitHub.BenefitHubTemsPage.OnAppearing">
+            <summary>
+            Mostrar terminos y condiciones
+            </summary>
+        </member>
         <member name="M:InntecMobileNetMaui.Views.Cards.CardDetailPage.#ctor(InntecMobileNetMaui.Models.CardModel)">
             <summary>
             Inicializar objetos
             </summary>
             <param name="cardModel">Datos de tarjeta</param>
             <param name="login">Datos del usuario que inicio sesion</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Cards.CardDetailPage.OnRequestedThemeChanged(System.Object,Microsoft.Maui.Controls.AppThemeChangedEventArgs)">
+            <summary>
+            Registra los cambios del tema para mostrar el icono de notificaciones dependiendo el modo 
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Cards.CardDetailPage.TapGestureRecognizer_Tapped_CerrarSesion(System.Object,Microsoft.Maui.Controls.TappedEventArgs)">
+            <summary>
+            Navega hacia el login "Evento cerrar session"
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Cards.CardDetailPage.MisTarjetas_Tapped(System.Object,Microsoft.Maui.Controls.TappedEventArgs)">
+            <summary>
+            Navega hacia el detalle de la tarjeta "para refrescar los cambios"
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Cards.CardDetailPage.Pkr_Month_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento que controla el filtro de movimientos de la tarjeta
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Cards.CardDetailPage.Cancelar_card(System.Object,Microsoft.Maui.Controls.TappedEventArgs)">
+            <summary>
+            Cancelar tarjeta 
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Cards.CardDetailPage.BlockCard_Tapped(System.Object,Microsoft.Maui.Controls.TappedEventArgs)">
+            <summary>
+            Bloquear tarjeta 
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Cards.CardDetailPage.DeleteCard_Tapped(System.Object,Microsoft.Maui.Controls.TappedEventArgs)">
+            <summary>
+            Eliminar tarjeta 
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Cards.CardDetailPage.CancelCard_Tapped(System.Object,Microsoft.Maui.Controls.TappedEventArgs)">
+            <summary>
+            Cancelar tarjeta BTN
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Cards.CardDetailPage.MoreOptionsCard_Tapped(System.Object,Microsoft.Maui.Controls.TappedEventArgs)">
+            <summary>
+            MoreOptions  de tarjeta  
+            </summary>
         </member>
         <member name="M:InntecMobileNetMaui.Views.Cards.CardsPage.#ctor">
             <summary>
@@ -1413,15 +2885,13 @@
         </member>
         <member name="M:InntecMobileNetMaui.Views.Cards.CardsPage.OnAppearing">
             <summary>
-            Cargar tarjetas de usuario
+            Cargar tarjetas de usuario y algunos procesos relacionados al icono de notificaciones
             </summary>
         </member>
-        <member name="M:InntecMobileNetMaui.Views.Cards.CardsPage.Switch_Toggled(System.Object,Microsoft.Maui.Controls.ToggledEventArgs)">
+        <member name="M:InntecMobileNetMaui.Views.Cards.CardsPage.OnRequestedThemeChanged(System.Object,Microsoft.Maui.Controls.AppThemeChangedEventArgs)">
             <summary>
-            Desactivar tarjeta temporalmente
+            Registra los cambios del tema para mostrar el icono de notificaciones dependiendo el modo 
             </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
         </member>
         <member name="M:InntecMobileNetMaui.Views.Cards.CardsPage.Gas_Clicked(System.Object,System.EventArgs)">
             <summary>
@@ -1450,6 +2920,162 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:InntecMobileNetMaui.Views.Cards.CardsPage.Current_NotificationActionTapped(Plugin.LocalNotification.EventArgs.NotificationActionEventArgs)">
+            <summary>
+            Nos ayuda a viajar con la Notificacion Local
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.CustomView.Card.CardNipPage.#ctor(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Inicializacion de NIP
+            </summary>
+            <param name="cardModel">Datos de tarjeta</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.CustomView.Card.CardNipPage.Btn_Cancel_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Cancelar cambio de NIP
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.CustomView.Card.CardNipPage.Btn_ChangeNip_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Solicitar cambio de NIP
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.CustomView.NewCardPage.Button_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Evento que controla la navegacion hacia atras al cerrar el control
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.CustomView.NewCardPage.Btn_NewCard_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Agregar una nueva tarjeta
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.CustomView.CustomMenu.#ctor">
+            <summary>
+            Todas las opciones del Custom Menu control personalizado
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivateCardPage.#ctor(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+            <param name="args">Datos de tarjeta</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivateCardPage.TxtPrecio_Unfocused(System.Object,Microsoft.Maui.Controls.FocusEventArgs)">
+            <summary>
+            Validacion de campo de Precio y Litros
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivateCardPage.TxtLitros_Unfocused(System.Object,Microsoft.Maui.Controls.FocusEventArgs)">
+            <summary>
+            Validacion de campo de Precio y Litros
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivateCardPage.TxtCantidad_Unfocused(System.Object,Microsoft.Maui.Controls.FocusEventArgs)">
+            <summary>
+            Validacion de campo de Precio y Litros (Formato de numero)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivateCardPage.OnAppearing">
+            <summary>
+            validacion de QR y vista para solicitar activacion
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivateCardPage.OnDisappearing">
+            <summary>
+            Llamar al recolector de basura al salir del Layout
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivateCardPage.Button_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Activar tarjeta
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivateCardPage.Button_Clicked_Cancel(System.Object,System.EventArgs)">
+            <summary>
+            Regresar a pantalla principal
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivateCardPage.TxtPrecio_TextChanged(System.Object,Microsoft.Maui.Controls.TextChangedEventArgs)">
+            <summary>
+            Inabilitar campo Cantidad/Litros
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivateCardPage.TxtCantidad_TextChanged(System.Object,Microsoft.Maui.Controls.TextChangedEventArgs)">
+            <summary>
+            Inabilitar Campo Litros
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivateCardPage.TxtLitros_TextChanged(System.Object,Microsoft.Maui.Controls.TextChangedEventArgs)">
+            <summary>
+            Inabilitar campo Cantidad
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivationRequestReportPage.#ctor(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Inicializar objetos
+            </summary>
+            <param name="args">Datos de la tarjeta</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivationRequestReportPage.OnAppearing">
+            <summary>
+            Cargar datos de detalle
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivationRequestReportPage.ListView_ItemTapped(System.Object,Microsoft.Maui.Controls.ItemTappedEventArgs)">
+            <summary>
+            Solicitar detalle de solicitudes
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivationRequestReportPage.PkrStatus_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Filtro por estatus
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.ActivationRequestReportPage.Button_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Cargar reportes filtrados.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.MainGasPage.#ctor(InntecMobileNetMaui.ViewModels.MainViewModel@)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+            <param name="mainViewModel">Datos de la pagina principal</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Gas.MainGasPage.OnAppearing">
+            <summary>
+            Carga de tarjetas
+            </summary>
+        </member>
         <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.#ctor">
             <summary>
             Inicializar objetos
@@ -1477,6 +3103,11 @@
             Inicializacion de Inicio de sesion
             </summary>
         </member>
+        <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.CheckAndRequestLocationPermission">
+            <summary>
+            Comprobacion del permisos de las notificaciones 
+            </summary>
+        </member>
         <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.Btn_Registro_Clicked(System.Object,System.EventArgs)">
             <summary>
             Registro de usuario nuevo
@@ -1495,8 +3126,14 @@
             <summary>
             Inicializacion de sesion
             </summary>
+            popupValidador es el nuevo Recapchat 
             <param name="sender"></param>
             <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.HayConexion">
+            <summary>
+            Verifica que exita una conexion a internet
+            </summary>
         </member>
         <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.Login(System.String,System.Int32)">
             <summary>
@@ -1523,6 +3160,16 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
+        <member name="M:InntecMobileNetMaui.Views.Login.LoginPage.CheckPass_CheckedChanged(System.Object,Microsoft.Maui.Controls.CheckedChangedEventArgs)">
+            <summary>
+            Para bloquear TxTUsuario y TxTContraseña cuando esta opcion esta activa
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.MyDataPage.OnRequestedThemeChanged(System.Object,Microsoft.Maui.Controls.AppThemeChangedEventArgs)">
+            <summary>
+            Registra los cambios del tema para mostrar el icono de notificaciones dependiendo el modo 
+            </summary>
+        </member>
         <member name="M:InntecMobileNetMaui.Views.MyDataPage.Button_Clicked(System.Object,System.EventArgs)">
             <summary>
             Actualizar datos
@@ -1536,6 +3183,298 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:InntecMobileNetMaui.Views.Notify.NotityPage.OnRequestedThemeChanged(System.Object,Microsoft.Maui.Controls.AppThemeChangedEventArgs)">
+            <summary>
+            Registra los cambios del tema para mostrar el icono de notificaciones dependiendo el modo 
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.RecoverPasswordPage.#ctor">
+            <summary>
+            Inicializar objetos
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.RegisterPage.#ctor">
+            <summary>
+            Inicializar objetos
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.RegisterPage.BtnRegistro_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Siguiente paso 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.RegisterPage.IniciarColores">
+            <summary>
+            Inicializar colores de controles de texto
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.RegisterPage.ValidarCampos">
+            <summary>
+            Validar datos obligatorios
+            </summary>
+            <returns>indicador de campos correctos</returns>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.RegisterPage.ToolbarItem_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Cancelar registro de usuario nuevo
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.TermsAndConditionsPage.#ctor(System.Boolean)">
+            <summary>
+            Inicializar objetos
+            </summary>
+            <param name="userModel">Datos de usuario</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.MainViaticsPage.#ctor(InntecMobileNetMaui.ViewModels.MainViewModel@)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+            <param name="mainViewModel">Datos de pagina principal</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.MainViaticsPage.OnAppearing">
+            <summary>
+            Listado de tarjetas
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.MainViaticsPage.OnDisappearing">
+            <summary>
+            Llamar al recolector de basura al salir del Layout
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticDetailPage.#ctor(System.Collections.Generic.List{InntecMobileNetMaui.Models.Viatics.DetailsViaticsRequest})">
+            <summary>
+            Inicializar objetos
+            </summary>
+            <param name="Detail">Listado de detalles</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticDetailPage.OnAppearing">
+            <summary>
+            Muestra de detalles
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsCheckDetailPage.#ctor(InntecMobileNetMaui.Models.Viatics.ConsumptionDetail)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+            <param name="param">detalles de consumos</param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsCheckDetailPage.XML_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Cargar XML
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsCheckDetailPage.PDF_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Cargar PDF
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsCheckDetailPage.Comprobante_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Cargar Comprobante
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsCheckPage.#ctor(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsCheckPage.OnAppearing">
+            <summary>
+            Detalle de consumos
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsCheckPage.ListView_ItemTapped(System.Object,Microsoft.Maui.Controls.ItemTappedEventArgs)">
+            <summary>
+            Mostrar detalle de consumos
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsCheckPage.Picker_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Filtro de estatus
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsListPage.#ctor(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Inicializacion de objetos
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsListPage.OnAppearing">
+            <summary>
+            Mostrar listado de solicitudes
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsListPage.ListView_ItemTapped(System.Object,Microsoft.Maui.Controls.ItemTappedEventArgs)">
+            <summary>
+            Mostrar detalles de la solicitud
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsListPage.PkrStatus_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Filtrado por estatus
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsRequestPage.#ctor(InntecMobileNetMaui.Models.CardModel)">
+            <summary>
+            Inicializar objetos
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsRequestPage.OnAppearing">
+            <summary>
+            Formulario para nueva solicitud
+            </summary>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsRequestPage.Btn_Add_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Agregar solicitud de viaticos
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:InntecMobileNetMaui.Views.Viatics.ViaticsRequestPage.MenuDelete_Clicked(System.Object,System.EventArgs)">
+            <summary>
+            Eliminar rubro del detalle
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_InputView.TextColorTo(Microsoft.Maui.Controls.InputView,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
@@ -1548,24 +3487,6 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
         </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LoadingBalance">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LoadingBalance" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CardMovementsResult">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CardMovementsResult" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsRefreshing">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Cards">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Cards" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Position">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Position" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Cerrado">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Cerrado" generated properties.</summary>
-        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -1577,24 +3498,6 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LoadingBalance">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LoadingBalance" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CardMovementsResult">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CardMovementsResult" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsRefreshing">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsRefreshing" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Cards">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Cards" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Position">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Position" generated properties.</summary>
-        </member>
-        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Cerrado">
-            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Cerrado" generated properties.</summary>
         </member>
     </members>
 </doc>

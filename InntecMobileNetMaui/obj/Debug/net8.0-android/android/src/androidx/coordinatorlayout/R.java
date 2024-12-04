@@ -9,32 +9,32 @@ package androidx.coordinatorlayout;
 public final class R {
 	public static final class attr {
 		public static final int coordinatorLayoutStyle = 0x7f04015c;
-		public static final int keylines = 0x7f04027c;
-		public static final int layout_anchor = 0x7f040288;
-		public static final int layout_anchorGravity = 0x7f040289;
-		public static final int layout_behavior = 0x7f04028a;
-		public static final int layout_dodgeInsetEdges = 0x7f0402bb;
-		public static final int layout_insetEdge = 0x7f0402c5;
-		public static final int layout_keyline = 0x7f0402c6;
-		public static final int statusBarBackground = 0x7f040420;
+		public static final int keylines = 0x7f04027d;
+		public static final int layout_anchor = 0x7f040289;
+		public static final int layout_anchorGravity = 0x7f04028a;
+		public static final int layout_behavior = 0x7f04028b;
+		public static final int layout_dodgeInsetEdges = 0x7f0402bc;
+		public static final int layout_insetEdge = 0x7f0402c6;
+		public static final int layout_keyline = 0x7f0402c7;
+		public static final int statusBarBackground = 0x7f040422;
 	}
 	public static final class id {
-		public static final int bottom = 0x7f090064;
-		public static final int end = 0x7f0900bd;
-		public static final int left = 0x7f0900fe;
-		public static final int none = 0x7f09015e;
+		public static final int bottom = 0x7f090063;
+		public static final int end = 0x7f0900bc;
+		public static final int left = 0x7f0900ff;
+		public static final int none = 0x7f09015d;
 		public static final int right = 0x7f090181;
 		public static final int start = 0x7f0901cc;
-		public static final int top = 0x7f0901fd;
+		public static final int top = 0x7f0901fc;
 	}
 	public static final class style {
-		public static final int Widget_Support_CoordinatorLayout = 0x7f11045d;
+		public static final int Widget_Support_CoordinatorLayout = 0x7f110458;
 	}
 	public static final class styleable {
-		public static final int[] CoordinatorLayout = new int[] { 0x7f04027c, 0x7f040420 };
+		public static final int[] CoordinatorLayout = new int[] { 0x7f04027d, 0x7f040422 };
 		public static final int CoordinatorLayout_keylines = 0;
 		public static final int CoordinatorLayout_statusBarBackground = 1;
-		public static final int[] CoordinatorLayout_Layout = new int[] { 0x010100b3, 0x7f040288, 0x7f040289, 0x7f04028a, 0x7f0402bb, 0x7f0402c5, 0x7f0402c6 };
+		public static final int[] CoordinatorLayout_Layout = new int[] { 0x010100b3, 0x7f040289, 0x7f04028a, 0x7f04028b, 0x7f0402bc, 0x7f0402c6, 0x7f0402c7 };
 		public static final int CoordinatorLayout_Layout_android_layout_gravity = 0;
 		public static final int CoordinatorLayout_Layout_layout_anchor = 1;
 		public static final int CoordinatorLayout_Layout_layout_anchorGravity = 2;
